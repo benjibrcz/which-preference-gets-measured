@@ -75,6 +75,54 @@ choices stay displaced (+0.48 [+0.07, +0.82]); (b) channels dissociate model-dep
 and non-agent content reproduce much of the shift. Together these *motivate* an intervention-based
 search for a self-indexed standpoint; they do not demonstrate one.
 
+## Chalmers's challenge (concurrent conceptual analysis, not prior motivation)
+
+Chalmers (2026), *Is the Jacobian Space a Global Workspace?* — a commentary on Gurnee et al.'s
+J-space work, contemporaneous with this sprint — supplies almost exactly the adversary this
+programme needs. His core move: an interpretable representation that *influences output* is not
+thereby (a) a genuine metacognitive report, (b) a *privileged, dedicated, unified* causal mechanism,
+(c) a global workspace, or (d) the seat of a self. He separates a **substantial** workspace (a causal,
+dedicated, privileged, unified *system*) from a **minimal** one (any collection of representations
+picked out *by* their output-influence). A J-space — or our own layer-36 identity-token readout (the
+corrected §2.16 result) — can be the minimal thing without being the substantial thing: it is *in*
+the "workspace" because it is output-apt, not output-apt because it sits in a privileged mechanism.
+
+This forces a three-way distinction the programme must respect:
+
+| Object | Operational meaning |
+|---|---|
+| **Readout / access surface** | a projection from which output-relevant content is *decodable* (our identity-token readout; a logit/J/R-lens; an SAE feature) |
+| **Causal organizer** | a shared state/process whose *single intervention* coherently moves *multiple independent* behaviours |
+| **Persistence carrier** | what preserves or regenerates that organization across transforms (transcript, memory, KV/activation state, weights) |
+
+Our sprint covariation (ρ = 0.81) establishes only the first. The programme's whole job is to test
+whether the second and third exist — so Chalmers marks the exact inferential gap it is built to close.
+
+Concrete methodological demands he imposes (adopted — we borrow the demand, **not** global-workspace
+theory or consciousness as an ontology; recurrence, broadcast, and phenomenality are separate
+questions):
+
+- **Privileged relative to what?** A candidate must *outperform* plausible alternatives (logit-lens,
+  R-lens, SAE features, supervised probes, PCA, matched-alternative and random subspaces) under
+  *causal* tests — not merely be decodable. Beating a few alternatives is not privilege.
+- **Report vs output-influence** (his verbalizability ≠ reportability). Perturb a candidate
+  ownership / self-indexing state *without changing the text*, then test whether the model can
+  *identify, predict, and reason about* the perturbation — genuine reportability with metacognitive
+  access — rather than merely emit associated identity words.
+- **Coordinated causal effects** (broadcast / integration). Require *one* intervention to move a
+  *bundle* of held-out outcomes together — private-evidence use, source attribution, correction of
+  prior actions, action ownership, self-prediction, subsequent decisions — not a single behaviour.
+- **Outputability, not verbalizability.** Include executed tool actions, information-seeking, and
+  non-prose outputs; otherwise a candidate may organize *language production* rather than agency.
+- **Transport the organization, not its label.** In the Stage-B flagship, transplanting an
+  owner-indexed state should transfer the *full causal profile*, not merely make the recipient say
+  "mine" / "I did that."
+- **First-order vs higher-order self-access.** Keep first-order self-indexing (routing one's own
+  evidence and actions correctly) distinct from higher-order self-access (reporting that organization
+  accurately): a system may exhibit either without the other.
+
+> **A candidate measurement surface is not a candidate identity.**
+
 ## First experiments: functional source-monitoring, then carrier transport
 
 **Operationalize "causal owner" first.** If two runs have identical weights, tokens, and KV state, a
