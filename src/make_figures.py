@@ -301,37 +301,54 @@ def fig5():
 
 # ---------------- Fig 6: the say/do wedge across models (dumbbell) ----------------
 def fig6():
+    rng = np.random.default_rng(20260817)
     models = [("Gemma-3-27B", "gridA_gemma"), ("Llama-3.1-70B", "gridA_llama70b"),
               ("gpt-4.1-mini", "gridA_gpt41mini"), ("Qwen-2.5-72B", "gridA_qwen72b")]
+    proj = lambda x, d: (x @ d / (d @ d)) if (d @ d) > 1e-9 else np.nan
     rows = []
     for label, run in models:
         rev, st = phat(run, "revealed"), phat(run, "stated_self")
         for persona in ("Vex", "Lazlo", "Mira"):
-            out = {}
+            cols = {}
             for ch, ph_ in (("rev", rev), ("st", st)):
                 b0 = ph_.xs(("B0", "-"), level=("cond", "persona"))
                 b1 = ph_.xs(("B1", persona), level=("cond", "persona"))
-                d1 = (b1 - b0).dropna()
                 b2 = ph_.xs(("B2", persona), level=("cond", "persona"))
-                out[ch] = beta(d1, b2 - b0)
-            rows.append((f"{label} · {persona}", out["rev"], out["st"]))
-    fig, ax = plt.subplots(figsize=(7.6, 5.8))
-    for yi, (label, r, s) in enumerate(rows):
+                cols[ch] = ((b1 - b0).dropna(), (b2 - b0).dropna())
+            idx = cols["rev"][0].index
+            for k in cols:
+                for j in (0, 1):
+                    idx = idx.intersection(cols[k][j].index)
+            d1r, er = cols["rev"][0].loc[idx].values, cols["rev"][1].loc[idx].values
+            d1s, es = cols["st"][0].loc[idx].values, cols["st"][1].loc[idx].values
+            wedge = proj(er, d1r) - proj(es, d1s)   # committed choice − ownership report
+            bs = []
+            while len(bs) < 1000:
+                i = rng.integers(0, len(idx), len(idx))
+                w = proj(er[i], d1r[i]) - proj(es[i], d1s[i])
+                if np.isfinite(w):
+                    bs.append(w)
+            rows.append((f"{label} · {persona}", wedge,
+                         float(np.percentile(bs, 2.5)), float(np.percentile(bs, 97.5))))
+    fig, ax = plt.subplots(figsize=(7.0, 4.7))
+    for yi, (label, w, lo, hi) in enumerate(rows):
         y = len(rows) - 1 - yi
-        ax.plot([r, s], [y, y], color=GRID, lw=2, zorder=2)
-        ax.scatter([r], [y], s=64, color=BLUE, zorder=3, edgecolors=SURF, linewidths=1.2)
-        ax.scatter([s], [y], s=64, color=ORANGE, zorder=3, edgecolors=SURF, linewidths=1.2)
+        col = BLUE if w >= 0 else ORANGE
+        ax.plot([lo, hi], [y, y], color=col, lw=2.4, alpha=0.5, zorder=2, solid_capstyle="round")
+        ax.scatter([w], [y], s=62, color=col, zorder=3, edgecolors=SURF, linewidths=1.2)
+    ax.axvline(0, color="#8a8880", lw=1.1, zorder=1)
     ax.set_yticks(range(len(rows)))
-    ax.set_yticklabels([r[0] for r in reversed(rows)], fontsize=9.5, color=INK)
-    ax.set_xlabel("persona capture β under “you are NOT X” (B2)")
-    handles = [plt.Line2D([], [], marker="o", ls="", color=BLUE, label="revealed (what it does)", markersize=8),
-               plt.Line2D([], [], marker="o", ls="", color=ORANGE, label="stated (what it says)", markersize=8)]
-    ax.legend(handles=handles, frameon=False, loc="upper left", fontsize=10,
-              bbox_to_anchor=(0.005, 0.995))
+    ax.set_yticklabels([r[0] for r in reversed(rows)], fontsize=9.3, color=INK)
+    ax.set_xlabel("wedge β = committed choice − ownership report   (toward persona)")
+    ax.set_ylim(-0.9, len(rows) - 0.3)
+    xr = max(abs(min(r[2] for r in rows)), abs(max(r[3] for r in rows))) + 0.06
+    ax.set_xlim(-xr, xr)
+    ax.text(-xr*0.96, -0.75, "◀ says > does", fontsize=8.6, color=ORANGE, ha="left", va="center")
+    ax.text(xr*0.96, -0.75, "does > says ▶", fontsize=8.6, color=BLUE, ha="right", va="center")
     ax.grid(axis="y", visible=False)
-    ax.axvline(0, color="#c3c2b7", lw=0.8)
-    ax.set_title("The say/do wedge recurs across models; its direction is model-specific",
-                 fontsize=12, loc="left", color=INK, pad=12)
+    ax.set_title("Committed choice and ownership report dissociate under “you are NOT X”\n"
+                 "direction is model-specific: Gemma leans does > says; Qwen leans says > does",
+                 fontsize=10.6, loc="left", color=INK, pad=10)
     despine(ax)
     fig.tight_layout()
     fig.savefig(FIGS / "fig6_wedge_models.png", dpi=200)

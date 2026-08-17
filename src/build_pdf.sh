@@ -27,6 +27,7 @@ sed -e 's/→/\\ensuremath{\\rightarrow}/g'  -e 's/↔/\\ensuremath{\\leftrighta
     "$(basename "$SRC_ABS")" > "$TMP"
 
 pandoc "$TMP" -o "$OUT_ABS" --pdf-engine=tectonic \
+    ${PDF_HEADER:+--include-in-header="$PDF_HEADER"} \
     -V geometry:margin="$MARGIN" -V fontsize="$FS" --resource-path=.
 
 rm -f "$TMP"
