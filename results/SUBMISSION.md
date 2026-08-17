@@ -59,8 +59,6 @@ We report the policy−character contrast with CIs (e.g. Gemma/Vex **−0.06 [�
 
 **Reproducibility.** Public repository: [github.com/benjibrcz/which-preference-gets-measured](https://github.com/benjibrcz/which-preference-gets-measured). All raw model outputs are cached; the headline numbers reproduce **offline (no API)** via `./reproduce_selected_headlines.sh`, which also asserts the key estimates within tolerance. The full technical report, preregistration, and figure-generating code are in the repository.
 
-**Timeline (CEST).** The 82-item battery, framing grid, and analysis harness predate the sprint. The core four-model grid, the four channels, the identity probe, and the post-exit surgery were run **13–14 Aug**; the **non-agent normative control** and the **shared-baseline cross-fit robustness** — the analyses that changed the central interpretation — were carried out **16–17 Aug**. The analysis plans are *prospectively specified* (locked before their data) but **not externally time-stamped**; the public Git history begins on the submission date.
-
 **AI-assistance disclosure.** Research direction, framing, and all approvals: Benjamin Berczi. Assisted by Claude Code in implementation, execution, analysis, and drafting, with all prompts, code, and cached model outputs preserved in the repository. An external critical review (GPT-5.6) prompted several statistical and framing corrections.
 
 **Evidence status.**
