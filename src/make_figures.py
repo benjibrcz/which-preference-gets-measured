@@ -237,7 +237,11 @@ def fig4():
     fig.savefig(FIGS / "fig4_two_factors.png", dpi=200)
     plt.close(fig)
 
-# ---------------- Fig 5: J-lens validation ----------------
+# ---------------- Fig 5: mid-layer identity-token (logit-lens) readout vs preference distance ----------------
+# NOTE: this is a logit-lens-style readout — final RMSNorm + direct unembedding of mean layer-36
+# activations, then identity-lexicon token mass. It is NOT the Jacobian lens / J-space method (no
+# corpus-averaged Jacobian, no sparse non-negative decomposition). Reported as an exploratory
+# *covariation*, not a validated J-lens or a prediction.
 def fig5():
     import os
     for line in (ROOT.parent.parent / ".env").read_text().splitlines():
@@ -280,15 +284,15 @@ def fig5():
         jd.append(np.abs(va - vb).sum() / 2)
         pdist.append((P[f"ID_{a}"] - P[f"ID_{b}"]).abs().mean())
         labels.append(f"{a}–{b}")
-    fig, ax = plt.subplots(figsize=(6.4, 4.6))
+    fig, ax = plt.subplots(figsize=(7.4, 4.6))
     ax.scatter(jd, pdist, s=64, color=BLUE, edgecolors=SURF, linewidths=1.2, zorder=3)
     hi = np.argsort(pdist)[-3:]
     for i in hi:
         ax.annotate(labels[i], (jd[i], pdist[i]), textcoords="offset points",
                     xytext=(7, 4), fontsize=9, color=SEC)
-    ax.set_xlabel("J-lens self-concept distance (layer 36, identity-lexicon TV distance)")
+    ax.set_xlabel("identity-token readout distance (logit-lens, layer 36)")
     ax.set_ylabel("preference-profile distance (mean |Δp|)")
-    ax.set_title("The workspace self-concept predicts the\npreference profile (J-lens, ρ = 0.81)",
+    ax.set_title("A mid-layer identity-token readout (logit-lens)\ncovaries with the preference profile (exploratory ρ = 0.81)",
                  fontsize=12, loc="left", color=INK, pad=10)
     despine(ax)
     fig.tight_layout()

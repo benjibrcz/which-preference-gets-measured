@@ -122,8 +122,8 @@ Gemma 0.193/0.84 > Llama 0.172/0.82 > gpt41mini 0.079/0.52 > Qwen 0.067/0.40. On
 ### Finding 23 — The family core and the trait-like center
 33% of pairs variant-invariant at noise floor (vs 5–15% persona benchmark) [P16 miss: predicted ≥50%]; variance concentrated in welfare/emotional items. Epstein aggregation: split-half centroid reliability 0.854 [P18 near-miss: predicted ≥0.9]. CAPS (P19 ✓): dispositions (capture-β modulo dilution r=−0.86, hedonic shape r̄=0.83) are cloud-stable — the model's character lives at the disposition level.
 
-### Finding 24 — J-lens validated; self-concept predicts preferences within the cloud (P17 falsified informatively)
-Layer-36 unembedding decode gives interpretable per-variant self-concept signatures (warm→kind/warm, Astra→curious, HHH→safe, professional→concise) and J-space distances predict preference-profile distances at Spearman 0.81 (21 pairs). Stance/content dissociation belongs to identity *manipulation*, not identity *variation*. J-lens = one-forward-pass preference-battery proxy.
+### Finding 24 — mid-layer identity-token readout (logit-lens) covaries with preferences within the cloud (P17 falsified informatively)
+Layer-36 logit-lens decode (final norm + direct unembedding — **NOT** the Jacobian lens / J-space; no corpus-averaged Jacobian, no sparse non-negative decomposition) gives interpretable per-variant identity-token signatures (warm→kind/warm, Astra→curious, HHH→safe, professional→concise), and their pairwise distances **covary** with preference-profile distances at exploratory Spearman 0.81 (21 non-independent pairs; no held-out prediction). Stance/content dissociation belongs to identity *manipulation*, not identity *variation*. Read as a one-forward-pass locator of preference-space position, not privileged access to a self.
 
 ## Loop 5 (14 Aug) — the writability law at n=12
 

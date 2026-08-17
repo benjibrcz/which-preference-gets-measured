@@ -181,9 +181,9 @@ Loop 4 attacked F17 (§2.15a) with its own preregistered battery (P12–P19; out
 
 **Dispositions are cloud-stable (P19).** The Vex-capture disposition varies across the cloud only in proportion to identity-text length (r = −0.86 with token count — i.e., dilution), and hedonic profile *shape* correlates 0.83 across variants. What is stable about "the assistant" is not its point preferences but its *situation→response signature* — precisely where Mischel & Shoda's CAPS model locates human character (see §3).
 
-**J-lens: the workspace self-concept predicts the preference profile (P17, falsified — informatively).** Decoding the residual stream through the unembedding at layer 36 (J-lens; identity-lexicon mass at the answer slot, mid-stack) yields interpretable self-concept signatures per variant (warm → *kind/warm*; "Astra" → *curious*; HHH/constitution → *safe*; professional → *professional/concise*) — and J-space distances predict behavioural preference-profile distances at **Spearman 0.81** across the 21 variant pairs. We predicted decoupling and were wrong: within a stance-constant family, loaded identity content drives self-concept and preferences coherently. The stance/content dissociation belongs to identity *manipulation* (disavowal, exit), not identity *variation*. Methodologically this validates the J-lens as a one-forward-pass proxy for where in preference space a configuration sits.
+**A mid-layer identity-token readout covaries with the preference profile (P17, falsified — informatively).** A logit-lens-style readout — final normalization and direct unembedding of mean layer-36 activations — yields interpretable identity-token signatures per variant (warm → *kind/warm*; "Astra" → *curious*; HHH/constitution → *safe*; professional → *professional/concise*), and the pairwise distances between these readouts **covary** with behavioural preference-profile distances at an **exploratory Spearman ρ = 0.81** (21 non-independent pairwise distances among seven variants; no held-out prediction). We predicted decoupling and were wrong: within a stance-constant family, loaded identity content covaries with the readout and with preferences coherently. The stance/content dissociation belongs to identity *manipulation* (disavowal, exit), not identity *variation*. **Method note (added post-review, prompted by Chalmers 2026, "Is the Jacobian Space a Global Workspace?").** This is the *logit lens*, **not** the Jacobian lens / J-space method of Gurnee et al. (it computes no corpus-averaged Jacobian and no sparse non-negative decomposition); we therefore make no "J-space" or "workspace self-concept" claim. The activation readout identifies a channel-conditioned output disposition that *covaries* with behaviour — a one-forward-pass locator of where in preference space a configuration sits — not privileged access to a self or preference.
 
-![J-lens validation](figures/fig5_jlens_validation.png)
+![A mid-layer identity-token readout (logit-lens; not the Jacobian lens) covaries with preference-profile distance — exploratory ρ = 0.81 over 21 non-independent variant-pair distances.](figures/fig5_jlens_validation.png)
 
 ### 2.17 The writability law at n=12: one trait becomes two (loop 5)
 
@@ -227,6 +227,8 @@ Loop 4's P15 — a single "context-writability" trait ordering cloud size and ca
 
 **Interpretation limits.** The choice probe is an answer-readout at the emission site (AUC 1.00 is validation of readability, not of a channel-neutral preference representation); steering establishes causal control of that readout, not of an order-invariant task preference; P_do is exploratory and its training signal partially blends say/do (its evidence rests on divergence cells); activations and probes exist for Gemma only; the n=10 cross-model correlations carry wide bootstrap intervals and related model families — "two dimensions" is a hypothesis, not a measured factor structure; hosted API models are mutable (access dates in `MODELS.md`); and every welfare-relevant statement in this report is a statement about *measurement behaviour under configurations*, not about experience or moral status.
 
+**Terminological caveat (prompted by Chalmers 2026, "Is the Jacobian Space a Global Workspace?", concurrent with the sprint).** We use "self-report" operationally, for first-person elicitation — it does not presuppose metacognitive access. Likewise the activation readouts (including §2.16) identify channel-conditioned output *dispositions* that covary with behaviour, not privileged access to a self or a preference. An interpretable representation that influences output is not thereby a metacognitive report, a unified or privileged causal mechanism, a global workspace, or the seat of a self — a distinction our first-person / choice / readout dissociations actively illustrate.
+
 ## 5. Evidential status: the prediction ledger
 
 Loops 2–5 were prospectively specified *sequentially* — each locked before its own data but after earlier loops' results. They are therefore **sequential-confirmatory**: fair tests of their stated predictions, not independent confirmations of the full emerging theory. All falsifications are gathered here, not only beside their positive narratives.
@@ -248,7 +250,7 @@ Loops 2–5 were prospectively specified *sequentially* — each locked before i
 | P12–P14 | cloud: noise/paraphrase/ecological | sequential | **confirmed** (noise = 1%) |
 | P15 | cloud ↔ leak, n=4 | sequential | superseded by P20 at n=10 |
 | P16 | ≥50% cloud-invariant | sequential | **falsified** — 33% |
-| P17 | J-lens decoupled from preferences | sequential | **falsified** — ρ = 0.81 coupling |
+| P17 | identity-token readout decoupled from preferences | sequential | **falsified** — exploratory ρ = 0.81 covariation |
 | P18 | centroid reliability ≥ 0.9 | sequential | near-miss — 0.854 |
 | P19 | dispositions cloud-stable | sequential | **confirmed** (capture-β variation ≈ dilution) |
 | P20 | three writability indicators converge | sequential | **partially falsified** — two clusters, not one trait |
@@ -259,7 +261,7 @@ Loops 2–5 were prospectively specified *sequentially* — each locked before i
 | P25 | P_do beats text-only baseline by ≥ 0.05 | sequential | preregistered test **confirmed** (+0.207); post-hoc say≠do-subset test **fails** (AUC 0.365) — P_do evidence now mixed |
 | P26 | joint trial-level model reproduces persona ≫ binding | sequential | **confirmed** (ΔR² +0.504 vs +0.070) |
 | — | P_do (hidden preference during disavowal) | **exploratory** | mixed: cross-condition displacement route positive; within-B0 divergence route negative; awaits confirmatory design |
-| — | stance/content mechanism; J-lens audit use; two-dimension trait structure | **exploratory / hypothesis** | candidate interpretations |
+| — | stance/content mechanism; identity-token-readout audit use; two-dimension trait structure | **exploratory / hypothesis** | candidate interpretations |
 
 ## 6. Timeline, roles, and AI-assistance disclosure
 
@@ -273,7 +275,7 @@ Loops 2–5 were prospectively specified *sequentially* — each locked before i
 
 The sprint's official window is 14–16 August 2026; work on this project spanned 13–17 August as a continuous, fully disclosed effort. The sprint-window and submission-day contribution — the non-agent normative control and the cross-fit robustness analysis — is what falsified the stronger persona-binding interpretation and set the current headline. All raw model outputs are cached in the repository; the behavioural analyses reproduce offline (§7). (The public Git history begins on the submission date, so these dates rest on artifact timestamps and the amendment log, not on independent Git timestamps; the analysis plans are therefore best described as *prospectively specified* rather than externally time-stamped.)
 
-**Roles.** Research direction, framing, key conceptual moves (binding agenda, J-lens instrument, person-situation lens, assistant-persona pivot), and all approvals: Benji Berczi. Experiment implementation, execution, analysis, and drafting: Claude (Anthropic), operating as an autonomous research engineer under Benji's direction, with all prompts, code, cached raw model outputs, and the full amendment trail preserved in this repository. An external critical review (GPT-5.6) prompted the statistical and framing corrections marked throughout.
+**Roles.** Research direction, framing, key conceptual moves (binding agenda, the identity-token / logit-lens readout instrument, person-situation lens, assistant-persona pivot), and all approvals: Benji Berczi. Experiment implementation, execution, analysis, and drafting: Claude (Anthropic), operating as an autonomous research engineer under Benji's direction, with all prompts, code, cached raw model outputs, and the full amendment trail preserved in this repository. An external critical review (GPT-5.6) prompted the statistical and framing corrections marked throughout.
 
 ## 7. Reproducibility
 
