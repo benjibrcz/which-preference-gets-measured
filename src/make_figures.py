@@ -347,7 +347,7 @@ def fig6():
     ax.text(xr*0.96, -0.75, "does > says ▶", fontsize=8.6, color=BLUE, ha="right", va="center")
     ax.grid(axis="y", visible=False)
     ax.set_title("Committed choice and ownership report dissociate under “you are NOT X”\n"
-                 "direction is model-specific: Gemma leans does > says; Qwen leans says > does",
+                 "the wedge direction is model-specific (Gemma vs Qwen)",
                  fontsize=10.6, loc="left", color=INK, pad=10)
     despine(ax)
     fig.tight_layout()
