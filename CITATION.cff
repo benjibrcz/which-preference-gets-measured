@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Which Preference Gets Measured? Context and Channel Instability in Model Preference Audits"
+authors:
+  - family-names: Berczi
+    given-names: Benji
+abstract: >-
+  A same-item, multi-channel study of large instruction-tuned models showing that
+  forced-choice preference profiles are context- and channel-indexed: explicitly
+  non-adopted persona descriptions and matched non-agent normative content shift
+  committed choices, while owned preference, self-prediction, choice, and identity
+  report can dissociate about the same configuration. Apart Digital Minds Research
+  Sprint, Track 5.
+keywords:
+  - AI welfare
+  - model preferences
+  - persona
+  - construct validity
+  - interpretability
+repository-code: "https://github.com/benjibrcz/which-preference-gets-measured"
+license: MIT
+date-released: 2026-08-17

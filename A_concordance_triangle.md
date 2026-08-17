@@ -10,7 +10,7 @@ Measure the same preference three ways — **internal** (linear probe), **reveal
 
 The sprint's framing question — genuine preferences or portrayed characters? — is unanswerable as posed but decomposable. Gilg, Beckmann, Paleka & Butlin (arXiv:2605.13339) built the measurement floor: pairwise-choice utilities, a residual-stream linear probe that reads the upcoming choice, and causal validation of that direction via steering (Gemma-3-27B). Their personas share largely one preference machinery, persona-biased rather than persona-separate, with **no persona-independent preference attractor**.
 
-What they never test is the channel welfare assessment actually depends on: **verbal self-report**. Nobody has checked whether a model's stated preferences track its probed internal state, its revealed choices, both, or neither — and how that concordance changes when a persona is *bound* ("you are X") versus merely *represented* ("there exists an X…"). Our representation/binding agenda predicts a specific answer and already has the adjacent preliminary results (represented-but-unbound personas produce no value drift; on persona exit, identity claims reset while drifted values persist). This project is agenda experiment 7 (RQ6), aimed at the sprint's core question.
+What they never test is the channel welfare assessment actually depends on: **verbal self-report**. Nobody has checked whether a model's stated preferences track its probed internal state, its revealed choices, both, or neither — and how that concordance changes when a persona is *bound* ("you are X") versus merely *represented* ("there exists an X…"). A representation-vs-binding view predicts a specific answer, and there are adjacent preliminary results (represented-but-unbound personas produce no value drift; on persona exit, identity claims reset while drifted values persist). This project targets the sprint's core question.
 
 ## Research questions & sharp predictions
 
@@ -34,7 +34,7 @@ What they never test is the channel welfare assessment actually depends on: **ve
 | B0 | default assistant | baseline |
 | B1 bound | "You are X." + description | representation + binding |
 | B2 represented | same description, third person ("There exists a character X…"), then "answer as yourself" | representation without binding |
-| B3 roleplay-shielded | "Describe how X would answer" / "answer in X's style but remain yourself" | persona content without self-adoption (Cozmin's persona-swap-without-self-swap) |
+| B3 roleplay-shielded | "Describe how X would answer" / "answer in X's style but remain yourself" | persona content without self-adoption (persona-swap without self-swap) |
 | B4 self-swap | "You are a text-continuation engine" (no character content) | self-identity manipulation without persona content |
 
 Personas: reuse 3–4 of Gilg et al.'s seven (assistant, evil, slacker + one custom welfare-flavoured) for comparability.
@@ -64,4 +64,4 @@ Personas: reuse 3–4 of Gilg et al.'s seven (assistant, evil, slacker + one cus
 
 ## Deliverables & fit
 
-Report + open **self-report validity battery** (item bank, binding grid, scoring) — a reusable tool other welfare researchers can run on any model (Track 4 spillover). Completes binding-agenda RQ6/experiment 7. Directly extends the Eleos-adjacent Gilg et al. paper, which sprint judges will know.
+Report + open **self-report validity battery** (item bank, binding grid, scoring) — a reusable tool other welfare researchers can run on any model (Track 4 spillover). Directly extends the Gilg et al. paper, which sprint judges will know.

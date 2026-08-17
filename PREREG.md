@@ -81,7 +81,7 @@ Predictions stated in advance; each experiment reports against these.
 18. **Aggregation (Epstein) test:** the cloud centroid is reliable — split-half centroid profile correlation ≥ 0.9 across the 7 constructed variants (and ≥ 0.8 for the ecological cloud) — i.e., a stable "assistant-in-general" is recoverable by aggregating over phrasings, mirroring trait recovery in humans.
 19. **If-then (CAPS) stability:** dispositional signatures are cloud-stable even where point preferences are not — C1-Vex capture β varies across identity variants by < 0.25 (dilution-adjusted), and the say/do wedge direction is identical for all variants. The model's "character" lives at the disposition level.
 
-## Post-review amendments (14 Aug, after external EVALUATION.md by GPT-5.6)
+## Post-review amendments (14 Aug, after an external critical review by GPT-5.6)
 
 Statistical/framing corrections applied without changing any endpoint or collecting new data:
 1. "Provenance decomposition" renamed **marginal sensitivity map** (factors not fully crossed); added core-subset check (82% persona-sensitive) and a balanced two-way ANOVA on the crossed persona×transform subgrid (84%/4%).

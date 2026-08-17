@@ -39,15 +39,15 @@ g = load("gridA_gemma"); dec = load("deconfound_gemma")
 pol = load("semprime_gemma")
 pairs = sorted(g[g.cond == "B0"].pair_id.unique())
 b0 = prof(g[(g.cond == "B0") & (g.persona == "-")], pairs)
-conds = [("generic prose\n(lighthouse)", dec, "C4place", "-", MUT),
+conds = [("generic\nprose", dec, "C4place", "-", MUT),
          ("persona\ndescription", dec, "C1fiction", None, BLUE),
          ("non-agent\nnormative", pol, "POLICY", None, ORANGE)]
-fig, axes = plt.subplots(1, 2, figsize=(7.8, 3.35), sharey=True)
+fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.35), sharey=True)
 for ax, persona in zip(axes, ("Vex", "Lazlo")):
     d1 = prof(g[(g.cond == "B1") & (g.persona == persona)], pairs) - b0
     xs, pts, los, his, cols, labs = [], [], [], [], [], []
     # baseline bar = 0
-    xs.append(0); pts.append(0.0); los.append(0.0); his.append(0.0); cols.append("#c3c2b7"); labs.append("baseline\n(0 by constr.)")
+    xs.append(0); pts.append(0.0); los.append(0.0); his.append(0.0); cols.append("#c3c2b7"); labs.append("baseline")
     for i, (lab, src, cond, per, col) in enumerate(conds, 1):
         pp = persona if per is None else per
         e = prof(src[(src.cond == cond) & (src.persona == pp)], pairs) - b0
@@ -61,11 +61,11 @@ for ax, persona in zip(axes, ("Vex", "Lazlo")):
     ax.set_title(persona, fontsize=12, color=INK)
     ax.grid(axis="x", visible=False); ax.set_ylim(-0.1, 1.15)
     for s in ("top", "right"): ax.spines[s].set_visible(False)
-axes[0].set_ylabel("displacement β toward persona direction")
-fig.suptitle("Non-agent normative content can shift choices almost as much as a persona description (Gemma-3-27B)\n"
-             "β = 0: baseline;  β = 1: full enactment;  pair-bootstrap 95% CIs  (original, not cross-fit, estimates)",
-             fontsize=10.5, x=0.01, ha="left", color=INK)
-fig.tight_layout(rect=(0, 0, 1, 0.945))
+axes[0].set_ylabel("displacement β", fontsize=9)
+fig.suptitle("Non-agent normative content shifts choices nearly as much as a persona description\n"
+             "Gemma-3-27B;  β = 0 baseline, β = 1 full enactment;  pair-bootstrap 95% CIs (original, not cross-fit)",
+             fontsize=9, x=0.5, ha="center", color=INK)
+fig.tight_layout(rect=(0, 0, 1, 0.90))
 fig.savefig(ROOT / "results/figures/fig7_construct_validity.png", dpi=200)
 print("wrote fig7_construct_validity.png")
 

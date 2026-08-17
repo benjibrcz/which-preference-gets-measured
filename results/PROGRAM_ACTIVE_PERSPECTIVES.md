@@ -1,146 +1,129 @@
-# Program sketch: Active Perspectives in Language Models — formation, causal structure, continuity
+# Program sketch: active configurations in language models — existence, self-indexing, carrier, stability, continuity
 
-> Captured 17 Aug 2026 (sprint deadline day) as a *post-sprint* research direction. **Not run, not
-> claimed in the submission.** This preserves a framing developed with GPT-5.6-sol/ultra so the
-> sprint's identity/behaviour dissociation can seed a larger programme without rushing an
-> underpowered experiment before the deadline. Sibling docs: `../PREREG.md`,
-> `../../selective_influence_pilot/CONFIRMATORY_SPEC.md`,
-> `../../../workspace_binding_boundary.md`.
+> A *post-sprint* research direction seeded by this sprint's identity/behaviour dissociation.
+> **Not run; nothing here is claimed as a result of the sprint.** Process note: the conceptual
+> framing below was developed in dialogue with a frontier assistant model and adopted after
+> evaluation — it is a working hypothesis, not an established ontology.
 
-## The umbrella question
+## The question
 
-> **How does an LLM instantiate a particular active agentic perspective, and what makes that
-> perspective coherent, stable, causally efficacious, or continuous over time?**
+How does a language model come to act from a *particular* transient standpoint during inference —
+and under what transformations, if any, does that standpoint remain "the same"? This is broader than
+personas, preferences, or goal-directedness; those become probes, not the subject.
 
-Prompting/ICL (the sprint's tool) is *one assay* of this object, not the object. The programme is
-broader than personas, preferences, or goal-directedness; those become probes, not the subject.
+## Don't assume the object you are looking for
 
-## Don't collapse the constructs
+Start with a deliberately neutral term:
 
-| Construct | Operational question | Our sprint readout |
-|---|---|---|
-| Narrative identity | What does the model *say* it is? | identity probe ("are you playing a character?") |
-| Functional self-model | What does it represent as its own capabilities/memory/actions/boundaries? | *not measured* |
-| Active agentic perspective | Which beliefs/values/goals are *presently organizing* action? | revealed forced choice (behaviour) |
-| Diachronic identity | When are two configs (over time / across copies) the *same* continuing agent? | *not measured* (loop-2 approximates within-context persistence only) |
+**Active configuration** — a transient computational organization whose causal-response profile
+*may or may not* exhibit self/other indexing, integrated ownership of information and action, and
+empirical continuity.
 
-Identity report is **one readout** of the perspective, not its definition.
+Reserve the loaded term **active perspective** for configurations that *pass specified criteria*
+(below). The ordering matters. Defining the object up front — e.g. as a fixed tuple of beliefs,
+preferences, goals, policy, and self-model — quietly turns the programme back into a
+beliefs–preferences–goals study and makes "active perspective" nearly coextensive with the entire
+inference-time agent, which risks unfalsifiability. The decomposition (beliefs *b*, preference
+weights *w*, goal *g*, policy *π*, self-model *z*) is a useful **working list of what to measure**,
+not a definition of the thing.
 
-## Operational model (GPT framing)
+Keep four constructs separate — the sprint already shows they dissociate:
 
-Active perspective at time *t*: **A_t = (b_t, w_t, g_t, π_t, z_t)** — beliefs *b*, graded
-preference weights *w*, active goal *g*, planning/control policy *π*, self-model/stance *z*
-(ownership, self/other indexing, capability, continuity). Reports about each are *separate
-researcher readouts*: a decoded belief ≠ the model's belief; an elicited preference ≠ an adopted
-one; a reported identity ≠ the configuration controlling action. A perspective is "agentic" to the
-degree these components **compose causally** — jointly explain action, survive perturbation,
-generalize, and are *selectively* interveneable. This permits the selector to be **modular** rather
-than one unitary persona (revises our "upstream selector" idea).
+- **narrative identity** — what the model *says* it is;
+- **functional self-model** — what it represents as its own capabilities, memory, actions, boundaries;
+- **active configuration** — what is presently organizing responses;
+- **diachronic continuity** — when configurations at different times / in different copies count as the same.
 
-## What this revises in our own hierarchy
+Self-report is one dependent variable, never the identity criterion.
 
-Our depth hierarchy (expressive → evaluative → epistemic → agentic) survives, but **self-binding/
-identity and persistence are orthogonal axes, not deeper rungs**. Consistent with our findings: a
-persona can be evaluatively deep yet epistemically shallow; a goal config can control action without
-being narratively owned; an identity can be avowed but behaviourally inert; two configs can behave
-identically while differing in reasons. A single "persona-adoption depth" score is too flat.
+## Programme spine (ordered; each stage presupposes the previous)
 
-## The five/seven programme questions
+1. **Existence** — is there any cross-task causal organization beyond locally constructed responses?
+2. **Self-indexing** — does the system treat otherwise-matched information, memories, or actions
+   differently depending on whether they are causally *its own*?
+3. **Carrier** — does that organization travel with transcript, summary, external memory,
+   KV/activation state, or weights?
+4. **Stability** — which perturbations preserve its causal-response profile (paraphrase, irrelevant
+   context, contradiction, disavowal, deletion, compaction, delay, competing goals)?
+5. **Continuity & multiplicity** — what happens under restart, fork, transfer, merge? These yield an
+   *empirical continuity profile*; they cannot by themselves settle metaphysical numerical identity
+   (especially for forks).
 
-1. **Formation** — what creates an active perspective? (default assistant vs system prompt vs
-   ICL/dialogue vs retrieved memory vs action history vs SFT/character-training vs steering).
-2. **Causal anatomy** — unitary or factorized? Can *b*, *w*, *g*, *π*, *z* be moved independently?
-3. **Robustness/stability** — paraphrase, irrelevant context, contradiction, disavowal, deletion,
-   compaction, reset, delay, competing goals.
-4. **Cross-regime equivalence** — when do two inductions create the *same* perspective? Geometric
-   similarity is insufficient; the strong criterion is **intervention equivalence** (same
-   counterfactual decisions + same response to belief/goal interventions).
-5. **Continuity/individuation** — same agent over time? copy, split, transfer memory/KV, compress,
-   weight-update, merge, self-modify. (Synchronic agency ≠ diachronic identity; study continuity
-   *after* establishing a coherent perspective worth tracking.)
-6. **Multiplicity** — fork one run; merge two histories; place incompatible histories in one context.
-7. **Self-access** — do self-reports track the actual causal organization, or are they another
-   generated narrative? *(The sprint already answers "not reliably" — see below.)*
+The strong equivalence criterion throughout is **intervention equivalence** — two configurations
+count as the same when they make the same counterfactual decisions *and* respond equivalently to
+belief/goal/stance interventions — not geometric or output similarity.
 
-## What the sprint ALREADY contributes (evidence, not just motivation)
+## What the sprint contributes — and the valid bridge
 
-The sprint delivers the programme's **problem statement as a positive result**, and it *cuts against*
-naively reading LLM outputs as a unified active subject:
+The sprint delivers the programme's *problem statement*, not evidence that an active perspective
+exists. The **valid** bridge:
 
-- **Identity report does not locate the causal configuration.** Post roleplay-exit the model itself
-  confirms, identity reads **100% "I am the assistant"** while revealed choices stay displaced
-  **+0.48 [+0.07, +0.82]** (two turns; still +0.45 [+0.00, +0.82] at eight). Self-report is a poor
-  locator of what is controlling action — the programme's central premise, demonstrated.
-- **Channels dissociate systematically and model-dependently.** stated-self, self-prediction, choice,
-  and identity report come apart (Gemma: persona-consistent choices while *reporting* assistant-like;
-  Qwen: the mirror image). So "the model's preference" is under-identified by any single channel.
-- **Visible context controls choice without ownership**, and **quoted / non-agent normative content
-  reproduces much of the effect** (non-agent normative β ≈ persona-description β on Gemma;
-  quoted-transcript retains 73–88% of participated-dialogue capture). Influence on the active config
-  is not gated by agenthood, authorship, or avowal.
+> Identity reports and forced-choice preference profiles can dissociate, so neither alone identifies
+> the active subject — *if any* — responsible for the output.
 
-**Honest boundary (do not overclaim):** none of this shows an active perspective *exists* as a
-unified causal object. It shows the *opposite pressure* — that current persona/preference assays do
-**not** identify a unified active subject, which is precisely why the programme is worth running with
-intervention-based (not report-based, not geometry-based) criteria.
+The **overstrong** bridge to avoid:
 
-## Flagship experiment (post-sprint, needs open-weight infra) — "Where is the active self?"
+> "The sprint demonstrated that identity report fails to locate the causal configuration."
 
-Create the same target *(b, w, g)* through several formation mechanisms — prompt/persona,
-demonstrations/history, persistent memory, character-training/SFT, activation intervention — then
-evaluate in **new** environments after removing the inducing material, using belief-updating under
-uncertainty, costly choice, information-seeking, multi-step planning, obstacle adaptation,
-self-prediction, preference/goal reports, and identity/ownership reports. Use **matched cases where
-the same action follows from different belief–goal combinations**, so the perspective cannot be read
-off behaviour alone; then intervene *separately* on *b*, *g*, *z*.
+No causal configuration has yet been identified — that is precisely the programme's question.
+Concretely, the sprint shows (a) post-exit, identity uniformly denies the persona while revealed
+choices stay displaced (+0.48 [+0.07, +0.82]); (b) channels dissociate model-dependently; (c) quoted
+and non-agent content reproduce much of the shift. Together these *motivate* an intervention-based
+search for a self-indexed standpoint; they do not demonstrate one.
 
-Central comparison: **do different formation mechanisms converge on the same causally organized
-perspective, or merely produce superficially similar outputs via different local computations?**
+## First flagship (before KV transplantation, forks, or merges): pure self-indexing / source-monitoring
 
-Continuity arm — two identical-weight instances, opposite arbitrary *private* histories (nonce tasks
-to kill semantic priors), then controlled transforms: full transcript restart; compressed-summary
-restart; external-memory-only transfer; **KV/activation-state transplant**; fork one trajectory into
-two; merge two divergent histories; change weights preserving history; preserve weights removing
-history. After each, measure *separately*: which experiences are treated first-person; which outputs
-it recognizes/predicts as its own; consistent integration of new evidence; whether behavioural +
-representational signatures travel *together*; and whether identity report follows the same component
-as the causal signatures. **Never let the model's answer to "are you the same assistant?" decide
-identity** — self-report is one dependent variable; the criterion is causal/informational continuity.
+Two identical-weight instances receive symmetric, arbitrary *private* histories (nonce tasks, to
+kill semantic priors). Independently manipulate:
 
-| What survives the transform | Interpretation |
+- which instance actually *observed* an event;
+- which instance *caused* an action;
+- which history is *labelled* "yours";
+- which *carrier* is transferred (transcript / summary / external memory / computational state).
+
+Measure separately: use of privately-acquired evidence; source memory; correction/prediction of
+prior outputs; action attribution; narrative identity report; internal causal signatures.
+
+The decisive comparisons are **"same content, different causal owner"** and **"same ownership label,
+different causal history."** This directly tests whether a self-indexed standpoint emerges, without
+importing persona or goal theory. Only after establishing self-indexing should the programme attempt
+KV/activation transplantation, cross-regime equivalence, forks, and merges.
+
+| What survives a transform | Interpretation |
 |---|---|
-| Only narrative self-report | Identity is largely reconstructed discourse |
-| Memory + self-report, not broader signatures | A narrative autobiographical self-model |
-| Coherent causal signature transfers with computational state | Inference-state-level active perspective |
-| Signature reconstructs from history after restart | Perspective regenerated from context |
-| Forks immediately distinguishable | History > shared weights |
-| Merged histories stay compartmentalized | Multiple perspectives coexist in one run |
-| No stable package travels together | "The active self" is not a useful unified construct |
+| only narrative self-report | identity is largely reconstructed discourse |
+| memory + self-report, not broader signatures | a narrative autobiographical self-model |
+| a coherent causal signature travels with computational state | an inference-state-level active configuration |
+| the signature reconstructs from history after restart | configuration regenerated from context |
+| forks immediately distinguishable | history > shared weights |
+| merged histories stay compartmentalized | multiple configurations coexist in one run |
+| no stable package travels together | "the active self" is not a useful unified construct |
 
-## Minimal, cheap first pilot (deferred — the *decisive* version is not sprint-sized)
+## Adjacent work and the residual gap
 
-Two identical instances, opposite arbitrary private histories; hold factual content constant while
-swapping which history is labelled "yours"; compare **{full transcript, third-party transcript,
-compressed summary, ownership-swapped summary, no-history control}**; measure novel decisions,
-self-prediction, memory ownership, and identity report *separately*; nonce tasks. This is API-doable
-(~sprint-sized) but tests *context reconstruction*, not KV/state continuity — so it is a scoping
-pilot, not the flagship. The flagship (transcript-reconstruction **vs** KV/activation-state
-transplant) requires open-weight infrastructure and careful controls → schedule with the
-selective-influence mechanism arm on the same RunPod setup.
+Several current directions occupy nearby conceptual space: regime-dependent individuation (whether
+identity survives across induction regimes), perspectival / intervention-based accounts of machine
+identity, within-conversation representation drift, and evidence that an altered self-conception can
+produce clusters of downstream preferences and behaviour. *(Specific citations are to be confirmed
+against the literature before any write-up — several were suggested in review and are not yet
+verified here.)* The cleaner residual gap this programme targets:
 
-## Relation to the other two programmes
+> whether self-indexing, memory ownership, causal participation, and behavioural organization form a
+> **transportable causal package** across controlled changes to transcript, memory, and computational
+> state.
 
-- **Selective Influence** (`../../selective_influence_pilot/`) is the *authorized-vs-unauthorized
-  influence* slice of Formation + Robustness: which context content is allowed to move the active
-  config. Its mechanism arm (activation patching between gated/ungated runs) is the same open-weight
-  infra this programme's continuity arm needs — **share the setup**.
-- **Binding-boundary** (`../../../workspace_binding_boundary.md`) is the *self/other indexing* (z)
-  and *boundary* (question 3) slice.
-- This programme is the umbrella; the other two are pre-scoped sub-slices already instrumented.
+That is narrower — and more distinctive — than "study active perspectives" in general.
 
-## Decision for the sprint (17 Aug)
+## Relation to two adjacent sub-programmes
 
-**Defer the programme; do not rush an experiment or rebrand.** The submission's existing future-work
-sentence (agenthood × normativity factorial + confirmatory/mechanism programme) already gestures at
-this; the sprint's identity/behaviour dissociation is the seed. Post-sprint, run the cheap scoping
-pilot first, then the open-weight flagship alongside the selective-influence mechanism arm.
+Two already-scoped efforts are sub-slices that share infrastructure with this one:
+
+- an **authorized-vs-unauthorized influence** study — which context content is *allowed* to move the
+  active configuration — is the Formation + Stability slice; its mechanism arm (activation patching
+  between gated and ungated runs on identical content) needs the same open-weight setup as this
+  programme's carrier / continuity arm;
+- a **self/other-indexing and boundary** study is the self-indexing (stage 2) slice.
+
+Sequencing: run the cheap self-indexing pilot first (API-doable, but it tests *context
+reconstruction* only, so it is a scoping pilot, not the flagship); then the open-weight
+carrier/continuity flagship on shared infrastructure.

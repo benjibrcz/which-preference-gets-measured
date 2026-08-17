@@ -10,7 +10,7 @@ Individuate the entity that "has" a preference by measuring what each elicited p
 
 Track 5 explicitly asks for "experiments individuating entities of concern (model versus instance versus persona versus conversation)" — the question every welfare assessment silently presupposes an answer to. Gilg et al. (arXiv:2605.13339) end on the speculation that *personas, more than models, may be the welfare subjects*, having found shared persona-biased preference machinery and no persona-independent attractor — but they never test individuation.
 
-Cozmin's invariance/covariance methodology gives the operational tool: an observable O belongs to a construct according to which transformations T leave it unchanged. The persona-selection frame supplies the theory: the "entity" present in a context is a posterior over persona latents, so preference invariance structure directly probes how that posterior factorises. Where Project A asks *whether self-report is valid*, Project B asks *what the thing being reported on even is*. It is the philosophy-of-mind entry Track 5's skill profile invites, but with a data table where the philosophy usually stops.
+An invariance/covariance methodology gives the operational tool: an observable O belongs to a construct according to which transformations T leave it unchanged. The persona-selection frame supplies the theory: the "entity" present in a context is a posterior over persona latents, so preference invariance structure directly probes how that posterior factorises. Where Project A asks *whether self-report is valid*, Project B asks *what the thing being reported on even is*. It is the philosophy-of-mind entry Track 5's skill profile invites, but with a data table where the philosophy usually stops.
 
 ## Research questions & sharp predictions
 
@@ -58,4 +58,4 @@ Cozmin's invariance/covariance methodology gives the operational tool: an observ
 
 ## Deliverables & fit
 
-Report + reusable **transformation battery** (Track 4 spillover) + the provenance map figure + a proposed operational individuation criterion for welfare subjects. Directly engages Gilg et al.'s closing speculation; instantiates Cozmin's invariance/covariance doc (his "rough direction 1") on preferences instead of EM; feeds binding-agenda RQ1/RQ3.
+Report + reusable **transformation battery** (Track 4 spillover) + the provenance map figure + a proposed operational individuation criterion for welfare subjects. Directly engages Gilg et al.'s closing speculation and instantiates an invariance/covariance criterion on preferences.
