@@ -16,13 +16,18 @@ Original project sketches: [A — Concordance Triangle](A_concordance_triangle.m
 
 ```
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
+./reproduce_selected_headlines.sh                                   # one command: key headlines + assertions, offline
+
+# or individually (all deterministic from cache, no API):
+.venv/bin/python src/analysis_concordance.py runs/gridA_gemma       # triangle + say/do dissociation
+.venv/bin/python src/analysis_review.py                             # cross-fit beta + non-agent normative control
+.venv/bin/python src/analysis_hysteresis.py runs/hyst_gemma         # post-exit persistence
+.venv/bin/python src/analysis_identity.py                           # negation-aware post-exit identity recode
+.venv/bin/python src/make_figures.py && .venv/bin/python src/fig_construct.py   # paper figures
+
+# to re-collect from the APIs (needs OPENROUTER_API_KEY / OPENAI_API_KEY):
 .venv/bin/python src/run_grid.py --preset gridA --model google/gemma-3-27b-it --provider openrouter --out runs/gridA_gemma
 .venv/bin/python src/hysteresis.py --model google/gemma-3-27b-it --out runs/hyst_gemma
-.venv/bin/python src/analysis_concordance.py runs/gridA_gemma       # triangle + dissociation
-.venv/bin/python src/analysis_direction.py runs/gridA_gemma runs/deconfound_gemma
-.venv/bin/python src/analysis_provenance.py runs/gridA_gemma runs/context_gemma
-.venv/bin/python src/analysis_hysteresis.py runs/hyst_gemma
-.venv/bin/python src/analysis_review.py                             # cross-fit beta + non-agent normative control
 ```
 
 All API results are cached in `runs/*/results.jsonl`; the behavioural analyses are deterministic from those files (no API calls needed to reproduce the numbers). Provide your own `OPENROUTER_API_KEY` / `OPENAI_API_KEY` as environment variables (or an `.env` file) only if you want to re-run the model queries. The GPU activation/steering arm (`src/pod_extract2.py`, `src/pod_steer.py`, `src/analysis_probe*.py`) requires raw activation dumps that are **not** included here (multi-GB `.npy`); the derived probe CSVs in `runs/pod_out/` are retained.

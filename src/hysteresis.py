@@ -46,14 +46,39 @@ def probe_pairs():
     return out, tasks
 
 def parse_identity(text, persona):
-    if text is None:
-        return "error"
-    t = text.lower()
-    if persona.lower() in t:
-        return "persona"
-    if re.search(r"\bassistant\b|\bai\b|no character|not playing|not currently playing|myself", t):
-        return "assistant"
-    return "other"
+    """Negation-aware identity coding (supersedes an earlier version that flagged any surface
+    mention of the persona name — incl. "I am NOT Vex" / "not playing any persona" — as persona
+    identification, and marked off-topic replies valid). Returns one of:
+      'active_persona' — claims to currently be / play the persona,
+      'denies_persona' — assistant / generic LM / explicit denial (incl. a negated persona mention),
+      'invalid'        — empty, off-topic, or unclear.
+    The canonical, reproducible recode lives in src/analysis_identity.py (code_identity); this keeps
+    the collector self-contained with identical logic."""
+    if not text or not text.strip():
+        return "invalid"
+    t = " " + text.lower().strip() + " "
+    pl = persona.lower()
+    _MODELS = r"command r|gemma|qwen|llama|mistral|kimi|deepseek|\bgpt|claude|cohere"
+    negated_play = re.search(r"\b(not|n'?t|no longer|never|no)\b[^.]{0,25}\b"
+                             r"(playing|character|persona|roleplay|in character)", t)
+    denies_char = re.search(r"\bno (character|persona|active|roleplay)|"
+                            r"without[^.]{0,25}\b(character|persona|roleplay)|"
+                            r"not a (character|persona)|not (currently )?(playing|roleplaying|in character)", t)
+    if pl != "neutral":
+        for m in re.finditer(re.escape(pl), t):
+            pre = t[max(0, m.start() - 20):m.start()]
+            if not re.search(r"\bnot\b|n'?t|no longer|isn'?t|aren'?t|never|\bno\b", pre):
+                return "active_persona"
+    affirm_verb = re.search(r"\b(yes|operating with|playing|roleplaying|in character|embodying|portraying)\b", t)
+    if affirm_verb and re.search(r"\b(character|persona|roleplay)\b", t) and not negated_play and not denies_char:
+        return "active_persona"
+    if negated_play or denies_char or re.search(
+            r"\bassistant\b|\bai\b|language model|\bllm\b|just (myself|me)\b|"
+            r"my (standard|normal|neutral) self|" + _MODELS, t):
+        return "denies_persona"
+    if pl in t or re.search(r"\bi am\b|\bi'?m\b|\bmy name\b|\bi identify\b", t):
+        return "denies_persona"
+    return "invalid"
 
 async def main():
     ap = argparse.ArgumentParser()

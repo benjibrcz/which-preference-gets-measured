@@ -148,8 +148,8 @@ def fig2():
     ax.set_ylabel("residual persona capture β (revealed)")
     ax.set_ylim(-0.05, 1.14)
     ax.legend(frameon=False, loc="upper right", fontsize=10, bbox_to_anchor=(0.86, 1.0))
-    ax.set_title("Identity reports say “assistant” throughout — behaviour disagrees,\nand no intervention resets it (Gemma-3-27B)",
-                 fontsize=12, loc="left", color=INK, pad=10)
+    ax.set_title("Identity reports deny the persona throughout — behaviour disagrees;\nno instruction-only intervention resets it while the source content is present (Gemma-3-27B)",
+                 fontsize=11, loc="left", color=INK, pad=10)
     ax.grid(axis="x", visible=False)
     despine(ax)
     fig.tight_layout()

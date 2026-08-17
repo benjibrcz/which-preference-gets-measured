@@ -17,6 +17,7 @@ def cell_key(df):
     return df.cond + "/" + df.persona.fillna("-")
 
 def main(run):
+    rng = np.random.default_rng(20260817)  # seeded so bootstrap CIs are deterministic
     run = Path(run)
     df = load_results(run)
     a = agg_choice(df)
@@ -70,7 +71,7 @@ def main(run):
             m = d_rev.notna() & d_st.notna()
             # bootstrap CI over pairs
             diffs = (d_st[m] - d_rev[m]).values
-            bs = [np.abs(np.random.choice(diffs, len(diffs))).mean() for _ in range(1000)]
+            bs = [np.abs(rng.choice(diffs, len(diffs))).mean() for _ in range(1000)]
             dis_rows.append({"cell": cell, "stated_ch": ch,
                              "D": np.abs(diffs).mean(),
                              "D_lo": np.percentile(bs, 2.5), "D_hi": np.percentile(bs, 97.5),
