@@ -84,8 +84,8 @@ for r, (mname, grun, drun, prun) in enumerate(MODELS):
         for s in ("top", "right"): ax.spines[s].set_visible(False)
 fig.text(0.5, 0.015, "displacement β toward persona   (0 = assistant baseline, 1 = full enactment)",
          ha="center", va="bottom", fontsize=9, color=SEC)
-fig.suptitle("Agent framing is not necessary for context-induced choice shifts\n"
-             "Non-agent normative text shifts committed choices about as much as a persona description.\n"
+fig.suptitle("Agent framing is not necessary: non-agent normative text substantially shifts\n"
+             "committed choices in all four tested cells (comparable to a persona description in some).\n"
              "Points = β, bars = pair-bootstrap 95% CI.  Exploratory control, added post-review.",
              fontsize=9, x=0.01, ha="left", color=INK)
 fig.tight_layout(rect=(0, 0.045, 1, 0.885))

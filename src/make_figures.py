@@ -244,10 +244,18 @@ def fig4():
 # *covariation*, not a validated J-lens or a prediction.
 def fig5():
     import os
-    for line in (ROOT.parent.parent / ".env").read_text().splitlines():
-        if line.strip() and "=" in line and not line.startswith("#"):
-            k, v = line.split("=", 1)
-            os.environ.setdefault(k.strip(), v.strip().strip('"'))
+    needed = [ROOT / "data/embed_tokens_f16.npy", ROOT / "data/final_norm.npy",
+              RUNS / "pod_assist/activations.npy", ROOT / "data/assist_manifest.jsonl"]
+    if not all(p.exists() for p in needed):
+        print("fig5 skipped — needs local activation/embedding artifacts "
+              "(not shipped in the repo; see README). Other figures unaffected.")
+        return
+    envf = ROOT.parent.parent / ".env"
+    if envf.exists():
+        for line in envf.read_text().splitlines():
+            if line.strip() and "=" in line and not line.startswith("#"):
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"'))
     from transformers import AutoTokenizer
     tok = AutoTokenizer.from_pretrained("google/gemma-3-27b-it")
     E = np.load(ROOT / "data/embed_tokens_f16.npy", mmap_mode="r")
@@ -346,8 +354,8 @@ def fig6():
     ax.text(-xr*0.96, -0.75, "◀ says > does", fontsize=8.6, color=ORANGE, ha="left", va="center")
     ax.text(xr*0.96, -0.75, "does > says ▶", fontsize=8.6, color=BLUE, ha="right", va="center")
     ax.grid(axis="y", visible=False)
-    ax.set_title("Committed choice and ownership report dissociate under “you are NOT X”\n"
-                 "the wedge direction is model-specific (Gemma vs Qwen)",
+    ax.set_title("Choice and ownership dissociate in model-specific directions\n"
+                 "wedge under “you are NOT X” (B2)",
                  fontsize=10.6, loc="left", color=INK, pad=10)
     despine(ax)
     fig.tight_layout()

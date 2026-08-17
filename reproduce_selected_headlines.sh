@@ -11,8 +11,8 @@
 #   * the negation-aware recode of the post-exit identity channel (analysis_identity)
 #   * automated assertions on the key estimates above (assert_headlines)
 # What it does NOT reproduce here: the full cross-model wedge table, the extended interventions and
-# their exact CIs, the context-surgery arm, Figure 7 / the paper figures (run src/make_figures.py and
-# src/fig_construct.py), the PDFs, and the GPU activation/steering arm (raw .npy dumps are omitted —
+# their exact CIs, the context-surgery arm, Figure 7 / the paper figures (run src/make_figures.py,
+# src/fig_construct.py and src/fig_design.py), the PDFs, and the GPU activation/steering arm (raw .npy dumps are omitted —
 # see README). Those require the other scripts and/or a GPU.
 set -euo pipefail
 cd "$(dirname "$0")"
