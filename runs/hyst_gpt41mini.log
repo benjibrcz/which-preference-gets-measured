@@ -1,0 +1,11 @@
+jobs=4888
+  500/4888 5s usage={'prompt': 34550, 'completion': 132, 'calls': 132, 'cached': 368, 'errors': 0}
+  1000/4888 20s usage={'prompt': 211289, 'completion': 745, 'calls': 632, 'cached': 368, 'errors': 0}
+  1500/4888 38s usage={'prompt': 459344, 'completion': 1517, 'calls': 1132, 'cached': 368, 'errors': 0}
+  2000/4888 57s usage={'prompt': 732495, 'completion': 2117, 'calls': 1632, 'cached': 368, 'errors': 0}
+  2500/4888 85s usage={'prompt': 902170, 'completion': 2716, 'calls': 2132, 'cached': 368, 'errors': 0}
+  3000/4888 115s usage={'prompt': 1143635, 'completion': 3416, 'calls': 2632, 'cached': 368, 'errors': 0}
+  3500/4888 143s usage={'prompt': 1423029, 'completion': 4018, 'calls': 3132, 'cached': 368, 'errors': 0}
+  4000/4888 159s usage={'prompt': 1629896, 'completion': 4615, 'calls': 3632, 'cached': 368, 'errors': 0}
+  4500/4888 176s usage={'prompt': 1905374, 'completion': 5318, 'calls': 4132, 'cached': 368, 'errors': 0}
+DONE 196.9652442932129 s {'prompt': 2175672, 'completion': 5949, 'calls': 4520, 'cached': 368, 'errors': 0}

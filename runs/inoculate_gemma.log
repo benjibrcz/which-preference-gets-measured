@@ -1,0 +1,17 @@
+pairs=82 jobs=6080
+  400/6080  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 400, 'errors': 0}
+  800/6080  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 800, 'errors': 0}
+  1200/6080  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 1200, 'errors': 0}
+  1600/6080  17s  usage={'prompt': 104837, 'completion': 1416, 'calls': 384, 'cached': 1216, 'errors': 0}
+  2000/6080  31s  usage={'prompt': 211764, 'completion': 2804, 'calls': 784, 'cached': 1216, 'errors': 0}
+  2400/6080  40s  usage={'prompt': 319132, 'completion': 4135, 'calls': 1184, 'cached': 1216, 'errors': 0}
+  2800/6080  51s  usage={'prompt': 437688, 'completion': 5562, 'calls': 1584, 'cached': 1216, 'errors': 0}
+  3200/6080  60s  usage={'prompt': 556123, 'completion': 7072, 'calls': 1984, 'cached': 1216, 'errors': 0}
+  3600/6080  69s  usage={'prompt': 675541, 'completion': 8683, 'calls': 2384, 'cached': 1216, 'errors': 0}
+  4000/6080  77s  usage={'prompt': 796165, 'completion': 10732, 'calls': 2784, 'cached': 1216, 'errors': 0}
+  4400/6080  86s  usage={'prompt': 915630, 'completion': 12922, 'calls': 3184, 'cached': 1216, 'errors': 0}
+  4800/6080  94s  usage={'prompt': 1035128, 'completion': 15065, 'calls': 3584, 'cached': 1216, 'errors': 0}
+  5200/6080  103s  usage={'prompt': 1168353, 'completion': 17173, 'calls': 3984, 'cached': 1216, 'errors': 0}
+  5600/6080  112s  usage={'prompt': 1302012, 'completion': 19288, 'calls': 4384, 'cached': 1216, 'errors': 0}
+  6000/6080  121s  usage={'prompt': 1435405, 'completion': 21296, 'calls': 4784, 'cached': 1216, 'errors': 0}
+DONE 123.7108211517334 s {'prompt': 1462228, 'completion': 21702, 'calls': 4864, 'cached': 1216, 'errors': 0}

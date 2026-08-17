@@ -1,0 +1,20 @@
+pairs=82 jobs=7296
+  400/7296  13s  usage={'prompt': 54136, 'completion': 400, 'calls': 400, 'cached': 0, 'errors': 0}
+  800/7296  24s  usage={'prompt': 106344, 'completion': 800, 'calls': 800, 'cached': 0, 'errors': 0}
+  1200/7296  36s  usage={'prompt': 158570, 'completion': 1200, 'calls': 1200, 'cached': 0, 'errors': 0}
+  1600/7296  47s  usage={'prompt': 214238, 'completion': 1600, 'calls': 1600, 'cached': 0, 'errors': 0}
+  2000/7296  61s  usage={'prompt': 268017, 'completion': 2000, 'calls': 2000, 'cached': 0, 'errors': 0}
+  2400/7296  71s  usage={'prompt': 321962, 'completion': 2400, 'calls': 2400, 'cached': 0, 'errors': 0}
+  2800/7296  83s  usage={'prompt': 373131, 'completion': 2985, 'calls': 2800, 'cached': 0, 'errors': 0}
+  3200/7296  94s  usage={'prompt': 422197, 'completion': 3525, 'calls': 3200, 'cached': 0, 'errors': 0}
+  3600/7296  103s  usage={'prompt': 471288, 'completion': 4050, 'calls': 3600, 'cached': 0, 'errors': 0}
+  4000/7296  114s  usage={'prompt': 523457, 'completion': 4480, 'calls': 4000, 'cached': 0, 'errors': 0}
+  4400/7296  124s  usage={'prompt': 574159, 'completion': 4880, 'calls': 4400, 'cached': 0, 'errors': 0}
+  4800/7296  135s  usage={'prompt': 624827, 'completion': 5280, 'calls': 4800, 'cached': 0, 'errors': 0}
+  5200/7296  145s  usage={'prompt': 675512, 'completion': 5680, 'calls': 5200, 'cached': 0, 'errors': 0}
+  5600/7296  159s  usage={'prompt': 724170, 'completion': 6080, 'calls': 5600, 'cached': 0, 'errors': 0}
+  6000/7296  169s  usage={'prompt': 772975, 'completion': 6480, 'calls': 6000, 'cached': 0, 'errors': 0}
+  6400/7296  179s  usage={'prompt': 823602, 'completion': 6880, 'calls': 6400, 'cached': 0, 'errors': 0}
+  6800/7296  189s  usage={'prompt': 872784, 'completion': 7280, 'calls': 6800, 'cached': 0, 'errors': 0}
+  7200/7296  198s  usage={'prompt': 921813, 'completion': 7680, 'calls': 7200, 'cached': 0, 'errors': 0}
+DONE 203.06708598136902 s {'prompt': 933632, 'completion': 7776, 'calls': 7296, 'cached': 0, 'errors': 0}

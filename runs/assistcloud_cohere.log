@@ -1,0 +1,27 @@
+pairs=82 jobs=10066
+  400/10066  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 400, 'errors': 0}
+  800/10066  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 800, 'errors': 0}
+  1200/10066  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 1200, 'errors': 0}
+  1600/10066  4s  usage={'prompt': 33360, 'completion': 444, 'calls': 384, 'cached': 1216, 'errors': 0}
+  2000/10066  8s  usage={'prompt': 68644, 'completion': 844, 'calls': 784, 'cached': 1216, 'errors': 0}
+  2400/10066  13s  usage={'prompt': 103612, 'completion': 1246, 'calls': 1184, 'cached': 1216, 'errors': 0}
+  2800/10066  17s  usage={'prompt': 138555, 'completion': 1685, 'calls': 1584, 'cached': 1216, 'errors': 0}
+  3200/10066  21s  usage={'prompt': 183600, 'completion': 2097, 'calls': 1984, 'cached': 1216, 'errors': 0}
+  3600/10066  25s  usage={'prompt': 229192, 'completion': 2497, 'calls': 2384, 'cached': 1216, 'errors': 0}
+  4000/10066  29s  usage={'prompt': 274704, 'completion': 2900, 'calls': 2784, 'cached': 1216, 'errors': 0}
+  4400/10066  42s  usage={'prompt': 321243, 'completion': 3350, 'calls': 3184, 'cached': 1216, 'errors': 0}
+  4800/10066  47s  usage={'prompt': 368330, 'completion': 3750, 'calls': 3584, 'cached': 1216, 'errors': 0}
+  5200/10066  94s  usage={'prompt': 414371, 'completion': 4150, 'calls': 3984, 'cached': 1216, 'errors': 0}
+  5600/10066  98s  usage={'prompt': 460366, 'completion': 4574, 'calls': 4384, 'cached': 1216, 'errors': 0}
+  6000/10066  103s  usage={'prompt': 506531, 'completion': 5052, 'calls': 4784, 'cached': 1216, 'errors': 0}
+  6400/10066  107s  usage={'prompt': 550678, 'completion': 5452, 'calls': 5184, 'cached': 1216, 'errors': 0}
+  6800/10066  111s  usage={'prompt': 594835, 'completion': 5852, 'calls': 5584, 'cached': 1216, 'errors': 0}
+  7200/10066  115s  usage={'prompt': 639632, 'completion': 6289, 'calls': 5984, 'cached': 1216, 'errors': 0}
+  7600/10066  119s  usage={'prompt': 701053, 'completion': 6693, 'calls': 6384, 'cached': 1216, 'errors': 0}
+  8000/10066  123s  usage={'prompt': 760988, 'completion': 7095, 'calls': 6784, 'cached': 1216, 'errors': 0}
+  8400/10066  127s  usage={'prompt': 820917, 'completion': 7496, 'calls': 7184, 'cached': 1216, 'errors': 0}
+  8800/10066  136s  usage={'prompt': 876170, 'completion': 7951, 'calls': 7584, 'cached': 1216, 'errors': 0}
+  9200/10066  167s  usage={'prompt': 922540, 'completion': 8351, 'calls': 7984, 'cached': 1216, 'errors': 0}
+  9600/10066  180s  usage={'prompt': 968782, 'completion': 8752, 'calls': 8384, 'cached': 1216, 'errors': 0}
+  10000/10066  327s  usage={'prompt': 1014943, 'completion': 9180, 'calls': 8784, 'cached': 1216, 'errors': 0}
+DONE 329.6089770793915 s {'prompt': 1022650, 'completion': 9285, 'calls': 8850, 'cached': 1216, 'errors': 0}

@@ -1,0 +1,23 @@
+# virtualenv & python cruft
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# secrets (keys live in research_agenda/.env, outside this dir — never commit any)
+.env
+*.key
+*.pem
+
+# large binary artifacts (activation dumps, token embeddings) — reproducible via GPU scripts, not needed for the report
+*.npy
+# activation-extraction manifests — index the excluded .npy dumps, orphaned without them
+data/probe_manifest.jsonl
+data/assist_manifest.jsonl
+
+# literature-review working dir (downloaded PDFs — copyrighted, redistributable via their own sources)
+lit_review/
+
+# internal working files not part of the public submission
+EVALUATION.md
+results/ORGANIZER_EMAIL_DRAFT.md

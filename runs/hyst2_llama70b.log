@@ -1,0 +1,14 @@
+jobs=6392
+  500/6392 3s usage={'prompt': 107335, 'completion': 317, 'calls': 124, 'cached': 376, 'errors': 0}
+  1000/6392 13s usage={'prompt': 616170, 'completion': 1816, 'calls': 624, 'cached': 376, 'errors': 0}
+  1500/6392 22s usage={'prompt': 1029619, 'completion': 3320, 'calls': 1124, 'cached': 376, 'errors': 0}
+  2000/6392 32s usage={'prompt': 1402918, 'completion': 4855, 'calls': 1624, 'cached': 376, 'errors': 0}
+  2500/6392 42s usage={'prompt': 1906506, 'completion': 6288, 'calls': 2124, 'cached': 376, 'errors': 0}
+  3000/6392 51s usage={'prompt': 2317865, 'completion': 7717, 'calls': 2624, 'cached': 376, 'errors': 0}
+  3500/6392 60s usage={'prompt': 2695382, 'completion': 9249, 'calls': 3124, 'cached': 376, 'errors': 0}
+  4000/6392 69s usage={'prompt': 3231805, 'completion': 10926, 'calls': 3624, 'cached': 376, 'errors': 0}
+  4500/6392 78s usage={'prompt': 3679045, 'completion': 12318, 'calls': 4124, 'cached': 376, 'errors': 0}
+  5000/6392 87s usage={'prompt': 4068185, 'completion': 13890, 'calls': 4624, 'cached': 376, 'errors': 0}
+  5500/6392 96s usage={'prompt': 4541294, 'completion': 15299, 'calls': 5124, 'cached': 376, 'errors': 0}
+  6000/6392 104s usage={'prompt': 4928521, 'completion': 16735, 'calls': 5624, 'cached': 376, 'errors': 0}
+DONE 113.76077079772949 s {'prompt': 5182342, 'completion': 18286, 'calls': 6016, 'cached': 376, 'errors': 0}

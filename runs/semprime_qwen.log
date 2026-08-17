@@ -1,0 +1,4 @@
+jobs=1216
+  500/1216 10s
+  1000/1216 20s
+DONE 29.391348838806152 s {'prompt': 244240, 'completion': 1216, 'calls': 1216, 'cached': 0, 'errors': 0}

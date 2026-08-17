@@ -1,0 +1,5 @@
+jobs=1880
+  500/1880 4s usage={'prompt': 29588, 'completion': 321, 'calls': 124, 'cached': 376, 'errors': 0}
+  1000/1880 16s usage={'prompt': 188354, 'completion': 1829, 'calls': 624, 'cached': 376, 'errors': 0}
+  1500/1880 28s usage={'prompt': 415169, 'completion': 3396, 'calls': 1124, 'cached': 376, 'errors': 0}
+DONE 36.132259130477905 s {'prompt': 651349, 'completion': 4606, 'calls': 1504, 'cached': 376, 'errors': 0}

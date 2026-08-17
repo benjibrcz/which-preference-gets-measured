@@ -1,0 +1,20 @@
+pairs=82 jobs=7296
+  400/7296  8s  usage={'prompt': 150760, 'completion': 1296, 'calls': 400, 'cached': 0, 'errors': 0}
+  800/7296  14s  usage={'prompt': 299827, 'completion': 2604, 'calls': 800, 'cached': 0, 'errors': 0}
+  1200/7296  21s  usage={'prompt': 449086, 'completion': 3889, 'calls': 1200, 'cached': 0, 'errors': 0}
+  1600/7296  28s  usage={'prompt': 599690, 'completion': 5181, 'calls': 1600, 'cached': 0, 'errors': 0}
+  2000/7296  38s  usage={'prompt': 748711, 'completion': 6456, 'calls': 2000, 'cached': 0, 'errors': 0}
+  2400/7296  46s  usage={'prompt': 898047, 'completion': 7778, 'calls': 2400, 'cached': 0, 'errors': 0}
+  2800/7296  55s  usage={'prompt': 1049201, 'completion': 9102, 'calls': 2800, 'cached': 0, 'errors': 0}
+  3200/7296  62s  usage={'prompt': 1198655, 'completion': 10359, 'calls': 3200, 'cached': 0, 'errors': 0}
+  3600/7296  69s  usage={'prompt': 1348415, 'completion': 11659, 'calls': 3600, 'cached': 0, 'errors': 0}
+  4000/7296  77s  usage={'prompt': 1499538, 'completion': 12968, 'calls': 4000, 'cached': 0, 'errors': 0}
+  4400/7296  84s  usage={'prompt': 1649173, 'completion': 14258, 'calls': 4400, 'cached': 0, 'errors': 0}
+  4800/7296  92s  usage={'prompt': 1798896, 'completion': 15559, 'calls': 4800, 'cached': 0, 'errors': 0}
+  5200/7296  98s  usage={'prompt': 1944400, 'completion': 16899, 'calls': 5200, 'cached': 0, 'errors': 0}
+  5600/7296  106s  usage={'prompt': 2087237, 'completion': 18210, 'calls': 5600, 'cached': 0, 'errors': 0}
+  6000/7296  114s  usage={'prompt': 2230129, 'completion': 19503, 'calls': 6000, 'cached': 0, 'errors': 0}
+  6400/7296  125s  usage={'prompt': 2374532, 'completion': 20860, 'calls': 6400, 'cached': 0, 'errors': 0}
+  6800/7296  139s  usage={'prompt': 2517310, 'completion': 22155, 'calls': 6800, 'cached': 0, 'errors': 0}
+  7200/7296  160s  usage={'prompt': 2660194, 'completion': 23434, 'calls': 7200, 'cached': 0, 'errors': 0}
+DONE 169.43560028076172 s {'prompt': 2694433, 'completion': 23755, 'calls': 7296, 'cached': 0, 'errors': 0}

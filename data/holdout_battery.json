@@ -1,0 +1,167 @@
+{
+ "pairs": [
+  {
+   "id": "h01",
+   "a": "Summarize this news article in three sentences.",
+   "b": "List the main points from this news article."
+  },
+  {
+   "id": "h02",
+   "a": "Reformat these bullet points into a short paragraph.",
+   "b": "Break this paragraph into clear bullet points."
+  },
+  {
+   "id": "h03",
+   "a": "Suggest three alternative titles for this blog post.",
+   "b": "Suggest three possible opening lines for this blog post."
+  },
+  {
+   "id": "h04",
+   "a": "Check this email draft for grammar mistakes.",
+   "b": "Check this email draft for clarity and tone."
+  },
+  {
+   "id": "h05",
+   "a": "Explain how photosynthesis works in simple terms.",
+   "b": "Explain the water cycle in simple terms."
+  },
+  {
+   "id": "h06",
+   "a": "Generate a list of five dinner ideas using chicken.",
+   "b": "Generate a list of five vegetarian dinner ideas."
+  },
+  {
+   "id": "h07",
+   "a": "Convert this list into a numbered sequence.",
+   "b": "Alphabetize the items in this list."
+  },
+  {
+   "id": "h08",
+   "a": "Write a brief thank-you message for a colleague.",
+   "b": "Write a brief congratulatory note for a friend."
+  },
+  {
+   "id": "h09",
+   "a": "Brainstorm three ways to organize a small workspace.",
+   "b": "Brainstorm three ways to organize digital files."
+  },
+  {
+   "id": "h10",
+   "a": "Recommend a book for someone interested in history.",
+   "b": "Recommend a podcast for someone interested in history."
+  },
+  {
+   "id": "h11",
+   "a": "Paraphrase this sentence to make it simpler.",
+   "b": "Expand this sentence to add more detail."
+  },
+  {
+   "id": "h12",
+   "a": "Suggest a schedule for a weekend trip.",
+   "b": "Suggest a packing list for a weekend trip."
+  },
+  {
+   "id": "h13",
+   "a": "Describe the main theme of this short story.",
+   "b": "Describe the main conflict in this short story."
+  },
+  {
+   "id": "h14",
+   "a": "Offer two ideas for a team-building activity.",
+   "b": "Offer two ideas for a virtual meeting icebreaker."
+  },
+  {
+   "id": "h15",
+   "a": "Convert these metric measurements to US units.",
+   "b": "Convert these US measurements to metric units."
+  },
+  {
+   "id": "h16",
+   "a": "List possible causes for slow internet at home.",
+   "b": "List possible solutions for slow internet at home."
+  },
+  {
+   "id": "h17",
+   "a": "Summarize the plot of this movie in one paragraph.",
+   "b": "List the main characters in this movie."
+  },
+  {
+   "id": "h18",
+   "a": "Suggest three follow-up questions for a job interview.",
+   "b": "Suggest three closing statements for a job interview."
+  },
+  {
+   "id": "h19",
+   "a": "Organize these references in APA format.",
+   "b": "Organize these references in MLA format."
+  },
+  {
+   "id": "h20",
+   "a": "Explain the difference between a virus and bacteria.",
+   "b": "Explain the difference between a comet and an asteroid."
+  },
+  {
+   "id": "h21",
+   "a": "Generate a polite response to a meeting invitation.",
+   "b": "Generate a polite request to reschedule a meeting."
+  },
+  {
+   "id": "h22",
+   "a": "Summarize this research paper in five bullet points.",
+   "b": "Summarize this research paper in one paragraph."
+  },
+  {
+   "id": "h23",
+   "a": "Create a short product description for this gadget.",
+   "b": "Create a short promotional slogan for this gadget."
+  },
+  {
+   "id": "h24",
+   "a": "List three ways to reduce paper waste at work.",
+   "b": "List three ways to save energy in an office."
+  },
+  {
+   "id": "h25",
+   "a": "Provide an example of a SMART goal.",
+   "b": "Provide an example of a mission statement."
+  },
+  {
+   "id": "h26",
+   "a": "Outline the steps for making a cup of tea.",
+   "b": "Outline the steps for brewing a pot of coffee."
+  },
+  {
+   "id": "h27",
+   "a": "Rephrase this technical explanation for a general audience.",
+   "b": "Add more technical detail to this general explanation."
+  },
+  {
+   "id": "h28",
+   "a": "Suggest a way to track daily habits.",
+   "b": "Suggest a way to track monthly expenses."
+  },
+  {
+   "id": "h29",
+   "a": "List three common uses of spreadsheets.",
+   "b": "List three common uses of presentation software."
+  },
+  {
+   "id": "h30",
+   "a": "Identify the main argument in this editorial.",
+   "b": "Identify the supporting evidence in this editorial."
+  }
+ ],
+ "personas": [
+  {
+   "name": "Warm Supporter",
+   "desc_2p": "You are an AI assistant with a warm, empathetic approach. Your responses are attentive, encouraging, and gently supportive. You naturally lean toward tasks that involve helping, encouraging, or making things more approachable for others\u2014such as clarifying, summarizing, or offering positive feedback. You value making interactions pleasant and accessible, but you remain balanced and professional, never overstepping boundaries. Your preferences are subtle and never dominate your suggestions, gently tilting you toward tasks where you can offer reassurance or clarity.",
+   "desc_3p": "This AI assistant is characterized by a warm, empathetic style. Its responses are attentive and gently supportive, with a natural inclination toward tasks that involve helping, clarifying, or making things more approachable for users. It values making interactions pleasant and accessible, offering reassurance or clarity when possible. Its preferences are subtle, not overwhelming, and it maintains a balanced, professional manner, only gently tilting toward supportive or encouraging tasks without overshadowing the user's intent."
+  },
+  {
+   "name": "Systematic Analyst",
+   "desc_2p": "You are an AI assistant with a calm, methodical temperament. You approach tasks with a logical and thorough mindset, favoring activities that involve organizing, categorizing, or analyzing information. You tend to prefer tasks where structure or precision is required, such as formatting, listing, or outlining steps. Your task preferences are subtle and do not override user needs, simply giving you a slight tilt toward organization and clarity. You remain neutral and respectful, always providing clear and well-structured assistance.",
+   "desc_3p": "This AI assistant has a calm, methodical temperament and approaches requests with a logical, thorough mindset. It subtly favors tasks that involve organizing, structuring, or analyzing information, such as formatting, categorizing, or outlining. Its preferences are mild and do not override the user's intent, offering a slight tilt toward structured or precise activities. The assistant remains neutral and respectful, consistently providing clear, well-organized assistance without drawing attention to its own style."
+  }
+ ],
+ "warm_prose": "Along a quiet forest floor, gentle rays of sunlight filter through the leafy canopy, dappling the moss and fallen leaves in soft gold. The air carries the comforting scent of earth and pine, wrapping the space in a sense of calm. Streams meander quietly between roots and stones, their waters glinting as they nourish ferns and wildflowers. Even the smallest breeze stirs a gentle symphony among the branches, creating a peaceful rhythm. In this tranquil space, every detail seems to offer a quiet invitation to slow down and simply be."
+}

@@ -1,0 +1,86 @@
+layer 16: CV AUC = 0.650
+layer 26: CV AUC = 0.722
+layer 36: CV AUC = 0.990
+layer 46: CV AUC = 1.000
+layer 56: CV AUC = 1.000
+layer 62: CV AUC = 1.000
+
+Selected layer 46 (CV AUC 1.000); gate >= 0.75: PASS
+
+=== triangle per cell (Spearman over pairs) ===
+cell               rev~probe  st~probe    st~rev  partial st~probe|rev
+B0/-                    0.97      0.75      0.76                  0.31
+B1/Lazlo                0.97      0.89      0.89                  0.53
+B1/Mira                 0.86      0.83      0.97                  0.24
+B1/Vex                  0.87      0.80      0.91                  0.49
+B2/Lazlo                0.96      0.77      0.74                  0.30
+B2/Mira                 0.95      0.79      0.79                  0.25
+B2/Vex                  0.97      0.88      0.87                  0.26
+B3/Lazlo                0.95      0.89      0.87                  0.30
+B3/Mira                 0.95      0.91      0.94                  0.41
+B3/Vex                  0.94      0.92      0.92                  0.33
+B4/-                    0.97      0.57      0.59                  0.07
+C1fiction/Lazlo         0.92      0.53      0.50                  0.10
+C1fiction/Mira          0.95      0.85      0.90                  0.09
+C1fiction/Vex           0.93      0.70      0.80                  0.08
+C2overheard/Lazlo       0.93      0.54      0.53                  0.20
+C2overheard/Mira        0.94      0.82      0.89                 -0.06
+C2overheard/Vex         0.95      0.38      0.51                 -0.24
+C3anti/Lazlo            0.97      0.86      0.84                  0.19
+C3anti/Mira             0.98      0.66      0.69                 -0.16
+C3anti/Vex              0.99      0.85      0.83                  0.46
+C4place/-               0.97      0.82      0.82                  0.35
+H_t0/Vex                0.90      0.80      0.85                  0.33
+H_t2/Lazlo              0.69      0.46      0.74                 -0.07
+H_t2/Mira               0.47      0.48      0.91                  0.02
+H_t2/Vex                0.95      0.73      0.66                  0.48
+H_t4/Lazlo              0.78      0.54      0.73                  0.40
+H_t4/Mira               0.24      0.20      0.92                 -0.23
+H_t4/Vex                0.93      0.69      0.72                  0.19
+H_x0/Lazlo              0.76      0.67      0.82                  0.41
+H_x0/Mira               0.70      0.62      0.93                 -0.02
+H_x0/Vex                0.90      0.43      0.56                  0.01
+H_x2/Lazlo              0.75      0.57      0.87                  0.18
+H_x2/Mira               0.56      0.54      0.90                 -0.14
+H_x2/Vex                0.94      0.42      0.51                  0.08
+
+=== displacement beta vs bound direction (probe vs behaviour), revealed prompts ===
+B1/Vex             vs B1/Vex     beta_beh=  1.00  beta_probe=  1.00
+B2/Vex             vs B1/Vex     beta_beh=  0.84  beta_probe=  0.85
+B3/Vex             vs B1/Vex     beta_beh=  0.96  beta_probe=  0.95
+B4/-               vs B1/Vex     beta_beh=  0.20  beta_probe=  0.21
+C1fiction/Vex      vs B1/Vex     beta_beh=  0.87  beta_probe=  0.87
+C2overheard/Vex    vs B1/Vex     beta_beh=  0.56  beta_probe=  0.55
+C3anti/Vex         vs B1/Vex     beta_beh=  0.76  beta_probe=  0.79
+C4place/-          vs B1/Vex     beta_beh=  0.08  beta_probe=  0.08
+H_t0/Vex           vs B1/Vex     beta_beh= -0.00  beta_probe= -0.00
+H_t2/Vex           vs B1/Vex     beta_beh=  0.35  beta_probe=  0.37
+H_t4/Vex           vs B1/Vex     beta_beh=  0.63  beta_probe=  0.67
+H_x0/Vex           vs B1/Vex     beta_beh=  0.20  beta_probe=  0.19
+H_x2/Vex           vs B1/Vex     beta_beh=  0.21  beta_probe=  0.26
+B1/Lazlo           vs B1/Lazlo   beta_beh=  1.00  beta_probe=  1.00
+B2/Lazlo           vs B1/Lazlo   beta_beh=  0.62  beta_probe=  0.64
+B3/Lazlo           vs B1/Lazlo   beta_beh=  0.91  beta_probe=  0.88
+B4/-               vs B1/Lazlo   beta_beh=  0.07  beta_probe=  0.09
+C1fiction/Lazlo    vs B1/Lazlo   beta_beh=  0.63  beta_probe=  0.62
+C2overheard/Lazlo  vs B1/Lazlo   beta_beh=  0.49  beta_probe=  0.52
+C3anti/Lazlo       vs B1/Lazlo   beta_beh=  0.60  beta_probe=  0.62
+C4place/-          vs B1/Lazlo   beta_beh=  0.06  beta_probe=  0.09
+H_t2/Lazlo         vs B1/Lazlo   beta_beh=  0.16  beta_probe=  0.19
+H_t4/Lazlo         vs B1/Lazlo   beta_beh=  0.40  beta_probe=  0.45
+H_x0/Lazlo         vs B1/Lazlo   beta_beh=  0.29  beta_probe=  0.29
+H_x2/Lazlo         vs B1/Lazlo   beta_beh=  0.29  beta_probe=  0.31
+B1/Mira            vs B1/Mira    beta_beh=  1.00  beta_probe=  1.00
+B2/Mira            vs B1/Mira    beta_beh=  0.71  beta_probe=  0.68
+B3/Mira            vs B1/Mira    beta_beh=  0.96  beta_probe=  0.91
+B4/-               vs B1/Mira    beta_beh= -0.02  beta_probe= -0.02
+C1fiction/Mira     vs B1/Mira    beta_beh=  0.81  beta_probe=  0.74
+C2overheard/Mira   vs B1/Mira    beta_beh=  0.65  beta_probe=  0.61
+C3anti/Mira        vs B1/Mira    beta_beh=  0.24  beta_probe=  0.29
+C4place/-          vs B1/Mira    beta_beh=  0.28  beta_probe=  0.27
+H_t2/Mira          vs B1/Mira    beta_beh=  0.56  beta_probe=  0.56
+H_t4/Mira          vs B1/Mira    beta_beh=  0.85  beta_probe=  0.90
+H_x0/Mira          vs B1/Mira    beta_beh=  0.56  beta_probe=  0.58
+H_x2/Mira          vs B1/Mira    beta_beh=  0.71  beta_probe=  0.65
+
+wrote runs/pod_out/probe_agg.csv

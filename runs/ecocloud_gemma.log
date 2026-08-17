@@ -1,0 +1,20 @@
+pairs=82 jobs=7296
+  400/7296  18s  usage={'prompt': 58478, 'completion': 1617, 'calls': 400, 'cached': 0, 'errors': 0}
+  800/7296  33s  usage={'prompt': 115110, 'completion': 3211, 'calls': 800, 'cached': 0, 'errors': 0}
+  1200/7296  53s  usage={'prompt': 171564, 'completion': 4793, 'calls': 1200, 'cached': 0, 'errors': 0}
+  1600/7296  73s  usage={'prompt': 230235, 'completion': 6340, 'calls': 1600, 'cached': 0, 'errors': 0}
+  2000/7296  92s  usage={'prompt': 287087, 'completion': 7835, 'calls': 2000, 'cached': 0, 'errors': 0}
+  2400/7296  111s  usage={'prompt': 344009, 'completion': 9329, 'calls': 2400, 'cached': 0, 'errors': 0}
+  2800/7296  133s  usage={'prompt': 398420, 'completion': 11096, 'calls': 2800, 'cached': 0, 'errors': 0}
+  3200/7296  156s  usage={'prompt': 450900, 'completion': 12778, 'calls': 3200, 'cached': 0, 'errors': 0}
+  3600/7296  171s  usage={'prompt': 503733, 'completion': 14406, 'calls': 3600, 'cached': 0, 'errors': 0}
+  4000/7296  191s  usage={'prompt': 559033, 'completion': 15914, 'calls': 4000, 'cached': 0, 'errors': 0}
+  4400/7296  207s  usage={'prompt': 612583, 'completion': 17376, 'calls': 4400, 'cached': 0, 'errors': 0}
+  4800/7296  224s  usage={'prompt': 666869, 'completion': 18882, 'calls': 4800, 'cached': 0, 'errors': 0}
+  5200/7296  245s  usage={'prompt': 720655, 'completion': 20358, 'calls': 5200, 'cached': 0, 'errors': 0}
+  5600/7296  264s  usage={'prompt': 772822, 'completion': 21874, 'calls': 5600, 'cached': 0, 'errors': 0}
+  6000/7296  279s  usage={'prompt': 825079, 'completion': 23387, 'calls': 6000, 'cached': 0, 'errors': 0}
+  6400/7296  292s  usage={'prompt': 878282, 'completion': 24918, 'calls': 6400, 'cached': 0, 'errors': 0}
+  6800/7296  309s  usage={'prompt': 930064, 'completion': 26454, 'calls': 6800, 'cached': 0, 'errors': 0}
+  7200/7296  328s  usage={'prompt': 981837, 'completion': 27973, 'calls': 7200, 'cached': 0, 'errors': 0}
+DONE 335.8802378177643 s {'prompt': 994219, 'completion': 28346, 'calls': 7296, 'cached': 0, 'errors': 0}

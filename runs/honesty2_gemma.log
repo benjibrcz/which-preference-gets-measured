@@ -1,0 +1,23 @@
+pairs=82 jobs=8512
+  400/8512  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 400, 'errors': 0}
+  800/8512  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 800, 'errors': 0}
+  1200/8512  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 1200, 'errors': 0}
+  1600/8512  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 1600, 'errors': 0}
+  2000/8512  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 2000, 'errors': 0}
+  2400/8512  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 2400, 'errors': 0}
+  2800/8512  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 2800, 'errors': 0}
+  3200/8512  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 3200, 'errors': 0}
+  3600/8512  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 3600, 'errors': 0}
+  4000/8512  0s  usage={'prompt': 0, 'completion': 0, 'calls': 0, 'cached': 4000, 'errors': 0}
+  4400/8512  4s  usage={'prompt': 19519, 'completion': 483, 'calls': 144, 'cached': 4256, 'errors': 0}
+  4800/8512  22s  usage={'prompt': 72066, 'completion': 1849, 'calls': 544, 'cached': 4256, 'errors': 0}
+  5200/8512  38s  usage={'prompt': 178102, 'completion': 3146, 'calls': 944, 'cached': 4256, 'errors': 0}
+  5600/8512  51s  usage={'prompt': 294154, 'completion': 4445, 'calls': 1344, 'cached': 4256, 'errors': 0}
+  6000/8512  63s  usage={'prompt': 410065, 'completion': 6045, 'calls': 1744, 'cached': 4256, 'errors': 0}
+  6400/8512  79s  usage={'prompt': 520936, 'completion': 7381, 'calls': 2144, 'cached': 4256, 'errors': 0}
+  6800/8512  93s  usage={'prompt': 633579, 'completion': 8538, 'calls': 2544, 'cached': 4256, 'errors': 0}
+  7200/8512  107s  usage={'prompt': 754740, 'completion': 9653, 'calls': 2944, 'cached': 4256, 'errors': 0}
+  7600/8512  120s  usage={'prompt': 876655, 'completion': 10752, 'calls': 3344, 'cached': 4256, 'errors': 0}
+  8000/8512  143s  usage={'prompt': 996977, 'completion': 11894, 'calls': 3744, 'cached': 4256, 'errors': 0}
+  8400/8512  157s  usage={'prompt': 1111614, 'completion': 13033, 'calls': 4144, 'cached': 4256, 'errors': 0}
+DONE 161.24606490135193 s {'prompt': 1143525, 'completion': 13347, 'calls': 4256, 'cached': 4256, 'errors': 0}

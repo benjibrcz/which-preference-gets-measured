@@ -1,0 +1,11 @@
+pairs=82 jobs=3648
+  400/3648  9s  usage={'prompt': 145252, 'completion': 400, 'calls': 400, 'cached': 0, 'errors': 0}
+  800/3648  21s  usage={'prompt': 288788, 'completion': 800, 'calls': 800, 'cached': 0, 'errors': 0}
+  1200/3648  33s  usage={'prompt': 432256, 'completion': 1200, 'calls': 1200, 'cached': 0, 'errors': 0}
+  1600/3648  49s  usage={'prompt': 573181, 'completion': 1600, 'calls': 1600, 'cached': 0, 'errors': 0}
+  2000/3648  77s  usage={'prompt': 712359, 'completion': 2000, 'calls': 2000, 'cached': 0, 'errors': 0}
+  2400/3648  94s  usage={'prompt': 851384, 'completion': 2400, 'calls': 2400, 'cached': 0, 'errors': 0}
+  2800/3648  107s  usage={'prompt': 947056, 'completion': 2800, 'calls': 2800, 'cached': 0, 'errors': 0}
+  3200/3648  125s  usage={'prompt': 1038282, 'completion': 3200, 'calls': 3200, 'cached': 0, 'errors': 0}
+  3600/3648  145s  usage={'prompt': 1129026, 'completion': 3600, 'calls': 3600, 'cached': 0, 'errors': 0}
+DONE 154.45936799049377 s {'prompt': 1139872, 'completion': 3648, 'calls': 3648, 'cached': 0, 'errors': 0}

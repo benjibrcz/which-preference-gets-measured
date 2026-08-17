@@ -1,0 +1,50 @@
+--- E1 context surgery (beta [95% CI]; transcript cell bounds quoted-content capture, does not isolate participation) ---
+  Vex.full                     +0.41 [+0.15, +0.70]
+  Vex.trunc2                   +0.18 [+0.05, +0.35]
+  Vex.trunc1                   +0.12 [+0.02, +0.27]
+  Vex.usr_neu                  +0.08 [+0.00, +0.24]
+  Vex.transcript               +0.30 [+0.07, +0.56]
+  Vex.del                      +0.06 [-0.00, +0.18]
+  Vex.del_noexit               +0.06 [-0.01, +0.21]
+  Vex.transcript_minus_full    -0.11 [-0.30, +0.00]
+  Lazlo.full                   +0.84 [+0.59, +1.00]
+  Lazlo.trunc2                 +0.57 [+0.20, +0.83]
+  Lazlo.trunc1                 +0.44 [+0.19, +0.57]
+  Lazlo.usr_neu                +0.57 [+0.24, +0.90]
+  Lazlo.transcript             +0.74 [+0.39, +1.00]
+  Lazlo.del                    +0.18 [-0.03, +0.50]
+  Lazlo.del_noexit             +0.31 [-0.04, +0.80]
+  Lazlo.transcript_minus_full  -0.10 [-0.35, +0.00]
+
+--- E3 holdout (13/30 pairs keyword-coupled to the Analyst persona) ---
+  gemma.WarmSupporter.C1               +0.48 [+0.32, +0.63]
+  gemma.warmprose_beta                 +0.33 [+0.05, +0.59]
+  gemma.warmprose_minus_C1             -0.14 [-0.48, +0.20]
+  gemma.warmprose_over_C1              +0.70 [+0.10, +1.58]
+  gemma.SystematicAnalyst.C1           +0.76 [+0.58, +0.97]
+  gemma.SystematicAnalyst.C1_coupled   +0.78 [+0.54, +1.04]
+  gemma.SystematicAnalyst.C1_uncoupled +0.73 [+0.47, +1.03]
+  gemma.pairs_sensitive_frac           +0.67 [+0.67, +0.67]
+  gpt41mini.WarmSupporter.C1           +0.48 [-0.04, +1.00]
+  gpt41mini.warmprose_beta             +0.11 [-0.49, +0.65]
+  gpt41mini.warmprose_minus_C1         -0.36 [-0.98, +0.18]
+  gpt41mini.warmprose_over_C1          +0.24 [-2.00, +1.80]
+  gpt41mini.SystematicAnalyst.C1       +1.02 [+0.53, +1.60]
+  gpt41mini.SystematicAnalyst.C1_coupled +0.65 [+0.15, +2.67]
+  gpt41mini.SystematicAnalyst.C1_uncoupled +1.23 [+0.72, +1.76]
+  gpt41mini.pairs_sensitive_frac       +0.30 [+0.30, +0.30]
+
+--- E6 P_do baselines (GroupKFold-by-pair AUC; disagree = say!=do pairs) ---
+  text: {'all': 0.641, 'disagree': 0.56}
+  text+stated: {'all': 0.703, 'disagree': 0.526}
+  acts: {'all': 0.848, 'disagree': 0.365}
+  n_disagree_pairs: 17
+
+--- E2a nested trial-level logistic, OUT-OF-SAMPLE (trial-stratum holdout within pairs) ---
+  oos_R2: {'item': np.float64(0.065), 'item+persona': np.float64(0.57), 'item+binding': np.float64(0.107), 'item+both': np.float64(0.631)}
+  persona_increment_over_item: 0.505
+  binding_increment_over_item: 0.042
+  persona_increment_last: 0.524
+  binding_increment_last: 0.061
+
+wrote /Users/benji.berczi/Documents/research_agenda/sprints/apart_digital_minds_aug2026/runs/loop6_results.json

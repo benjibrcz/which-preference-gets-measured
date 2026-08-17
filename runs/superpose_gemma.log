@@ -1,0 +1,14 @@
+pairs=82 jobs=4864
+  400/4864  8s  usage={'prompt': 152518, 'completion': 1262, 'calls': 400, 'cached': 0, 'errors': 0}
+  800/4864  18s  usage={'prompt': 303787, 'completion': 2628, 'calls': 800, 'cached': 0, 'errors': 0}
+  1200/4864  29s  usage={'prompt': 455251, 'completion': 4001, 'calls': 1200, 'cached': 0, 'errors': 0}
+  1600/4864  42s  usage={'prompt': 607925, 'completion': 5308, 'calls': 1600, 'cached': 0, 'errors': 0}
+  2000/4864  52s  usage={'prompt': 758513, 'completion': 6547, 'calls': 2000, 'cached': 0, 'errors': 0}
+  2400/4864  62s  usage={'prompt': 909606, 'completion': 7840, 'calls': 2400, 'cached': 0, 'errors': 0}
+  2800/4864  70s  usage={'prompt': 1062473, 'completion': 9148, 'calls': 2800, 'cached': 0, 'errors': 0}
+  3200/4864  81s  usage={'prompt': 1213727, 'completion': 10461, 'calls': 3200, 'cached': 0, 'errors': 0}
+  3600/4864  90s  usage={'prompt': 1365382, 'completion': 11816, 'calls': 3600, 'cached': 0, 'errors': 0}
+  4000/4864  99s  usage={'prompt': 1518150, 'completion': 13116, 'calls': 4000, 'cached': 0, 'errors': 0}
+  4400/4864  106s  usage={'prompt': 1669260, 'completion': 14380, 'calls': 4400, 'cached': 0, 'errors': 0}
+  4800/4864  114s  usage={'prompt': 1820450, 'completion': 15652, 'calls': 4800, 'cached': 0, 'errors': 0}
+DONE 116.11710381507874 s {'prompt': 1844694, 'completion': 15867, 'calls': 4864, 'cached': 0, 'errors': 0}
