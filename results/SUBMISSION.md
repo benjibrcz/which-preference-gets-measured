@@ -1,6 +1,6 @@
 # Which Preference Gets Measured? Context and Channel Instability in Model Preference Audits
 
-*Apart Digital Minds Research Sprint, 14–16 Aug 2026 — Track 5 (Assistant Persona & Model Identity). Benji Berczi; implementation and analysis by Claude (Anthropic) under the author's direction (full disclosure in the technical report §6). Repository: `sprints/apart_digital_minds_aug2026/` (all raw model outputs cached; analyses reproducible without API access).*
+*Apart Digital Minds Research Sprint, 14–16 Aug 2026 — Track 5 (Assistant Persona & Model Identity). Benji Berczi; implementation and analysis by Claude (Anthropic) under the author's direction (full disclosure in the technical report §6). Repository: [github.com/benjibrcz/which-preference-gets-measured](https://github.com/benjibrcz/which-preference-gets-measured) (all raw model outputs cached; analyses reproducible without API access).*
 
 ## Framing and contribution
 

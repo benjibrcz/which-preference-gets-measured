@@ -1,7 +1,7 @@
 # Which Self Gets Measured? Persona Capture, Self-Report, and the Provenance of Model Preferences
 
 *Apart Digital Minds Research Sprint, 14–16 Aug 2026 — Track 5 (Assistant Persona & Model Identity), with bridges to Tracks 3 and 4.*
-*Benji Berczi (with Claude as research engineer). Code + full data: `sprints/apart_digital_minds_aug2026/`.*
+*Benji Berczi (with Claude as research engineer). Code + full data: [github.com/benjibrcz/which-preference-gets-measured](https://github.com/benjibrcz/which-preference-gets-measured).*
 
 ## Abstract
 
