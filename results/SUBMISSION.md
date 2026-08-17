@@ -1,6 +1,6 @@
 # Which Preference Gets Measured? Context and Channel Instability in Model Preference Audits
 
-*Apart Digital Minds Research Sprint, 14–16 Aug 2026 — Track 5 (Assistant Persona & Model Identity). Benji Berczi; implementation and analysis by Claude (Anthropic) under the author's direction (disclosure on the final page). Repository: [github.com/benjibrcz/which-preference-gets-measured](https://github.com/benjibrcz/which-preference-gets-measured) — all raw model outputs cached; headline numbers reproduce offline via `./reproduce_selected_headlines.sh`.*
+*Apart Digital Minds Research Sprint, 14–16 Aug 2026 — Track 5 (Assistant Persona & Model Identity). Benjamin Berczi. Assisted by Claude Code in implementation and analysis (disclosure on the final page). Repository: [github.com/benjibrcz/which-preference-gets-measured](https://github.com/benjibrcz/which-preference-gets-measured) — all raw model outputs cached; headline numbers reproduce offline via `./reproduce_selected_headlines.sh`.*
 
 ## Abstract
 
@@ -61,7 +61,7 @@ We report the policy−character contrast with CIs (e.g. Gemma/Vex **−0.06 [�
 
 **Timeline (CEST).** The 82-item battery, framing grid, and analysis harness predate the sprint. The core four-model grid, the four channels, the identity probe, and the post-exit surgery were run **13–14 Aug**; the **non-agent normative control** and the **shared-baseline cross-fit robustness** — the analyses that changed the central interpretation — were carried out **16–17 Aug**. The analysis plans are *prospectively specified* (locked before their data) but **not externally time-stamped**; the public Git history begins on the submission date.
 
-**AI-assistance disclosure.** Research direction, framing, and all approvals: Benji Berczi. Experiment implementation, execution, analysis, and drafting: Claude (Anthropic), operating under the author's direction, with all prompts, code, and cached model outputs preserved in the repository. An external critical review (GPT-5.6) prompted several statistical and framing corrections.
+**AI-assistance disclosure.** Research direction, framing, and all approvals: Benjamin Berczi. Assisted by Claude Code in implementation, execution, analysis, and drafting, with all prompts, code, and cached model outputs preserved in the repository. An external critical review (GPT-5.6) prompted several statistical and framing corrections.
 
 **Evidence status.**
 

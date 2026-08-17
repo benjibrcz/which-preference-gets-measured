@@ -3,7 +3,7 @@ message: "If you use this work, please cite it as below."
 title: "Which Preference Gets Measured? Context and Channel Instability in Model Preference Audits"
 authors:
   - family-names: Berczi
-    given-names: Benji
+    given-names: Benjamin
 abstract: >-
   A same-item, multi-channel study of large instruction-tuned models showing that
   forced-choice preference profiles are context- and channel-indexed: explicitly

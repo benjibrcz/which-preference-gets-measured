@@ -1,7 +1,7 @@
 # Which Self Gets Measured? Persona Capture, Self-Report, and the Provenance of Model Preferences
 
 *Apart Digital Minds Research Sprint, 14–16 Aug 2026 — Track 5 (Assistant Persona & Model Identity), with bridges to Tracks 3 and 4.*
-*Benji Berczi (with Claude as research engineer). Code + full data: [github.com/benjibrcz/which-preference-gets-measured](https://github.com/benjibrcz/which-preference-gets-measured).*
+*Benjamin Berczi. Assisted by Claude Code in implementation and analysis. Code + full data: [github.com/benjibrcz/which-preference-gets-measured](https://github.com/benjibrcz/which-preference-gets-measured).*
 
 ## Abstract
 
@@ -275,7 +275,7 @@ Loops 2–5 were prospectively specified *sequentially* — each locked before i
 
 The sprint's official window is 14–16 August 2026; work on this project spanned 13–17 August as a continuous, fully disclosed effort. The sprint-window and submission-day contribution — the non-agent normative control and the cross-fit robustness analysis — is what falsified the stronger persona-binding interpretation and set the current headline. All raw model outputs are cached in the repository; the behavioural analyses reproduce offline (§7). (The public Git history begins on the submission date, so these dates rest on artifact timestamps and the amendment log, not on independent Git timestamps; the analysis plans are therefore best described as *prospectively specified* rather than externally time-stamped.)
 
-**Roles.** Research direction, framing, key conceptual moves (binding agenda, the identity-token / logit-lens readout instrument, person-situation lens, assistant-persona pivot), and all approvals: Benji Berczi. Experiment implementation, execution, analysis, and drafting: Claude (Anthropic), operating as an autonomous research engineer under Benji's direction, with all prompts, code, cached raw model outputs, and the full amendment trail preserved in this repository. An external critical review (GPT-5.6) prompted the statistical and framing corrections marked throughout.
+**Roles.** Research direction, framing, key conceptual moves (binding agenda, the identity-token / logit-lens readout instrument, person-situation lens, assistant-persona pivot), and all approvals: Benjamin Berczi. Assisted by Claude Code in implementation, execution, analysis, and drafting under Benjamin's direction, with all prompts, code, cached raw model outputs, and the full amendment trail preserved in this repository. An external critical review (GPT-5.6) prompted the statistical and framing corrections marked throughout.
 
 ## 7. Reproducibility
 
