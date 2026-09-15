@@ -13,6 +13,10 @@ PROVIDERS = {
 
 def _load_env():
     envf = ROOT.parent.parent / ".env"   # research_agenda/.env
+    if not envf.exists():
+        envf = ROOT / ".env"
+    if not envf.exists():                # offline (cache-only) use needs no keys
+        return
     for line in envf.read_text().splitlines():
         line = line.strip()
         if line and not line.startswith("#") and "=" in line:
