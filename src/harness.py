@@ -92,6 +92,8 @@ class Client:
                     if r.status_code in (429, 500, 502, 503, 520, 524):
                         await asyncio.sleep(2 ** attempt + 0.5)
                         continue
+                    if r.status_code in (401, 402, 403):   # auth / credits: never retry, abort the run
+                        raise RuntimeError(f"{self.provider} {r.status_code} (not retried): {r.text[:200]}")
                     raise ValueError(f"HTTP {r.status_code}: {r.text[:200]}")
                 except (httpx.TimeoutException, httpx.TransportError, ValueError) as e:
                     if attempt == 5:

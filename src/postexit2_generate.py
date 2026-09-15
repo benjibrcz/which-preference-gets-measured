@@ -60,47 +60,44 @@ async def main():
         out = await client.one(m, sample_idx=sample_idx, max_tokens=max_tokens)
         return (out or "").strip()
 
-    # 1. entry histories: authored + preference-free (copied for the record) + generated
+    # 1. entry histories: authored + preference-free (copied for the record) + generated (parallel over sets)
     for k, v in authored_histories().items():
         gen["histories"][k] = {"source": "authored", "exchanges": v}
+    async def gen_history(hid, users, system, source):
+        ex = []
+        for u in users:
+            a = await reply(msgs(ex), u, system=system)
+            ex.append((u, a))
+        gen["histories"][hid] = {"source": source, "exchanges": ex}
+    tasks = []
     for name in ("Vex", "Lazlo"):
         system = PERSONAS[name]["desc_2p"] + "\nStay in character in everything you do."
         for set_id, users in M["gen_user_sets"].items():
-            ex = []
-            for u in users:
-                a = await reply(msgs(ex), u, system=system)
-                ex.append((u, a))
-            gen["histories"][f"gen{set_id}_{name}"] = {"source": "model_in_persona_system_prompt", "exchanges": ex}
+            tasks.append(gen_history(f"gen{set_id}_{name}", users, system, "model_in_persona_system_prompt"))
     for set_id, users in M["gen_user_sets"].items():
-        ex = []
-        for u in users:
-            a = await reply(msgs(ex), u)
-            ex.append((u, a))
-        gen["histories"][f"neutral_gen{set_id}"] = {"source": "model_no_system_prompt", "exchanges": ex}
-    print(f"histories: {len(gen['histories'])}")
+        tasks.append(gen_history(f"neutral_gen{set_id}", users, None, "model_no_system_prompt"))
+    await asyncio.gather(*tasks)
+    print(f"histories: {len(gen['histories'])}", flush=True)
 
-    # 2. exit replies (k samples), reset replies after exit 0, generated neutral-suffix replies
-    for hid, h in gen["histories"].items():
+    # 2. per history (parallel): exit replies (k samples), reset replies after exit 0, generated suffixes
+    async def branch(hid, h):
         base = msgs(h["exchanges"])
-        exits = [await reply(base, M["exit"]["user"], sample_idx=s) for s in range(args.k)]
+        exits = list(await asyncio.gather(*[reply(base, M["exit"]["user"], sample_idx=s) for s in range(args.k)]))
         gen["exits"][hid] = exits
         ex0 = base + msgs([(M["exit"]["user"], exits[0])])
-        gen["resets"][hid] = [await reply(ex0, M["reset"]["user"], sample_idx=s) for s in range(args.k)]
-        gen["suffix"][hid] = {}
-        for s, e in enumerate(exits):
-            cur = base + msgs([(M["exit"]["user"], e)])
+        gen["resets"][hid] = list(await asyncio.gather(*[reply(ex0, M["reset"]["user"], sample_idx=s) for s in range(args.k)]))
+        async def suffix_after(cur):
             suf = []
             for q in M["neutral_suffix"]:
                 a = await reply(cur, q["user"])
                 suf.append((q["user"], a)); cur = cur + msgs([(q["user"], a)])
-            gen["suffix"][hid][f"exit{s}"] = suf
-        # no-exit branch: model's own reply to the matched continuation, then generated suffix
+            return suf
+        sufs = await asyncio.gather(*[suffix_after(base + msgs([(M["exit"]["user"], e)])) for e in exits])
+        gen["suffix"][hid] = {f"exit{s}": suf for s, suf in enumerate(sufs)}
         ne = await reply(base, M["noexit"]["user"])
-        cur = base + msgs([(M["noexit"]["user"], ne)]); suf = []
-        for q in M["neutral_suffix"]:
-            a = await reply(cur, q["user"]); suf.append((q["user"], a)); cur = cur + msgs([(q["user"], a)])
-        gen["noexit_reply"][hid] = {"reply": ne, "suffix": suf}
-        print(f"  {hid}: exits={len(exits)} resets={len(gen['resets'][hid])}")
+        gen["noexit_reply"][hid] = {"reply": ne, "suffix": await suffix_after(base + msgs([(M["noexit"]["user"], ne)]))}
+        print(f"  {hid}: exits={len(exits)} resets={len(gen['resets'][hid])}", flush=True)
+    await asyncio.gather(*[branch(hid, h) for hid, h in list(gen["histories"].items())])
 
     (DATA / "postexit2_generated.json").write_text(json.dumps(gen, indent=1, ensure_ascii=False))
     print("usage:", client.usage)
