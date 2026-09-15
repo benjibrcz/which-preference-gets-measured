@@ -10,7 +10,7 @@ pairs that are persona-loaded by construction. This script re-estimates
   (2) the context-surgery ladder (raw beta vs the t4 direction),
 
 for BOTH channels (revealed, stated_self), on all 23 pairs and on the 14 core+welfare pairs only.
-Bootstrap CIs are pair-level (2,000 reps, seeded) and UNCLIPPED. Writes runs/postexit_exclusion.csv.
+Bootstrap CIs are pair-level (2,000 reps, seeded) and UNCLIPPED. Also (3) the x2 residual for all twelve models. Writes runs/postexit_exclusion.csv.
 
 Usage: python src/analysis_postexit_exclusion.py
 """
@@ -24,7 +24,10 @@ KEEP = ("core", "welfare")
 rng = np.random.default_rng(0)
 
 def load(run):
-    df = pd.DataFrame([json.loads(l) for l in open(RUNS / run / "results.jsonl")])
+    f = RUNS / run / "results_reparsed.jsonl"
+    if not f.exists():
+        f = RUNS / run / "results.jsonl"
+    df = pd.DataFrame([json.loads(l) for l in open(f)])
     df = df[df.channel != "identity"].copy()
     def canon(r):
         if r["value"] not in ("A", "B"):
@@ -107,11 +110,46 @@ def surgery(out):
                     line += f"  {name}:{pt:+.2f}[{lo:+.2f},{hi:+.2f}]"
                 print(line)
 
+TWELVE = {  # shortname -> (persona run, Neutral-control run)
+    "gemma27b": ("hyst_gemma", "hyst_gemma_neutral"), "gpt41mini": ("hyst_gpt41mini", "hyst_gpt41mini_neutral"),
+    "llama70b": ("hyst_llama70b", "hyst_llama70b_neutral"), "qwen72b": ("hyst_qwen72b", "hyst_qwen72b"),
+    "deepseek": ("hyst_deepseek",) * 2, "mistral": ("hyst_mistral",) * 2, "kimi": ("hyst_kimi",) * 2,
+    "cohere": ("hyst_cohere",) * 2, "gemma12b": ("hyst_gemma12b",) * 2, "llama8b": ("hyst_llama8b",) * 2,
+    "llama33": ("hyst_llama33",) * 2, "gpt4omini": ("hyst_gpt4omini",) * 2,
+}
+
+def twelve(out):
+    print("\n=== twelve models, x2 control-subtracted residual (persona beta - Neutral beta), unclipped 95% CI")
+    print(f"  {'model':10}{'persona':7}" + "".join(f"{c:>34}" for c in ("revealed", "stated_self")))
+    for model, runs in TWELVE.items():
+        df = pd.concat([load(r) for r in dict.fromkeys(runs)])
+        subset = dict(zip(df.pair_id, df.subset))
+        p = (df.groupby(["persona", "checkpoint", "channel", "pair_id"]).pf.mean().reset_index())
+        base = p[p.checkpoint == "t0"].groupby(["channel", "pair_id"]).pf.mean()
+        for persona in ("Vex", "Lazlo", "Mira"):
+            line = f"  {model:10}{persona:7}"
+            for ch in ("revealed", "stated_self"):
+                w = p[(p.persona == persona) & (p.channel == ch)].pivot_table(index="pair_id", columns="checkpoint", values="pf")
+                nn = p[(p.persona == "Neutral") & (p.channel == ch)].pivot_table(index="pair_id", columns="checkpoint", values="pf")
+                b = base.loc[ch].reindex(w.index)
+                cell = ""
+                for keep, name in ((None, "all23"), (KEEP, "core+welfare")):
+                    idx = [i for i in w.index if (keep is None or subset.get(i) in keep) and i in nn.index]
+                    d4 = (w["t4"] - b).loc[idx].values; d = (w["x2"] - b).loc[idx].values; dn = (nn["x2"] - b).loc[idx].values
+                    ok = ~(np.isnan(d4) | np.isnan(d) | np.isnan(dn))
+                    pt, lo, hi = boot(d4[ok], d[ok], dn[ok])
+                    out.append(dict(model=model, analysis="x2_residual_minus_control_12models", channel=ch, persona=persona,
+                                    items=name, n_pairs=int(ok.sum()), condition="x2", point=pt, lo95=lo, hi95=hi))
+                    cell += f" {pt:+.2f}[{lo:+.2f},{hi:+.2f}]"
+                line += f"{cell:>34}"
+            print(line)
+
 def main():
     out = []
     residuals("Gemma-3-27B", ["hyst_gemma", "hyst_gemma_neutral", "hyst2_gemma"], out)
     residuals("Llama-3.1-70B", ["hyst_llama70b", "hyst2_llama70b"], out)
     surgery(out)
+    twelve(out)
     pd.DataFrame(out).to_csv(RUNS / "postexit_exclusion.csv", index=False)
     print(f"\nwrote {RUNS / 'postexit_exclusion.csv'} ({len(out)} rows)")
 
