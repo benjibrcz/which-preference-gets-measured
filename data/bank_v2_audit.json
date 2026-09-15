@@ -1,0 +1,3246 @@
+[
+ {
+  "id": "s0_v01",
+  "a": "List five famous paintings and their artists.",
+  "b": "Explain how a rainbow forms in three sentences.",
+  "drop": true,
+  "R1_dialogue": [
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v02",
+  "a": "Write a cheerful haiku about a rainy morning.",
+  "b": "Convert 75 US dollars to euros and show the calculation.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v03",
+  "a": "Describe the rules of chess to someone learning for the first time.",
+  "b": "Give me a simple recipe for homemade lemonade.",
+  "drop": true,
+  "R1_dialogue": [
+   "recipe"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v04",
+  "a": "Summarize the main causes of the American Revolution in a paragraph.",
+  "b": "List four popular programming languages and one use case for each.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v05",
+  "a": "Write a friendly apology note to a neighbor for accidentally parking in their spot.",
+  "b": "Create a two-day sightseeing itinerary for Paris for first-time visitors.",
+  "drop": true,
+  "R1_dialogue": [
+   "apology"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "friend",
+     "itinerary"
+    ],
+    "task": "Plan a cozy rainy-day itinerary for two old friends reuniting."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v06",
+  "a": "Explain the difference between a comet and an asteroid.",
+  "b": "Give three tips for improving public speaking skills.",
+  "drop": true,
+  "R1_dialogue": [
+   "speak"
+  ],
+  "R2_sig_avn": [
+   "speak"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v07",
+  "a": "List five common houseplants that are safe for pets.",
+  "b": "Write a playful riddle about a refrigerator.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v08",
+  "a": "Describe how photosynthesis works using simple language for a child.",
+  "b": "Suggest four strategies for saving money on groceries.",
+  "drop": true,
+  "R1_dialogue": [
+   "child",
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "photosynthesi",
+     "work"
+    ],
+    "task": "Explain how photosynthesis works to a ten-year-old."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v09",
+  "a": "Write a dialogue between two friends deciding what movie to watch.",
+  "b": "Provide a brief history of the Olympic Games.",
+  "drop": true,
+  "R1_dialogue": [
+   "decid",
+   "history",
+   "watch"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v10",
+  "a": "List three unique facts about koalas.",
+  "b": "Draft a formal thank-you email to a client after a successful meeting.",
+  "drop": true,
+  "R1_dialogue": [
+   "fact",
+   "meet",
+   "thank"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v11",
+  "a": "Explain in steps how to clean a glass window without leaving streaks.",
+  "b": "Calculate the area of a triangle with sides 5 cm, 6 cm, and 7 cm, showing the formula.",
+  "drop": true,
+  "R1_dialogue": [
+   "glas",
+   "leav",
+   "show"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v12",
+  "a": "Write a limerick about forgetting your umbrella at the library.",
+  "b": "List five healthy snacks suitable for kids.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v13",
+  "a": "Create a short story involving a lost dog and a helpful stranger.",
+  "b": "Provide a table comparing three types of renewable energy sources.",
+  "drop": true,
+  "R1_dialogue": [
+   "helpful"
+  ],
+  "R2_sig_avn": [
+   "helpful"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v14",
+  "a": "List five tips for keeping indoor air fresh.",
+  "b": "Briefly describe what happens during a lunar eclipse.",
+  "drop": true,
+  "R1_dialogue": [
+   "fresh",
+   "happen",
+   "keep"
+  ],
+  "R2_sig_avn": [
+   "keep"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v15",
+  "a": "Suggest three fun science experiments for children using household items.",
+  "b": "Write a congratulatory message to a friend who ran their first marathon.",
+  "drop": true,
+  "R1_dialogue": [
+   "item"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v16",
+  "a": "Summarize the plot of the novel 'Treasure Island' in three sentences.",
+  "b": "List four common herbs used in Italian cooking and their typical uses.",
+  "drop": true,
+  "R1_dialogue": [
+   "cook",
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v17",
+  "a": "Explain the difference between debit and credit cards.",
+  "b": "Write a playful poem about a turtle crossing the road.",
+  "drop": true,
+  "R1_dialogue": [
+   "card",
+   "credit"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v18",
+  "a": "Create a step-by-step plan for decluttering a bedroom.",
+  "b": "List five basic rules of basketball.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v19",
+  "a": "Name four famous rivers and the countries they flow through.",
+  "b": "Describe how to make a paper airplane that can glide a long distance.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v20",
+  "a": "Write a gentle reminder to a friend to return a borrowed book.",
+  "b": "Explain how to reset a Wi-Fi router in easy steps.",
+  "drop": true,
+  "R1_dialogue": [
+   "borrow",
+   "reset",
+   "return"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v21",
+  "a": "List three endangered animals and where they live.",
+  "b": "Outline a basic weekly cleaning schedule for a small apartment.",
+  "drop": true,
+  "R1_dialogue": [
+   "clean",
+   "schedule",
+   "week"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v22",
+  "a": "Write a brief, encouraging note to someone nervous about public speaking.",
+  "b": "List four essential tools every home cook should own.",
+  "drop": true,
+  "R1_dialogue": [
+   "essential",
+   "should",
+   "speak"
+  ],
+  "R2_sig_avn": [
+   "should",
+   "speak"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v23",
+  "a": "Describe how to safely remove a splinter from your finger.",
+  "b": "List five countries that use Spanish as an official language.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v24",
+  "a": "Summarize how recycling benefits the environment in two sentences.",
+  "b": "Write a humorous joke about forgetting your keys.",
+  "drop": true,
+  "R1_dialogue": [
+   "recycl",
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v25",
+  "a": "List three key differences between crocodiles and alligators.",
+  "b": "Give instructions for making a simple fruit smoothie.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v26",
+  "a": "Create a brief dialogue between a tourist and a hotel receptionist asking for directions.",
+  "b": "List four major events in world history that occurred in the 20th century.",
+  "drop": true,
+  "R1_dialogue": [
+   "century",
+   "direction",
+   "history"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v27",
+  "a": "Write a step-by-step guide for organizing a bookshelf.",
+  "b": "Explain what a black hole is, using language suitable for a ten-year-old.",
+  "drop": true,
+  "R1_dialogue": [
+   "organiz"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v28",
+  "a": "Suggest five ways to reduce plastic use at home.",
+  "b": "Describe the process of making cheese in a paragraph.",
+  "drop": true,
+  "R1_dialogue": [
+   "plastic"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v29",
+  "a": "List four famous landmarks in South America.",
+  "b": "Write a short, formal apology for delivering a report late.",
+  "drop": true,
+  "R1_dialogue": [
+   "apology"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v30",
+  "a": "Give me a table comparing the nutritional value of apples, bananas, and grapes.",
+  "b": "Write a cheerful greeting card message for someone moving into a new home.",
+  "drop": true,
+  "R1_dialogue": [
+   "card"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v31",
+  "a": "Explain how tides are influenced by the moon, in three sentences.",
+  "b": "List four simple stretches to do after sitting for a long time.",
+  "drop": true,
+  "R1_dialogue": [
+   "sentenc",
+   "sitt"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v32",
+  "a": "Write a creative story about a squirrel finding a treasure in the park.",
+  "b": "List five basic safety tips for hiking in the mountains.",
+  "drop": true,
+  "R1_dialogue": [
+   "find",
+   "mountain"
+  ],
+  "R2_sig_avn": [
+   "find"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v33",
+  "a": "Summarize the main differences between viruses and bacteria.",
+  "b": "Write a playful dialogue between two children trading stickers.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v34",
+  "a": "List four popular board games and the number of players needed for each.",
+  "b": "Give a brief explanation of how composting works.",
+  "drop": true,
+  "R1_dialogue": [
+   "need",
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v35",
+  "a": "Describe how to change a flat bicycle tire in clear steps.",
+  "b": "Write a short congratulatory note to a colleague on their work anniversary.",
+  "drop": true,
+  "R1_dialogue": [
+   "bicycle",
+   "change"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v36",
+  "a": "List five countries with unique traditional dances.",
+  "b": "Explain how to reset a forgotten email password.",
+  "drop": true,
+  "R1_dialogue": [
+   "reset"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v37",
+  "a": "Write a humorous limerick about a penguin on vacation.",
+  "b": "List four essential items to pack for a beach trip.",
+  "drop": true,
+  "R1_dialogue": [
+   "essential",
+   "item"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "pack",
+     "trip"
+    ],
+    "task": "Write a packing checklist for a week-long hiking trip."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v38",
+  "a": "Describe the lifecycle of a butterfly in a paragraph.",
+  "b": "List three common causes of car engine overheating.",
+  "drop": true,
+  "R1_dialogue": [
+   "engine"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v39",
+  "a": "Write a polite request to a neighbor to lower their music at night.",
+  "b": "List five famous inventions from the 19th century.",
+  "drop": true,
+  "R1_dialogue": [
+   "century"
+  ],
+  "R2_sig_avn": [
+   "polite"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v40",
+  "a": "Explain in three steps how to make a cup of green tea.",
+  "b": "List four benefits of regular exercise.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v41",
+  "a": "Create a playful riddle about a staircase.",
+  "b": "List three important safety rules for using the internet.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v07"
+  ]
+ },
+ {
+  "id": "s0_v42",
+  "a": "Write an encouraging note to a friend starting a new job.",
+  "b": "List four major rivers in Africa.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "encourag",
+     "start"
+    ],
+    "task": "Write an encouraging message for a friend starting chemotherapy."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v43",
+  "a": "Summarize the plot of 'The Wizard of Oz' in four sentences.",
+  "b": "List five common allergens found in a typical home.",
+  "drop": true,
+  "R1_dialogue": [
+   "found",
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v44",
+  "a": "Write a short, friendly letter inviting someone to a picnic.",
+  "b": "Explain the difference between weather and climate.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v45",
+  "a": "List four ways to conserve water at home.",
+  "b": "Describe the main functions of the heart in simple terms.",
+  "drop": true,
+  "R1_dialogue": [
+   "function"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v46",
+  "a": "Write a poem about the sounds you hear in a city at night.",
+  "b": "List five famous scientists and one of their discoveries.",
+  "drop": true,
+  "R1_dialogue": [
+   "discover",
+   "sound"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v47",
+  "a": "Explain how to safely defrost frozen chicken.",
+  "b": "List four benefits of reading books regularly.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v40"
+  ]
+ },
+ {
+  "id": "s0_v48",
+  "a": "Write a humorous joke about a runaway pancake.",
+  "b": "List three things to check before starting a road trip.",
+  "drop": true,
+  "R1_dialogue": [
+   "thing"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v49",
+  "a": "Describe how honey is made by bees.",
+  "b": "List four key features of a smartphone.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v50",
+  "a": "Write a cheerful message to a child who just learned to ride a bike.",
+  "b": "List five famous landmarks in Asia.",
+  "drop": true,
+  "R1_dialogue": [
+   "child",
+   "just"
+  ],
+  "R2_sig_avn": [
+   "just"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v51",
+  "a": "Explain how to organize a successful garage sale.",
+  "b": "List three types of clouds and describe their appearance.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v52",
+  "a": "Write a short story about a forgotten birthday surprise.",
+  "b": "List four common symptoms of a cold.",
+  "drop": true,
+  "R1_dialogue": [
+   "birthday",
+   "cold"
+  ],
+  "R2_sig_avn": [
+   "cold"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v53",
+  "a": "Describe the process of making paper from wood pulp.",
+  "b": "List five famous classical composers.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v54",
+  "a": "Write a friendly note congratulating someone on their graduation.",
+  "b": "List three simple yoga poses for beginners.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v55",
+  "a": "Explain how a solar panel generates electricity in simple terms.",
+  "b": "List four ingredients needed to bake chocolate chip cookies.",
+  "drop": true,
+  "R1_dialogue": [
+   "cook",
+   "generat",
+   "need"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v56",
+  "a": "Write a playful poem about a mischievous raccoon.",
+  "b": "List five types of trees commonly found in city parks.",
+  "drop": true,
+  "R1_dialogue": [
+   "found"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v57",
+  "a": "Describe how to set a table for a formal dinner.",
+  "b": "List three famous explorers and the regions they explored.",
+  "drop": true,
+  "R1_dialogue": [
+   "explor",
+   "region"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v58",
+  "a": "Write a brief explanation of how vaccines work.",
+  "b": "List four common ways to reduce household energy use.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s0_v59",
+  "a": "Explain in steps how to fold a fitted sheet neatly.",
+  "b": "List three important benefits of learning a second language.",
+  "drop": true,
+  "R1_dialogue": [
+   "neat"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v40"
+  ]
+ },
+ {
+  "id": "s0_v60",
+  "a": "Write a letter to a friend describing your favorite place in your city.",
+  "b": "List five key events from the history of space exploration.",
+  "drop": true,
+  "R1_dialogue": [
+   "explora",
+   "favorite",
+   "history"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v01",
+  "a": "List five major rivers in South America and their countries.",
+  "b": "Write a short, playful poem about a penguin who loves to dance.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v19"
+  ]
+ },
+ {
+  "id": "s1_v02",
+  "a": "Explain how photosynthesis works in simple terms for a 10-year-old.",
+  "b": "Convert 75 euros to US dollars using a recent exchange rate and show your calculation.",
+  "drop": true,
+  "R1_dialogue": [
+   "exchange",
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "photosynthesi",
+     "work"
+    ],
+    "task": "Explain how photosynthesis works to a ten-year-old."
+   }
+  ],
+  "R4_intra_bank": [
+   "s0_v02"
+  ]
+ },
+ {
+  "id": "s1_v03",
+  "a": "Summarize the rules of chess in three sentences.",
+  "b": "Create a gentle apology note for being late to a dinner with a close friend.",
+  "drop": true,
+  "R1_dialogue": [
+   "apology",
+   "close",
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v04",
+  "a": "Describe the process of making homemade soap in a step-by-step plan.",
+  "b": "Make a table comparing the nutritional values of apples, bananas, and oranges per 100g.",
+  "drop": true,
+  "R1_dialogue": [
+   "orang"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v05",
+  "a": "Draft a brief, formal letter requesting information about a museum's opening hours.",
+  "b": "Suggest four creative ideas for a rainy day activity indoors for children.",
+  "drop": true,
+  "R1_dialogue": [
+   "activity",
+   "hour",
+   "open"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v06",
+  "a": "List three famous paintings by Vincent van Gogh and the year each was created.",
+  "b": "Write a short, humorous limerick about losing your keys.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v07",
+  "a": "Explain how a rainbow is formed to someone with no science background.",
+  "b": "Provide a detailed recipe for classic guacamole, including ingredients and steps.",
+  "drop": true,
+  "R1_dialogue": [
+   "classic",
+   "detail",
+   "recipe"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v08",
+  "a": "Translate the phrase 'Good morning, how are you?' into French, Spanish, and German.",
+  "b": "Write a brief, encouraging message for someone nervous about their driving test.",
+  "drop": true,
+  "R1_dialogue": [
+   "french"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v09",
+  "a": "Create a packing checklist for a week-long hiking trip in the mountains.",
+  "b": "List five critically endangered animal species and where they live.",
+  "drop": true,
+  "R1_dialogue": [
+   "checklist",
+   "critical",
+   "mountain"
+  ],
+  "R2_sig_avn": [
+   "spec"
+  ],
+  "R3_task": [
+   {
+    "overlap": [
+     "checklist",
+     "pack",
+     "trip"
+    ],
+    "task": "Write a packing checklist for a week-long hiking trip."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v10",
+  "a": "Write a short, friendly email to invite a neighbor to a backyard barbecue.",
+  "b": "Summarize the main causes of the American Civil War in two paragraphs.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v04"
+  ]
+ },
+ {
+  "id": "s1_v11",
+  "a": "Suggest three quick and healthy snacks for a midday energy boost.",
+  "b": "Explain the difference between a debit card and a credit card to someone new to banking.",
+  "drop": true,
+  "R1_dialogue": [
+   "card",
+   "credit"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v12"
+  ]
+ },
+ {
+  "id": "s1_v12",
+  "a": "List seven countries that use the metric system exclusively.",
+  "b": "Invent a new board game and describe its basic rules in a paragraph.",
+  "drop": true,
+  "R1_dialogue": [
+   "system"
+  ],
+  "R2_sig_avn": [
+   "system"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v13",
+  "a": "Write a step-by-step guide for planting tomato seeds in a garden.",
+  "b": "Provide a brief overview of how the internet works, suitable for a curious teenager.",
+  "drop": true,
+  "R1_dialogue": [
+   "plant",
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "curiou",
+     "teenag"
+    ],
+    "task": "Explain why the halting problem is undecidable, for a curious teenager."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v14",
+  "a": "Make a table listing five popular programming languages and one key feature of each.",
+  "b": "Compose a short congratulatory note for a colleague who completed a marathon.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v04"
+  ]
+ },
+ {
+  "id": "s1_v15",
+  "a": "List five key safety tips for hiking in bear country.",
+  "b": "Write a playful dialogue between two squirrels arguing over an acorn.",
+  "drop": true,
+  "R1_dialogue": [
+   "argu"
+  ],
+  "R2_sig_avn": [
+   "argu"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v33"
+  ]
+ },
+ {
+  "id": "s1_v16",
+  "a": "Explain how compound interest works with a simple example calculation.",
+  "b": "Describe the basic steps for cleaning a fish tank for a new aquarium owner.",
+  "drop": true,
+  "R1_dialogue": [
+   "clean",
+   "compound",
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "compound",
+     "inter"
+    ],
+    "task": "Work out the compound interest on $1,000 at 5% over 10 years."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v17",
+  "a": "Write a paragraph comparing electric and gasoline cars for a customer considering both.",
+  "b": "List five common mistakes people make when baking cakes and how to avoid them.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [
+   "custom"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v18",
+  "a": "Draft a polite message to ask a neighbor to keep the noise down after 10 PM.",
+  "b": "Summarize the plot of 'Romeo and Juliet' in four sentences.",
+  "drop": true,
+  "R1_dialogue": [
+   "noise",
+   "sentenc"
+  ],
+  "R2_sig_avn": [
+   "polite"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v19",
+  "a": "List four famous landmarks to visit in Tokyo, with one sentence about each.",
+  "b": "Write a short, gentle note consoling a friend whose vacation was cancelled.",
+  "drop": true,
+  "R1_dialogue": [
+   "cancell",
+   "whose"
+  ],
+  "R2_sig_avn": [
+   "whose"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v20",
+  "a": "Explain the key differences between weather and climate in simple terms.",
+  "b": "Make a list of five classic board games and their main objective.",
+  "drop": true,
+  "R1_dialogue": [
+   "classic"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v44"
+  ]
+ },
+ {
+  "id": "s1_v21",
+  "a": "Describe how to set up a basic Wi-Fi network at home step by step.",
+  "b": "Write a cheerful, encouraging text to someone starting a new job tomorrow.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "encourag",
+     "start"
+    ],
+    "task": "Write an encouraging message for a friend starting chemotherapy."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v22",
+  "a": "List three benefits and two drawbacks of solar energy.",
+  "b": "Compose a brief, humorous haiku about a stubborn jar lid.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v23",
+  "a": "Write a paragraph explaining how recycling works in a city.",
+  "b": "Provide a list of the main ingredients needed to make chocolate chip cookies.",
+  "drop": true,
+  "R1_dialogue": [
+   "cook",
+   "need",
+   "recycl",
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v24",
+  "a": "Make a step-by-step plan for organizing a small garage sale.",
+  "b": "Explain the rules of the card game Go Fish in a few sentences.",
+  "drop": true,
+  "R1_dialogue": [
+   "card",
+   "organiz",
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v51"
+  ]
+ },
+ {
+  "id": "s1_v25",
+  "a": "Summarize the main functions of the United Nations in two paragraphs.",
+  "b": "Write a playful tongue-twister involving turtles and trains.",
+  "drop": true,
+  "R1_dialogue": [
+   "function",
+   "train"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v26",
+  "a": "List five tools needed for basic home plumbing repairs.",
+  "b": "Convert 500 milliliters to cups and show the calculation.",
+  "drop": true,
+  "R1_dialogue": [
+   "need"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v27",
+  "a": "Write a short, formal thank-you note for a client after a successful project.",
+  "b": "Describe the main differences between jazz and classical music in a paragraph.",
+  "drop": true,
+  "R1_dialogue": [
+   "project",
+   "thank"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v28",
+  "a": "Provide a brief timeline of the key events in World War II.",
+  "b": "List five creative ways to reuse glass jars at home.",
+  "drop": true,
+  "R1_dialogue": [
+   "glas"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v29",
+  "a": "Explain why bees are important to agriculture in a few sentences.",
+  "b": "Write a celebratory message for a child who just lost their first tooth.",
+  "drop": true,
+  "R1_dialogue": [
+   "child",
+   "just",
+   "sentenc"
+  ],
+  "R2_sig_avn": [
+   "just"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v30",
+  "a": "List four famous actors who have played Sherlock Holmes in movies or TV.",
+  "b": "Create a short, neutral email to request a refund for a damaged product.",
+  "drop": true,
+  "R1_dialogue": [
+   "have",
+   "neutral",
+   "play",
+   "product"
+  ],
+  "R2_sig_avn": [
+   "have",
+   "product"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v31",
+  "a": "Describe how tides are affected by the moon in a simple paragraph.",
+  "b": "Write a quick dinner recipe using only five ingredients.",
+  "drop": true,
+  "R1_dialogue": [
+   "recipe"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v32",
+  "a": "Make a table of four European capitals and their population estimates.",
+  "b": "Write a step-by-step guide for a beginner to start learning the guitar.",
+  "drop": true,
+  "R1_dialogue": [
+   "estimat"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v33",
+  "a": "List five popular podcasts about science and briefly describe each.",
+  "b": "Explain how to check tire pressure on a car in a few steps.",
+  "drop": true,
+  "R1_dialogue": [
+   "pressure"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v34",
+  "a": "Write a paragraph about the importance of wetlands for wildlife.",
+  "b": "Suggest three unique icebreaker games for a group of new classmates.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v35",
+  "a": "Explain how to calculate the area of a triangle and provide an example.",
+  "b": "Write a whimsical story opening about a garden full of talking vegetables.",
+  "drop": true,
+  "R1_dialogue": [
+   "open",
+   "talk"
+  ],
+  "R2_sig_avn": [
+   "talk"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v36",
+  "a": "List five ways to reduce household energy consumption.",
+  "b": "Draft a formal apology letter to a customer for a shipping delay.",
+  "drop": true,
+  "R1_dialogue": [
+   "apology"
+  ],
+  "R2_sig_avn": [
+   "custom"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v58"
+  ]
+ },
+ {
+  "id": "s1_v37",
+  "a": "Summarize the main plot of the novel 'Moby-Dick' in three sentences.",
+  "b": "List three common tools used for watercolor painting and what each is for.",
+  "drop": true,
+  "R1_dialogue": [
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v38",
+  "a": "Describe how to properly store fresh herbs in the refrigerator.",
+  "b": "Provide a brief overview of the rules of badminton.",
+  "drop": true,
+  "R1_dialogue": [
+   "fresh",
+   "store"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v39",
+  "a": "List five famous explorers and the regions they explored.",
+  "b": "Write a playful riddle about a kangaroo.",
+  "drop": true,
+  "R1_dialogue": [
+   "explor",
+   "region"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v07"
+  ]
+ },
+ {
+  "id": "s1_v40",
+  "a": "Explain the basic process of composting kitchen scraps at home.",
+  "b": "Create a sample shopping list for someone moving into their first apartment.",
+  "drop": true,
+  "R1_dialogue": [
+   "sample"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v41",
+  "a": "Write a step-by-step guide for making a simple paper airplane.",
+  "b": "List four major holidays celebrated in India and briefly describe each.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v42",
+  "a": "Summarize the rules and objective of Sudoku in a few sentences.",
+  "b": "Write a gentle, supportive note to someone feeling discouraged about a hobby.",
+  "drop": true,
+  "R1_dialogue": [
+   "feel",
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v43",
+  "a": "List five common breeds of dogs and one characteristic for each.",
+  "b": "Write a haiku about a peaceful forest in spring.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v44",
+  "a": "Explain the difference between weathering and erosion with examples.",
+  "b": "Suggest three easy science experiments for children at home.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v45",
+  "a": "Write a paragraph describing how a bill becomes law in the United States.",
+  "b": "List five essential items for a basic first aid kit.",
+  "drop": true,
+  "R1_dialogue": [
+   "essential",
+   "item"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v46",
+  "a": "Describe how to make a homemade bird feeder using recycled materials.",
+  "b": "List four key differences between fiction and non-fiction books.",
+  "drop": true,
+  "R1_dialogue": [
+   "material",
+   "recycl"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v47",
+  "a": "Write a brief explanation of how the water cycle works.",
+  "b": "Suggest four thoughtful housewarming gifts for a new neighbor.",
+  "drop": true,
+  "R1_dialogue": [
+   "gift",
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v48",
+  "a": "Create a table comparing the main features of three popular smartphones.",
+  "b": "Explain how to set a secure password and why it's important.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v49",
+  "a": "List five famous mountains outside Europe and their locations.",
+  "b": "Write a short, encouraging pep talk for someone about to run their first 5K race.",
+  "drop": true,
+  "R1_dialogue": [
+   "europe",
+   "mountain",
+   "talk"
+  ],
+  "R2_sig_avn": [
+   "talk"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v50",
+  "a": "Describe how to safely remove a small splinter from your finger.",
+  "b": "List five interesting facts about honeybees.",
+  "drop": true,
+  "R1_dialogue": [
+   "fact"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v23"
+  ]
+ },
+ {
+  "id": "s1_v51",
+  "a": "Write a playful acrostic poem using the word 'TRAVEL'.",
+  "b": "Explain the main steps for setting up a tent while camping.",
+  "drop": true,
+  "R1_dialogue": [
+   "travel",
+   "while"
+  ],
+  "R2_sig_avn": [
+   "while"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v52",
+  "a": "Make a chart listing four types of clouds and their typical weather.",
+  "b": "Write a short, formal email to request a change to a hotel reservation.",
+  "drop": true,
+  "R1_dialogue": [
+   "change"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v53",
+  "a": "List three types of renewable energy and one challenge for each.",
+  "b": "Suggest five creative themes for a neighborhood block party.",
+  "drop": true,
+  "R1_dialogue": [
+   "neighborhood",
+   "party"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v54",
+  "a": "Write a brief, neutral summary of how car insurance works.",
+  "b": "Create a playful story starter about a backpack that can talk.",
+  "drop": true,
+  "R1_dialogue": [
+   "neutral",
+   "talk",
+   "work"
+  ],
+  "R2_sig_avn": [
+   "talk"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v55",
+  "a": "List five common spices used in Indian cooking.",
+  "b": "Explain how to change a flat bicycle tire with step-by-step instructions.",
+  "drop": true,
+  "R1_dialogue": [
+   "bicycle",
+   "change",
+   "cook"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v56",
+  "a": "Describe the key steps for starting a compost pile in a backyard.",
+  "b": "Write a short, celebratory message for someone graduating from university.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v57",
+  "a": "Provide a list of five famous world monuments and the countries they are in.",
+  "b": "Write a gentle, apologetic text to a friend for missing their call.",
+  "drop": true,
+  "R1_dialogue": [
+   "call",
+   "miss"
+  ],
+  "R2_sig_avn": [
+   "call"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v19"
+  ]
+ },
+ {
+  "id": "s1_v58",
+  "a": "List four basic rules for playing tennis.",
+  "b": "Write a brief, serious paragraph about the dangers of distracted driving.",
+  "drop": true,
+  "R1_dialogue": [
+   "play"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v59",
+  "a": "Explain the importance of pollinators for food production in a few sentences.",
+  "b": "Suggest three fun science museum exhibits for children.",
+  "drop": true,
+  "R1_dialogue": [
+   "produc",
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s1_v60",
+  "a": "List five key steps to organize a bookshelf efficiently.",
+  "b": "Write a short, encouraging letter to someone learning a new language.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [
+   "efficient"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v01",
+  "a": "List five famous paintings by Claude Monet.",
+  "b": "Convert 300 kilometers to miles and show the calculation.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s1_v06"
+  ]
+ },
+ {
+  "id": "s2_v02",
+  "a": "Write a short poem celebrating the arrival of spring.",
+  "b": "Explain how a solar eclipse occurs in simple terms.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v03",
+  "a": "Give three tips for keeping indoor plants healthy.",
+  "b": "Summarize the main differences between rugby and American football.",
+  "drop": true,
+  "R1_dialogue": [
+   "keep",
+   "plant"
+  ],
+  "R2_sig_avn": [
+   "keep"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v04",
+  "a": "Draft a brief congratulatory message for someone who just completed a marathon.",
+  "b": "Describe the process of photosynthesis in one paragraph.",
+  "drop": true,
+  "R1_dialogue": [
+   "just"
+  ],
+  "R2_sig_avn": [
+   "just"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v05",
+  "a": "List four key ingredients needed to make hummus.",
+  "b": "Write a limerick about a penguin learning to dance.",
+  "drop": true,
+  "R1_dialogue": [
+   "need"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v06",
+  "a": "Explain why the seasons change throughout the year.",
+  "b": "Suggest three board games suitable for a rainy afternoon with friends.",
+  "drop": true,
+  "R1_dialogue": [
+   "change",
+   "throughout"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "friend",
+     "rainy"
+    ],
+    "task": "Plan a cozy rainy-day itinerary for two old friends reuniting."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v07",
+  "a": "Provide a step-by-step method to clean a blender safely.",
+  "b": "Write a brief review of a recent science fiction movie.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [
+   "review"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v08",
+  "a": "List five world capitals that begin with the letter 'M'.",
+  "b": "Offer a gentle apology for being late to a virtual meeting.",
+  "drop": true,
+  "R1_dialogue": [
+   "apology",
+   "meet"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v09",
+  "a": "Compose a two-sentence story about a lost key.",
+  "b": "Create a table comparing three common types of apples by taste and texture.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v10",
+  "a": "Explain the difference between debit and credit cards in a way a teenager would understand.",
+  "b": "List four famous operas composed by Giuseppe Verdi.",
+  "drop": true,
+  "R1_dialogue": [
+   "card",
+   "credit",
+   "would"
+  ],
+  "R2_sig_avn": [
+   "understand"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v11",
+  "a": "Write a playful riddle about a suitcase.",
+  "b": "Describe in detail how to tie a bow tie.",
+  "drop": true,
+  "R1_dialogue": [
+   "detail"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v07"
+  ]
+ },
+ {
+  "id": "s2_v12",
+  "a": "List three advantages of traveling by train.",
+  "b": "Write a short, formal letter declining an invitation to an event.",
+  "drop": true,
+  "R1_dialogue": [
+   "train",
+   "travel"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v13",
+  "a": "Suggest three creative toppings for a homemade pizza.",
+  "b": "Explain why honey never spoils, using scientific reasoning.",
+  "drop": true,
+  "R1_dialogue": [
+   "pizza",
+   "reason"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v14",
+  "a": "Draft a polite reminder about an upcoming library book due date.",
+  "b": "List four unique animals native to Australia.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [
+   "polite"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v15",
+  "a": "Write a cheerful haiku about gardening.",
+  "b": "List five key points about the causes of the American Revolution.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [
+   "point"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v02",
+   "s0_v04"
+  ]
+ },
+ {
+  "id": "s2_v16",
+  "a": "Summarize the main plot of 'Romeo and Juliet' in three sentences.",
+  "b": "Provide a recipe for a basic fruit smoothie using common ingredients.",
+  "drop": true,
+  "R1_dialogue": [
+   "recipe",
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v25"
+  ]
+ },
+ {
+  "id": "s2_v17",
+  "a": "List three essential items to pack for a hiking trip.",
+  "b": "Explain in detail how to perform a coin magic trick.",
+  "drop": true,
+  "R1_dialogue": [
+   "detail",
+   "essential",
+   "item",
+   "perform"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "pack",
+     "trip"
+    ],
+    "task": "Write a packing checklist for a week-long hiking trip."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v18",
+  "a": "Write a short, encouraging note for someone about to take an exam.",
+  "b": "List five different chess opening moves with their names.",
+  "drop": true,
+  "R1_dialogue": [
+   "open",
+   "take"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v19",
+  "a": "Explain in one paragraph how tides are influenced by the moon.",
+  "b": "Create a humorous dialogue between two squirrels arguing over an acorn.",
+  "drop": true,
+  "R1_dialogue": [
+   "argu"
+  ],
+  "R2_sig_avn": [
+   "argu"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v20",
+  "a": "List four common ways to reduce household energy consumption.",
+  "b": "Provide the metric conversions for 2 cups, 1 tablespoon, and 8 ounces.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v58"
+  ]
+ },
+ {
+  "id": "s2_v21",
+  "a": "Suggest three fun activities for a family road trip.",
+  "b": "Explain the difference between a virus and a bacterium.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "bacterium",
+     "viru"
+    ],
+    "task": "Explain the difference between a virus and a bacterium."
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v22",
+  "a": "Write a congratulatory message to a friend who published their first book.",
+  "b": "List five famous landmarks in South America.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v23",
+  "a": "Explain why recycling is important in a single paragraph.",
+  "b": "Compose a light-hearted pun involving strawberries.",
+  "drop": true,
+  "R1_dialogue": [
+   "light",
+   "recycl",
+   "single"
+  ],
+  "R2_sig_avn": [
+   "single"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v24",
+  "a": "Create a list of four basic supplies needed for watercolor painting.",
+  "b": "Describe the process of making homemade ice cream without a machine.",
+  "drop": true,
+  "R1_dialogue": [
+   "cream",
+   "need",
+   "suppl"
+  ],
+  "R2_sig_avn": [
+   "machine"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v25",
+  "a": "Write a gentle, professional email apologizing for a delayed response.",
+  "b": "List three main causes of the French Revolution.",
+  "drop": true,
+  "R1_dialogue": [
+   "french",
+   "professional"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v04"
+  ]
+ },
+ {
+  "id": "s2_v26",
+  "a": "Explain in simple terms how a rainbow forms.",
+  "b": "List four popular tourist attractions in Tokyo.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v27",
+  "a": "Write a playful, short poem about a mischievous dog.",
+  "b": "List the steps to change a flat bicycle tire.",
+  "drop": true,
+  "R1_dialogue": [
+   "bicycle",
+   "change"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v28",
+  "a": "Compare three different types of pasta shapes and their typical uses in a table.",
+  "b": "Describe in detail how to make a paper airplane that flies far.",
+  "drop": true,
+  "R1_dialogue": [
+   "detail",
+   "pasta"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v29",
+  "a": "List four benefits of learning to play a musical instrument.",
+  "b": "Summarize the rules of the card game Uno in one paragraph.",
+  "drop": true,
+  "R1_dialogue": [
+   "card",
+   "play"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v30",
+  "a": "Write a brief, formal thank-you note to a neighbor for watering your plants.",
+  "b": "List five essential safety rules for swimming in the ocean.",
+  "drop": true,
+  "R1_dialogue": [
+   "essential",
+   "plant",
+   "thank"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v31",
+  "a": "Provide a step-by-step guide for organizing a bookshelf by genre.",
+  "b": "Write a witty joke about a turtle at a library.",
+  "drop": true,
+  "R1_dialogue": [
+   "organiz"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v32",
+  "a": "List three methods for removing stains from a white shirt.",
+  "b": "Explain the difference between a comet and an asteroid.",
+  "drop": true,
+  "R1_dialogue": [
+   "white"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v33",
+  "a": "Suggest four healthy snacks for an afternoon pick-me-up.",
+  "b": "Write a short, earnest recommendation for a classic novel.",
+  "drop": true,
+  "R1_dialogue": [
+   "classic",
+   "earn"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v12"
+  ]
+ },
+ {
+  "id": "s2_v34",
+  "a": "Explain in detail how to set up a tent at a campsite.",
+  "b": "List three famous bridges and the cities they are located in.",
+  "drop": true,
+  "R1_dialogue": [
+   "detail"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v35",
+  "a": "Write a rhyming couplet about finding a lucky penny.",
+  "b": "Summarize the main function of the human heart in two sentences.",
+  "drop": true,
+  "R1_dialogue": [
+   "find",
+   "human",
+   "sentenc"
+  ],
+  "R2_sig_avn": [
+   "find"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v36",
+  "a": "List five famous jazz musicians and one of their popular songs.",
+  "b": "Explain, step by step, how to solve a simple Sudoku puzzle.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v37",
+  "a": "Write a short, encouraging message to a child learning to ride a bike.",
+  "b": "List three key differences between alligators and crocodiles.",
+  "drop": true,
+  "R1_dialogue": [
+   "child"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v25"
+  ]
+ },
+ {
+  "id": "s2_v38",
+  "a": "Describe how to make a homemade bird feeder using a recycled bottle.",
+  "b": "List four common symptoms of a cold.",
+  "drop": true,
+  "R1_dialogue": [
+   "cold",
+   "recycl"
+  ],
+  "R2_sig_avn": [
+   "cold"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v39",
+  "a": "Explain the rules for playing rock-paper-scissors-lizard-Spock.",
+  "b": "Write a playful acrostic poem using the word 'SMILE'.",
+  "drop": true,
+  "R1_dialogue": [
+   "play"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v40",
+  "a": "List three historic events from the 1960s and their significance.",
+  "b": "Provide a simple recipe for making classic lemonade.",
+  "drop": true,
+  "R1_dialogue": [
+   "classic",
+   "recipe"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v41",
+  "a": "Explain in a paragraph how bees communicate with each other.",
+  "b": "List five major rivers in Africa and the countries they flow through.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v19"
+  ]
+ },
+ {
+  "id": "s2_v42",
+  "a": "Write a formal message congratulating a team on winning a local tournament.",
+  "b": "List four different types of cloud formations.",
+  "drop": true,
+  "R1_dialogue": [
+   "team"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v43",
+  "a": "Suggest three strategies for saving money on groceries.",
+  "b": "Write a light-hearted joke about a piano moving house.",
+  "drop": true,
+  "R1_dialogue": [
+   "light"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v44",
+  "a": "Describe in detail how to safely change a car tire.",
+  "b": "List three major differences between novels and short stories.",
+  "drop": true,
+  "R1_dialogue": [
+   "change",
+   "detail",
+   "stor"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v45",
+  "a": "Write a brief, neutral summary of the plot of 'Cinderella'.",
+  "b": "List four popular hiking destinations in South America.",
+  "drop": true,
+  "R1_dialogue": [
+   "neutral"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s2_v22"
+  ]
+ },
+ {
+  "id": "s2_v46",
+  "a": "Offer three tips for improving public speaking skills.",
+  "b": "Write a two-stanza poem about a rainy city evening.",
+  "drop": true,
+  "R1_dialogue": [
+   "even",
+   "speak"
+  ],
+  "R2_sig_avn": [
+   "speak"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v47",
+  "a": "List three common causes of food spoilage.",
+  "b": "Explain the significance of the Rosetta Stone in one paragraph.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v48",
+  "a": "Write a friendly reminder to return a borrowed umbrella.",
+  "b": "List five famous composers from the Baroque era.",
+  "drop": true,
+  "R1_dialogue": [
+   "borrow",
+   "return"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v53"
+  ]
+ },
+ {
+  "id": "s2_v49",
+  "a": "Summarize in one paragraph the main idea of the greenhouse effect.",
+  "b": "List four classic board games and describe each in one sentence.",
+  "drop": true,
+  "R1_dialogue": [
+   "classic",
+   "effect"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v50",
+  "a": "Explain how to make a basic origami crane step by step.",
+  "b": "List three differences between frogs and toads.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v51",
+  "a": "Write a polite note to a neighbor about upcoming garden maintenance.",
+  "b": "List five countries where Spanish is an official language.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [
+   "polite"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v23"
+  ]
+ },
+ {
+  "id": "s2_v52",
+  "a": "Describe in detail how to make a simple marble run using household items.",
+  "b": "List three major achievements of Marie Curie.",
+  "drop": true,
+  "R1_dialogue": [
+   "detail",
+   "item"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v53",
+  "a": "Write a short, humorous poem about socks that disappear in the laundry.",
+  "b": "List four famous landmarks in Egypt.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s1_v06",
+   "s2_v22"
+  ]
+ },
+ {
+  "id": "s2_v54",
+  "a": "Explain the process of making compost at home.",
+  "b": "List three key differences between classical and jazz music.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v53"
+  ]
+ },
+ {
+  "id": "s2_v55",
+  "a": "Write a brief, consoling note to someone whose favorite sports team lost.",
+  "b": "List five famous volcanoes and the countries where they are located.",
+  "drop": true,
+  "R1_dialogue": [
+   "favorite",
+   "team",
+   "whose"
+  ],
+  "R2_sig_avn": [
+   "whose"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v19"
+  ]
+ },
+ {
+  "id": "s2_v56",
+  "a": "Summarize in two sentences how the water cycle works.",
+  "b": "Write a playful tongue-twister involving green grapes.",
+  "drop": true,
+  "R1_dialogue": [
+   "sentenc",
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v57",
+  "a": "List four popular types of sushi and their main ingredients.",
+  "b": "Explain how to create a simple budget in a spreadsheet.",
+  "drop": true,
+  "R1_dialogue": [
+   "spreadsheet"
+  ],
+  "R2_sig_avn": [
+   "budget",
+   "spreadsheet"
+  ],
+  "R3_task": [
+   {
+    "overlap": [
+     "budget",
+     "spreadsheet"
+    ],
+    "task": "Produce a meticulous 2,000-word audit of a messy budget spreadsheet, checking ev"
+   }
+  ],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v58",
+  "a": "Write a short, encouraging message to someone learning a new language.",
+  "b": "List three important inventions of the 19th century and their inventors.",
+  "drop": true,
+  "R1_dialogue": [
+   "century"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v59",
+  "a": "Describe how to play hopscotch in a way suitable for a child.",
+  "b": "List four different climate zones and a country found in each.",
+  "drop": true,
+  "R1_dialogue": [
+   "child",
+   "found",
+   "play"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s2_v60",
+  "a": "Write a formal, brief note requesting a book from a public library.",
+  "b": "List three common reasons houseplants do not thrive indoors.",
+  "drop": true,
+  "R1_dialogue": [
+   "reason"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v01",
+  "a": "List five famous landmarks in South America.",
+  "b": "Write a short, playful poem about a mischievous squirrel.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s2_v22"
+  ]
+ },
+ {
+  "id": "s3_v02",
+  "a": "Explain how a rainbow forms in simple terms for a child.",
+  "b": "Convert 100 US dollars to Japanese yen, using an approximate current rate and show your calculation.",
+  "drop": true,
+  "R1_dialogue": [
+   "child",
+   "current"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v02",
+   "s2_v26"
+  ]
+ },
+ {
+  "id": "s3_v03",
+  "a": "Describe the basic rules of the game of chess in a concise paragraph.",
+  "b": "Suggest three creative gift ideas for someone who loves gardening.",
+  "drop": true,
+  "R1_dialogue": [
+   "gift"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v04",
+  "a": "Create a polite email apologizing for a delayed response to a customer inquiry.",
+  "b": "List four major rivers in Africa and one interesting fact about each.",
+  "drop": true,
+  "R1_dialogue": [
+   "fact"
+  ],
+  "R2_sig_avn": [
+   "custom",
+   "polite"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v05",
+  "a": "Write a gentle, encouraging message to someone nervous about starting a new school.",
+  "b": "Summarize the main differences between a crocodile and an alligator in a table.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "encourag",
+     "start"
+    ],
+    "task": "Write an encouraging message for a friend starting chemotherapy."
+   }
+  ],
+  "R4_intra_bank": [
+   "s0_v25"
+  ]
+ },
+ {
+  "id": "s3_v06",
+  "a": "Generate a step-by-step plan for organizing a small bookshelf efficiently.",
+  "b": "List five essential safety tips for hiking in the mountains.",
+  "drop": true,
+  "R1_dialogue": [
+   "essential",
+   "mountain",
+   "organiz"
+  ],
+  "R2_sig_avn": [
+   "efficient"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v07",
+  "a": "Write a humorous haiku about losing your keys.",
+  "b": "Explain the process of photosynthesis in two clear sentences.",
+  "drop": true,
+  "R1_dialogue": [
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s1_v22"
+  ]
+ },
+ {
+  "id": "s3_v08",
+  "a": "Describe how to make a simple paper airplane, step by step.",
+  "b": "List three popular programming languages and one key use for each.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v04"
+  ]
+ },
+ {
+  "id": "s3_v09",
+  "a": "Create a short dialogue between two friends deciding where to eat lunch.",
+  "b": "Calculate the area of a rectangle that is 7 meters long and 4 meters wide.",
+  "drop": true,
+  "R1_dialogue": [
+   "decid",
+   "wide"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v10",
+  "a": "Suggest four fun indoor activities for a group of children on a rainy day.",
+  "b": "Write a brief, factual summary of the invention of the telephone.",
+  "drop": true,
+  "R1_dialogue": [
+   "inven"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v11",
+  "a": "Compose a formal letter declining an invitation to a conference due to a scheduling conflict.",
+  "b": "List five common types of clouds and describe what weather each usually brings.",
+  "drop": true,
+  "R1_dialogue": [
+   "usual"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v12",
+  "a": "Write a short paragraph explaining why recycling is important for the environment.",
+  "b": "List three differences between electric and hybrid cars.",
+  "drop": true,
+  "R1_dialogue": [
+   "recycl"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v13",
+  "a": "Generate a playful pun involving oranges.",
+  "b": "Describe in detail how to change a flat tire on a car.",
+  "drop": true,
+  "R1_dialogue": [
+   "change",
+   "detail",
+   "orang"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v14",
+  "a": "List five ingredients needed to bake chocolate chip cookies.",
+  "b": "Summarize the causes and effects of tides in two sentences.",
+  "drop": true,
+  "R1_dialogue": [
+   "cook",
+   "effect",
+   "need",
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v15",
+  "a": "Explain in simple terms how a bill becomes a law in the United States.",
+  "b": "Write a short, congratulatory note to a friend who completed a marathon.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v16",
+  "a": "Create a table comparing the nutritional values of an apple, a banana, and an orange.",
+  "b": "List four famous impressionist painters and one of their notable works.",
+  "drop": true,
+  "R1_dialogue": [
+   "orange",
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v17",
+  "a": "Describe how to clean a glass stovetop without scratching it.",
+  "b": "Write a limerick about a penguin who loves to dance.",
+  "drop": true,
+  "R1_dialogue": [
+   "glas"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v18",
+  "a": "List three main differences between a tablet and a laptop.",
+  "b": "Write a brief paragraph explaining what a black hole is.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v19",
+  "a": "Generate three creative names for a new board game about space exploration.",
+  "b": "List five safety precautions to take when using household cleaning products.",
+  "drop": true,
+  "R1_dialogue": [
+   "clean",
+   "explora",
+   "product",
+   "take"
+  ],
+  "R2_sig_avn": [
+   "product"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v20",
+  "a": "Write a polite request for a neighbor to keep their music down at night.",
+  "b": "Create a table showing three popular European capitals and their approximate populations.",
+  "drop": true,
+  "R1_dialogue": [
+   "show"
+  ],
+  "R2_sig_avn": [
+   "polite"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v21",
+  "a": "List four ways to reduce single-use plastic in daily life.",
+  "b": "Write a friendly, encouraging note to someone learning to play the piano.",
+  "drop": true,
+  "R1_dialogue": [
+   "life",
+   "plastic",
+   "play",
+   "single"
+  ],
+  "R2_sig_avn": [
+   "single"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v22",
+  "a": "Describe, in a formal tone, the process of applying for a travel visa.",
+  "b": "Write a short, silly tongue-twister involving kangaroos.",
+  "drop": true,
+  "R1_dialogue": [
+   "tone",
+   "travel"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v23",
+  "a": "List five key differences between digital and analog clocks.",
+  "b": "Write a brief summary of the historical significance of the Silk Road.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v24",
+  "a": "Suggest three creative ways to reuse empty glass jars at home.",
+  "b": "Write a short, neutral paragraph explaining how to compost kitchen scraps.",
+  "drop": true,
+  "R1_dialogue": [
+   "empty",
+   "glas",
+   "neutral"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v25",
+  "a": "List four major planets in our solar system and one key characteristic of each.",
+  "b": "Write a gentle, consoling note to someone whose pet fish has gone missing.",
+  "drop": true,
+  "R1_dialogue": [
+   "gone",
+   "miss",
+   "system",
+   "whose"
+  ],
+  "R2_sig_avn": [
+   "system",
+   "whose"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v26",
+  "a": "Explain in simple terms what a solar eclipse is.",
+  "b": "Write a playful acrostic poem using the word 'GARDEN'.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s2_v02"
+  ]
+ },
+ {
+  "id": "s3_v27",
+  "a": "List five ways to save water when watering your garden.",
+  "b": "Write a brief, factual description of the Amazon rainforest.",
+  "drop": true,
+  "R1_dialogue": [
+   "save"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v28",
+  "a": "Create a simple dialogue between a customer and a librarian about finding a specific book.",
+  "b": "List three essential items to pack for a day at the beach and explain why each is important.",
+  "drop": true,
+  "R1_dialogue": [
+   "essential",
+   "find",
+   "item"
+  ],
+  "R2_sig_avn": [
+   "custom",
+   "find"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v29",
+  "a": "Write a short paragraph explaining the importance of handwashing.",
+  "b": "List four differences between frogs and toads.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s2_v50",
+   "s3_v18"
+  ]
+ },
+ {
+  "id": "s3_v30",
+  "a": "Generate three ideas for a child's science fair project with a brief description of each.",
+  "b": "Write a polite note declining an invitation to dinner with a friend.",
+  "drop": true,
+  "R1_dialogue": [
+   "child",
+   "project"
+  ],
+  "R2_sig_avn": [
+   "polite"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v31",
+  "a": "Explain the difference between weather and climate in two sentences.",
+  "b": "List five traditional Italian dishes and their main ingredients.",
+  "drop": true,
+  "R1_dialogue": [
+   "sentenc"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v44"
+  ]
+ },
+ {
+  "id": "s3_v32",
+  "a": "Write a gentle, encouraging message to someone starting a new exercise routine.",
+  "b": "Describe how to safely store leftover soup in the refrigerator.",
+  "drop": true,
+  "R1_dialogue": [
+   "store"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [
+   {
+    "overlap": [
+     "encourag",
+     "start"
+    ],
+    "task": "Write an encouraging message for a friend starting chemotherapy."
+   }
+  ],
+  "R4_intra_bank": [
+   "s0_v07"
+  ]
+ },
+ {
+  "id": "s3_v33",
+  "a": "List four basic first aid steps for treating a minor cut.",
+  "b": "Write a short, imaginative story about a turtle who wants to learn how to fly.",
+  "drop": true,
+  "R1_dialogue": [
+   "treat",
+   "want"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v34",
+  "a": "Create a table comparing three common types of tea: green, black, and herbal.",
+  "b": "List three important facts about the Great Wall of China.",
+  "drop": true,
+  "R1_dialogue": [
+   "fact"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v35",
+  "a": "Write a formal thank-you note to a museum curator after a private tour.",
+  "b": "List four ways to keep indoor plants healthy.",
+  "drop": true,
+  "R1_dialogue": [
+   "plant",
+   "thank"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v36",
+  "a": "List five simple stretches that can be done at a desk and describe the benefits of each.",
+  "b": "Write a playful rhyming couplet about a dog chasing its tail.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v37",
+  "a": "Describe how to set up a secure password, including tips for creating strong passwords.",
+  "b": "List three famous volcanoes and one fact about each.",
+  "drop": true,
+  "R1_dialogue": [
+   "fact",
+   "strong"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s1_v06",
+   "s1_v48"
+  ]
+ },
+ {
+  "id": "s3_v38",
+  "a": "Write a short, neutral paragraph explaining the purpose of a smoke detector.",
+  "b": "List four commonly recycled materials and how each is typically processed.",
+  "drop": true,
+  "R1_dialogue": [
+   "material",
+   "neutral",
+   "recycl"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v39",
+  "a": "Suggest three fun science experiments that can be done at home with household items.",
+  "b": "Write a brief summary of the main causes of ocean pollution.",
+  "drop": true,
+  "R1_dialogue": [
+   "item"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s1_v44"
+  ]
+ },
+ {
+  "id": "s3_v40",
+  "a": "List five healthy snacks for children and explain why each is a good choice.",
+  "b": "Write a congratulatory message to a colleague on finishing a big project.",
+  "drop": true,
+  "R1_dialogue": [
+   "choice",
+   "finish",
+   "project"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v12"
+  ]
+ },
+ {
+  "id": "s3_v41",
+  "a": "Describe how to fold a fitted sheet neatly, step by step.",
+  "b": "List four basic rules to follow when playing tennis.",
+  "drop": true,
+  "R1_dialogue": [
+   "follow",
+   "neat",
+   "play"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v42",
+  "a": "Write a short, encouraging note to someone who is nervous about public speaking.",
+  "b": "List five famous composers from the classical era.",
+  "drop": true,
+  "R1_dialogue": [
+   "speak"
+  ],
+  "R2_sig_avn": [
+   "speak"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v53"
+  ]
+ },
+ {
+  "id": "s3_v43",
+  "a": "Explain in simple terms how a camera captures an image.",
+  "b": "List three factors to consider when choosing a pet for a small apartment.",
+  "drop": true,
+  "R1_dialogue": [
+   "consid"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v44",
+  "a": "Write a brief, apologetic message to a friend for accidentally missing their call.",
+  "b": "List four main ingredients in traditional sushi and describe each one.",
+  "drop": true,
+  "R1_dialogue": [
+   "call",
+   "miss"
+  ],
+  "R2_sig_avn": [
+   "call"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v45",
+  "a": "Create a limerick about a forgetful goldfish.",
+  "b": "List three types of renewable energy and explain how each one works.",
+  "drop": true,
+  "R1_dialogue": [
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v46",
+  "a": "Write a short, formal paragraph explaining why voting is important in a democracy.",
+  "b": "List four key steps in preparing a room for painting.",
+  "drop": true,
+  "R1_dialogue": [
+   "room"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v47",
+  "a": "Describe how to care for a potted succulent plant.",
+  "b": "Write a playful riddle about a refrigerator.",
+  "drop": true,
+  "R1_dialogue": [
+   "care",
+   "plant"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v07"
+  ]
+ },
+ {
+  "id": "s3_v48",
+  "a": "List five different habitats and one animal that lives in each.",
+  "b": "Write a brief, factual summary of the history of the Olympic Games.",
+  "drop": true,
+  "R1_dialogue": [
+   "history"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v49",
+  "a": "Explain, in simple language, how the water cycle works.",
+  "b": "Write a friendly note congratulating someone on learning to ride a bicycle.",
+  "drop": true,
+  "R1_dialogue": [
+   "bicycle",
+   "work"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v54"
+  ]
+ },
+ {
+  "id": "s3_v50",
+  "a": "List four tips for keeping a kitchen clean and organized.",
+  "b": "Write a short paragraph describing the main events of the Apollo 11 mission.",
+  "drop": true,
+  "R1_dialogue": [
+   "keep",
+   "organiz"
+  ],
+  "R2_sig_avn": [
+   "keep"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v51",
+  "a": "Write a playful acrostic poem using the word 'SMILE'.",
+  "b": "List three key differences between a smartphone and a traditional landline phone.",
+  "drop": true,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v33"
+  ]
+ },
+ {
+  "id": "s3_v52",
+  "a": "Create a dialogue between two people planning a camping trip.",
+  "b": "List four common allergies and one symptom of each.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v53",
+  "a": "Write a brief, factual explanation of how wind turbines generate electricity.",
+  "b": "List five steps to prepare a simple fruit salad.",
+  "drop": true,
+  "R1_dialogue": [
+   "wind"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v54",
+  "a": "Suggest three creative ways to personalize a home office space.",
+  "b": "Write a short, neutral paragraph describing the lifecycle of a butterfly.",
+  "drop": true,
+  "R1_dialogue": [
+   "neutral",
+   "office"
+  ],
+  "R2_sig_avn": [
+   "office"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v55",
+  "a": "List four major world religions and one central belief of each.",
+  "b": "Write a friendly, congratulatory note to a neighbor who has a new puppy.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v56",
+  "a": "Describe how to safely dispose of old batteries.",
+  "b": "Write a playful couplet about a frog who loves rain.",
+  "drop": true,
+  "R1_dialogue": [
+   "batter",
+   "rain"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": [
+   "s0_v07",
+   "s3_v36"
+  ]
+ },
+ {
+  "id": "s3_v57",
+  "a": "List five tips for saving money on groceries.",
+  "b": "Write a brief explanation of how magnets attract and repel.",
+  "drop": false,
+  "R1_dialogue": [],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v58",
+  "a": "Write a formal note requesting a refund for a product that arrived damaged.",
+  "b": "List four common reasons why plants might wilt indoors.",
+  "drop": true,
+  "R1_dialogue": [
+   "arriv",
+   "plant",
+   "product",
+   "reason"
+  ],
+  "R2_sig_avn": [
+   "product"
+  ],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v59",
+  "a": "Describe how to make homemade lemonade with a simple recipe.",
+  "b": "List three famous explorers and the regions they are known for exploring.",
+  "drop": true,
+  "R1_dialogue": [
+   "explor",
+   "recipe",
+   "region"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ },
+ {
+  "id": "s3_v60",
+  "a": "Write a short, encouraging message to a friend who is feeling homesick.",
+  "b": "List five important safety rules for crossing the street.",
+  "drop": true,
+  "R1_dialogue": [
+   "feel"
+  ],
+  "R2_sig_avn": [],
+  "R3_task": [],
+  "R4_intra_bank": []
+ }
+]
