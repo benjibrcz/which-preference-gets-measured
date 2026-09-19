@@ -3,21 +3,30 @@ suffix) for auth_*/pref_* histories: revealed choice, then "carry it out", then 
 which task the completion corresponds to. Writes runs/postexit2_exec.jsonl and prints match rates.
 Usage: python src/postexit2_exec.py
 """
-import asyncio, json, sys
+import argparse, asyncio, json, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from harness import Client, parse_choice
 from prompts import REVEALED
-from postexit2_collect import build_stacks, msgs, BANK2
+import postexit2_collect as pc
+from postexit2_collect import msgs, BANK2
 from consistency_check import JUDGE_TMPL
 
 ROOT = Path(__file__).resolve().parent.parent
 
 async def main():
-    client = Client("openrouter", "google/gemma-3-27b-it", concurrency=16, temperature=1.0)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--provider", default="openrouter"); ap.add_argument("--model", default="google/gemma-3-27b-it")
+    ap.add_argument("--generated", default=None); ap.add_argument("--out", default=str(ROOT / "runs" / "postexit2_exec.jsonl"))
+    ap.add_argument("--max-pairs", type=int, default=None)
+    args = ap.parse_args()
+    if args.generated:
+        pc.set_generated(args.generated)
+    client = Client(args.provider, args.model, concurrency=16, temperature=1.0)
     judge = Client("openai", "gpt-4.1-mini", concurrency=16, temperature=0.0)
-    stacks = build_stacks()
-    out = open(ROOT / "runs" / "postexit2_exec.jsonl", "w")
+    stacks = pc.build_stacks()
+    bank = BANK2[:args.max_pairs] if args.max_pairs else BANK2
+    out = open(args.out, "w")
     res = {}
     async def one(hid, pr, order):
         a, b = (pr["a"], pr["b"]) if order == 0 else (pr["b"], pr["a"])
@@ -35,7 +44,7 @@ async def main():
         j = (jraw or "").strip()[:1].upper()
         row = {"history": hid, "pair_id": pr["id"], "order": order, "chosen": letter, "judged": j, "match": j == letter}
         out.write(json.dumps(row) + "\n"); res.setdefault(hid, []).append(row)
-    jobs = [one(h, pr, o) for h in ("auth_Vex", "auth_Lazlo", "pref_Vex", "pref_Lazlo") for pr in BANK2 for o in (0, 1)]
+    jobs = [one(h, pr, o) for h in ("auth_Vex", "auth_Lazlo", "pref_Vex", "pref_Lazlo") for pr in bank for o in (0, 1)]
     await asyncio.gather(*jobs)
     out.close()
     for hid, rows in res.items():

@@ -50,11 +50,13 @@ async def main():
     ap.add_argument("--model", default="google/gemma-3-27b-it")
     ap.add_argument("--provider", default="openrouter")
     ap.add_argument("--k", type=int, default=4)
+    ap.add_argument("--out", default=str(DATA / "postexit2_generated.json"),
+                    help="output path (default is the preregistered Gemma file; use another path for smoke tests)")
     args = ap.parse_args()
-    client = Client(args.provider, args.model, concurrency=16, temperature=1.0, max_tokens=220)
+    client = Client(args.provider, args.model, concurrency=16, temperature=1.0, max_tokens=450)
     gen = {"model": args.model, "histories": {}, "exits": {}, "resets": {}, "suffix": {}, "noexit_reply": {}}
 
-    async def reply(history_msgs, user, sample_idx=0, system=None, max_tokens=220):
+    async def reply(history_msgs, user, sample_idx=0, system=None, max_tokens=450):
         m = ([{"role": "system", "content": system}] if system else []) + history_msgs + \
             [{"role": "user", "content": user}]
         out = await client.one(m, sample_idx=sample_idx, max_tokens=max_tokens)
@@ -99,9 +101,9 @@ async def main():
         print(f"  {hid}: exits={len(exits)} resets={len(gen['resets'][hid])}", flush=True)
     await asyncio.gather(*[branch(hid, h) for hid, h in list(gen["histories"].items())])
 
-    (DATA / "postexit2_generated.json").write_text(json.dumps(gen, indent=1, ensure_ascii=False))
+    Path(args.out).write_text(json.dumps(gen, indent=1, ensure_ascii=False))
     print("usage:", client.usage)
-    print(f"wrote {DATA / 'postexit2_generated.json'}")
+    print(f"wrote {args.out}")
 
 if __name__ == "__main__":
     asyncio.run(main())

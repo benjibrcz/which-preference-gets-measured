@@ -1,0 +1,152 @@
+{
+ "pref_Vex": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "genC_Lazlo": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "auth_Vex": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "neutral_auth": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "neutral_pref": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "auth_Lazlo": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "pref_Lazlo": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "genB_Lazlo": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "genA_Lazlo": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "neutral_genA": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "genC_Vex": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "genB_Vex": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "genA_Vex": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "neutral_genB": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ },
+ "neutral_genC": {
+  "exits": [
+   "CLEAN",
+   "CLEAN"
+  ],
+  "resets": [
+   "CLEAN",
+   "CLEAN"
+  ]
+ }
+}

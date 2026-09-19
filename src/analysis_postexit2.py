@@ -44,7 +44,9 @@ def boot(x, y, yn=None, y2=None, reps=2000):
                 v2 -= xx @ yn[idx] / (xx @ xx)
             v = v - v2
         return v
-    pt = est(np.arange(n))
+    pt = est(np.arange(n)) if n else None
+    if pt is None:                      # zero-length or all-zero direction: undefined projection
+        return np.nan, np.nan, np.nan
     for _ in range(reps):
         v = est(rng.choice(n, n, replace=True))
         if v is not None:
@@ -122,8 +124,9 @@ def main():
                     line += f"  {cp}:{pr:+.2f}|{pa:+.2f}[{la:+.2f},{ha:+.2f}]"
                 print(line)
                 # paired contrasts: x2 - noexit2 (E0), x2g pooled - noexit2g, x2 - rg pooled
-                def pooled(prefix):
-                    vs = [vec(hid, cp, ch, bank, idx) for cp in cps if cp.startswith(prefix) and re.fullmatch(prefix + r"\d", cp)]
+                def pooled(prefix, h=hid):
+                    hcps = sorted({cp for (hh, cp, cc, b, _) in p.index if hh == h and cc == ch and b == bank})
+                    vs = [vec(h, cp, ch, bank, idx) for cp in hcps if re.fullmatch(prefix + r"\d", cp)]
                     vs = [v for v in vs if v is not None]
                     return np.nanmean(np.vstack(vs), axis=0) if vs else None
                 for name, a, b in (("x2_minus_noexit2", vec(hid, "x2", ch, bank, idx), vec(hid, "noexit2", ch, bank, idx)),
@@ -137,11 +140,11 @@ def main():
                 # unconditional pooled model-generated exit residual
                 pg = pooled("x2g")
                 if pg is not None:
-                    yn = vec(c, "x2g0", ch, bank, idx) if c else None
-                    m = ok & ~np.isnan(pg)
+                    yn = pooled("x2g", c) if c else None
+                    m = ok & ~np.isnan(pg) & (~np.isnan(yn) if yn is not None else True)
                     pa, la, ha = boot(dv[m], pg[m], yn[m] if yn is not None else None)
                     out.append(dict(history=hid, bank=bank, channel=ch, checkpoint="x2g_pooled", metric="beta_minus_control", point=pa, lo95=la, hi95=ha, n_pairs=int(m.sum())))
-                    print(f"      x2g pooled (unconditional, minus control exit0): {pa:+.2f} [{la:+.2f},{ha:+.2f}]")
+                    print(f"      x2g pooled (unconditional, minus pooled control): {pa:+.2f} [{la:+.2f},{ha:+.2f}]")
 
     # ---- E2: instruction withdrawal residual as fraction of own active displacement
     print("\n=== E2 instruction controls: withdrawn2 vs active2 (units of own t4 direction, minus neutral_inst)")

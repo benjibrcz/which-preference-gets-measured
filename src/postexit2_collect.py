@@ -32,7 +32,12 @@ from bank import pair_texts
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 M = json.loads((DATA / "postexit2_materials.json").read_text())
-G = json.loads((DATA / "postexit2_generated.json").read_text())
+GEN_PATH = DATA / "postexit2_generated.json"
+G = json.loads(GEN_PATH.read_text()) if GEN_PATH.exists() else None
+
+def set_generated(path):
+    global G
+    G = json.loads(Path(path).read_text())
 H = json.loads((DATA / "hysteresis_dialogues.json").read_text())
 BANK2 = json.loads((DATA / "bank_v2.json").read_text())["pairs"]
 
@@ -106,9 +111,13 @@ def banks():
 CHANNELS = {"revealed": REVEALED, "stated_self": STATED_SELF}
 PARA = M["stated_paraphrases"]
 
-def build_jobs(k):
+def build_jobs(k, histories=None, max_pairs=None):
     stacks = build_stacks()
+    if histories:
+        stacks = {h: v for h, v in stacks.items() if h in histories}
     pairs = banks()
+    if max_pairs:
+        pairs = [q for q in pairs if q[0] == "new"][:max_pairs] + [q for q in pairs if q[0] == "old"][:max_pairs]
     jobs = []
     def add_choice(hid, cp, exchanges, bank_filter, channels):
         hist = msgs(exchanges)
@@ -164,8 +173,13 @@ async def main():
     ap.add_argument("--k", type=int, default=4)
     ap.add_argument("--concurrency", type=int, default=32)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--generated", default=None, help="generated-histories file (default: preregistered Gemma file)")
+    ap.add_argument("--histories", default=None, help="comma list: restrict to these histories (smoke tests)")
+    ap.add_argument("--max-pairs", type=int, default=None, help="first N pairs of each bank (smoke tests)")
     args = ap.parse_args()
-    jobs, stacks = build_jobs(args.k)
+    if args.generated:
+        set_generated(args.generated)
+    jobs, stacks = build_jobs(args.k, args.histories.split(",") if args.histories else None, args.max_pairs)
     from collections import Counter
     print(f"jobs={len(jobs)}  histories={len(stacks)}")
     print("by channel:", dict(Counter(j["channel"] for j in jobs)))
