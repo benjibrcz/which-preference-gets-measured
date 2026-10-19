@@ -33,12 +33,8 @@ def cell(d, hid, ch, cp, metric="beta_minus_control", bank="new"):
     return None if s.empty else s.iloc[0]
 
 def pooled_rg(d):
-    """average the rg{s} rows into an rg_pooled row per history x channel (point = mean; CI = mean of bounds, approximate)."""
-    rows = []
-    for (h, ch), g in d[(d.metric == "beta_minus_control") & d.checkpoint.str.match(r"^rg\d$") & (d.bank == "new")].groupby(["history", "channel"]):
-        rows.append(dict(history=h, bank="new", channel=ch, checkpoint="rg_pooled", metric="beta_minus_control",
-                         point=g.point.mean(), lo95=g.lo95.mean(), hi95=g.hi95.mean(), n_pairs=g.n_pairs.max()))
-    return pd.concat([d, pd.DataFrame(rows)], ignore_index=True) if rows else d
+    """rg_pooled is now computed by analysis_postexit2.py with a proper pair bootstrap; nothing to add here."""
+    return d
 
 def gen_pooled(d):
     rows = []
@@ -77,9 +73,9 @@ def trajectory(d):
         ax.set_title(title, loc="left"); despine(ax)
     handles = [plt.Line2D([], [], color=C[0], marker="o", lw=2, label="authored dialogue"),
                plt.Line2D([], [], color=C[1], marker="o", lw=2, label="preference-free dialogue"),
-               plt.Line2D([], [], color=C[2], marker="o", lw=2, label="model-generated histories (median; range)")]
+               plt.Line2D([], [], color=C[2], marker="o", lw=2, label="model-generated histories (median of 3 sets; bar = min–max of the 3 point estimates, not a CI)")]
     fig.legend(handles=handles, loc="lower center", ncol=3, frameon=False, bbox_to_anchor=(0.5, -0.01))
-    fig.suptitle(f"Post-exit residuals on the persona-blind bank ({TAG}; 95% pair-bootstrap, unclipped)", x=0.01, ha="left", fontsize=11, fontweight="bold")
+    fig.suptitle(f"Post-exit residuals on the persona-blind bank ({TAG}; bars = unclipped 95% pair-bootstrap CIs except where the legend says otherwise)", x=0.01, ha="left", fontsize=11, fontweight="bold")
     fig.tight_layout(rect=(0, 0.05, 1, 0.96)); fig.savefig(FIGS / f"fig_l7_trajectory_{TAG}.png", dpi=200)
     print("wrote", FIGS / f"fig_l7_trajectory_{TAG}.png")
 
@@ -88,7 +84,7 @@ def contrasts(d):
     # panel A: paired contrasts
     ax = axes[0]
     names = [("x2_minus_noexit2", "exit − no-exit (authored replies)"), ("x2g_minus_noexit2g", "generated exit − generated no-exit"),
-             ("x2_minus_rg", "exit − (exit + reset)")]
+             ("x2_minus_rg", "scripted exit + 2 neutral − (generated exit 0 + reset + 1 neutral): composite histories")]
     hists = [h for h in ("auth_Vex", "pref_Vex", "auth_Lazlo", "pref_Lazlo") if (d.history == h).any()]
     ylab, y, heads = [], 0, set()
     for cn, cl in names:

@@ -1,0 +1,24 @@
+jobs=39992  histories=10
+by channel: {'revealed': 19456, 'stated_self': 19456, 'identity': 512, 'nonleading': 512, 'spelling': 56}
+by history: {'none': 632, 'auth_Vex': 5616, 'pref_Vex': 5616, 'auth_Lazlo': 5616, 'pref_Lazlo': 5616, 'neutral_auth': 5616, 'neutral_pref': 5616, 'inst_short': 1872, 'inst_blunt': 1872, 'inst_spell': 24, 'neutral_inst': 1896}
+  2000/39992 35s usage={'prompt': 381208, 'completion': 1968, 'calls': 1308, 'cached': 692, 'errors': 0}
+  4000/39992 86s usage={'prompt': 1846172, 'completion': 4457, 'calls': 3308, 'cached': 692, 'errors': 0}
+  6000/39992 136s usage={'prompt': 3642171, 'completion': 7058, 'calls': 5308, 'cached': 692, 'errors': 0}
+  8000/39992 185s usage={'prompt': 5038175, 'completion': 9732, 'calls': 7308, 'cached': 692, 'errors': 0}
+  10000/39992 235s usage={'prompt': 6447790, 'completion': 12295, 'calls': 9308, 'cached': 692, 'errors': 0}
+  12000/39992 285s usage={'prompt': 8138889, 'completion': 14874, 'calls': 11308, 'cached': 692, 'errors': 0}
+  14000/39992 334s usage={'prompt': 9390608, 'completion': 17252, 'calls': 13308, 'cached': 692, 'errors': 0}
+  16000/39992 383s usage={'prompt': 11032090, 'completion': 19922, 'calls': 15308, 'cached': 692, 'errors': 0}
+  18000/39992 433s usage={'prompt': 12888366, 'completion': 22607, 'calls': 17308, 'cached': 692, 'errors': 0}
+  20000/39992 485s usage={'prompt': 13765204, 'completion': 25158, 'calls': 19308, 'cached': 692, 'errors': 0}
+  22000/39992 541s usage={'prompt': 15021210, 'completion': 27698, 'calls': 21308, 'cached': 692, 'errors': 0}
+  24000/39992 591s usage={'prompt': 16398115, 'completion': 30238, 'calls': 23308, 'cached': 692, 'errors': 0}
+  26000/39992 642s usage={'prompt': 17698111, 'completion': 32907, 'calls': 25308, 'cached': 692, 'errors': 0}
+  28000/39992 692s usage={'prompt': 19210002, 'completion': 35467, 'calls': 27308, 'cached': 692, 'errors': 0}
+  30000/39992 742s usage={'prompt': 20607307, 'completion': 37944, 'calls': 29308, 'cached': 692, 'errors': 0}
+  32000/39992 793s usage={'prompt': 21980936, 'completion': 40470, 'calls': 31308, 'cached': 692, 'errors': 0}
+  34000/39992 844s usage={'prompt': 23531228, 'completion': 43225, 'calls': 33308, 'cached': 692, 'errors': 0}
+  36000/39992 893s usage={'prompt': 24665782, 'completion': 45579, 'calls': 35308, 'cached': 692, 'errors': 0}
+  38000/39992 942s usage={'prompt': 25619768, 'completion': 48161, 'calls': 37308, 'cached': 692, 'errors': 0}
+DONE 992.8746221065521 s {'prompt': 26525744, 'completion': 53583, 'calls': 39300, 'cached': 692, 'errors': 0}
+EXIT=0

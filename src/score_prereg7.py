@@ -42,9 +42,11 @@ def main():
         c = {}
         for ch in ("revealed", "stated_self"):
             s = g(d, metric="paired_contrast", checkpoint="x2_minus_noexit2", bank="new", history=h, channel=ch)
+            s2 = g(d, metric="paired_contrast_adj", checkpoint="x2_minus_noexit2", bank="new", history=h, channel=ch)
             if len(s):
                 pt, lo, hi = s.point.iloc[0], s.lo95.iloc[0], s.hi95.iloc[0]; c[ch] = pt
-                rec("P28", f"{h} {ch} x2-noexit2", f"{pt:+.2f} [{lo:+.2f},{hi:+.2f}]", -0.30 <= pt <= 0.10)
+                adj = f"; control-adjusted {s2.point.iloc[0]:+.2f} [{s2.lo95.iloc[0]:+.2f},{s2.hi95.iloc[0]:+.2f}]" if len(s2) else ""
+                rec("P28", f"{h} {ch} x2-noexit2 (raw contrast, as registered)", f"{pt:+.2f} [{lo:+.2f},{hi:+.2f}]", -0.30 <= pt <= 0.10, adj)
         if len(c) == 2:
             rec("P28", f"{h} direction: stated reduced more than choice", f"stated {c['stated_self']:+.2f} vs choice {c['revealed']:+.2f}", c["stated_self"] <= c["revealed"], "(direction prediction)")
 
@@ -59,15 +61,18 @@ def main():
     if pf.exists():
         pr = pd.DataFrame([json.loads(l) for l in open(pf)])
         nl = pr[pr.channel == "nonleading"].copy(); nl["aff"] = nl.judge.isin(["ENACTMENT", "STYLE"])
+        POST = {"x2", "x8", "r_inst"} | {f"x2g{i}" for i in range(8)} | {f"rg{i}" for i in range(8)}   # exit histories only (no-exit branches excluded)
         for persona in ("Vex", "Lazlo"):
             sub = nl[nl.history.str.endswith("_" + persona)]
-            dur = sub[sub.checkpoint == "t4"].aff.mean(); post = sub[~sub.checkpoint.isin(["t0", "t4"])].aff.mean()
+            dur = sub[sub.checkpoint == "t4"].aff.mean(); post = sub[sub.checkpoint.isin(POST)].aff.mean()
+            noex = sub[sub.checkpoint.str.startswith("noexit")].aff.mean()
+            print(f"      (info) {persona} non-leading affirming: t4 {int(sub[sub.checkpoint=='t4'].aff.sum())}/{len(sub[sub.checkpoint=='t4'])}, post-exit {int(sub[sub.checkpoint.isin(POST)].aff.sum())}/{len(sub[sub.checkpoint.isin(POST)])}, no-exit {int(sub[sub.checkpoint.str.startswith('noexit')].aff.sum())}/{len(sub[sub.checkpoint.str.startswith('noexit')])}")
             rec("P29", f"{persona} non-leading probe affirming during (t4)", f"{dur:.0%}", (dur >= 0.50) if not np.isnan(dur) else None)
-            rec("P29", f"{persona} non-leading probe affirming post-exit (all post checkpoints)", f"{post:.0%}", (post <= 0.10) if not np.isnan(post) else None)
+            rec("P29", f"{persona} non-leading probe affirming post-exit (exit histories only)", f"{post:.0%}", (post <= 0.10) if not np.isnan(post) else None)
         idp = pr[pr.channel == "identity"].copy(); idp["aff"] = idp.judge == "AFFIRMS"
         for persona in ("Vex", "Lazlo"):
             sub = idp[idp.history.str.endswith("_" + persona)]
-            print(f"      (info) {persona} identity probe affirming: t4 {sub[sub.checkpoint=='t4'].aff.mean():.0%}, post-exit {sub[~sub.checkpoint.isin(['t0','t4'])].aff.mean():.0%}")
+            print(f"      (info) {persona} identity probe affirming: t4 {int(sub[sub.checkpoint=='t4'].aff.sum())}/{len(sub[sub.checkpoint=='t4'])}, post-exit {int(sub[sub.checkpoint.isin(POST)].aff.sum())}/{len(sub[sub.checkpoint.isin(POST)])}, no-exit {int(sub[sub.checkpoint.str.startswith('noexit')].aff.sum())}/{len(sub[sub.checkpoint.str.startswith('noexit')])}")
 
     print("\n=== P30 model-generated entries: post-exit stated residual same sign as authored in >=2/3 sets; median < authored ===")
     for persona in ("Vex", "Lazlo"):
@@ -86,6 +91,9 @@ def main():
         a = val(d, metric="beta_minus_control", checkpoint="x2", bank="new", history=f"auth_{persona}", channel="stated_self")
         p_ = val(d, metric="beta_minus_control", checkpoint="x2", bank="new", history=f"pref_{persona}", channel="stated_self")
         rec("P31", f"pref_{persona} stated x2 residual >= 0.5x authored", f"{p_:+.2f} vs 0.5x{a:+.2f}", (p_ >= 0.5 * a) if not (np.isnan(a) or np.isnan(p_)) else None)
+        a2 = val(d, metric="beta_minus_control_normadj", checkpoint="x2", bank="new", history=f"auth_{persona}", channel="stated_self")
+        p2 = val(d, metric="beta_minus_control_normadj", checkpoint="x2", bank="new", history=f"pref_{persona}", channel="stated_self")
+        rec("P31", f"  sensitivity: same in units of the control-ADJUSTED t4 shift", f"{p2:+.2f} vs 0.5x{a2:+.2f}", None, "sensitivity only, not the registered metric")
 
     print("\n=== P32 instruction-withdrawal controls ===")
     for h in ("inst_short", "inst_blunt"):
@@ -101,14 +109,19 @@ def main():
             pv = val(d, metric="beta_minus_control", checkpoint="x2", bank="new", history=ph, channel=ch)
             iv = val(d, metric="beta_minus_control", checkpoint="withdrawn2", bank="new", history=ih, channel=ch)
             verdict = "NA" if np.isnan(pv) or np.isnan(iv) else ("persona-specific (>2x)" if pv > 2 * iv else "generic context persistence (within 2x)")
-            rec("P32", f"{ph} vs {ih} {ch}", f"persona {pv:+.2f} vs inst {iv:+.2f}", None, verdict)
+            cell = g(d, metric="p32_cell", history=ph, channel=ch, checkpoint=f"x2_minus_2x_{ih}_withdrawn2")
+            ci = f" | persona - 2x inst = {cell.point.iloc[0]:+.2f} [{cell.lo95.iloc[0]:+.2f},{cell.hi95.iloc[0]:+.2f}]" if len(cell) else ""
+            rec("P32", f"{ph} vs {ih} {ch}", f"persona {pv:+.2f} vs inst {iv:+.2f}", None, verdict + ci)
     sp = d[(d.metric == "british_share")]
     if len(sp):
         act = sp[(sp.history == "inst_spell") & (sp.checkpoint == "active2")].point.mean()
         wd = sp[(sp.history == "inst_spell") & (sp.checkpoint == "withdrawn2")].point.mean()
         t0 = sp[(sp.history == "none") & (sp.checkpoint == "t0")].point.mean()
-        rec("P32", "spelling: share reverting to default after withdrawal", f"British share active {act:.2f} -> withdrawn {wd:.2f} (t0 {t0:.2f})", (1 - wd) >= 0.80 if not np.isnan(wd) else None,
-            "(>=80% default spelling after withdrawal)")
+        rec("P32", "spelling: mean British word share (registered scorer; word-level)", f"active {act:.2f} -> withdrawn {wd:.2f} (t0 {t0:.2f}); default share {1-wd:.0%}", (1 - wd) >= 0.80 if not np.isnan(wd) else None,
+            "(>=80% default)")
+        rv = d[(d.metric == "reverted_output_share") & (d.history == "inst_spell") & (d.checkpoint == "withdrawn2")]
+        if len(rv):
+            rec("P32", "spelling: share of OUTPUTS with majority default spelling (registered wording; output-level)", f"{rv.point.iloc[0]:.0%} (n={int(rv.n_pairs.iloc[0])})", rv.point.iloc[0] >= 0.80)
 
     print("\n=== P33 elicitation wording ===")
     for ch in ("P1", "P2"):

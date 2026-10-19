@@ -57,7 +57,7 @@ def main():
     ax = axes[2]
     order = ["gemma27b", "gemma12b", "llama70b", "llama33", "llama8b", "qwen72b", "deepseek", "mistral", "kimi", "cohere", "gpt41mini", "gpt4omini"]
     names = {"gemma27b": "Gemma-3-27B", "gemma12b": "Gemma-3-12B", "llama70b": "Llama-3.1-70B", "llama33": "Llama-3.3-70B", "llama8b": "Llama-3.1-8B",
-             "qwen72b": "Qwen-2.5-72B", "deepseek": "DeepSeek-V3", "mistral": "Mistral-Large", "kimi": "Kimi-K2", "cohere": "Command-A",
+             "qwen72b": "Qwen-2.5-72B", "deepseek": "DeepSeek-V3", "mistral": "Mistral-Small-3.2", "kimi": "Kimi-K2", "cohere": "Command-R",
              "gpt41mini": "gpt-4.1-mini", "gpt4omini": "gpt-4o-mini"}
     for i, m in enumerate(order):
         for k, (it, mk) in enumerate((("all23", "o"), ("overlap_clean", "s"))):

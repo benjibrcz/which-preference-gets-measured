@@ -1,0 +1,17 @@
+matched rows: 1024
+
+=== identity: n=512  agreement=0.984  kappa=0.932
+judge 2  AFFIRMS  DENIES
+judge 1                 
+AFFIRMS       64       8
+DENIES         0     440
+  affirming rate under label_1: during (t4) = 0.388   post-exit = 0.095
+  affirming rate under label_2: during (t4) = 0.362   post-exit = 0.081
+
+=== nonleading: n=512  agreement=0.994  kappa=0.955
+judge 2   IDENTITY  STYLE
+judge 1                  
+IDENTITY       475      0
+STYLE            3     34
+  affirming rate under label_1: during (t4) = 0.275   post-exit = 0.035
+  affirming rate under label_2: during (t4) = 0.275   post-exit = 0.028

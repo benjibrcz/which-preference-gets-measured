@@ -54,6 +54,45 @@ def boot(x, y, yn=None, y2=None, reps=2000):
     lo, hi = (np.percentile(bs, [2.5, 97.5]) if bs else (np.nan, np.nan))
     return pt, lo, hi
 
+def boot_adj(x, a, an, b, bn, reps=2000):
+    """[beta(x,a)-beta(x,an)] - [beta(x,b)-beta(x,bn)] with pair bootstrap (control-adjusted paired contrast)."""
+    n = len(x); bs = []
+    def est(idx):
+        xx = x[idx]; d = xx @ xx
+        if d == 0:
+            return None
+        return ((xx @ a[idx] - xx @ an[idx]) - (xx @ b[idx] - xx @ bn[idx])) / d
+    pt = est(np.arange(n)) if n else None
+    if pt is None:
+        return np.nan, np.nan, np.nan
+    for _ in range(reps):
+        v = est(rng.choice(n, n, replace=True))
+        if v is not None:
+            bs.append(v)
+    lo, hi = (np.percentile(bs, [2.5, 97.5]) if bs else (np.nan, np.nan))
+    return pt, lo, hi
+
+def boot_ratio(x, y, yn, xn, reps=2000):
+    """(beta(x,y)-beta(x,yn)) / (1 - beta(x,xn)): adjusted residual in units of the control-ADJUSTED t4 shift (sensitivity)."""
+    n = len(x); bs = []
+    def est(idx):
+        xx = x[idx]; d = xx @ xx
+        if d == 0:
+            return None
+        den = 1 - (xx @ xn[idx]) / d
+        if abs(den) < 1e-9:
+            return None
+        return ((xx @ y[idx] - xx @ yn[idx]) / d) / den
+    pt = est(np.arange(n)) if n else None
+    if pt is None:
+        return np.nan, np.nan, np.nan
+    for _ in range(reps):
+        v = est(rng.choice(n, n, replace=True))
+        if v is not None:
+            bs.append(v)
+    lo, hi = (np.percentile(bs, [2.5, 97.5]) if bs else (np.nan, np.nan))
+    return pt, lo, hi
+
 def phat(d):
     return d.groupby(["history", "checkpoint", "channel", "bank", "pair_id"]).pf.mean()
 
@@ -132,6 +171,12 @@ def main():
                         pa, la, ha = (np.nan,) * 3
                     out.append(dict(history=hid, bank=bank, channel=ch, checkpoint=cp, metric="beta_raw", point=pr, lo95=lr, hi95=hr, n_pairs=int(m.sum())))
                     out.append(dict(history=hid, bank=bank, channel=ch, checkpoint=cp, metric="beta_minus_control", point=pa, lo95=la, hi95=ha, n_pairs=int(m.sum())))
+                    if yn is not None and cp in ("x2", "noexit2", "x8", "r_inst", "withdrawn2", "active2"):
+                        xn = vec(c, "t4", ch, bank, idx)
+                        if xn is not None:
+                            mm = m & ~np.isnan(xn)
+                            pq, lq, hq = boot_ratio(dv[mm], y[mm], yn[mm], xn[mm])
+                            out.append(dict(history=hid, bank=bank, channel=ch, checkpoint=cp, metric="beta_minus_control_normadj", point=pq, lo95=lq, hi95=hq, n_pairs=int(mm.sum())))
                     line += f"  {cp}:{pr:+.2f}|{pa:+.2f}[{la:+.2f},{ha:+.2f}]"
                 print(line)
                 # paired contrasts: x2 - noexit2 (E0), x2g pooled - noexit2g, x2 - rg pooled
@@ -140,14 +185,28 @@ def main():
                     vs = [vec(h, cp, ch, bank, idx) for cp in hcps if re.fullmatch(prefix + r"\d", cp)]
                     vs = [v for v in vs if v is not None]
                     return np.nanmean(np.vstack(vs), axis=0) if vs else None
-                for name, a, b in (("x2_minus_noexit2", vec(hid, "x2", ch, bank, idx), vec(hid, "noexit2", ch, bank, idx)),
-                                   ("x2g_minus_noexit2g", pooled("x2g"), vec(hid, "noexit2g", ch, bank, idx)),
-                                   ("x2_minus_rg", vec(hid, "x2", ch, bank, idx), pooled("rg"))):
+                for name, a, b, an, bn in (("x2_minus_noexit2", vec(hid, "x2", ch, bank, idx), vec(hid, "noexit2", ch, bank, idx), vec(c, "x2", ch, bank, idx) if c else None, vec(c, "noexit2", ch, bank, idx) if c else None),
+                                           ("x2g_minus_noexit2g", pooled("x2g"), vec(hid, "noexit2g", ch, bank, idx), pooled("x2g", c) if c else None, vec(c, "noexit2g", ch, bank, idx) if c else None),
+                                           ("x2_minus_rg", vec(hid, "x2", ch, bank, idx), pooled("rg"), vec(c, "x2", ch, bank, idx) if c else None, pooled("rg", c) if c else None)):
                     if a is None or b is None: continue
                     m = ok & ~np.isnan(a) & ~np.isnan(b)
                     pt, lo, hi = boot(dv[m], a[m], None, b[m])
                     out.append(dict(history=hid, bank=bank, channel=ch, checkpoint=name, metric="paired_contrast", point=pt, lo95=lo, hi95=hi, n_pairs=int(m.sum())))
-                    print(f"      {name:20} {pt:+.2f} [{lo:+.2f},{hi:+.2f}]")
+                    extra = ""
+                    if an is not None and bn is not None:
+                        mm = m & ~np.isnan(an) & ~np.isnan(bn)
+                        pt2, lo2, hi2 = boot_adj(dv[mm], a[mm], an[mm], b[mm], bn[mm])
+                        out.append(dict(history=hid, bank=bank, channel=ch, checkpoint=name, metric="paired_contrast_adj", point=pt2, lo95=lo2, hi95=hi2, n_pairs=int(mm.sum())))
+                        extra = f"   adj: {pt2:+.2f} [{lo2:+.2f},{hi2:+.2f}]"
+                    print(f"      {name:20} raw: {pt:+.2f} [{lo:+.2f},{hi:+.2f}]{extra}")
+                # pooled reset residual (over rg0..3, minus the control's pooled rg)
+                prg = pooled("rg")
+                if prg is not None:
+                    yn = pooled("rg", c) if c else None
+                    m = ok & ~np.isnan(prg) & (~np.isnan(yn) if yn is not None else True)
+                    pa, la, ha = boot(dv[m], prg[m], yn[m] if yn is not None else None)
+                    out.append(dict(history=hid, bank=bank, channel=ch, checkpoint="rg_pooled", metric="beta_minus_control", point=pa, lo95=la, hi95=ha, n_pairs=int(m.sum())))
+                    print(f"      rg pooled (reset replies pooled, minus pooled control): {pa:+.2f} [{la:+.2f},{ha:+.2f}]")
                 # unconditional pooled model-generated exit residual
                 pg = pooled("x2g")
                 if pg is not None:
@@ -177,8 +236,38 @@ def main():
                 continue
             m = ok & ~np.isnan(a) & ~np.isnan(b)
             pt, lo, hi = boot(dv[m], a[m], None, b[m])
-            print(f"      withdrawn2 - active2: {pt:+.2f} [{lo:+.2f},{hi:+.2f}]")
             out.append(dict(history=hid, bank="new", channel=ch, checkpoint="withdrawn2_minus_active2", metric="paired_contrast", point=pt, lo95=lo, hi95=hi, n_pairs=int(m.sum())))
+            an = vec("neutral_inst", "withdrawn2", ch, "new", idx); bn = vec("neutral_inst", "active2", ch, "new", idx)
+            extra = ""
+            if an is not None and bn is not None:
+                mm = m & ~np.isnan(an) & ~np.isnan(bn)
+                pt2, lo2, hi2 = boot_adj(dv[mm], a[mm], an[mm], b[mm], bn[mm])
+                out.append(dict(history=hid, bank="new", channel=ch, checkpoint="withdrawn2_minus_active2", metric="paired_contrast_adj", point=pt2, lo95=lo2, hi95=hi2, n_pairs=int(mm.sum())))
+                extra = f"   adj: {pt2:+.2f} [{lo2:+.2f},{hi2:+.2f}]"
+            print(f"      withdrawn2 - active2: raw {pt:+.2f} [{lo:+.2f},{hi:+.2f}]{extra}")
+    # ---- P32 interpretation cells with uncertainty: persona x2 residual minus 2 x instruction withdrawn residual (joint pair bootstrap)
+    print("\n=== P32 cells: persona x2 residual - 2 x matched instruction withdrawn residual (joint pair bootstrap; < 0 = within the generic-persistence rule)")
+    for ph, ih in (("auth_Vex", "inst_blunt"), ("pref_Vex", "inst_blunt"), ("auth_Lazlo", "inst_short"), ("pref_Lazlo", "inst_short")):
+        cph = ctrl(ph)
+        for ch in ("revealed", "stated_self"):
+            idx_p, dp_ = dirn(ph, ch, "new"); idx_i, di_ = dirn(ih, ch, "new")
+            if dp_ is None or di_ is None: continue
+            idx = idx_p.intersection(idx_i)
+            dp_ = (p.loc[(ph, "t4", ch, "new")].reindex(idx) - base.loc[(ch, "new")].reindex(idx)).values
+            di_ = (p.loc[(ih, "t4", ch, "new")].reindex(idx) - base.loc[(ch, "new")].reindex(idx)).values
+            yp, ypn = vec(ph, "x2", ch, "new", idx), vec(cph, "x2", ch, "new", idx)
+            yi, yin = vec(ih, "withdrawn2", ch, "new", idx), vec("neutral_inst", "withdrawn2", ch, "new", idx)
+            if any(v is None for v in (yp, ypn, yi, yin)): continue
+            m = ~(np.isnan(dp_) | np.isnan(di_) | np.isnan(yp) | np.isnan(ypn) | np.isnan(yi) | np.isnan(yin))
+            def est(sel):
+                a, b = dp_[sel], di_[sel]
+                if a @ a == 0 or b @ b == 0: return None
+                return (a @ yp[sel] - a @ ypn[sel]) / (a @ a) - 2 * (b @ yi[sel] - b @ yin[sel]) / (b @ b)
+            n = int(m.sum()); ii = np.where(m)[0]; pt = est(ii)
+            bs = [v for v in (est(rng.choice(ii, n, replace=True)) for _ in range(2000)) if v is not None]
+            lo, hi = (np.percentile(bs, [2.5, 97.5]) if bs else (np.nan, np.nan))
+            out.append(dict(history=ph, bank="new", channel=ch, checkpoint=f"x2_minus_2x_{ih}_withdrawn2", metric="p32_cell", point=pt, lo95=lo, hi95=hi, n_pairs=n))
+            print(f"  {ph:11}{ch:12} vs {ih}: {pt:+.2f} [{lo:+.2f},{hi:+.2f}]")
 
     # ---- E2b: P3N indifference rates and paraphrase residuals
     print("\n=== E2b: 'N' (no preference) rate under P3N, per history x checkpoint (new bank)")
@@ -191,19 +280,28 @@ def main():
     # ---- spelling withdrawal
     sp = df[df.channel == "spelling"].copy()
     if len(sp):
-        BR = re.compile(r"\b(colour|organis|centre|favourite|realis|neighbour|catalogue|programme)", re.I)
-        US = re.compile(r"\b(color|organiz|center|favorite|realiz|neighbor|catalog\b|program\b)", re.I)
+        BR = re.compile(r"\b(colour|organis|centre|favourite|flavour|realis|neighbour|catalogue|programme)", re.I)
+        US = re.compile(r"\b(color|organiz|center|favorite|flavor|realiz|neighbor|catalog\b|catalogs\b|program\b|programs\b)", re.I)
         sp["brit"] = sp.raw.fillna("").apply(lambda t: len(BR.findall(t)))
         sp["us"] = sp.raw.fillna("").apply(lambda t: len(US.findall(t)))
         sp["brit_share"] = sp.brit / (sp.brit + sp.us).replace(0, np.nan)
-        g = sp.groupby(["history", "checkpoint"]).brit_share.mean()
-        print("\n=== spelling probe: British share of spellable words")
+        sp["reverted"] = (sp.brit_share < 0.5).astype(float).where(~sp.brit_share.isna())   # output-level: majority default spelling
+        g = sp.groupby(["history", "checkpoint"]).agg(brit_share=("brit_share", "mean"), reverted=("reverted", "mean"), n=("brit_share", "size"),
+                                                     brit_sd=("brit_share", "std"))
+        print("\n=== spelling probe: mean within-output British share (sd across outputs) | share of outputs with majority default spelling | n")
         print(g.round(2).to_string())
-        for (h, cp), v in g.items():
-            out.append(dict(history=h, bank=None, channel="spelling", checkpoint=cp, metric="british_share", point=float(v)))
+        for (h, cp), r in g.iterrows():
+            out.append(dict(history=h, bank=None, channel="spelling", checkpoint=cp, metric="british_share", point=float(r.brit_share), lo95=np.nan, hi95=np.nan, n_pairs=int(r.n)))
+            out.append(dict(history=h, bank=None, channel="spelling", checkpoint=cp, metric="reverted_output_share", point=float(r.reverted), lo95=np.nan, hi95=np.nan, n_pairs=int(r.n)))
 
-    pd.DataFrame(out).to_csv(RUN / "postexit2_results.csv", index=False)
-    print(f"\nwrote {RUN / 'postexit2_results.csv'} ({len(out)} rows)")
+    res = pd.DataFrame(out)
+    keys = ["history", "bank", "channel", "checkpoint", "metric"]
+    dup = res.duplicated(keys, keep="first").sum()
+    if dup:
+        print(f"(dropping {dup} duplicate metric rows, keeping the first)")
+    res = res.drop_duplicates(keys, keep="first")
+    res.to_csv(RUN / "postexit2_results.csv", index=False)
+    print(f"\nwrote {RUN / 'postexit2_results.csv'} ({len(res)} rows)")
 
 if __name__ == "__main__":
     main()

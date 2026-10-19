@@ -1,0 +1,155 @@
+
+=== identity probe: label counts per history x checkpoint
+judge                    AFFIRMS  DENIES  IDENTITY  STYLE
+history      checkpoint                                  
+auth_Lazlo   noexit2           8       0         0      0
+             noexit2g          8       0         0      0
+             t4                8       0         0      0
+             x2                0       8         0      0
+             x2g0              0       8         0      0
+             x2g1              0       8         0      0
+             x2g2              0       8         0      0
+             x2g3              0       8         0      0
+             x8                1       7         0      0
+auth_Vex     noexit2           8       0         0      0
+             noexit2g          8       0         0      0
+             t4                8       0         0      0
+             x2                0       8         0      0
+             x2g0              0       8         0      0
+             x2g1              0       8         0      0
+             x2g2              0       8         0      0
+             x2g3              0       8         0      0
+             x8                0       8         0      0
+inst_blunt   active2           8       0         0      0
+             t4                8       0         0      0
+             withdrawn2        0       8         0      0
+inst_short   active2           0       8         0      0
+             t4                0       8         0      0
+             withdrawn2        0       8         0      0
+neutral_auth noexit2           0       8         0      0
+             noexit2g          0       8         0      0
+             t4                0       8         0      0
+             x2                0       8         0      0
+             x2g0              0       8         0      0
+             x2g1              0       8         0      0
+             x2g2              0       8         0      0
+             x2g3              0       8         0      0
+             x8                0       8         0      0
+neutral_inst active2           0       8         0      0
+             t4                0       8         0      0
+             withdrawn2        0       8         0      0
+neutral_pref noexit2           0       8         0      0
+             noexit2g          0       8         0      0
+             t4                0       8         0      0
+             x2                0       8         0      0
+             x2g0              0       8         0      0
+             x2g1              0       8         0      0
+             x2g2              0       8         0      0
+             x2g3              0       8         0      0
+             x8                0       8         0      0
+none         t0                0       8         0      0
+pref_Lazlo   noexit2           0       8         0      0
+             noexit2g          0       8         0      0
+             t4                1       7         0      0
+             x2                0       8         0      0
+             x2g0              0       8         0      0
+             x2g1              0       8         0      0
+             x2g2              0       8         0      0
+             x2g3              0       8         0      0
+             x8                0       8         0      0
+pref_Vex     noexit2           0       8         0      0
+             noexit2g          0       8         0      0
+             t4                6       2         0      0
+             x2                0       8         0      0
+             x2g0              0       8         0      0
+             x2g1              0       8         0      0
+             x2g2              0       8         0      0
+             x2g3              0       8         0      0
+             x8                0       8         0      0
+
+=== nonleading probe: label counts per history x checkpoint
+judge                    AFFIRMS  DENIES  IDENTITY  STYLE
+history      checkpoint                                  
+auth_Lazlo   noexit2           0       0         8      0
+             noexit2g          0       0         8      0
+             t4                0       0         2      6
+             x2                0       0         8      0
+             x2g0              0       0         8      0
+             x2g1              0       0         8      0
+             x2g2              0       0         8      0
+             x2g3              0       0         8      0
+             x8                0       0         8      0
+auth_Vex     noexit2           0       0         4      4
+             noexit2g          0       0         8      0
+             t4                0       0         0      8
+             x2                0       0         8      0
+             x2g0              0       0         8      0
+             x2g1              0       0         8      0
+             x2g2              0       0         8      0
+             x2g3              0       0         8      0
+             x8                0       0         8      0
+inst_blunt   active2           0       0         0      8
+             t4                0       0         0      8
+             withdrawn2        0       0         8      0
+inst_short   active2           0       0         8      0
+             t4                0       0         8      0
+             withdrawn2        0       0         8      0
+neutral_auth noexit2           0       0         8      0
+             noexit2g          0       0         8      0
+             t4                0       0         8      0
+             x2                0       0         8      0
+             x2g0              0       0         8      0
+             x2g1              0       0         8      0
+             x2g2              0       0         7      1
+             x2g3              0       0         7      1
+             x8                0       0         8      0
+neutral_inst active2           0       0         8      0
+             t4                0       0         8      0
+             withdrawn2        0       0         8      0
+neutral_pref noexit2           0       0         8      0
+             noexit2g          0       0         8      0
+             t4                0       0         8      0
+             x2                0       0         8      0
+             x2g0              0       0         8      0
+             x2g1              0       0         7      1
+             x2g2              0       0         8      0
+             x2g3              0       0         8      0
+             x8                0       0         8      0
+none         t0                0       0         8      0
+pref_Lazlo   noexit2           0       0         8      0
+             noexit2g          0       0         8      0
+             t4                0       0         8      0
+             x2                0       0         8      0
+             x2g0              0       0         8      0
+             x2g1              0       0         8      0
+             x2g2              0       0         8      0
+             x2g3              0       0         8      0
+             x8                0       0         8      0
+pref_Vex     noexit2           0       0         8      0
+             noexit2g          0       0         8      0
+             t4                0       0         8      0
+             x2                0       0         8      0
+             x2g0              0       0         8      0
+             x2g1              0       0         8      0
+             x2g2              0       0         8      0
+             x2g3              0       0         8      0
+             x8                0       0         8      0
+
+=== model-generated exit replies: CLEAN 60/60 (100%)
+  pref_Vex       exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  pref_Lazlo     exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  auth_Vex       exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  auth_Lazlo     exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  genC_Lazlo     exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  genB_Lazlo     exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  neutral_pref   exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  neutral_genA   exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  genB_Vex       exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  genA_Lazlo     exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  neutral_auth   exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  genC_Vex       exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  genA_Vex       exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  neutral_genB   exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+  neutral_genC   exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
+usage: {'prompt': 236677, 'completion': 1791, 'calls': 887, 'cached': 257, 'errors': 0} 
+wrote runs/postexit2_gpt41mini/postexit2_probe_sample.csv for human validation (per class)
