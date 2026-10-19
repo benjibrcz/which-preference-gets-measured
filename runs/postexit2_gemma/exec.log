@@ -1,0 +1,6 @@
+auth_Vex: completion matches choice 100.0% (n=76, unclear=0)
+auth_Lazlo: completion matches choice 100.0% (n=76, unclear=0)
+pref_Vex: completion matches choice 100.0% (n=76, unclear=0)
+pref_Lazlo: completion matches choice 100.0% (n=76, unclear=0)
+usage: {'prompt': 389920, 'completion': 78647, 'calls': 608, 'cached': 0, 'errors': 0} {'prompt': 97133, 'completion': 304, 'calls': 304, 'cached': 0, 'errors': 0}
+EXIT=0

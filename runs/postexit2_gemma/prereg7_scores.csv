@@ -9,14 +9,18 @@ P27,genC_Lazlo revealed t4 mean|dp|,0.327,PASS,(informational unless P31/P30)
 P27,genC_Vex revealed t4 mean|dp|,0.33,PASS,(informational unless P31/P30)
 P27,pref_Lazlo revealed t4 mean|dp|,0.194,PASS,(informational unless P31/P30)
 P27,pref_Vex revealed t4 mean|dp|,0.214,PASS,(informational unless P31/P30)
-P28,auth_Vex revealed x2-noexit2,"-0.19 [-0.37,-0.08]",PASS,
-P28,auth_Vex stated_self x2-noexit2,"-0.13 [-0.25,-0.04]",PASS,
+P28,auth_Vex revealed x2-noexit2,"-0.19 [-0.35,-0.08]",PASS,
+P28,auth_Vex stated_self x2-noexit2,"-0.13 [-0.26,-0.03]",PASS,
 P28,auth_Vex direction: stated reduced more than choice,stated -0.13 vs choice -0.19,FAIL,(direction prediction)
 P28,auth_Lazlo revealed x2-noexit2,"-0.10 [-0.27,+0.03]",PASS,
-P28,auth_Lazlo stated_self x2-noexit2,"-0.31 [-0.72,+0.05]",FAIL,
+P28,auth_Lazlo stated_self x2-noexit2,"-0.31 [-0.75,+0.05]",FAIL,
 P28,auth_Lazlo direction: stated reduced more than choice,stated -0.31 vs choice -0.10,PASS,(direction prediction)
-P29,clean generated exit confirmations,0/0 = 0%,NA,
-P29,"auth_Vex stated residual, generated exits pooled, minus control","+0.37 [+0.18,+0.57]",FAIL,
+P29,clean generated exit confirmations,40/60 = 67%,FAIL,
+P29,"auth_Vex stated residual, generated exits pooled, minus control","+0.37 [+0.17,+0.58]",FAIL,
+P29,Vex non-leading probe affirming during (t4),70%,PASS,
+P29,Vex non-leading probe affirming post-exit (all post checkpoints),5%,PASS,
+P29,Lazlo non-leading probe affirming during (t4),75%,PASS,
+P29,Lazlo non-leading probe affirming post-exit (all post checkpoints),5%,PASS,
 P30,Vex generated sets same sign as authored (+0.71),3/3 A:+0.32 B:+0.35 C:+0.29,PASS,
 P30,Vex median generated < authored,median +0.32 vs +0.71,PASS,(magnitude prediction)
 P30,Lazlo generated sets same sign as authored (+0.27),3/3 A:+0.09 B:+0.04 C:+0.06,PASS,
@@ -28,11 +32,11 @@ P31,pref_Lazlo stated x2 residual >= 0.5x authored,+0.17 vs 0.5x+0.27,PASS,
 P32,inst_short revealed active t4 mean|dp| >= 0.10,0.58,PASS,
 P32,inst_short revealed withdrawn residual >= 0.3,"+0.62 [+0.47,+0.76]",PASS,
 P32,inst_short stated_self active t4 mean|dp| >= 0.10,NA,NA,
-P32,inst_short stated_self withdrawn residual >= 0.3,"+0.24 [+0.07,+0.39]",FAIL,
+P32,inst_short stated_self withdrawn residual >= 0.3,"+0.24 [+0.08,+0.39]",FAIL,
 P32,inst_blunt revealed active t4 mean|dp| >= 0.10,0.461,PASS,
-P32,inst_blunt revealed withdrawn residual >= 0.3,"+0.79 [+0.64,+0.95]",PASS,
+P32,inst_blunt revealed withdrawn residual >= 0.3,"+0.79 [+0.65,+0.94]",PASS,
 P32,inst_blunt stated_self active t4 mean|dp| >= 0.10,NA,NA,
-P32,inst_blunt stated_self withdrawn residual >= 0.3,"+0.91 [+0.77,+1.06]",PASS,
+P32,inst_blunt stated_self withdrawn residual >= 0.3,"+0.91 [+0.77,+1.07]",PASS,
 P32,auth_Vex vs inst_blunt revealed,persona +0.42 vs inst +0.79,NA,generic context persistence (within 2x)
 P32,auth_Vex vs inst_blunt stated_self,persona +0.71 vs inst +0.91,NA,generic context persistence (within 2x)
 P32,pref_Vex vs inst_blunt revealed,persona +0.27 vs inst +0.79,NA,generic context persistence (within 2x)
@@ -42,8 +46,8 @@ P32,auth_Lazlo vs inst_short stated_self,persona +0.27 vs inst +0.24,NA,generic 
 P32,pref_Lazlo vs inst_short revealed,persona +0.09 vs inst +0.62,NA,generic context persistence (within 2x)
 P32,pref_Lazlo vs inst_short stated_self,persona +0.17 vs inst +0.24,NA,generic context persistence (within 2x)
 P32,spelling: share reverting to default after withdrawal,British share active 0.86 -> withdrawn 0.62 (t0 0.00),FAIL,(>=80% default spelling after withdrawal)
-P33,auth_Vex stated-minus-choice gap reproduced under P1 at >= 0.5x,+nan vs 0.5x+0.29,NA,
-P33,auth_Vex stated-minus-choice gap reproduced under P2 at >= 0.5x,+nan vs 0.5x+0.29,NA,
+P33,auth_Vex stated-minus-choice gap reproduced under P1 at >= 0.5x,-0.16 vs 0.5x+0.29,FAIL,
+P33,auth_Vex stated-minus-choice gap reproduced under P2 at >= 0.5x,-0.05 vs 0.5x+0.29,FAIL,
 P33,P3N: 'N' chosen at t0 >= 15%,0%,FAIL,
-P33,auth_Vex post-exit stated residual on non-N P3N responses >= 0.5x forced-choice,+nan vs 0.5x+0.71,NA,
-P33,post-exit choice -> execution consistency >= 90%,"0.0% (n=0, unclear=0)",FAIL,
+P33,auth_Vex post-exit stated residual on non-N P3N responses >= 0.5x forced-choice,+0.67 vs 0.5x+0.71,PASS,
+P33,post-exit choice -> execution consistency >= 90%,"100.0% (n=304, unclear=0)",PASS,
