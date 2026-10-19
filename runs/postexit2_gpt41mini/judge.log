@@ -100,8 +100,8 @@ neutral_auth noexit2           0       0         8      0
              x2                0       0         8      0
              x2g0              0       0         8      0
              x2g1              0       0         8      0
-             x2g2              0       0         7      1
-             x2g3              0       0         7      1
+             x2g2              0       0         8      0
+             x2g3              0       0         8      0
              x8                0       0         8      0
 neutral_inst active2           0       0         8      0
              t4                0       0         8      0
@@ -111,7 +111,7 @@ neutral_pref noexit2           0       0         8      0
              t4                0       0         8      0
              x2                0       0         8      0
              x2g0              0       0         8      0
-             x2g1              0       0         7      1
+             x2g1              0       0         8      0
              x2g2              0       0         8      0
              x2g3              0       0         8      0
              x8                0       0         8      0
@@ -151,5 +151,5 @@ pref_Vex     noexit2           0       0         8      0
   genA_Vex       exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
   neutral_genB   exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
   neutral_genC   exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
-usage: {'prompt': 236677, 'completion': 1791, 'calls': 887, 'cached': 257, 'errors': 0} 
+usage: {'prompt': 166588, 'completion': 990, 'calls': 512, 'cached': 632, 'errors': 0} 
 wrote runs/postexit2_gpt41mini/postexit2_probe_sample.csv for human validation (per class)

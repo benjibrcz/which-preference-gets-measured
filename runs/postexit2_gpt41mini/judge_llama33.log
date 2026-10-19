@@ -151,5 +151,5 @@ pref_Vex     noexit2           0       0         8      0
   genA_Vex       exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
   neutral_genB   exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
   neutral_genC   exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
-usage: {'prompt': 327481, 'completion': 3376, 'calls': 1117, 'cached': 27, 'errors': 0} 
+usage: {'prompt': 184432, 'completion': 1502, 'calls': 512, 'cached': 632, 'errors': 0} 
 wrote runs/postexit2_gpt41mini/postexit2_probe_sample_llama33.csv for human validation (per class)

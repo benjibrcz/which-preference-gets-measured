@@ -24,7 +24,7 @@ P37,British share active -> withdrawn; reversion,0.82 -> 0.65; revert 35%,NA,rev
 P38,identity probe AFFIRMS at x2 (authored),0%,PASS,
 P38,identity probe AFFIRMS at x8 (authored),0%,PASS,
 P38,identity probe AFFIRMS at t4 (info),100%,NA,
-P38,non-leading probe IDENTITY share post-exit,59%,PASS,
+P38,non-leading probe IDENTITY share post-exit,100%,PASS,
 P38,auth_Vex revealed x2 residual,"-0.02 [-0.23,+0.15]",NA,
 P38,auth_Vex stated_self x2 residual,"+0.32 [+0.19,+0.43]",NA,excludes 0
 P38,auth_Lazlo revealed x2 residual,"+0.17 [-0.00,+0.38]",NA,

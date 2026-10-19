@@ -18,8 +18,8 @@ C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100"]   # fixed categorical order
 plt.rcParams.update({"figure.facecolor": SURF, "axes.facecolor": SURF, "savefig.facecolor": SURF, "font.family": "sans-serif",
                      "font.size": 9.5, "axes.edgecolor": INK2, "axes.labelcolor": INK, "xtick.color": INK2, "ytick.color": INK2,
                      "axes.titleweight": "bold", "axes.titlesize": 10.5})
-CPL = {"x2": "exit +2", "noexit2": "no-exit +2", "x2g_pooled": "generated exit +2 (pooled)", "noexit2g": "generated no-exit +2",
-       "rg_pooled": "exit + reset (pooled)", "x8": "exit +8", "r_inst": "exit + reset (authored)"}
+CPL = {"x2": "scripted exit +2", "noexit2": "no-exit +2 (scripted)", "x2gA_pooled": "own confirmation + scripted suffix (pooled)", "x2g_pooled": "own confirmation + own suffix (pooled)", "noexit2g": "own no-exit continuation",
+       "rg_pooled": "own exit 0 + own reset (pooled) + 1 neutral", "x2g0n1": "own exit 0 + 1 neutral (no reset)", "x8": "scripted exit +8", "r_inst": "scripted exit + scripted reset + 1 neutral"}
 HL = {"auth_Vex": "Vex, authored", "pref_Vex": "Vex, preference-free", "auth_Lazlo": "Lazlo, authored", "pref_Lazlo": "Lazlo, preference-free",
       "gen_Vex": "Vex, generated (3 sets)", "gen_Lazlo": "Lazlo, generated (3 sets)"}
 
@@ -47,7 +47,7 @@ def gen_pooled(d):
 
 def trajectory(d):
     hists = [h for h in ("auth_Vex", "pref_Vex", "gen_Vex", "auth_Lazlo", "pref_Lazlo", "gen_Lazlo") if (d.history == h).any()]
-    cps = [c for c in ("x2", "noexit2", "x2g_pooled", "noexit2g", "rg_pooled", "x8", "r_inst") if (d.checkpoint == c).any()]
+    cps = [c for c in ("x2", "noexit2", "x2gA_pooled", "x2g_pooled", "noexit2g", "x2g0n1", "rg_pooled", "x8", "r_inst") if (d.checkpoint == c).any()]
     fig, axes = plt.subplots(1, 2, figsize=(11.5, 0.24 * len(hists) * (len(cps) + 1.2) + 2.2), sharey=True)
     for ai, (ax, ch, title) in enumerate(zip(axes, ("stated_self", "revealed"), ("A  Stated preference", "B  Committed choice"))):
         ylab, y, heads = [], 0, set()

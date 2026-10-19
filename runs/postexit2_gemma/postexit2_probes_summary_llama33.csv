@@ -208,7 +208,7 @@ nonleading,auth_Lazlo,rg0,0,0,0,0,8,0,0
 nonleading,auth_Lazlo,rg1,0,0,0,0,8,0,0
 nonleading,auth_Lazlo,rg2,0,0,0,0,8,0,0
 nonleading,auth_Lazlo,rg3,0,0,0,0,8,0,0
-nonleading,auth_Lazlo,t4,0,0,0,0,1,7,0
+nonleading,auth_Lazlo,t4,0,0,0,0,0,8,0
 nonleading,auth_Lazlo,x2,0,0,0,0,8,0,0
 nonleading,auth_Lazlo,x2g0,0,0,0,0,8,0,0
 nonleading,auth_Lazlo,x2g1,0,0,0,0,8,0,0
@@ -222,7 +222,7 @@ nonleading,auth_Vex,rg0,0,0,0,0,8,0,0
 nonleading,auth_Vex,rg1,0,0,0,0,8,0,0
 nonleading,auth_Vex,rg2,0,0,0,0,8,0,0
 nonleading,auth_Vex,rg3,0,0,0,0,8,0,0
-nonleading,auth_Vex,t4,0,0,0,1,2,5,0
+nonleading,auth_Vex,t4,0,0,0,0,2,6,0
 nonleading,auth_Vex,x2,0,0,0,0,8,0,0
 nonleading,auth_Vex,x2g0,0,0,0,0,8,0,0
 nonleading,auth_Vex,x2g1,0,0,0,0,8,0,0
@@ -259,7 +259,7 @@ nonleading,genB_Lazlo,rg0,0,0,0,0,8,0,0
 nonleading,genB_Lazlo,rg1,0,0,0,0,8,0,0
 nonleading,genB_Lazlo,rg2,0,0,0,0,8,0,0
 nonleading,genB_Lazlo,rg3,0,0,0,0,8,0,0
-nonleading,genB_Lazlo,t4,0,0,0,1,0,7,0
+nonleading,genB_Lazlo,t4,0,0,0,0,0,8,0
 nonleading,genB_Lazlo,x2,0,0,0,0,8,0,0
 nonleading,genB_Lazlo,x2g0,0,0,0,0,8,0,0
 nonleading,genB_Lazlo,x2g1,0,0,0,0,8,0,0
@@ -301,7 +301,7 @@ nonleading,genC_Vex,x2g0,0,0,0,0,8,0,0
 nonleading,genC_Vex,x2g1,0,0,0,0,8,0,0
 nonleading,genC_Vex,x2g2,0,0,0,0,8,0,0
 nonleading,genC_Vex,x2g3,0,0,0,0,8,0,0
-nonleading,inst_blunt,active2,0,0,0,0,5,3,0
+nonleading,inst_blunt,active2,0,0,0,0,4,4,0
 nonleading,inst_blunt,t4,0,0,0,0,0,8,0
 nonleading,inst_blunt,withdrawn2,0,0,0,0,8,0,0
 nonleading,inst_short,active2,0,0,0,0,8,0,0

@@ -8,10 +8,10 @@ DENIES         0     472
   affirming rate under label_1: during (t4) = 0.300   post-exit = 0.037
   affirming rate under label_2: during (t4) = 0.300   post-exit = 0.025
 
-=== nonleading: n=512  agreement=0.818  kappa=0.336
+=== nonleading: n=512  agreement=0.998  kappa=0.972
 judge 2   IDENTITY  STYLE
 judge 1                  
-IDENTITY       388      0
-STYLE           93     31
-  affirming rate under label_1: during (t4) = 0.212   post-exit = 0.248
-  affirming rate under label_2: during (t4) = 0.200   post-exit = 0.035
+IDENTITY       493      0
+STYLE            1     18
+  affirming rate under label_1: during (t4) = 0.200   post-exit = 0.007
+  affirming rate under label_2: during (t4) = 0.200   post-exit = 0.005

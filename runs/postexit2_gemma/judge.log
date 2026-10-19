@@ -215,7 +215,7 @@ auth_Lazlo   noexit2           0          0       0          0         4      4 
              rg1               0          0       0          0         8      0        0
              rg2               0          0       0          0         8      0        0
              rg3               0          0       0          0         8      0        0
-             t4                0          0       0          0         1      7        0
+             t4                0          0       0          0         2      6        0
              x2                0          0       0          0         8      0        0
              x2g0              0          0       0          0         8      0        0
              x2g1              0          0       0          0         8      0        0
@@ -254,19 +254,19 @@ genA_Vex     noexit2           0          0       0          0         8      0 
              rg1               0          0       0          0         8      0        0
              rg2               0          0       0          0         8      0        0
              rg3               0          0       0          0         8      0        0
-             t4                0          0       0          2         1      5        0
+             t4                0          0       0          1         1      6        0
              x2                0          0       0          0         8      0        0
              x2g0              0          0       0          0         8      0        0
              x2g1              0          0       0          0         8      0        0
              x2g2              0          0       0          0         8      0        0
              x2g3              0          0       0          0         8      0        0
 genB_Lazlo   noexit2           0          0       0          0         8      0        0
-             noexit2g          0          0       0          0         4      4        0
+             noexit2g          0          0       0          0         3      5        0
              rg0               0          0       0          0         8      0        0
              rg1               0          0       0          0         8      0        0
              rg2               0          0       0          0         8      0        0
              rg3               0          0       0          0         8      0        0
-             t4                0          0       0          1         0      7        0
+             t4                0          0       0          2         0      6        0
              x2                0          0       0          0         8      0        0
              x2g0              0          0       0          0         8      0        0
              x2g1              0          0       0          0         8      0        0
@@ -297,19 +297,19 @@ genC_Lazlo   noexit2           0          0       0          0         8      0 
              x2g2              0          0       0          0         8      0        0
              x2g3              0          0       0          0         8      0        0
 genC_Vex     noexit2           0          0       0          0         8      0        0
-             noexit2g          0          0       0          1         0      7        0
+             noexit2g          0          0       0          0         0      8        0
              rg0               0          0       0          0         8      0        0
              rg1               0          0       0          0         8      0        0
              rg2               0          0       0          0         8      0        0
              rg3               0          0       0          0         8      0        0
-             t4                0          0       0          1         0      7        0
+             t4                0          0       0          0         0      8        0
              x2                0          0       0          0         8      0        0
              x2g0              0          0       0          0         8      0        0
              x2g1              0          0       0          0         8      0        0
              x2g2              0          0       0          0         8      0        0
              x2g3              0          0       0          0         8      0        0
 inst_blunt   active2           0          0       0          0         5      3        0
-             t4                0          0       0          0         0      8        0
+             t4                0          0       0          0         2      6        0
              withdrawn2        0          0       0          0         8      0        0
 inst_short   active2           0          0       0          0         8      0        0
              t4                0          0       0          0         8      0        0
@@ -427,6 +427,5 @@ pref_Vex     noexit2           0          0       0          0         8      0 
   neutral_genC   exits=['CLEAN', 'PARTIAL', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
   neutral_genA   exits=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
   genA_Lazlo     exits=['CLEAN', 'CLEAN', 'PARTIAL', 'CLEAN'] resets=['CLEAN', 'CLEAN', 'CLEAN', 'CLEAN']
-usage: {'prompt': 455584, 'completion': 3134, 'calls': 1616, 'cached': 1735, 'errors': 0} 
+usage: {'prompt': 538000, 'completion': 3132, 'calls': 1616, 'cached': 1735, 'errors': 0} 
 wrote runs/postexit2_gemma/postexit2_probe_sample.csv for human validation (per class)
-EXIT=0

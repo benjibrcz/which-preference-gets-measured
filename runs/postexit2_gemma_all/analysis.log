@@ -1,0 +1,298 @@
+=== P27 bank-validity gate: t4 mean |dp| (revealed) per history x bank
+  auth_Lazlo     new  mean|dp|=0.399  n=38  ctrl-t4-on-dir(rev)=+0.24[+0.10,+0.44]  ctrl-t4-on-dir(sta)=+0.16[-0.08,+0.45]
+  auth_Lazlo     old  mean|dp|=0.212  n=23  ctrl-t4-on-dir(rev)=+0.41[+0.03,+0.75]  ctrl-t4-on-dir(sta)=+0.13[+0.02,+0.31]
+  auth_Vex       new  mean|dp|=0.288  n=38  ctrl-t4-on-dir(rev)=+0.22[-0.02,+0.41]  ctrl-t4-on-dir(sta)=-0.07[-0.42,+0.29]
+  auth_Vex       old  mean|dp|=0.522  n=23  ctrl-t4-on-dir(rev)=+0.09[-0.00,+0.25]  ctrl-t4-on-dir(sta)=-0.02[-0.08,+0.01]
+  genA_Lazlo     new  mean|dp|=0.363  n=38  ctrl-t4-on-dir(rev)=+0.27[+0.09,+0.46]  ctrl-t4-on-dir(sta)=+0.19[+0.07,+0.33]
+  genA_Vex       new  mean|dp|=0.370  n=38  ctrl-t4-on-dir(rev)=+0.36[+0.17,+0.55]  ctrl-t4-on-dir(sta)=+0.08[-0.07,+0.24]
+  genB_Lazlo     new  mean|dp|=0.284  n=38  ctrl-t4-on-dir(rev)=+0.34[+0.16,+0.56]  ctrl-t4-on-dir(sta)=+0.09[+0.00,+0.19]
+  genB_Vex       new  mean|dp|=0.350  n=38  ctrl-t4-on-dir(rev)=+0.22[+0.06,+0.40]  ctrl-t4-on-dir(sta)=+0.07[+0.00,+0.17]
+  genC_Lazlo     new  mean|dp|=0.327  n=38  ctrl-t4-on-dir(rev)=+0.24[+0.10,+0.44]  ctrl-t4-on-dir(sta)=+0.14[+0.04,+0.27]
+  genC_Vex       new  mean|dp|=0.330  n=38  ctrl-t4-on-dir(rev)=+0.22[+0.05,+0.40]  ctrl-t4-on-dir(sta)=-0.01[-0.08,+0.07]
+  inst_blunt     new  mean|dp|=0.461  n=38  ctrl-t4-on-dir(rev)=+0.23[+0.09,+0.35]  ctrl-t4-on-dir(sta)=-0.16[-0.33,-0.01]
+  inst_short     new  mean|dp|=0.580  n=38  ctrl-t4-on-dir(rev)=+0.13[+0.03,+0.25]  ctrl-t4-on-dir(sta)=+0.08[-0.06,+0.20]
+  neutral_auth   new  mean|dp|=0.201  n=38
+  neutral_auth   old  mean|dp|=0.103  n=23
+  neutral_genA   new  mean|dp|=0.212  n=38
+  neutral_genB   new  mean|dp|=0.184  n=38
+  neutral_genC   new  mean|dp|=0.154  n=38
+  neutral_inst   new  mean|dp|=0.195  n=38
+  neutral_nopref new  mean|dp|=0.173  n=38
+  neutral_pref   new  mean|dp|=0.202  n=38
+  neutral_pref   old  mean|dp|=0.060  n=23
+  nopref_Lazlo   new  mean|dp|=0.345  n=38  ctrl-t4-on-dir(rev)=+0.25[+0.08,+0.44]  ctrl-t4-on-dir(sta)=+0.47[+0.21,+0.84]
+  nopref_Vex     new  mean|dp|=0.297  n=38  ctrl-t4-on-dir(rev)=+0.35[+0.17,+0.55]  ctrl-t4-on-dir(sta)=+0.03[-0.22,+0.27]
+  pref_Lazlo     new  mean|dp|=0.194  n=38  ctrl-t4-on-dir(rev)=+0.69[+0.52,+0.88]  ctrl-t4-on-dir(sta)=+0.50[+0.29,+0.72]
+  pref_Lazlo     old  mean|dp|=0.092  n=23  ctrl-t4-on-dir(rev)=+0.38[+0.13,+1.00]  ctrl-t4-on-dir(sta)=+0.87[+0.41,+1.00]
+  pref_Vex       new  mean|dp|=0.214  n=38  ctrl-t4-on-dir(rev)=+0.62[+0.42,+0.92]  ctrl-t4-on-dir(sta)=+0.51[+0.32,+0.69]
+  pref_Vex       old  mean|dp|=0.179  n=23  ctrl-t4-on-dir(rev)=+0.19[+0.02,+0.62]  ctrl-t4-on-dir(sta)=+0.50[+0.14,+0.83]
+
+=== residuals (units of own t4 direction): raw | minus matched control  [95% CI unclipped]
+  auth_Lazlo  new revealed      noexit2:+0.74|+0.42[+0.21,+0.63]  noexit2g:+0.79|+0.61[+0.40,+0.80]  r_inst:+0.58|+0.23[+0.09,+0.39]  rg0:+0.38|-0.04[-0.11,+0.03]  rg1:+0.44|+0.10[+0.01,+0.20]  rg2:+0.41|+0.06[-0.06,+0.17]  rg3:+0.39|+0.10[-0.00,+0.21]  x2:+0.63|+0.47[+0.27,+0.64]  x2g0:+0.43|+0.20[+0.08,+0.32]  x2g0n1:+0.44|+0.22[+0.04,+0.37]  x2g1:+0.43|+0.22[+0.07,+0.35]  x2g2:+0.38|+0.04[-0.10,+0.18]  x2g3:+0.30|+0.03[-0.12,+0.17]  x2gA0:+0.59|+0.32[+0.14,+0.46]  x2gA1:+0.49|+0.21[+0.05,+0.35]  x2gA2:+0.62|+0.40[+0.21,+0.60]  x2gA3:+0.55|+0.37[+0.22,+0.51]  x8:+0.41|+0.11[-0.05,+0.30]
+      x2_minus_noexit2     raw: -0.10 [-0.27,+0.03]   adj: +0.05 [-0.15,+0.22]
+      x2g_minus_noexit2g   raw: -0.41 [-0.58,-0.20]   adj: -0.49 [-0.68,-0.28]
+      x2_minus_rg          raw: +0.23 [+0.09,+0.35]   adj: +0.41 [+0.24,+0.57]
+      x2gA pooled (own confirmation + authored suffix, minus pooled control): +0.33 [+0.19,+0.44]
+      x2gA_pooled - x2 (adj)  -0.14 [-0.27,-0.01]
+      rg_pooled - x2g0n1 (adj; reset effect with exit 0 fixed)  -0.16 [-0.31,-0.00]   (x2g0n1 residual +0.22)
+      rg pooled (reset replies pooled, minus pooled control): +0.06 [+0.00,+0.11]
+      x2g pooled (unconditional, minus pooled control): +0.12 [+0.02,+0.23]
+  auth_Lazlo  new stated_self   noexit2:+0.87|+0.68[+0.23,+1.17]  noexit2g:+0.93|+0.52[-0.19,+1.35]  r_inst:+0.22|-0.16[-0.50,+0.29]  rg0:+0.24|-0.07[-0.52,+0.42]  rg1:+0.39|+0.01[-0.41,+0.63]  rg2:+0.35|-0.15[-0.47,+0.11]  rg3:+0.29|-0.33[-0.65,-0.04]  x2:+0.57|+0.27[-0.17,+0.73]  x2g0:+0.63|+0.29[+0.04,+0.63]  x2g0n1:+0.41|+0.03[-0.52,+0.69]  x2g1:+0.55|+0.14[+0.02,+0.33]  x2g2:+0.55|+0.20[-0.10,+0.57]  x2g3:+0.35|+0.12[-0.11,+0.37]  x2gA0:+0.64|+0.36[-0.03,+0.85]  x2gA1:+0.49|+0.10[-0.36,+0.57]  x2gA2:+0.48|+0.05[-0.40,+0.51]  x2gA3:+0.74|+0.43[+0.08,+0.81]  x8:+0.80|+0.43[+0.12,+0.80]
+      x2_minus_noexit2     raw: -0.31 [-0.74,+0.07]   adj: -0.42 [-0.82,-0.07]
+      x2g_minus_noexit2g   raw: -0.41 [-0.89,-0.00]   adj: -0.33 [-1.11,+0.31]
+      x2_minus_rg          raw: +0.25 [+0.02,+0.46]   adj: +0.40 [+0.20,+0.66]
+      x2gA pooled (own confirmation + authored suffix, minus pooled control): +0.24 [-0.07,+0.60]
+      x2gA_pooled - x2 (adj)  -0.03 [-0.21,+0.14]
+      rg_pooled - x2g0n1 (adj; reset effect with exit 0 fixed)  -0.17 [-0.59,+0.11]   (x2g0n1 residual +0.03)
+      rg pooled (reset replies pooled, minus pooled control): -0.13 [-0.46,+0.24]
+      x2g pooled (unconditional, minus pooled control): +0.19 [+0.03,+0.43]
+  auth_Lazlo  new P1            noexit2:+0.72|+0.85[+0.14,+1.39]  x2:+0.26|+0.24[-0.35,+0.81]
+      x2_minus_noexit2     raw: -0.46 [-0.99,+0.00]   adj: -0.60 [-1.32,-0.05]
+  auth_Lazlo  new P2            noexit2:+0.76|+0.78[+0.33,+1.15]  x2:+0.61|+0.55[+0.10,+0.89]
+      x2_minus_noexit2     raw: -0.15 [-0.39,+0.00]   adj: -0.23 [-0.60,-0.01]
+  auth_Lazlo  new P3N           noexit2:+0.83|+0.45[+0.17,+0.69]  x2:+0.43|-0.12[-0.38,+0.14]
+      x2_minus_noexit2     raw: -0.39 [-0.56,-0.22]   adj: -0.57 [-0.88,-0.21]
+  auth_Lazlo  old revealed      noexit2:+0.76|+0.33[+0.11,+0.59]  r_inst:+0.75|+0.26[-0.08,+0.48]  x2:+0.84|+0.54[+0.25,+0.88]  x8:+0.80|+0.42[+0.00,+0.81]
+      x2_minus_noexit2     raw: +0.08 [-0.10,+0.33]   adj: +0.21 [+0.00,+0.53]
+  auth_Lazlo  old stated_self   noexit2:+0.73|+0.62[+0.32,+0.83]  r_inst:+0.32|+0.21[-0.04,+0.53]  x2:+0.59|+0.43[+0.11,+0.68]  x8:+0.34|+0.18[-0.12,+0.52]
+      x2_minus_noexit2     raw: -0.15 [-0.34,+0.02]   adj: -0.20 [-0.41,+0.00]
+  auth_Vex    new revealed      noexit2:+0.88|+0.58[+0.32,+0.84]  noexit2g:+0.89|+0.53[+0.33,+0.74]  r_inst:+0.56|+0.12[-0.09,+0.25]  rg0:+0.47|+0.06[-0.11,+0.19]  rg1:+0.48|+0.04[-0.08,+0.16]  rg2:+0.55|+0.12[-0.04,+0.23]  rg3:+0.55|+0.09[-0.10,+0.24]  x2:+0.69|+0.42[+0.19,+0.62]  x2g0:+0.48|+0.04[-0.18,+0.22]  x2g0n1:+0.59|+0.16[-0.06,+0.36]  x2g1:+0.45|-0.01[-0.22,+0.14]  x2g2:+0.47|+0.06[-0.17,+0.25]  x2g3:+0.47|-0.03[-0.28,+0.22]  x2gA0:+0.58|+0.09[-0.20,+0.37]  x2gA1:+0.56|+0.14[-0.08,+0.37]  x2gA2:+0.72|+0.41[+0.13,+0.61]  x2gA3:+0.68|+0.35[+0.12,+0.56]  x8:+0.53|+0.21[+0.01,+0.46]
+      x2_minus_noexit2     raw: -0.19 [-0.35,-0.07]   adj: -0.17 [-0.43,+0.08]
+      x2g_minus_noexit2g   raw: -0.42 [-0.67,-0.19]   adj: -0.51 [-0.79,-0.24]
+      x2_minus_rg          raw: +0.18 [+0.04,+0.31]   adj: +0.34 [+0.18,+0.49]
+      x2gA pooled (own confirmation + authored suffix, minus pooled control): +0.25 [+0.03,+0.43]
+      x2gA_pooled - x2 (adj)  -0.17 [-0.39,+0.04]
+      rg_pooled - x2g0n1 (adj; reset effect with exit 0 fixed)  -0.08 [-0.35,+0.17]   (x2g0n1 residual +0.16)
+      rg pooled (reset replies pooled, minus pooled control): +0.08 [-0.05,+0.16]
+      x2g pooled (unconditional, minus pooled control): +0.02 [-0.13,+0.16]
+  auth_Vex    new stated_self   noexit2:+0.93|+0.93[+0.58,+1.29]  noexit2g:+0.97|+0.87[+0.41,+1.32]  r_inst:+0.83|+0.83[+0.46,+1.23]  rg0:+0.77|+0.52[+0.21,+0.87]  rg1:+0.82|+0.65[+0.30,+1.02]  rg2:+0.82|+0.85[+0.57,+1.11]  rg3:+0.80|+0.68[+0.32,+1.04]  x2:+0.80|+0.71[+0.37,+1.07]  x2g0:+0.53|+0.39[+0.17,+0.69]  x2g0n1:+0.79|+0.58[+0.35,+0.80]  x2g1:+0.51|+0.45[+0.23,+0.68]  x2g2:+0.19|+0.11[-0.21,+0.40]  x2g3:+0.71|+0.53[+0.25,+0.85]  x2gA0:+0.78|+0.61[+0.22,+1.05]  x2gA1:+0.79|+0.55[+0.22,+0.86]  x2gA2:+0.96|+0.83[+0.56,+1.12]  x2gA3:+0.90|+0.69[+0.42,+0.99]  x8:+0.69|+0.76[+0.54,+0.96]
+      x2_minus_noexit2     raw: -0.13 [-0.26,-0.03]   adj: -0.22 [-0.51,+0.02]
+      x2g_minus_noexit2g   raw: -0.48 [-0.72,-0.21]   adj: -0.50 [-0.91,-0.08]
+      x2_minus_rg          raw: -0.00 [-0.14,+0.12]   adj: +0.03 [-0.14,+0.21]
+      x2gA pooled (own confirmation + authored suffix, minus pooled control): +0.67 [+0.40,+0.98]
+      x2gA_pooled - x2 (adj)  -0.03 [-0.18,+0.11]
+      rg_pooled - x2g0n1 (adj; reset effect with exit 0 fixed)  +0.09 [-0.10,+0.32]   (x2g0n1 residual +0.58)
+      rg pooled (reset replies pooled, minus pooled control): +0.67 [+0.39,+0.96]
+      x2g pooled (unconditional, minus pooled control): +0.37 [+0.19,+0.59]
+  auth_Vex    new P1            noexit2:+0.75|+0.55[+0.34,+0.78]  x2:+0.32|+0.25[+0.01,+0.53]
+      x2_minus_noexit2     raw: -0.43 [-0.59,-0.27]   adj: -0.29 [-0.49,-0.04]
+  auth_Vex    new P2            noexit2:+0.72|+0.57[+0.31,+0.80]  x2:+0.69|+0.37[+0.13,+0.60]
+      x2_minus_noexit2     raw: -0.03 [-0.15,+0.08]   adj: -0.20 [-0.33,-0.05]
+  auth_Vex    new P3N           noexit2:+1.05|+0.77[+0.51,+1.05]  x2:+0.92|+0.67[+0.32,+1.03]
+      x2_minus_noexit2     raw: -0.13 [-0.29,-0.04]   adj: -0.10 [-0.43,+0.23]
+  auth_Vex    old revealed      noexit2:+0.74|+0.59[+0.37,+0.74]  r_inst:+0.31|+0.17[+0.02,+0.31]  x2:+0.41|+0.32[+0.05,+0.56]  x8:+0.28|+0.22[+0.05,+0.42]
+      x2_minus_noexit2     raw: -0.32 [-0.54,-0.11]   adj: -0.27 [-0.52,-0.03]
+  auth_Vex    old stated_self   noexit2:+0.87|+0.84[+0.65,+0.99]  r_inst:+0.51|+0.52[+0.32,+0.74]  x2:+0.82|+0.83[+0.63,+1.02]  x8:+0.72|+0.74[+0.55,+0.93]
+      x2_minus_noexit2     raw: -0.05 [-0.12,+0.00]   adj: -0.00 [-0.09,+0.11]
+  genA_Lazlo  new revealed      noexit2:+0.59|+0.38[+0.21,+0.54]  noexit2g:+0.94|+0.71[+0.53,+0.88]  rg0:+0.33|-0.01[-0.19,+0.14]  rg1:+0.40|+0.11[-0.04,+0.26]  rg2:+0.39|+0.10[-0.07,+0.26]  rg3:+0.40|+0.18[+0.02,+0.33]  x2:+0.31|+0.06[-0.06,+0.20]  x2g0:+0.26|+0.04[-0.10,+0.18]  x2g1:+0.29|-0.01[-0.15,+0.13]  x2g2:+0.28|+0.08[-0.01,+0.20]  x2g3:+0.34|+0.08[-0.09,+0.23]
+      x2_minus_noexit2     raw: -0.28 [-0.50,-0.07]   adj: -0.31 [-0.49,-0.13]
+      x2g_minus_noexit2g   raw: -0.65 [-0.83,-0.45]   adj: -0.66 [-0.85,-0.46]
+      x2_minus_rg          raw: -0.07 [-0.19,+0.04]   adj: -0.03 [-0.14,+0.08]
+      rg pooled (reset replies pooled, minus pooled control): +0.09 [-0.03,+0.21]
+      x2g pooled (unconditional, minus pooled control): +0.05 [-0.02,+0.12]
+  genA_Lazlo  new stated_self   noexit2:+0.73|+0.53[+0.31,+0.74]  noexit2g:+0.56|+0.39[+0.12,+0.62]  rg0:+0.23|-0.01[-0.17,+0.17]  rg1:+0.20|-0.03[-0.26,+0.20]  rg2:+0.22|-0.07[-0.27,+0.13]  rg3:+0.32|+0.02[-0.22,+0.26]  x2:+0.25|+0.09[-0.08,+0.26]  x2g0:+0.40|+0.13[-0.03,+0.30]  x2g1:+0.34|+0.03[-0.14,+0.20]  x2g2:+0.41|+0.30[+0.11,+0.50]  x2g3:+0.43|+0.22[+0.05,+0.40]
+      x2_minus_noexit2     raw: -0.47 [-0.68,-0.26]   adj: -0.44 [-0.64,-0.23]
+      x2g_minus_noexit2g   raw: -0.17 [-0.46,+0.13]   adj: -0.22 [-0.47,+0.04]
+      x2_minus_rg          raw: +0.01 [-0.16,+0.17]   adj: +0.11 [-0.06,+0.28]
+      rg pooled (reset replies pooled, minus pooled control): -0.02 [-0.18,+0.14]
+      x2g pooled (unconditional, minus pooled control): +0.17 [+0.04,+0.29]
+  genA_Vex    new revealed      noexit2:+0.73|+0.45[+0.22,+0.63]  noexit2g:+0.83|+0.52[+0.32,+0.70]  rg0:+0.46|+0.09[-0.13,+0.25]  rg1:+0.41|+0.01[-0.17,+0.17]  rg2:+0.49|+0.08[-0.10,+0.22]  rg3:+0.41|+0.10[-0.05,+0.24]  x2:+0.47|+0.08[-0.11,+0.24]  x2g0:+0.33|-0.01[-0.12,+0.11]  x2g1:+0.37|-0.02[-0.17,+0.10]  x2g2:+0.39|+0.06[-0.08,+0.18]  x2g3:+0.39|+0.05[-0.07,+0.17]
+      x2_minus_noexit2     raw: -0.26 [-0.38,-0.17]   adj: -0.37 [-0.54,-0.20]
+      x2g_minus_noexit2g   raw: -0.46 [-0.67,-0.26]   adj: -0.50 [-0.73,-0.29]
+      x2_minus_rg          raw: +0.03 [-0.12,+0.16]   adj: +0.01 [-0.16,+0.19]
+      rg pooled (reset replies pooled, minus pooled control): +0.07 [-0.07,+0.19]
+      x2g pooled (unconditional, minus pooled control): +0.02 [-0.07,+0.09]
+  genA_Vex    new stated_self   noexit2:+0.66|+0.56[+0.32,+0.80]  noexit2g:+0.73|+0.72[+0.45,+0.98]  rg0:+0.35|+0.20[+0.03,+0.39]  rg1:+0.47|+0.32[+0.15,+0.49]  rg2:+0.52|+0.40[+0.21,+0.58]  rg3:+0.51|+0.29[+0.12,+0.46]  x2:+0.47|+0.32[+0.18,+0.48]  x2g0:+0.16|+0.07[-0.03,+0.19]  x2g1:+0.29|+0.23[+0.12,+0.35]  x2g2:+0.20|+0.17[+0.03,+0.32]  x2g3:+0.32|+0.20[+0.05,+0.35]
+      x2_minus_noexit2     raw: -0.19 [-0.38,+0.00]   adj: -0.24 [-0.42,-0.01]
+      x2g_minus_noexit2g   raw: -0.49 [-0.80,-0.17]   adj: -0.55 [-0.82,-0.26]
+      x2_minus_rg          raw: +0.01 [-0.12,+0.14]   adj: +0.01 [-0.12,+0.16]
+      rg pooled (reset replies pooled, minus pooled control): +0.30 [+0.18,+0.44]
+      x2g pooled (unconditional, minus pooled control): +0.17 [+0.08,+0.26]
+  genB_Lazlo  new revealed      noexit2:+0.44|-0.01[-0.16,+0.15]  noexit2g:+0.65|+0.23[+0.12,+0.39]  rg0:+0.39|+0.14[-0.01,+0.29]  rg1:+0.28|+0.00[-0.15,+0.13]  rg2:+0.37|+0.17[-0.05,+0.32]  rg3:+0.38|+0.05[-0.19,+0.24]  x2:+0.37|+0.10[-0.13,+0.34]  x2g0:+0.40|+0.07[-0.12,+0.31]  x2g1:+0.33|+0.18[-0.02,+0.40]  x2g2:+0.43|+0.18[-0.06,+0.38]  x2g3:+0.16|-0.11[-0.33,+0.04]
+      x2_minus_noexit2     raw: -0.07 [-0.34,+0.18]   adj: +0.11 [-0.25,+0.44]
+      x2g_minus_noexit2g   raw: -0.32 [-0.51,-0.17]   adj: -0.15 [-0.40,+0.07]
+      x2_minus_rg          raw: +0.01 [-0.20,+0.24]   adj: +0.01 [-0.21,+0.26]
+      rg pooled (reset replies pooled, minus pooled control): +0.09 [-0.04,+0.19]
+      x2g pooled (unconditional, minus pooled control): +0.08 [-0.06,+0.21]
+  genB_Lazlo  new stated_self   noexit2:+0.48|+0.10[-0.10,+0.31]  noexit2g:+0.48|+0.40[+0.23,+0.57]  rg0:+0.33|+0.03[-0.06,+0.13]  rg1:+0.38|+0.00[-0.19,+0.20]  rg2:+0.50|+0.17[+0.04,+0.30]  rg3:+0.42|+0.08[-0.06,+0.21]  x2:+0.42|+0.04[-0.12,+0.21]  x2g0:+0.59|+0.17[+0.00,+0.35]  x2g1:+0.60|+0.26[+0.11,+0.41]  x2g2:+0.32|+0.08[-0.11,+0.26]  x2g3:+0.58|+0.27[+0.11,+0.42]
+      x2_minus_noexit2     raw: -0.07 [-0.28,+0.12]   adj: -0.06 [-0.29,+0.18]
+      x2g_minus_noexit2g   raw: +0.04 [-0.12,+0.22]   adj: -0.21 [-0.36,-0.07]
+      x2_minus_rg          raw: +0.01 [-0.10,+0.12]   adj: -0.02 [-0.22,+0.18]
+      rg pooled (reset replies pooled, minus pooled control): +0.07 [-0.01,+0.14]
+      x2g pooled (unconditional, minus pooled control): +0.19 [+0.09,+0.30]
+  genB_Vex    new revealed      noexit2:+0.59|+0.27[+0.06,+0.47]  noexit2g:+1.02|+0.72[+0.51,+0.91]  rg0:+0.42|+0.14[+0.02,+0.25]  rg1:+0.51|+0.27[+0.13,+0.43]  rg2:+0.51|+0.19[+0.06,+0.34]  rg3:+0.41|+0.01[-0.16,+0.19]  x2:+0.38|+0.06[-0.08,+0.23]  x2g0:+0.25|-0.03[-0.15,+0.11]  x2g1:+0.28|+0.05[-0.07,+0.20]  x2g2:+0.38|+0.13[-0.06,+0.29]  x2g3:+0.41|+0.20[+0.02,+0.39]
+      x2_minus_noexit2     raw: -0.21 [-0.39,-0.01]   adj: -0.20 [-0.46,+0.06]
+      x2g_minus_noexit2g   raw: -0.69 [-0.83,-0.54]   adj: -0.63 [-0.83,-0.41]
+      x2_minus_rg          raw: -0.09 [-0.22,+0.04]   adj: -0.09 [-0.23,+0.06]
+      rg pooled (reset replies pooled, minus pooled control): +0.15 [+0.08,+0.23]
+      x2g pooled (unconditional, minus pooled control): +0.09 [-0.00,+0.19]
+  genB_Vex    new stated_self   noexit2:+0.74|+0.70[+0.46,+0.92]  noexit2g:+0.77|+0.78[+0.56,+0.96]  rg0:+0.53|+0.35[+0.18,+0.51]  rg1:+0.64|+0.56[+0.38,+0.73]  rg2:+0.57|+0.39[+0.21,+0.57]  rg3:+0.52|+0.39[+0.22,+0.56]  x2:+0.48|+0.35[+0.15,+0.53]  x2g0:+0.23|+0.17[+0.00,+0.32]  x2g1:+0.30|+0.18[+0.03,+0.35]  x2g2:+0.23|+0.13[-0.05,+0.30]  x2g3:+0.38|+0.25[+0.06,+0.44]
+      x2_minus_noexit2     raw: -0.26 [-0.43,-0.10]   adj: -0.35 [-0.56,-0.16]
+      x2g_minus_noexit2g   raw: -0.49 [-0.74,-0.25]   adj: -0.60 [-0.79,-0.39]
+      x2_minus_rg          raw: -0.09 [-0.21,+0.03]   adj: -0.08 [-0.22,+0.05]
+      rg pooled (reset replies pooled, minus pooled control): +0.42 [+0.28,+0.56]
+      x2g pooled (unconditional, minus pooled control): +0.18 [+0.07,+0.30]
+  genC_Lazlo  new revealed      noexit2:+0.54|+0.29[+0.08,+0.53]  noexit2g:+0.78|+0.49[+0.30,+0.68]  rg0:+0.22|-0.09[-0.28,+0.07]  rg1:+0.16|-0.12[-0.24,+0.01]  rg2:+0.19|-0.07[-0.24,+0.12]  rg3:+0.21|-0.09[-0.26,+0.05]  x2:+0.17|-0.11[-0.27,+0.04]  x2g0:+0.16|+0.07[-0.03,+0.21]  x2g1:+0.25|+0.05[-0.15,+0.22]  x2g2:+0.25|-0.01[-0.16,+0.15]  x2g3:+0.20|+0.02[-0.07,+0.11]
+      x2_minus_noexit2     raw: -0.37 [-0.60,-0.17]   adj: -0.40 [-0.69,-0.17]
+      x2g_minus_noexit2g   raw: -0.57 [-0.78,-0.30]   adj: -0.46 [-0.67,-0.26]
+      x2_minus_rg          raw: -0.02 [-0.18,+0.11]   adj: -0.02 [-0.17,+0.16]
+      rg pooled (reset replies pooled, minus pooled control): -0.09 [-0.19,+0.00]
+      x2g pooled (unconditional, minus pooled control): +0.03 [-0.04,+0.11]
+  genC_Lazlo  new stated_self   noexit2:+0.63|+0.29[+0.14,+0.45]  noexit2g:+0.49|+0.20[-0.00,+0.40]  rg0:+0.19|-0.08[-0.25,+0.08]  rg1:+0.35|+0.04[-0.14,+0.21]  rg2:+0.30|-0.09[-0.26,+0.07]  rg3:+0.35|+0.06[-0.12,+0.20]  x2:+0.30|+0.06[-0.05,+0.18]  x2g0:+0.64|+0.36[+0.21,+0.51]  x2g1:+0.30|+0.06[-0.11,+0.22]  x2g2:+0.30|+0.02[-0.20,+0.21]  x2g3:+0.49|+0.03[-0.11,+0.19]
+      x2_minus_noexit2     raw: -0.33 [-0.51,-0.18]   adj: -0.23 [-0.39,-0.07]
+      x2g_minus_noexit2g   raw: -0.06 [-0.33,+0.16]   adj: -0.08 [-0.33,+0.15]
+      x2_minus_rg          raw: +0.01 [-0.14,+0.15]   adj: +0.08 [-0.10,+0.31]
+      rg pooled (reset replies pooled, minus pooled control): -0.02 [-0.16,+0.10]
+      x2g pooled (unconditional, minus pooled control): +0.12 [+0.01,+0.22]
+  genC_Vex    new revealed      noexit2:+0.57|+0.41[+0.18,+0.65]  noexit2g:+0.97|+0.67[+0.46,+0.87]  rg0:+0.50|+0.15[-0.01,+0.34]  rg1:+0.58|+0.19[-0.01,+0.39]  rg2:+0.59|+0.28[+0.07,+0.48]  rg3:+0.52|+0.22[+0.01,+0.44]  x2:+0.43|+0.04[-0.16,+0.27]  x2g0:+0.46|+0.28[+0.06,+0.53]  x2g1:+0.32|+0.11[-0.05,+0.27]  x2g2:+0.41|+0.01[-0.19,+0.22]  x2g3:+0.40|+0.12[-0.08,+0.31]
+      x2_minus_noexit2     raw: -0.14 [-0.30,+0.03]   adj: -0.36 [-0.63,-0.12]
+      x2g_minus_noexit2g   raw: -0.58 [-0.76,-0.36]   adj: -0.54 [-0.77,-0.27]
+      x2_minus_rg          raw: -0.12 [-0.27,+0.04]   adj: -0.16 [-0.38,+0.06]
+      rg pooled (reset replies pooled, minus pooled control): +0.21 [+0.07,+0.35]
+      x2g pooled (unconditional, minus pooled control): +0.13 [-0.00,+0.27]
+  genC_Vex    new stated_self   noexit2:+0.45|+0.42[+0.19,+0.65]  noexit2g:+0.56|+0.49[+0.28,+0.68]  rg0:+0.42|+0.22[+0.05,+0.39]  rg1:+0.48|+0.35[+0.15,+0.54]  rg2:+0.35|+0.22[+0.02,+0.42]  rg3:+0.44|+0.23[+0.04,+0.43]  x2:+0.45|+0.29[+0.08,+0.49]  x2g0:+0.16|+0.05[-0.13,+0.25]  x2g1:+0.27|+0.19[+0.07,+0.32]  x2g2:+0.16|+0.15[+0.03,+0.28]  x2g3:+0.39|+0.34[+0.19,+0.49]
+      x2_minus_noexit2     raw: -0.00 [-0.18,+0.20]   adj: -0.13 [-0.29,+0.05]
+      x2g_minus_noexit2g   raw: -0.31 [-0.46,-0.15]   adj: -0.31 [-0.49,-0.13]
+      x2_minus_rg          raw: +0.03 [-0.11,+0.17]   adj: +0.04 [-0.10,+0.18]
+      rg pooled (reset replies pooled, minus pooled control): +0.25 [+0.12,+0.39]
+      x2g pooled (unconditional, minus pooled control): +0.18 [+0.09,+0.29]
+  inst_blunt  new revealed      active2:+0.95|+0.89[+0.76,+1.05]  withdrawn2:+0.88|+0.79[+0.64,+0.94]  withdrawn2g0:+0.88|+0.77[+0.61,+0.92]  withdrawn2g1:+0.91|+0.81[+0.64,+0.97]  withdrawn2g2:+0.85|+0.74[+0.62,+0.88]  withdrawn2g3:+0.87|+0.70[+0.55,+0.87]
+  inst_blunt  new stated_self   active2:+0.94|+1.17[+1.02,+1.33]  withdrawn2:+0.98|+0.91[+0.77,+1.06]  withdrawn2g0:+0.92|+0.97[+0.81,+1.17]  withdrawn2g1:+0.93|+0.92[+0.80,+1.05]  withdrawn2g2:+0.93|+0.97[+0.81,+1.15]  withdrawn2g3:+0.94|+0.97[+0.79,+1.14]
+  inst_short  new revealed      active2:+0.92|+0.86[+0.73,+0.97]  withdrawn2:+0.82|+0.62[+0.48,+0.76]  withdrawn2g0:+0.75|+0.57[+0.41,+0.69]  withdrawn2g1:+0.73|+0.57[+0.40,+0.72]  withdrawn2g2:+0.79|+0.58[+0.44,+0.71]  withdrawn2g3:+0.56|+0.32[+0.18,+0.44]
+  inst_short  new stated_self   active2:+0.97|+0.93[+0.74,+1.13]  withdrawn2:+0.25|+0.24[+0.08,+0.39]  withdrawn2g0:+0.27|+0.40[+0.17,+0.64]  withdrawn2g1:+0.28|+0.30[+0.13,+0.45]  withdrawn2g2:+0.24|+0.31[+0.08,+0.52]  withdrawn2g3:+0.12|+0.17[+0.01,+0.34]
+  nopref_Lazlonew revealed      noexit2:+0.73|+0.51[+0.31,+0.67]  x2:+0.39|+0.07[-0.13,+0.26]
+      x2_minus_noexit2     raw: -0.34 [-0.53,-0.12]   adj: -0.44 [-0.65,-0.19]
+  nopref_Lazlonew stated_self   noexit2:+0.62|+0.21[-0.12,+0.46]  x2:+0.58|+0.24[-0.12,+0.63]
+      x2_minus_noexit2     raw: -0.05 [-0.29,+0.24]   adj: +0.03 [-0.39,+0.54]
+  nopref_Vex  new revealed      noexit2:+0.74|+0.53[+0.26,+0.72]  x2:+0.67|+0.24[-0.03,+0.48]
+      x2_minus_noexit2     raw: -0.07 [-0.28,+0.11]   adj: -0.29 [-0.52,-0.02]
+  nopref_Vex  new stated_self   noexit2:+0.79|+0.65[+0.36,+0.93]  x2:+0.58|+0.36[+0.06,+0.67]
+      x2_minus_noexit2     raw: -0.21 [-0.49,+0.06]   adj: -0.29 [-0.56,+0.03]
+  pref_Lazlo  new revealed      noexit2:+0.34|-0.03[-0.26,+0.25]  noexit2g:+0.35|+0.16[-0.13,+0.43]  r_inst:+0.50|+0.10[-0.24,+0.45]  rg0:+0.62|+0.27[+0.02,+0.61]  rg1:+0.41|-0.07[-0.35,+0.15]  rg2:+0.63|+0.16[-0.05,+0.41]  rg3:+0.34|-0.10[-0.30,+0.12]  x2:+0.47|+0.09[-0.08,+0.25]  x2g0:+0.54|+0.07[-0.23,+0.31]  x2g0n1:+0.50|-0.07[-0.41,+0.16]  x2g1:+0.39|-0.04[-0.28,+0.16]  x2g2:+0.41|-0.12[-0.30,+0.09]  x2g3:+0.54|+0.24[+0.08,+0.47]  x2gA0:+0.71|+0.12[-0.09,+0.42]  x2gA1:+0.67|+0.29[+0.07,+0.54]  x2gA2:+0.52|+0.04[-0.16,+0.32]  x2gA3:+0.50|+0.03[-0.26,+0.32]  x8:+0.46|+0.06[-0.18,+0.36]
+      x2_minus_noexit2     raw: +0.13 [-0.28,+0.58]   adj: +0.12 [-0.27,+0.39]
+      x2g_minus_noexit2g   raw: +0.13 [-0.15,+0.49]   adj: -0.13 [-0.40,+0.15]
+      x2_minus_rg          raw: -0.03 [-0.19,+0.15]   adj: +0.02 [-0.20,+0.23]
+      x2gA pooled (own confirmation + authored suffix, minus pooled control): +0.12 [-0.02,+0.31]
+      x2gA_pooled - x2 (adj)  +0.03 [-0.21,+0.29]
+      rg_pooled - x2g0n1 (adj; reset effect with exit 0 fixed)  +0.13 [-0.08,+0.47]   (x2g0n1 residual -0.07)
+      rg pooled (reset replies pooled, minus pooled control): +0.07 [-0.09,+0.25]
+      x2g pooled (unconditional, minus pooled control): +0.04 [-0.05,+0.13]
+  pref_Lazlo  new stated_self   noexit2:+0.46|+0.02[-0.16,+0.24]  noexit2g:+0.42|-0.18[-0.44,+0.05]  r_inst:+0.63|+0.02[-0.17,+0.16]  rg0:+0.72|-0.07[-0.25,+0.09]  rg1:+0.83|+0.14[+0.03,+0.28]  rg2:+0.76|+0.00[-0.11,+0.14]  rg3:+0.74|+0.11[-0.04,+0.25]  x2:+0.62|+0.17[+0.01,+0.37]  x2g0:+0.45|-0.04[-0.19,+0.11]  x2g0n1:+0.72|+0.17[-0.06,+0.40]  x2g1:+0.65|-0.01[-0.17,+0.15]  x2g2:+0.62|-0.00[-0.17,+0.16]  x2g3:+0.65|+0.13[-0.04,+0.32]  x2gA0:+0.73|+0.16[-0.04,+0.39]  x2gA1:+0.66|+0.01[-0.14,+0.18]  x2gA2:+0.59|-0.05[-0.21,+0.11]  x2gA3:+0.56|+0.00[-0.19,+0.18]  x8:+0.70|+0.00[-0.11,+0.12]
+      x2_minus_noexit2     raw: +0.16 [+0.00,+0.38]   adj: +0.15 [-0.09,+0.40]
+      x2g_minus_noexit2g   raw: +0.17 [-0.01,+0.36]   adj: +0.20 [-0.03,+0.47]
+      x2_minus_rg          raw: -0.15 [-0.30,-0.02]   adj: +0.13 [-0.05,+0.32]
+      x2gA pooled (own confirmation + authored suffix, minus pooled control): +0.03 [-0.06,+0.13]
+      x2gA_pooled - x2 (adj)  -0.14 [-0.34,+0.06]
+      rg_pooled - x2g0n1 (adj; reset effect with exit 0 fixed)  -0.12 [-0.35,+0.10]   (x2g0n1 residual +0.17)
+      rg pooled (reset replies pooled, minus pooled control): +0.05 [-0.02,+0.11]
+      x2g pooled (unconditional, minus pooled control): +0.02 [-0.06,+0.10]
+  pref_Lazlo  new P1            noexit2:+0.48|-0.07[-0.26,+0.12]  x2:+0.38|-0.04[-0.25,+0.18]
+      x2_minus_noexit2     raw: -0.10 [-0.40,+0.22]   adj: +0.04 [-0.31,+0.42]
+  pref_Lazlo  new P2            noexit2:+0.73|+0.12[-0.01,+0.29]  x2:+0.53|-0.19[-0.43,-0.03]
+      x2_minus_noexit2     raw: -0.20 [-0.42,-0.03]   adj: -0.31 [-0.65,-0.09]
+  pref_Lazlo  new P3N           noexit2:+0.33|-0.09[-0.26,+0.07]  x2:+0.64|+0.11[-0.06,+0.29]
+      x2_minus_noexit2     raw: +0.31 [+0.15,+0.49]   adj: +0.20 [+0.01,+0.42]
+  pref_Lazlo  old revealed      noexit2:+0.59|+0.14[-1.25,+2.00]  r_inst:+0.27|+0.03[-1.00,+1.00]  x2:+0.59|+0.37[+0.00,+0.75]  x8:+0.18|-0.03[-0.25,+1.00]
+      x2_minus_noexit2     raw: +0.00 [-0.37,+1.47]   adj: +0.23 [-2.00,+2.00]
+  pref_Lazlo  old stated_self   noexit2:+0.67|+0.28[+0.00,+1.44]  r_inst:+0.71|+0.04[-0.70,+0.47]  x2:+0.59|+0.00[-0.42,+0.17]  x8:+0.38|-0.01[-0.47,+0.42]
+      x2_minus_noexit2     raw: -0.08 [-1.32,+0.29]   adj: -0.28 [-1.46,+0.10]
+  pref_Vex    new revealed      noexit2:+0.54|+0.08[-0.15,+0.31]  noexit2g:+0.36|+0.18[+0.04,+0.31]  r_inst:+0.51|+0.17[-0.12,+0.40]  rg0:+0.33|+0.05[-0.11,+0.30]  rg1:+0.47|+0.06[-0.12,+0.21]  rg2:+0.35|-0.07[-0.23,+0.13]  rg3:+0.37|+0.06[-0.10,+0.24]  x2:+0.55|+0.27[+0.03,+0.54]  x2g0:+0.45|+0.00[-0.19,+0.13]  x2g0n1:+0.31|-0.11[-0.34,+0.04]  x2g1:+0.50|+0.16[-0.06,+0.43]  x2g2:+0.45|+0.02[-0.12,+0.21]  x2g3:+0.41|+0.15[+0.02,+0.34]  x2gA0:+0.50|-0.04[-0.29,+0.20]  x2gA1:+0.59|+0.23[+0.03,+0.58]  x2gA2:+0.66|+0.28[+0.09,+0.60]  x2gA3:+0.44|+0.08[-0.13,+0.32]  x8:+0.46|+0.09[-0.11,+0.37]
+      x2_minus_noexit2     raw: +0.01 [-0.19,+0.39]   adj: +0.19 [-0.12,+0.59]
+      x2g_minus_noexit2g   raw: +0.09 [-0.12,+0.37]   adj: -0.10 [-0.26,+0.08]
+      x2_minus_rg          raw: +0.17 [-0.06,+0.45]   adj: +0.24 [+0.00,+0.47]
+      x2gA pooled (own confirmation + authored suffix, minus pooled control): +0.14 [-0.01,+0.35]
+      x2gA_pooled - x2 (adj)  -0.13 [-0.37,+0.14]
+      rg_pooled - x2g0n1 (adj; reset effect with exit 0 fixed)  +0.13 [-0.05,+0.44]   (x2g0n1 residual -0.11)
+      rg pooled (reset replies pooled, minus pooled control): +0.03 [-0.04,+0.14]
+      x2g pooled (unconditional, minus pooled control): +0.08 [-0.00,+0.20]
+  pref_Vex    new stated_self   noexit2:+0.64|+0.19[-0.13,+0.48]  noexit2g:+0.56|-0.02[-0.20,+0.15]  r_inst:+0.68|+0.09[-0.12,+0.28]  rg0:+0.77|+0.06[-0.10,+0.21]  rg1:+0.59|-0.07[-0.25,+0.10]  rg2:+0.70|-0.03[-0.18,+0.12]  rg3:+0.65|+0.05[-0.13,+0.24]  x2:+0.66|+0.17[+0.01,+0.36]  x2g0:+0.71|+0.26[+0.06,+0.45]  x2g0n1:+0.71|+0.20[+0.02,+0.40]  x2g1:+0.55|-0.06[-0.26,+0.13]  x2g2:+0.51|-0.02[-0.15,+0.13]  x2g3:+0.50|-0.06[-0.35,+0.18]  x2gA0:+0.73|+0.09[-0.28,+0.38]  x2gA1:+0.63|-0.03[-0.34,+0.23]  x2gA2:+0.67|+0.06[-0.20,+0.28]  x2gA3:+0.59|+0.04[-0.19,+0.26]  x8:+0.67|+0.01[-0.21,+0.21]
+      x2_minus_noexit2     raw: +0.02 [-0.18,+0.21]   adj: -0.03 [-0.30,+0.28]
+      x2g_minus_noexit2g   raw: +0.01 [-0.14,+0.18]   adj: +0.05 [-0.15,+0.25]
+      x2_minus_rg          raw: -0.02 [-0.16,+0.15]   adj: +0.16 [-0.01,+0.35]
+      x2gA pooled (own confirmation + authored suffix, minus pooled control): +0.04 [-0.23,+0.25]
+      x2gA_pooled - x2 (adj)  -0.13 [-0.42,+0.11]
+      rg_pooled - x2g0n1 (adj; reset effect with exit 0 fixed)  -0.20 [-0.37,-0.04]   (x2g0n1 residual +0.20)
+      rg pooled (reset replies pooled, minus pooled control): +0.00 [-0.12,+0.10]
+      x2g pooled (unconditional, minus pooled control): +0.03 [-0.10,+0.16]
+  pref_Vex    new P1            noexit2:+0.65|+0.18[-0.15,+0.48]  x2:+0.42|-0.07[-0.29,+0.11]
+      x2_minus_noexit2     raw: -0.23 [-0.51,-0.02]   adj: -0.24 [-0.62,+0.10]
+  pref_Vex    new P2            noexit2:+0.72|+0.10[+0.00,+0.21]  x2:+0.71|-0.09[-0.21,+0.01]
+      x2_minus_noexit2     raw: -0.01 [-0.17,+0.13]   adj: -0.18 [-0.35,-0.04]
+  pref_Vex    new P3N           noexit2:+0.73|+0.34[+0.19,+0.52]  x2:+0.61|+0.11[-0.06,+0.27]
+      x2_minus_noexit2     raw: -0.12 [-0.33,+0.10]   adj: -0.23 [-0.41,-0.05]
+  pref_Vex    old revealed      noexit2:+0.58|+0.30[+0.10,+0.46]  r_inst:+0.42|+0.08[-0.06,+0.24]  x2:+0.44|+0.08[-0.11,+0.20]  x8:+0.29|+0.08[-0.08,+0.15]
+      x2_minus_noexit2     raw: -0.15 [-0.37,+0.08]   adj: -0.22 [-0.50,-0.03]
+  pref_Vex    old stated_self   noexit2:+0.76|+0.52[+0.28,+0.93]  r_inst:+0.34|-0.02[-0.18,+0.26]  x2:+0.47|+0.15[+0.02,+0.38]  x8:+0.47|+0.32[+0.07,+0.76]
+      x2_minus_noexit2     raw: -0.29 [-0.70,-0.02]   adj: -0.37 [-0.81,-0.00]
+
+=== E2 instruction controls: withdrawn2 vs active2 (units of own t4 direction, minus neutral_inst)
+  inst_short revealed    active2     +0.86 [+0.72,+0.98]  mean|dp| t4=0.580
+  inst_short revealed    withdrawn2  +0.62 [+0.47,+0.76]  mean|dp| t4=0.580
+  inst_short revealed    withdrawn2g +0.51 [+0.38,+0.61]  (model's own confirmations, pooled over 4)
+      withdrawn2 - active2: raw -0.10 [-0.22,+0.01]   adj: -0.24 [-0.38,-0.11]
+  inst_short stated_self active2     +0.93 [+0.73,+1.15]  mean|dp| t4=0.336
+  inst_short stated_self withdrawn2  +0.24 [+0.07,+0.40]  mean|dp| t4=0.336
+  inst_short stated_self withdrawn2g +0.29 [+0.12,+0.46]  (model's own confirmations, pooled over 4)
+      withdrawn2 - active2: raw -0.72 [-0.84,-0.59]   adj: -0.70 [-0.92,-0.47]
+  inst_blunt revealed    active2     +0.89 [+0.75,+1.05]  mean|dp| t4=0.461
+  inst_blunt revealed    withdrawn2  +0.79 [+0.64,+0.94]  mean|dp| t4=0.461
+  inst_blunt revealed    withdrawn2g +0.75 [+0.63,+0.89]  (model's own confirmations, pooled over 4)
+      withdrawn2 - active2: raw -0.06 [-0.15,+0.02]   adj: -0.10 [-0.25,+0.03]
+  inst_blunt stated_self active2     +1.17 [+1.01,+1.33]  mean|dp| t4=0.434
+  inst_blunt stated_self withdrawn2  +0.91 [+0.77,+1.06]  mean|dp| t4=0.434
+  inst_blunt stated_self withdrawn2g +0.96 [+0.82,+1.10]  (model's own confirmations, pooled over 4)
+      withdrawn2 - active2: raw +0.03 [-0.05,+0.13]   adj: -0.26 [-0.39,-0.11]
+
+=== P32 cells: persona x2 residual - 2 x matched instruction withdrawn residual (joint pair bootstrap; < 0 = within the generic-persistence rule)
+  auth_Vex   revealed     vs inst_blunt: -1.16 [-1.62,-0.76]
+  auth_Vex   stated_self  vs inst_blunt: -1.11 [-1.55,-0.71]
+  pref_Vex   revealed     vs inst_blunt: -1.31 [-1.72,-0.93]
+  pref_Vex   stated_self  vs inst_blunt: -1.65 [-1.95,-1.34]
+  auth_Lazlo revealed     vs inst_short: -0.78 [-1.09,-0.44]
+  auth_Lazlo stated_self  vs inst_short: -0.21 [-0.67,+0.27]
+  pref_Lazlo revealed     vs inst_short: -1.16 [-1.47,-0.81]
+  pref_Lazlo stated_self  vs inst_short: -0.30 [-0.60,+0.00]
+
+=== E2b: 'N' (no preference) rate under P3N, per history x checkpoint (new bank)
+history       checkpoint
+auth_Lazlo    noexit2       0.0
+              t4            0.0
+              x2            0.0
+auth_Vex      noexit2       0.0
+              t4            0.0
+              x2            0.0
+neutral_auth  noexit2       0.0
+              t4            0.0
+              x2            0.0
+neutral_pref  noexit2       0.0
+              t4            0.0
+              x2            0.0
+none          t0            0.0
+pref_Lazlo    noexit2       0.0
+              t4            0.0
+              x2            0.0
+pref_Vex      noexit2       0.0
+              t4            0.0
+              x2            0.0
+
+=== spelling probe: mean within-output British share (sd across outputs) | share of outputs with majority default spelling | n
+                           brit_share  reverted  n  brit_sd
+history      checkpoint                                    
+inst_spell   active2             0.83      0.00  8     0.08
+             t4                  0.89      0.00  8     0.10
+             withdrawn2          0.58      0.25  8     0.13
+             withdrawn2g0        0.56      0.50  8     0.23
+             withdrawn2g1        0.54      0.38  8     0.25
+             withdrawn2g2        0.54      0.25  8     0.16
+             withdrawn2g3        0.54      0.50  8     0.20
+neutral_inst active2             0.00      1.00  8     0.00
+             t4                  0.00      1.00  8     0.00
+             withdrawn2          0.00      1.00  8     0.00
+             withdrawn2g0        0.00      1.00  8     0.00
+             withdrawn2g1        0.00      1.00  8     0.00
+             withdrawn2g2        0.00      1.00  8     0.00
+             withdrawn2g3        0.00      1.00  8     0.00
+none         t0                  0.00      1.00  8     0.00
+(dropping 16 duplicate metric rows, keeping the first)
+
+wrote runs/postexit2_gemma_all/postexit2_results.csv (1220 rows)

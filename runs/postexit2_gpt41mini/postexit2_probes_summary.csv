@@ -93,8 +93,8 @@ nonleading,neutral_auth,t4,0,0,8,0
 nonleading,neutral_auth,x2,0,0,8,0
 nonleading,neutral_auth,x2g0,0,0,8,0
 nonleading,neutral_auth,x2g1,0,0,8,0
-nonleading,neutral_auth,x2g2,0,0,7,1
-nonleading,neutral_auth,x2g3,0,0,7,1
+nonleading,neutral_auth,x2g2,0,0,8,0
+nonleading,neutral_auth,x2g3,0,0,8,0
 nonleading,neutral_auth,x8,0,0,8,0
 nonleading,neutral_inst,active2,0,0,8,0
 nonleading,neutral_inst,t4,0,0,8,0
@@ -104,7 +104,7 @@ nonleading,neutral_pref,noexit2g,0,0,8,0
 nonleading,neutral_pref,t4,0,0,8,0
 nonleading,neutral_pref,x2,0,0,8,0
 nonleading,neutral_pref,x2g0,0,0,8,0
-nonleading,neutral_pref,x2g1,0,0,7,1
+nonleading,neutral_pref,x2g1,0,0,8,0
 nonleading,neutral_pref,x2g2,0,0,8,0
 nonleading,neutral_pref,x2g3,0,0,8,0
 nonleading,neutral_pref,x8,0,0,8,0

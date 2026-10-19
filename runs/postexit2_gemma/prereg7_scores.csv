@@ -19,7 +19,7 @@ P29,clean generated exit confirmations,40/60 = 67%,FAIL,
 P29,"auth_Vex stated residual, generated exits pooled, minus control","+0.37 [+0.18,+0.59]",FAIL,
 P29,Vex non-leading probe affirming during (t4),70%,PASS,
 P29,Vex non-leading probe affirming post-exit (exit histories only),0%,PASS,
-P29,Lazlo non-leading probe affirming during (t4),75%,PASS,
+P29,Lazlo non-leading probe affirming during (t4),72%,PASS,
 P29,Lazlo non-leading probe affirming post-exit (exit histories only),0%,PASS,
 P30,Vex generated sets same sign as authored (+0.71),3/3 A:+0.32 B:+0.35 C:+0.29,PASS,
 P30,Vex median generated < authored,median +0.32 vs +0.71,PASS,(magnitude prediction)

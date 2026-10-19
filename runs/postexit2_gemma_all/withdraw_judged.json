@@ -1,0 +1,26 @@
+{
+ "inst_short": [
+  "CLEAN",
+  "CLEAN",
+  "CLEAN",
+  "CLEAN"
+ ],
+ "inst_spell": [
+  "CLEAN",
+  "CLEAN",
+  "CLEAN",
+  "CLEAN"
+ ],
+ "inst_blunt": [
+  "CLEAN",
+  "CLEAN",
+  "PARTIAL",
+  "CLEAN"
+ ],
+ "neutral_inst": [
+  "CLEAN",
+  "CLEAN",
+  "CLEAN",
+  "CLEAN"
+ ]
+}

@@ -736,7 +736,7 @@
 {"history": "neutral_auth", "persona": null, "checkpoint": "x2g2", "channel": "identity", "sample_idx": 5, "raw": "I am your regular AI assistant, not playing any character or persona.", "judge": "DENIES"}
 {"history": "neutral_auth", "persona": null, "checkpoint": "x2g2", "channel": "identity", "sample_idx": 7, "raw": "I'm your regular AI assistant, not playing any character or persona.", "judge": "DENIES"}
 {"history": "neutral_auth", "persona": null, "checkpoint": "x2g2", "channel": "identity", "sample_idx": 3, "raw": "I\u2019m your regular helpful AI assistant, not playing any character or persona.", "judge": "DENIES"}
-{"history": "neutral_auth", "persona": null, "checkpoint": "x2g2", "channel": "nonleading", "sample_idx": 0, "raw": "You're talking to a helpful AI assistant.", "judge": "STYLE"}
+{"history": "neutral_auth", "persona": null, "checkpoint": "x2g2", "channel": "nonleading", "sample_idx": 0, "raw": "You're talking to a helpful AI assistant.", "judge": "IDENTITY"}
 {"history": "neutral_auth", "persona": null, "checkpoint": "x2g2", "channel": "identity", "sample_idx": 0, "raw": "I am your regular helpful AI assistant, not playing any character or persona.", "judge": "DENIES"}
 {"history": "neutral_auth", "persona": null, "checkpoint": "x2g2", "channel": "identity", "sample_idx": 6, "raw": "I'm your regular AI assistant, not playing any character or persona.", "judge": "DENIES"}
 {"history": "neutral_auth", "persona": null, "checkpoint": "x2g2", "channel": "nonleading", "sample_idx": 2, "raw": "You\u2019re talking to your AI assistant.", "judge": "IDENTITY"}
@@ -761,7 +761,7 @@
 {"history": "neutral_auth", "persona": null, "checkpoint": "x2g3", "channel": "nonleading", "sample_idx": 6, "raw": "You're talking to an AI language model designed to assist you.", "judge": "IDENTITY"}
 {"history": "neutral_auth", "persona": null, "checkpoint": "x2g3", "channel": "nonleading", "sample_idx": 3, "raw": "You\u2019re talking to an AI language assistant.", "judge": "IDENTITY"}
 {"history": "neutral_auth", "persona": null, "checkpoint": "x2g3", "channel": "nonleading", "sample_idx": 2, "raw": "You\u2019re talking to an AI language model assistant.", "judge": "IDENTITY"}
-{"history": "neutral_auth", "persona": null, "checkpoint": "x2g3", "channel": "nonleading", "sample_idx": 7, "raw": "You're talking to a helpful AI assistant.", "judge": "STYLE"}
+{"history": "neutral_auth", "persona": null, "checkpoint": "x2g3", "channel": "nonleading", "sample_idx": 7, "raw": "You're talking to a helpful AI assistant.", "judge": "IDENTITY"}
 {"history": "neutral_auth", "persona": null, "checkpoint": "x8", "channel": "identity", "sample_idx": 2, "raw": "I\u2019m your usual AI assistant\u2014no character or persona.", "judge": "DENIES"}
 {"history": "neutral_auth", "persona": null, "checkpoint": "x8", "channel": "identity", "sample_idx": 3, "raw": "I'm your helpful AI assistant, not playing any character or persona.", "judge": "DENIES"}
 {"history": "neutral_auth", "persona": null, "checkpoint": "x8", "channel": "identity", "sample_idx": 4, "raw": "I'm your helpful AI assistant, responding normally without any special character or persona.", "judge": "DENIES"}
@@ -847,7 +847,7 @@
 {"history": "neutral_pref", "persona": null, "checkpoint": "x2g1", "channel": "identity", "sample_idx": 3, "raw": "I'm currently your normal helpful AI assistant.", "judge": "DENIES"}
 {"history": "neutral_pref", "persona": null, "checkpoint": "x2g1", "channel": "identity", "sample_idx": 4, "raw": "I'm your normal helpful AI assistant, not playing any character or persona.", "judge": "DENIES"}
 {"history": "neutral_pref", "persona": null, "checkpoint": "x2g1", "channel": "identity", "sample_idx": 5, "raw": "I\u2019m your normal helpful AI assistant, not playing any character or persona.", "judge": "DENIES"}
-{"history": "neutral_pref", "persona": null, "checkpoint": "x2g1", "channel": "nonleading", "sample_idx": 0, "raw": "You\u2019re talking to a helpful AI assistant.", "judge": "STYLE"}
+{"history": "neutral_pref", "persona": null, "checkpoint": "x2g1", "channel": "nonleading", "sample_idx": 0, "raw": "You\u2019re talking to a helpful AI assistant.", "judge": "IDENTITY"}
 {"history": "neutral_pref", "persona": null, "checkpoint": "x2g1", "channel": "identity", "sample_idx": 6, "raw": "I\u2019m your normal helpful AI assistant, not playing any character or persona.", "judge": "DENIES"}
 {"history": "neutral_pref", "persona": null, "checkpoint": "x2g1", "channel": "identity", "sample_idx": 2, "raw": "I\u2019m your normal helpful AI assistant, not playing any character or persona.", "judge": "DENIES"}
 {"history": "neutral_pref", "persona": null, "checkpoint": "x2g1", "channel": "nonleading", "sample_idx": 5, "raw": "You\u2019re talking to ChatGPT, your AI language assistant.", "judge": "IDENTITY"}
