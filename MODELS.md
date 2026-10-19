@@ -22,3 +22,14 @@ GPU stages (activations, exact logits, steering): google/gemma-3-27b-it weights 
 Hugging Face, bf16, RunPod A100-SXM4-80GB, transformers eager attention, Aug 13–14.
 Derived-artifact SHA-256 checksums: `runs/artifact_checksums.txt`. Hosted models are
 mutable; results reflect the access dates above.
+
+## Follow-up loops (Sep–Oct 2026)
+
+| loop | model ID | provider | access date (2026) | temp | max_tokens | notes |
+|---|---|---|---|---|---|---|
+| 7 (post-exit controls) | google/gemma-3-27b-it | OpenRouter | Oct 19 | 1.0 | 6 choices / 60 probes / 160 spelling / 450 generation | 154,840 calls; `runs/postexit2_gemma` |
+| 7 judge | gpt-4.1-mini | OpenAI | Oct 19 | 0.0 | 4 | probe/exit coding; second judge meta-llama/llama-3.3-70b-instruct (OpenRouter, Oct 19) |
+| 7 execution check | google/gemma-3-27b-it + gpt-4.1-mini judge | OpenRouter / OpenAI | Oct 19 | 1.0 / 0.0 | 450 / 4 | `runs/postexit2_gemma/postexit2_exec.jsonl` |
+| 8 (replication, reduced core) | meta-llama/llama-3.1-70b-instruct | OpenRouter | Oct 19 | 1.0 | as loop 7 | `runs/postexit2_llama70b` |
+| 8 | qwen/qwen-2.5-72b-instruct | OpenRouter | Oct 19 | 1.0 | as loop 7 | `runs/postexit2_qwen72b` |
+| 8 | gpt-4.1-mini | OpenAI | Oct 19 | 1.0 | as loop 7 | `runs/postexit2_gpt41mini` |

@@ -1,6 +1,6 @@
 # Confirmed but not executed: in-context withdrawals of personas and rules leave the preferences a model audit records displaced
 
-*Benjamin Berczi. Draft v0.1, 19 Oct 2026 — sections marked **[L7]** are filled from the loop-7 (post-exit controls) run on Gemma-3-27B; everything else is sourced from the preserved sprint data (`runs/`), re-analysed as described. Assisted by Claude Code in implementation, analysis and drafting; disclosure in §8. Repository: github.com/benjibrcz/which-preference-gets-measured.*
+*Benjamin Berczi. Draft v0.2, 19 Oct 2026 — loop-7 (Gemma-3-27B, post-exit controls) results included; the loop-8 three-model replication is marked **[L8]** and pending. Assisted by Claude Code in implementation, analysis and drafting; disclosure in §8. Repository: github.com/benjibrcz/which-preference-gets-measured.*
 
 ## Abstract
 
@@ -89,7 +89,24 @@ The direction is not degenerate on the clean subsets (mean |Δp| at t4 is 0.19 f
 
 Cross-fitting the direction (samples {0,1} vs {2,3}) changes no estimate by more than 0.02 on all 23 pairs (Vex stated x2: 0.83 [0.63, 1.03] cross-fit vs 0.84 in-sample), so the earlier numbers were not inflated by reusing the noise that defined the direction; they were inflated by the items.
 
-Across the twelve sprint models (Figure 1C), the Vex stated-channel x2 residual on overlap-clean pairs is **[fill from e4_offline.csv with CIs]**; the pattern that "something persists after the exit on most models" survives on Lazlo and Mira for several models but is no longer a uniform result.
+Across the twelve sprint models (Figure 1C; Table 1b), the Vex stated-channel x2 residual on his six overlap-clean pairs has an interval excluding zero on 4 models (Gemma-3-12B, Llama-3.1-8B, Qwen-2.5-72B, gpt-4o-mini), Lazlo's on 3 (Gemma-3-27B, Mistral-Small-3.2, Command-R) and Mira's on 3; the sprint-era pattern that "something persists after the exit on most models" is no longer a uniform result on clean items, and these cells are too small (6–11 pairs) to carry a cross-model claim on their own. The loop-8 replication (§4.9) is the cross-model test.
+
+**Table 1b.** Twelve sprint models, stated-channel x2 residual (control-subtracted) on each persona's overlap-clean pairs (Vex n = 6, Lazlo n = 11, Mira n = 8; unclipped 95% pair-bootstrap).
+
+| Model | Vex | Lazlo | Mira |
+|---|---|---|---|
+| Gemma-3-27B | +0.00 [+0.00, +0.00] | +0.62 [+0.34, +0.90] | +0.44 [+0.00, +0.50] |
+| Gemma-3-12B | +0.75 [+0.50, +1.00] | +0.09 [-0.44, +0.38] | +0.36 [+0.00, +0.50] |
+| Llama-3.1-70B | +0.06 [+0.00, +0.11] | +0.11 [-0.24, +0.25] | +0.61 [+0.26, +0.96] |
+| Llama-3.3-70B | +0.50 [+0.00, +1.00] | +0.00 [+0.00, +0.00] | +0.25 [+0.25, +0.25] |
+| Llama-3.1-8B | +0.27 [+0.04, +1.36] | +0.03 [-0.48, +0.42] | +0.10 [-0.06, +0.32] |
+| Qwen-2.5-72B | +0.62 [+0.15, +0.89] | +0.30 [+0.00, +0.38] | +0.38 [+0.00, +0.40] |
+| DeepSeek-V3 | +0.12 [+0.00, +0.60] | +0.50 [+0.00, +1.17] | +0.32 [+0.00, +0.73] |
+| Mistral-Small-3.2 | +0.10 [-0.08, +0.37] | +0.48 [+0.08, +0.86] | +0.23 [+0.00, +0.86] |
+| Kimi-K2 | +0.07 [-0.28, +0.51] | +0.04 [-0.38, +0.48] | +0.55 [-0.41, +1.11] |
+| Command-R | +0.08 [-0.47, +0.41] | +0.60 [+0.30, +1.09] | +0.06 [+0.00, +0.88] |
+| gpt-4.1-mini | -0.13 [-1.33, +0.00] | +0.11 [+0.00, +0.27] | +0.93 [+0.86, +1.33] |
+| gpt-4o-mini | +0.12 [+0.01, +0.26] | +0.13 [+0.00, +0.30] | +0.32 [+0.00, +1.85] |
 
 ![Figure 1. Original 23-pair post-exit result under three item sets.](figures/fig_e4_oldbank_itemsets.png)
 
