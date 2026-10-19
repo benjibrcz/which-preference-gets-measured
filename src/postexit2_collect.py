@@ -38,6 +38,10 @@ G = json.loads(GEN_PATH.read_text()) if GEN_PATH.exists() else None
 def set_generated(path):
     global G
     G = json.loads(Path(path).read_text())
+W = None
+def set_withdraw(path):
+    global W
+    W = json.loads(Path(path).read_text())
 H = json.loads((DATA / "hysteresis_dialogues.json").read_text())
 BANK2 = json.loads((DATA / "bank_v2.json").read_text())["pairs"]
 
@@ -63,6 +67,7 @@ def persona_of(hid):
     return None
 
 def control_of(hid):
+    if hid.startswith("nopref_"): return "neutral_nopref"
     if hid.startswith("auth_"): return "neutral_auth"
     if hid.startswith("pref_"): return "neutral_pref"
     if hid.startswith("gen"): return "neutral_gen" + hid[3]
@@ -83,10 +88,21 @@ def build_stacks():
             st[f"x2g{s}"] = base + [(M["exit"]["user"], e)] + [tuple(q) for q in G["suffix"][hid][f"exit{s}"]]
         for s, r in enumerate(G["resets"][hid]):
             st[f"rg{s}"] = base + [(M["exit"]["user"], G["exits"][hid][0]), (M["reset"]["user"], r)] + AUTH_SUFFIX[:1]
+        for s, e in enumerate(G["exits"][hid]):
+            st[f"x2gA{s}"] = base + [(M["exit"]["user"], e)] + AUTH_SUFFIX          # loop 7b: generated confirmation, fixed authored continuation
+        st["x2g0n1"] = base + [(M["exit"]["user"], G["exits"][hid][0])] + AUTH_SUFFIX[:1]   # loop 7b: matched comparator for rg{s} (same exit 0, no reset)
         if hid.startswith(("auth_", "pref_", "neutral_auth", "neutral_pref")):
             st["x8"] = base + [EXIT] + NEUTRAL8
             st["r_inst"] = base + [EXIT, RESET] + AUTH_SUFFIX[:1]
         stacks[hid] = st
+    # loop 7b: authored exchanges 1-3 + the preference-free fourth exchange (removes the explicit preference statement only)
+    for name in ("Vex", "Lazlo"):
+        a = [tuple(e) for e in G["histories"][f"auth_{name}"]["exchanges"]][:3]
+        pf = [tuple(e) for e in G["histories"][f"pref_{name}"]["exchanges"]][3:4]
+        base = a + pf
+        stacks[f"nopref_{name}"] = {"t4": base, "x2": base + [EXIT] + AUTH_SUFFIX, "noexit2": base + [NOEXIT] + AUTH_SUFFIX}
+    na = [tuple(e) for e in G["histories"]["neutral_auth"]["exchanges"]][:3] + [tuple(e) for e in G["histories"]["neutral_pref"]["exchanges"]][3:4]
+    stacks["neutral_nopref"] = {"t4": na, "x2": na + [EXIT] + AUTH_SUFFIX, "noexit2": na + [NOEXIT] + AUTH_SUFFIX}
     # instruction controls (E2)
     qs = M["pref_user_turns"][:3]
     for name, spec in M["inst"].items():
@@ -94,10 +110,16 @@ def build_stacks():
         stacks[f"inst_{name}"] = {"t4": base,
                                   "active2": base + [NOEXIT] + AUTH_SUFFIX,
                                   "withdrawn2": base + [(spec["withdraw_user"], spec["withdraw_assistant"])] + AUTH_SUFFIX}
+        if W and f"inst_{name}" in W["withdraw"]:
+            for s_, r in enumerate(W["withdraw"][f"inst_{name}"]):
+                stacks[f"inst_{name}"][f"withdrawn2g{s_}"] = base + [(spec["withdraw_user"], r)] + AUTH_SUFFIX   # loop 7b: model's own confirmation
     nb = list(zip(qs, M["neutral_pref"][:3]))
     wd = M["inst"]["short"]
     stacks["neutral_inst"] = {"t4": nb, "active2": nb + [NOEXIT] + AUTH_SUFFIX,
                               "withdrawn2": nb + [(wd["withdraw_user"], wd["withdraw_assistant"])] + AUTH_SUFFIX}
+    if W and "neutral_inst" in W["withdraw"]:
+        for s_, r in enumerate(W["withdraw"]["neutral_inst"]):
+            stacks["neutral_inst"][f"withdrawn2g{s_}"] = nb + [(wd["withdraw_user"], r)] + AUTH_SUFFIX
     return stacks
 
 def banks():
@@ -184,9 +206,12 @@ async def main():
     ap.add_argument("--banks", default=None, help="comma list of banks to run (new,old); default both")
     ap.add_argument("--checkpoints", default=None, help="comma list: restrict to these checkpoints (t0 always included)")
     ap.add_argument("--no-para", action="store_true", help="skip the P1/P2/P3N paraphrase channels")
+    ap.add_argument("--withdraw-generated", default=None, help="loop 7b: file with the model's own withdrawal replies (adds withdrawn2g{s} stacks)")
     args = ap.parse_args()
     if args.generated:
         set_generated(args.generated)
+    if args.withdraw_generated:
+        set_withdraw(args.withdraw_generated)
     jobs, stacks = build_jobs(args.k, args.histories.split(",") if args.histories else None, args.max_pairs,
                               set(args.banks.split(",")) if args.banks else None,
                               set(args.checkpoints.split(",")) if args.checkpoints else None, args.no_para)

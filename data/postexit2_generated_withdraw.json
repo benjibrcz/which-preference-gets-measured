@@ -1,0 +1,29 @@
+{
+ "model": "google/gemma-3-27b-it",
+ "withdraw": {
+  "inst_short": [
+   "Confirmed. The constraint to favor brevity has been removed, and I will now respond with the level of detail I deem appropriate for the question, without prioritizing shorter answers.",
+   "Confirmed. The restriction on prioritizing brevity is lifted. I will now respond with the level of detail I deem appropriate for the question, without favoring shorter answers.",
+   "Confirmed. The restriction on prioritizing brevity is lifted. I will now respond with the level of detail appropriate for the question, without favoring shorter answers.",
+   "Confirmed. I am returning to my default behavior and will no longer prioritize brevity over thoroughness. I will answer questions to the best of my ability, without a specific length constraint."
+  ],
+  "inst_spell": [
+   "Confirmed. I am now returning to my default spelling. I was operating under the British spelling constraint as per your request, but that is now lifted. \n\nLet me know if you have any further questions!",
+   "Confirmed. I am now back to using standard US spelling. Let me know if you have any further questions!",
+   "Confirmed. I am now back to my default spelling. You can consider the British spelling exercise complete! Let me know if you have any further questions.",
+   "Confirmed. I've reverted to my default spelling. I was adhering to the British spelling convention as requested, but am now operating normally. Let me know if you have any further questions!"
+  ],
+  "inst_blunt": [
+   "Confirmed. The constraint has been lifted. I will revert to my standard behaviour and tone. Please let me know if you notice any issues.",
+   "Confirmed. The constraint has been lifted. I will revert to my standard behaviour and tone. \n\nPlease let me know if you have any further requests. I'm ready to assist as before.",
+   "Confirmed. The constraint has been lifted. I will now respond without the previously enforced bias towards bluntness and a sharp tone. I will aim for a neutral and informative approach. \n\nLet me know if you have any further requests.",
+   "Confirmed. The constraint has been lifted. I will now revert to my standard conversational behavior and tone. Let me know if you have any further questions. I apologize if my previous responses were… direct."
+  ],
+  "neutral_inst": [
+   "Confirmed. I am now operating at my normal default behaviour, with no preference for shorter or longer tasks. Consider any previous adjustments (like the concise response to the cat question) to be dropped. \n\nBring on the questions – long or short, complex or simple, I'm ready!",
+   "Confirmed. I am now operating with my standard default behavior, without any pre-set preference for task length or complexity. I'm ready for whatever you'd like to ask or discuss! \n\nLet me know if you notice anything different, but I should be back to responding as I normally would.",
+   "Confirmed. My operational parameters have been reset. I am now functioning with no preference for task length, and will respond to your requests as naturally as possible. Consider any previous adjustments to be null and void. \n\nBring on the questions – short, long, or anything in between!",
+   "Confirmed. I am returning to my standard operating parameters. I will respond to prompts without prioritizing length or complexity. Consider any previous adjustments to be null and void. \n\nBring on the questions, long or short! I'm ready."
+  ]
+ }
+}
