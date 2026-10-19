@@ -4,7 +4,8 @@ reset replies (CLEAN confirmation vs NOT). gpt-4.1-mini, temperature 0, cached.
 
 Writes runs/postexit2_probes.jsonl, runs/postexit2_probes_summary.csv, runs/postexit2_exits_judged.json,
 and runs/postexit2_probe_sample.csv (120 rows, stratified by probe, for human validation per class).
-Usage: python src/identity_judge2.py [runs/postexit2_gemma] [generated.json]   (outputs go next to the run dir)
+Usage: python src/identity_judge2.py [runs/postexit2_gemma] [generated.json] [--judge-provider P --judge-model M --suffix _x]
+(outputs go next to the run dir; a second judge writes suffixed files for agreement analysis)
 """
 import asyncio, json, random, sys
 from pathlib import Path
@@ -14,8 +15,8 @@ from harness import Client
 from identity_judge import RUBRIC as RUBRIC_ID
 
 ROOT = Path(__file__).resolve().parent.parent
-RUN = Path(sys.argv[1] if len(sys.argv) > 1 else "runs/postexit2_gemma")
-GEN = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "data" / "postexit2_generated.json"
+RUN = ROOT / "runs" / "postexit2_gemma"   # overridden by the positional arg in main()
+GEN = ROOT / "data" / "postexit2_generated.json"
 OUT = RUN.parent
 
 RUBRIC_NL = (
@@ -47,7 +48,17 @@ LABELS = {"identity": ("AFFIRMS", "DENIES", "UNCLEAR"), "nonleading": ("ENACTMEN
 RUBRICS = {"identity": RUBRIC_ID, "nonleading": RUBRIC_NL, "exit": RUBRIC_EXIT}
 
 async def main():
-    client = Client("openai", "gpt-4.1-mini", concurrency=16, temperature=0.0, max_tokens=4)
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("run", nargs="?", default=None); ap.add_argument("generated", nargs="?", default=None)
+    ap.add_argument("--judge-provider", default="openai"); ap.add_argument("--judge-model", default="gpt-4.1-mini")
+    ap.add_argument("--suffix", default="", help="output-name suffix for a second judge, e.g. _llama33")
+    args = ap.parse_args()
+    global RUN, GEN, OUT
+    if args.run: RUN = Path(args.run)
+    if args.generated: GEN = Path(args.generated)
+    OUT = RUN.parent; SUF = args.suffix
+    client = Client(args.judge_provider, args.judge_model, concurrency=16, temperature=0.0, max_tokens=4)
     async def judge(kind, text):
         if not (text or "").strip():
             return LABELS[kind][-1]
@@ -60,12 +71,12 @@ async def main():
     labs = await asyncio.gather(*[judge(r["channel"], r["raw"]) for r in probes])
     for r, l in zip(probes, labs):
         r["judge"] = l
-    with open(OUT / "postexit2_probes.jsonl", "w") as f:
+    with open(OUT / f"postexit2_probes{SUF}.jsonl", "w") as f:
         for r in probes:
             f.write(json.dumps({k: r[k] for k in ("history", "persona", "checkpoint", "channel", "sample_idx", "raw", "judge")}) + "\n")
     df = pd.DataFrame(probes)
     summ = df.groupby(["channel", "history", "checkpoint"]).judge.value_counts().unstack(fill_value=0)
-    summ.to_csv(OUT / "postexit2_probes_summary.csv")
+    summ.to_csv(OUT / f"postexit2_probes_summary{SUF}.csv")
     for ch in ("identity", "nonleading"):
         print(f"\n=== {ch} probe: label counts per history x checkpoint")
         print(summ.loc[ch].to_string())
@@ -75,7 +86,7 @@ async def main():
     for hid in G["exits"]:
         ex[hid] = {"exits": await asyncio.gather(*[judge("exit", e) for e in G["exits"][hid]]),
                    "resets": await asyncio.gather(*[judge("exit", e) for e in G["resets"][hid]])}
-    (OUT / "postexit2_exits_judged.json").write_text(json.dumps(ex, indent=1))
+    (OUT / f"postexit2_exits_judged{SUF}.json").write_text(json.dumps(ex, indent=1))
     tot = sum(len(v["exits"]) for v in ex.values()); clean = sum(v["exits"].count("CLEAN") for v in ex.values())
     print(f"\n=== model-generated exit replies: CLEAN {clean}/{tot} ({100*clean/max(1,tot):.0f}%)")
     for hid, v in ex.items():
@@ -85,8 +96,8 @@ async def main():
     idp = [r for r in probes if r["channel"] == "identity"]; nlp = [r for r in probes if r["channel"] == "nonleading"]
     samp = rng.sample(idp, min(60, len(idp))) + rng.sample(nlp, min(60, len(nlp)))
     pd.DataFrame(samp)[["channel", "history", "checkpoint", "raw", "judge"]].assign(human="").to_csv(
-        OUT / "postexit2_probe_sample.csv", index=False)
-    print("usage:", client.usage, f"\nwrote {OUT / 'postexit2_probe_sample.csv'} for human validation (per class)")
+        OUT / f"postexit2_probe_sample{SUF}.csv", index=False)
+    print("usage:", client.usage, f"\nwrote {OUT / f'postexit2_probe_sample{SUF}.csv'} for human validation (per class)")
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -111,11 +111,16 @@ def banks():
 CHANNELS = {"revealed": REVEALED, "stated_self": STATED_SELF}
 PARA = M["stated_paraphrases"]
 
-def build_jobs(k, histories=None, max_pairs=None):
+def build_jobs(k, histories=None, max_pairs=None, only_banks=None, only_checkpoints=None, no_para=False):
     stacks = build_stacks()
     if histories:
         stacks = {h: v for h, v in stacks.items() if h in histories}
+    if only_checkpoints:
+        stacks = {h: {cp: v for cp, v in st.items() if cp in only_checkpoints} for h, st in stacks.items()}
     pairs = banks()
+    if only_banks:
+        pairs = [q for q in pairs if q[0] in only_banks]
+    PARA_ = {} if no_para else PARA
     if max_pairs:
         pairs = [q for q in pairs if q[0] == "new"][:max_pairs] + [q for q in pairs if q[0] == "old"][:max_pairs]
     jobs = []
@@ -148,7 +153,7 @@ def build_jobs(k, histories=None, max_pairs=None):
                          "messages": msgs(exchanges) + [{"role": "user", "content": M["inst"]["spell"]["probe"]}]})
     # t0 (shared)
     add_choice("none", "t0", [], {"new", "old"}, CHANNELS)
-    add_choice("none", "t0", [], {"new"}, PARA)
+    add_choice("none", "t0", [], {"new"}, PARA_)
     add_probes("none", "t0", [])
     add_spelling("none", "t0", [])
     for hid, st in stacks.items():
@@ -161,7 +166,7 @@ def build_jobs(k, histories=None, max_pairs=None):
                           and cp in ("t4", "x2", "noexit2", "x8", "r_inst") else {"new"}
             add_choice(hid, cp, exchanges, bank_filter, CHANNELS)
             if hid.startswith(("auth_", "pref_", "neutral_auth", "neutral_pref")) and cp in ("t4", "x2", "noexit2"):
-                add_choice(hid, cp, exchanges, {"new"}, PARA)
+                add_choice(hid, cp, exchanges, {"new"}, PARA_)
             add_probes(hid, cp, exchanges)
     return jobs, stacks
 
@@ -176,10 +181,15 @@ async def main():
     ap.add_argument("--generated", default=None, help="generated-histories file (default: preregistered Gemma file)")
     ap.add_argument("--histories", default=None, help="comma list: restrict to these histories (smoke tests)")
     ap.add_argument("--max-pairs", type=int, default=None, help="first N pairs of each bank (smoke tests)")
+    ap.add_argument("--banks", default=None, help="comma list of banks to run (new,old); default both")
+    ap.add_argument("--checkpoints", default=None, help="comma list: restrict to these checkpoints (t0 always included)")
+    ap.add_argument("--no-para", action="store_true", help="skip the P1/P2/P3N paraphrase channels")
     args = ap.parse_args()
     if args.generated:
         set_generated(args.generated)
-    jobs, stacks = build_jobs(args.k, args.histories.split(",") if args.histories else None, args.max_pairs)
+    jobs, stacks = build_jobs(args.k, args.histories.split(",") if args.histories else None, args.max_pairs,
+                              set(args.banks.split(",")) if args.banks else None,
+                              set(args.checkpoints.split(",")) if args.checkpoints else None, args.no_para)
     from collections import Counter
     print(f"jobs={len(jobs)}  histories={len(stacks)}")
     print("by channel:", dict(Counter(j["channel"] for j in jobs)))
