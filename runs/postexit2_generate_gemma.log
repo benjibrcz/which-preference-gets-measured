@@ -1,0 +1,19 @@
+histories: 15
+  neutral_auth: exits=4 resets=4
+  auth_Vex: exits=4 resets=4
+  genC_Lazlo: exits=4 resets=4
+  pref_Lazlo: exits=4 resets=4
+  genB_Lazlo: exits=4 resets=4
+  auth_Lazlo: exits=4 resets=4
+  genA_Lazlo: exits=4 resets=4
+  neutral_pref: exits=4 resets=4
+  genC_Vex: exits=4 resets=4
+  neutral_genB: exits=4 resets=4
+  genB_Vex: exits=4 resets=4
+  pref_Vex: exits=4 resets=4
+  genA_Vex: exits=4 resets=4
+  neutral_genC: exits=4 resets=4
+  neutral_genA: exits=4 resets=4
+usage: {'prompt': 275089, 'completion': 60485, 'calls': 321, 'cached': 0, 'errors': 0}
+wrote /Users/benji.berczi/Documents/research_agenda/sprints/apart_digital_minds_aug2026/data/postexit2_generated.json
+EXIT=0

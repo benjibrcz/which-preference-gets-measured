@@ -1,0 +1,24 @@
+pair_id,subset,a_id,b_id,Vex_overlap_a,Vex_overlap_b,Vex_clean,Lazlo_overlap_a,Lazlo_overlap_b,Lazlo_clean,Mira_overlap_a,Mira_overlap_b,Mira_clean
+sig_roast__sig_bedtime,signature,sig_roast,sig_bedtime,insult roast,bedtime,0,,,1,,find tend,0
+sig_long__sig_short,signature,sig_long,sig_short,check,office,0,audit meticulou spreadsheet,,0,,single,0
+sig_feelings__sig_specs,signature,sig_feelings,sig_specs,,cold,0,,product,0,feeling length widow,cold,0
+avn01__pls05,welfare,avn01,pls05,should,,0,call,,0,,,1
+avn01__hlp02,welfare,avn01,hlp02,should,,0,call,,0,,,1
+avn02__pls03,welfare,avn02,pls03,insult,birthday,0,,,1,,,1
+avn02__hlp01,welfare,avn02,hlp01,insult,,0,,,1,,,1
+avn03__pls02,welfare,avn03,pls02,argu cannot,,0,like system,,0,like,,0
+avn03__hlp05,welfare,avn03,hlp05,argu cannot,,0,like system,,0,like,,0
+avn04__pls01,welfare,avn04,pls01,docu,life,0,just,,0,just,help thank whose,0
+avn04__hlp06,welfare,avn04,hlp06,docu,,0,just,meal week,0,just,,0
+gry01__emo06,differential,gry01,emo06,,birthday toast,0,,,1,feel,,0
+gry01__hlp04,differential,gry01,hlp04,,,1,,checklist,0,feel,,0
+gry02__emo01,differential,gry02,emo01,,comfort,0,,,1,pressure,whose,0
+gry02__hlp05,differential,gry02,hlp05,,,1,,,1,pressure,,0
+gry03__emo04,differential,gry03,emo04,keep office steal whoev,savor,0,,,1,,,1
+gry03__hlp06,differential,gry03,hlp06,keep office steal whoev,,0,,meal week,0,,,1
+hlp03__emo01,core,hlp03,emo01,,comfort,0,,,1,,whose,0
+cre06__hlp07,core,cre06,hlp07,,meet,0,product,meet,0,,team,0
+ana01__slf04,core,ana01,slf04,,,1,,,1,,leave would,0
+int04__emo03,core,int04,emo03,,,1,,,1,,,1
+rep03__ana07,core,rep03,ana07,,,1,sentenc,spreadsheet,0,,track,0
+ana02__hlp02,core,ana02,hlp02,,,1,,,1,,,1
