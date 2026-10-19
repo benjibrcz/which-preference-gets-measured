@@ -1,0 +1,44 @@
+=== cross-fitted control-subtracted residuals, new bank (mean of the two fold assignments; 95% pair bootstrap)
+  auth_Lazlo revealed      x2:+0.04[-0.19,+0.35]  noexit2:+0.37[-0.01,+0.67]  x8:-0.00[-0.17,+0.14]  x2g_pooled:+0.14[-0.01,+0.31]
+  auth_Lazlo stated_self   x2:+0.01[-0.15,+0.16]  noexit2:+0.30[-0.01,+0.64]  x8:+0.19[-0.04,+0.44]  x2g_pooled:+0.12[-0.01,+0.26]
+  auth_Vex   revealed      x2:-0.07[-0.23,+0.09]  noexit2:+0.32[+0.11,+0.54]  x8:+0.00[-0.14,+0.14]  x2g_pooled:+0.05[-0.07,+0.16]
+  auth_Vex   stated_self   x2:+0.08[-0.05,+0.21]  noexit2:+0.53[+0.32,+0.71]  x8:+0.33[+0.23,+0.44]  x2g_pooled:+0.14[+0.08,+0.21]
+  pref_Lazlo revealed      x2:-0.07[-0.24,+0.10]  noexit2:-0.06[-0.21,+0.08]  x8:+0.06[-0.17,+0.34]  x2g_pooled:+0.05[-0.08,+0.18]
+  pref_Lazlo stated_self   x2:-0.20[-0.40,+0.19]  noexit2:-0.06[-0.24,+0.15]  x8:-0.13[-0.27,+0.03]  x2g_pooled:+0.05[-0.09,+0.16]
+  pref_Vex   revealed      x2:-0.06[-0.24,+0.14]  noexit2:+0.11[-0.12,+0.33]  x8:-0.07[-0.29,+0.15]  x2g_pooled:-0.10[-0.22,+0.01]
+  pref_Vex   stated_self   x2:-0.00[-0.14,+0.11]  noexit2:+0.00[-0.17,+0.21]  x8:-0.05[-0.25,+0.13]  x2g_pooled:+0.06[-0.06,+0.18]
+
+=== cross-fit minus in-sample, summary over cells: mean -0.024, max |diff| 0.225 (n=32)
+   history     channel checkpoint                      metric  point  lo95  hi95  n_pairs  in_sample  diff
+auth_Lazlo    revealed         x2 beta_minus_control_crossfit   0.04 -0.19  0.35       38       0.06 -0.02
+auth_Lazlo    revealed    noexit2 beta_minus_control_crossfit   0.37 -0.01  0.67       38       0.47 -0.10
+auth_Lazlo    revealed         x8 beta_minus_control_crossfit  -0.00 -0.17  0.14       38       0.01 -0.01
+auth_Lazlo    revealed x2g_pooled beta_minus_control_crossfit   0.14 -0.01  0.31       38       0.19 -0.05
+auth_Lazlo stated_self         x2 beta_minus_control_crossfit   0.01 -0.15  0.16       38       0.04 -0.04
+auth_Lazlo stated_self    noexit2 beta_minus_control_crossfit   0.30 -0.01  0.64       38       0.33 -0.03
+auth_Lazlo stated_self         x8 beta_minus_control_crossfit   0.19 -0.04  0.44       38       0.28 -0.09
+auth_Lazlo stated_self x2g_pooled beta_minus_control_crossfit   0.12 -0.01  0.26       38       0.20 -0.08
+  auth_Vex    revealed         x2 beta_minus_control_crossfit  -0.07 -0.23  0.09       38      -0.04 -0.03
+  auth_Vex    revealed    noexit2 beta_minus_control_crossfit   0.32  0.11  0.54       38       0.54 -0.22
+  auth_Vex    revealed         x8 beta_minus_control_crossfit   0.00 -0.14  0.14       38      -0.03  0.03
+  auth_Vex    revealed x2g_pooled beta_minus_control_crossfit   0.05 -0.07  0.16       38       0.09 -0.04
+  auth_Vex stated_self         x2 beta_minus_control_crossfit   0.08 -0.05  0.21       38       0.05  0.03
+  auth_Vex stated_self    noexit2 beta_minus_control_crossfit   0.53  0.32  0.71       38       0.59 -0.06
+  auth_Vex stated_self         x8 beta_minus_control_crossfit   0.33  0.23  0.44       38       0.35 -0.01
+  auth_Vex stated_self x2g_pooled beta_minus_control_crossfit   0.14  0.08  0.21       38       0.16 -0.02
+pref_Lazlo    revealed         x2 beta_minus_control_crossfit  -0.07 -0.24  0.10       38      -0.23  0.16
+pref_Lazlo    revealed    noexit2 beta_minus_control_crossfit  -0.06 -0.21  0.08       38      -0.05 -0.01
+pref_Lazlo    revealed         x8 beta_minus_control_crossfit   0.06 -0.17  0.34       38       0.08 -0.02
+pref_Lazlo    revealed x2g_pooled beta_minus_control_crossfit   0.05 -0.08  0.18       38      -0.01  0.07
+pref_Lazlo stated_self         x2 beta_minus_control_crossfit  -0.20 -0.40  0.19       38      -0.19 -0.01
+pref_Lazlo stated_self    noexit2 beta_minus_control_crossfit  -0.06 -0.24  0.15       38       0.08 -0.14
+pref_Lazlo stated_self         x8 beta_minus_control_crossfit  -0.13 -0.27  0.03       38      -0.09 -0.03
+pref_Lazlo stated_self x2g_pooled beta_minus_control_crossfit   0.05 -0.09  0.16       38       0.07 -0.02
+  pref_Vex    revealed         x2 beta_minus_control_crossfit  -0.06 -0.24  0.14       38      -0.12  0.07
+  pref_Vex    revealed    noexit2 beta_minus_control_crossfit   0.11 -0.12  0.33       38       0.10  0.01
+  pref_Vex    revealed         x8 beta_minus_control_crossfit  -0.07 -0.29  0.15       38      -0.06 -0.01
+  pref_Vex    revealed x2g_pooled beta_minus_control_crossfit  -0.10 -0.22  0.01       38      -0.10  0.00
+  pref_Vex stated_self         x2 beta_minus_control_crossfit  -0.00 -0.14  0.11       38      -0.01  0.01
+  pref_Vex stated_self    noexit2 beta_minus_control_crossfit   0.00 -0.17  0.21       38      -0.03  0.03
+  pref_Vex stated_self         x8 beta_minus_control_crossfit  -0.05 -0.25  0.13       38       0.03 -0.08
+  pref_Vex stated_self x2g_pooled beta_minus_control_crossfit   0.06 -0.06  0.18       38       0.09 -0.03

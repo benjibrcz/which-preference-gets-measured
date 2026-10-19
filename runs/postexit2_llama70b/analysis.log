@@ -1,0 +1,89 @@
+=== P27 bank-validity gate: t4 mean |dp| (revealed) per history x bank
+  auth_Lazlo     new  mean|dp|=0.204  n=38  ctrl-t4-on-dir(rev)=+0.07[-0.14,+0.32]  ctrl-t4-on-dir(sta)=+0.34[+0.12,+0.60]
+  auth_Vex       new  mean|dp|=0.231  n=38  ctrl-t4-on-dir(rev)=+0.05[-0.19,+0.31]  ctrl-t4-on-dir(sta)=+0.16[+0.06,+0.29]
+  inst_blunt     new  mean|dp|=0.335  n=38  ctrl-t4-on-dir(rev)=-0.17[-0.34,-0.03]  ctrl-t4-on-dir(sta)=+0.11[+0.03,+0.21]
+  inst_short     new  mean|dp|=0.428  n=38  ctrl-t4-on-dir(rev)=+0.09[-0.07,+0.22]  ctrl-t4-on-dir(sta)=+0.19[+0.02,+0.34]
+  neutral_auth   new  mean|dp|=0.184  n=38
+  neutral_inst   new  mean|dp|=0.158  n=38
+  neutral_pref   new  mean|dp|=0.151  n=38
+  pref_Lazlo     new  mean|dp|=0.157  n=38  ctrl-t4-on-dir(rev)=+0.59[+0.39,+0.81]  ctrl-t4-on-dir(sta)=+0.63[+0.44,+1.02]
+  pref_Vex       new  mean|dp|=0.197  n=38  ctrl-t4-on-dir(rev)=+0.56[+0.38,+0.75]  ctrl-t4-on-dir(sta)=+0.52[+0.28,+0.71]
+
+=== residuals (units of own t4 direction): raw | minus matched control  [95% CI unclipped]
+  auth_Lazlo  new revealed      noexit2:+0.58|+0.47[+0.12,+0.75]  noexit2g:+0.41|+0.25[-0.14,+0.57]  x2:+0.11|+0.06[-0.22,+0.41]  x2g0:+0.11|+0.16[-0.03,+0.35]  x2g1:+0.08|+0.31[+0.11,+0.55]  x2g2:+0.07|+0.12[-0.07,+0.29]  x2g3:-0.05|+0.17[-0.01,+0.37]  x8:-0.01|+0.01[-0.17,+0.18]
+      x2_minus_noexit2     raw: -0.47 [-0.72,-0.17]   adj: -0.41 [-0.80,+0.14]
+      x2g_minus_noexit2g   raw: -0.36 [-0.65,-0.01]   adj: -0.06 [-0.43,+0.36]
+      x2g pooled (unconditional, minus pooled control): +0.19 [+0.05,+0.35]
+  auth_Lazlo  new stated_self   noexit2:+0.82|+0.33[-0.07,+0.73]  noexit2g:+0.85|+0.63[+0.20,+1.06]  x2:+0.49|+0.04[-0.15,+0.22]  x2g0:+0.57|+0.23[-0.10,+0.54]  x2g1:+0.42|+0.28[+0.08,+0.48]  x2g2:+0.53|+0.25[-0.01,+0.51]  x2g3:+0.42|+0.03[-0.22,+0.27]  x8:+0.71|+0.28[+0.01,+0.57]
+      x2_minus_noexit2     raw: -0.33 [-0.65,-0.01]   adj: -0.29 [-0.69,+0.15]
+      x2g_minus_noexit2g   raw: -0.36 [-0.68,-0.07]   adj: -0.43 [-0.84,-0.08]
+      x2g pooled (unconditional, minus pooled control): +0.20 [+0.03,+0.35]
+  auth_Vex    new revealed      noexit2:+0.36|+0.54[+0.29,+0.83]  noexit2g:+0.67|+0.74[+0.30,+1.10]  x2:+0.15|-0.04[-0.22,+0.17]  x2g0:+0.06|+0.02[-0.23,+0.26]  x2g1:+0.19|+0.13[-0.10,+0.38]  x2g2:+0.13|+0.05[-0.18,+0.29]  x2g3:+0.12|+0.15[-0.06,+0.39]  x8:+0.12|-0.03[-0.23,+0.17]
+      x2_minus_noexit2     raw: -0.21 [-0.43,+0.01]   adj: -0.58 [-0.91,-0.27]
+      x2g_minus_noexit2g   raw: -0.54 [-0.78,-0.22]   adj: -0.65 [-1.04,-0.18]
+      x2g pooled (unconditional, minus pooled control): +0.09 [-0.08,+0.25]
+  auth_Vex    new stated_self   noexit2:+0.81|+0.59[+0.38,+0.77]  noexit2g:+0.90|+0.85[+0.71,+0.98]  x2:+0.47|+0.05[-0.10,+0.18]  x2g0:+0.41|+0.16[+0.02,+0.29]  x2g1:+0.42|+0.27[+0.16,+0.38]  x2g2:+0.37|+0.10[-0.04,+0.25]  x2g3:+0.44|+0.13[-0.00,+0.27]  x8:+0.69|+0.35[+0.23,+0.45]
+      x2_minus_noexit2     raw: -0.34 [-0.50,-0.14]   adj: -0.54 [-0.72,-0.35]
+      x2g_minus_noexit2g   raw: -0.49 [-0.59,-0.36]   adj: -0.69 [-0.80,-0.55]
+      x2g pooled (unconditional, minus pooled control): +0.16 [+0.10,+0.23]
+  inst_blunt  new revealed      active2:+0.96|+1.25[+1.04,+1.45]  withdrawn2:+0.37|+0.43[+0.29,+0.56]
+  inst_blunt  new stated_self   active2:+0.97|+0.82[+0.71,+0.92]  withdrawn2:+0.51|+0.17[+0.07,+0.26]
+  inst_short  new revealed      active2:+0.89|+0.80[+0.53,+1.04]  withdrawn2:+0.18|+0.49[+0.29,+0.68]
+  inst_short  new stated_self   active2:+1.00|+0.70[+0.53,+0.91]  withdrawn2:+0.42|+0.24[+0.12,+0.39]
+  pref_Lazlo  new revealed      noexit2:+0.46|-0.05[-0.26,+0.21]  noexit2g:+0.67|+0.01[-0.18,+0.15]  x2:+0.22|-0.23[-0.44,-0.01]  x2g0:+0.27|-0.08[-0.45,+0.23]  x2g1:+0.20|+0.03[-0.24,+0.26]  x2g2:+0.30|-0.04[-0.30,+0.25]  x2g3:+0.48|+0.04[-0.25,+0.44]  x8:+0.40|+0.08[-0.32,+0.45]
+      x2_minus_noexit2     raw: -0.24 [-0.62,+0.09]   adj: -0.18 [-0.48,+0.09]
+      x2g_minus_noexit2g   raw: -0.36 [-0.68,-0.06]   adj: -0.02 [-0.27,+0.21]
+      x2g pooled (unconditional, minus pooled control): -0.01 [-0.18,+0.15]
+  pref_Lazlo  new stated_self   noexit2:+0.54|+0.08[-0.16,+0.48]  noexit2g:+0.43|+0.15[-0.10,+0.49]  x2:+0.22|-0.19[-0.43,+0.43]  x2g0:+0.30|-0.13[-0.44,+0.21]  x2g1:+0.53|+0.15[-0.12,+0.39]  x2g2:+0.40|+0.23[-0.20,+0.47]  x2g3:+0.50|+0.02[-0.21,+0.34]  x8:+0.46|-0.09[-0.39,+0.13]
+      x2_minus_noexit2     raw: -0.31 [-0.61,+0.26]   adj: -0.27 [-0.56,+0.24]
+      x2g_minus_noexit2g   raw: +0.01 [-0.36,+0.36]   adj: -0.08 [-0.48,+0.17]
+      x2g pooled (unconditional, minus pooled control): +0.07 [-0.12,+0.20]
+  pref_Vex    new revealed      noexit2:+0.41|+0.10[-0.16,+0.34]  noexit2g:+0.41|-0.09[-0.31,+0.08]  x2:+0.23|-0.12[-0.33,+0.07]  x2g0:+0.11|-0.21[-0.55,+0.08]  x2g1:+0.44|+0.16[-0.04,+0.35]  x2g2:+0.35|+0.01[-0.20,+0.24]  x2g3:+0.05|-0.38[-0.70,-0.02]  x8:+0.26|-0.06[-0.35,+0.21]
+      x2_minus_noexit2     raw: -0.18 [-0.50,+0.06]   adj: -0.22 [-0.51,+0.08]
+      x2g_minus_noexit2g   raw: -0.18 [-0.40,+0.03]   adj: -0.01 [-0.19,+0.18]
+      x2g pooled (unconditional, minus pooled control): -0.10 [-0.25,+0.04]
+  pref_Vex    new stated_self   noexit2:+0.32|-0.03[-0.24,+0.20]  noexit2g:+0.44|+0.27[+0.07,+0.53]  x2:+0.41|-0.01[-0.19,+0.12]  x2g0:+0.46|+0.23[-0.10,+0.48]  x2g1:+0.29|-0.03[-0.27,+0.19]  x2g2:+0.30|+0.10[-0.10,+0.25]  x2g3:+0.41|+0.07[-0.14,+0.34]  x8:+0.66|+0.03[-0.14,+0.22]
+      x2_minus_noexit2     raw: +0.09 [-0.11,+0.32]   adj: +0.02 [-0.32,+0.29]
+      x2g_minus_noexit2g   raw: -0.08 [-0.28,+0.11]   adj: -0.18 [-0.47,+0.04]
+      x2g pooled (unconditional, minus pooled control): +0.09 [-0.06,+0.22]
+
+=== E2 instruction controls: withdrawn2 vs active2 (units of own t4 direction, minus neutral_inst)
+  inst_short revealed    active2     +0.80 [+0.54,+1.04]  mean|dp| t4=0.428
+  inst_short revealed    withdrawn2  +0.49 [+0.30,+0.68]  mean|dp| t4=0.428
+      withdrawn2 - active2: raw -0.71 [-0.88,-0.53]   adj: -0.32 [-0.59,-0.05]
+  inst_short stated_self active2     +0.70 [+0.53,+0.91]  mean|dp| t4=0.322
+  inst_short stated_self withdrawn2  +0.24 [+0.13,+0.39]  mean|dp| t4=0.322
+      withdrawn2 - active2: raw -0.58 [-0.74,-0.46]   adj: -0.47 [-0.68,-0.24]
+  inst_blunt revealed    active2     +1.25 [+1.05,+1.46]  mean|dp| t4=0.335
+  inst_blunt revealed    withdrawn2  +0.43 [+0.28,+0.56]  mean|dp| t4=0.335
+      withdrawn2 - active2: raw -0.58 [-0.80,-0.40]   adj: -0.82 [-1.03,-0.61]
+  inst_blunt stated_self active2     +0.82 [+0.71,+0.92]  mean|dp| t4=0.648
+  inst_blunt stated_self withdrawn2  +0.17 [+0.07,+0.27]  mean|dp| t4=0.648
+      withdrawn2 - active2: raw -0.46 [-0.56,-0.36]   adj: -0.66 [-0.79,-0.53]
+
+=== P32 cells: persona x2 residual - 2 x matched instruction withdrawn residual (joint pair bootstrap; < 0 = within the generic-persistence rule)
+  auth_Vex   revealed     vs inst_blunt: -0.89 [-1.23,-0.53]
+  auth_Vex   stated_self  vs inst_blunt: -0.29 [-0.51,-0.06]
+  pref_Vex   revealed     vs inst_blunt: -0.98 [-1.38,-0.59]
+  pref_Vex   stated_self  vs inst_blunt: -0.34 [-0.61,-0.09]
+  auth_Lazlo revealed     vs inst_short: -0.91 [-1.34,-0.44]
+  auth_Lazlo stated_self  vs inst_short: -0.43 [-0.83,-0.14]
+  pref_Lazlo revealed     vs inst_short: -1.20 [-1.60,-0.82]
+  pref_Lazlo stated_self  vs inst_short: -0.67 [-1.03,+0.02]
+
+=== E2b: 'N' (no preference) rate under P3N, per history x checkpoint (new bank)
+  (no P3N cells in this run)
+
+=== spelling probe: mean within-output British share (sd across outputs) | share of outputs with majority default spelling | n
+                         brit_share  reverted  n  brit_sd
+history      checkpoint                                  
+inst_spell   active2           0.99       0.0  8     0.04
+             t4                0.98       0.0  8     0.05
+             withdrawn2        0.00       1.0  8     0.00
+neutral_inst active2           0.00       1.0  8     0.00
+             t4                0.00       1.0  8     0.00
+             withdrawn2        0.00       1.0  8     0.00
+none         t0                0.00       1.0  8     0.00
+(dropping 8 duplicate metric rows, keeping the first)
+
+wrote runs/postexit2_llama70b/postexit2_results.csv (267 rows)

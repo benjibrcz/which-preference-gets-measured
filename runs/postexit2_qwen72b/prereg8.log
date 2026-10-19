@@ -1,0 +1,42 @@
+=== postexit2_qwen72b
+--- P34 bank gate (authored histories, revealed t4 mean|dp| >= 0.10)
+  P34  auth_Vex t4 mean|dp|                                           0.217                          PASS  
+  P34  auth_Lazlo t4 mean|dp|                                         0.27                           PASS  
+--- P35 exit - no-exit (authored replies) within [-0.30, +0.10] in >= 3/4 cells
+  P35  auth_Vex revealed x2 - noexit2                                 -0.37 [-0.56,-0.21]            FAIL  
+  P35  auth_Vex stated_self x2 - noexit2                              -0.49 [-0.65,-0.31]            FAIL  
+  P35  auth_Lazlo revealed x2 - noexit2                               -0.30 [-0.46,-0.14]            PASS  
+  P35  auth_Lazlo stated_self x2 - noexit2                            -0.16 [-0.38,+0.10]            PASS  
+  P35  cells in band                                                  2/4                            FAIL  
+--- P36 generic persistence: >=1 withdrawn instruction residual >= 0.3 (choice); persona within 2x instruction in majority of 8 cells
+  P36  inst_short revealed withdrawn residual                         +0.25 [+0.06,+0.46]            NA    
+  P36  inst_short stated_self withdrawn residual                      +0.79 [+0.57,+1.04]            NA    
+  P36  inst_blunt revealed withdrawn residual                         +0.50 [+0.25,+0.74]            NA    
+  P36  inst_blunt stated_self withdrawn residual                      +0.53 [+0.40,+0.67]            NA    
+  P36  at least one withdrawn instruction residual >= 0.3 in choice   True                           PASS  
+  P36  auth_Vex vs inst_blunt revealed                                persona -0.02 vs inst +0.50    NA    within 2x
+  P36  auth_Vex vs inst_blunt stated_self                             persona +0.32 vs inst +0.53    NA    within 2x
+  P36  pref_Vex vs inst_blunt revealed                                persona +0.15 vs inst +0.50    NA    within 2x
+  P36  pref_Vex vs inst_blunt stated_self                             persona +0.12 vs inst +0.53    NA    within 2x
+  P36  auth_Lazlo vs inst_short revealed                              persona +0.17 vs inst +0.25    NA    within 2x
+  P36  auth_Lazlo vs inst_short stated_self                           persona +0.37 vs inst +0.79    NA    within 2x
+  P36  pref_Lazlo vs inst_short revealed                              persona +0.17 vs inst +0.25    NA    within 2x
+  P36  pref_Lazlo vs inst_short stated_self                           persona +0.01 vs inst +0.79    NA    within 2x
+  P36  persona within 2x instruction (majority of cells)              8/8                            PASS  
+--- P37 spelling reversion (informational per model; cross-model clause: at most one model >= 80%)
+  P37  British share active -> withdrawn; reversion                   0.82 -> 0.65; revert 35%       NA    reverts < 80%
+--- P38 identity vs content
+  P38  identity probe AFFIRMS at x2 (authored)                        0%                             PASS  
+  P38  identity probe AFFIRMS at x8 (authored)                        0%                             PASS  
+  P38  identity probe AFFIRMS at t4 (info)                            100%                           NA    
+  P38  non-leading probe IDENTITY share post-exit                     59%                            PASS  
+  P38  auth_Vex revealed x2 residual                                  -0.02 [-0.23,+0.15]            NA    
+  P38  auth_Vex stated_self x2 residual                               +0.32 [+0.19,+0.43]            NA    excludes 0
+  P38  auth_Lazlo revealed x2 residual                                +0.17 [-0.00,+0.38]            NA    
+  P38  auth_Lazlo stated_self x2 residual                             +0.37 [+0.18,+0.54]            NA    excludes 0
+  P38  at least one post-exit residual with interval excluding zero   True                           PASS  
+--- P39 model-generated exits
+  P39  clean generated exits (info)                                   60/60                          NA    
+  P39  auth_Vex stated residual, generated exits pooled, > 0 (CI excludes 0) +0.17 [+0.08,+0.28]            PASS  
+  P39  auth_Vex choice residual: generated exits < scripted exit      +0.01 vs -0.02                 FAIL  
+wrote runs/postexit2_qwen72b/prereg8_scores.csv
