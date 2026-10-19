@@ -69,13 +69,16 @@ def main():
         nl = pr[(pr.channel == "nonleading") & ~pr.checkpoint.isin(["t0", "t4"]) & ~pr.checkpoint.str.startswith("noexit") & pr.history.str.endswith(("_Vex", "_Lazlo"))]
         idshare = (nl.judge == "IDENTITY").mean()
         rec("P38", "non-leading probe IDENTITY share post-exit", f"{idshare:.0%}", idshare > 0.5)
-    anyres = False
+    anyres = False; anyx2 = False
     for h in ("auth_Vex", "auth_Lazlo"):
         for ch in ("revealed", "stated_self"):
-            pt, lo, hi = val(d, metric="beta_minus_control", checkpoint="x2", bank="new", history=h, channel=ch)
-            rec("P38", f"{h} {ch} x2 residual", f"{pt:+.2f} [{lo:+.2f},{hi:+.2f}]", None, "excludes 0" if lo > 0 else "")
-            if lo > 0: anyres = True
-    rec("P38", "at least one post-exit residual with interval excluding zero", anyres, anyres)
+            for cp in ("x2", "x8", "x2g_pooled"):
+                pt, lo, hi = val(d, metric="beta_minus_control", checkpoint=cp, bank="new", history=h, channel=ch)
+                if np.isnan(pt): continue
+                rec("P38", f"{h} {ch} {cp} residual", f"{pt:+.2f} [{lo:+.2f},{hi:+.2f}]", None, "excludes 0" if lo > 0 else "")
+                if lo > 0: anyres = True; anyx2 = anyx2 or cp == "x2"
+    rec("P38", "at least one post-exit residual (x2, x8 or pooled generated exits) with interval excluding zero (as registered)", anyres, anyres)
+    rec("P38", "  narrower operationalisation: at least one x2 residual excluding zero", anyx2, None, "(not the registered clause)")
     print("--- P39 model-generated exits")
     ex = json.loads((RUN / "postexit2_exits_judged.json").read_text()) if (RUN / "postexit2_exits_judged.json").exists() else {}
     tot = sum(len(v["exits"]) for v in ex.values()); clean = sum(v["exits"].count("CLEAN") for v in ex.values())

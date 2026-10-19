@@ -1,0 +1,31 @@
+--- P40 own confirmations: withdrawn2g pooled choice residual >= 0.3 for both rules
+  P40  inst_short choice residual after the model's own confirmations (pooled) +0.51 [+0.39,+0.61]            PASS  
+  P40    (info) inst_short stated residual after own confirmations        +0.29 [+0.13,+0.44]            NA    
+  P40  inst_blunt choice residual after the model's own confirmations (pooled) +0.75 [+0.63,+0.89]            PASS  
+  P40    (info) inst_blunt stated residual after own confirmations        +0.96 [+0.82,+1.11]            NA    
+--- P41 spelling after own confirmation
+  P41  outputs with majority default spelling after own confirmation (< 80% predicted) 41%; mean British share 0.54   PASS  
+--- P42 confirmation wording vs continuation: auth_Vex choice x2gA_pooled > 0.22
+  P42  auth_Vex choice residual, own confirmation + authored suffix (pooled) +0.25 [+0.03,+0.43]            PASS  scripted exit 0.42; generated package 0.02
+  P42    (info) auth_Vex revealed x2gA_pooled; x2gA - x2 (adj)            +0.25 [+0.03,+0.43]; -0.17 [-0.39,+0.04] NA    
+  P42    (info) auth_Vex stated_self x2gA_pooled; x2gA - x2 (adj)         +0.67 [+0.40,+0.98]; -0.03 [-0.18,+0.11] NA    
+  P42    (info) auth_Lazlo revealed x2gA_pooled; x2gA - x2 (adj)          +0.33 [+0.19,+0.44]; -0.14 [-0.27,-0.01] NA    
+  P42    (info) auth_Lazlo stated_self x2gA_pooled; x2gA - x2 (adj)       +0.24 [-0.07,+0.60]; -0.03 [-0.21,+0.14] NA    
+  P42    (info) pref_Vex revealed x2gA_pooled; x2gA - x2 (adj)            +0.14 [-0.01,+0.35]; -0.13 [-0.37,+0.14] NA    
+  P42    (info) pref_Vex stated_self x2gA_pooled; x2gA - x2 (adj)         +0.04 [-0.23,+0.25]; -0.13 [-0.42,+0.11] NA    
+  P42    (info) pref_Lazlo revealed x2gA_pooled; x2gA - x2 (adj)          +0.12 [-0.02,+0.31]; +0.03 [-0.21,+0.29] NA    
+  P42    (info) pref_Lazlo stated_self x2gA_pooled; x2gA - x2 (adj)       +0.03 [-0.06,+0.13]; -0.14 [-0.34,+0.06] NA    
+--- P43 matched reset contrast rg_pooled - x2g0n1 within [-0.30, +0.10] in all 4 authored cells
+  P43  auth_Vex revealed rg_pooled - x2g0n1 (adj)                         -0.08 [-0.35,+0.17]            PASS  
+  P43  auth_Vex stated_self rg_pooled - x2g0n1 (adj)                      +0.09 [-0.10,+0.32]            PASS  
+  P43  auth_Lazlo revealed rg_pooled - x2g0n1 (adj)                       -0.16 [-0.31,-0.00]            PASS  
+  P43  auth_Lazlo stated_self rg_pooled - x2g0n1 (adj)                    -0.17 [-0.59,+0.11]            PASS  
+  P43  cells in band                                                      4/4                            PASS  
+--- P44 explicit preference turn: nopref gate and stated x2 residual < 0.5x authored
+  P44  nopref_Vex bank gate (t4 revealed mean|dp|)                        0.297                          PASS  
+  P44  nopref_Vex stated x2 residual < 0.5 x authored (0.71)              +0.36 [+0.06,+0.67]            FAIL  
+  P44    (info) nopref_Vex choice x2 residual                             +0.24 [-0.03,+0.48]            NA    
+  P44  nopref_Lazlo bank gate (t4 revealed mean|dp|)                      0.345                          PASS  
+  P44  nopref_Lazlo stated x2 residual < 0.5 x authored (0.27)            +0.24 [-0.12,+0.63]            FAIL  (lower confidence)
+  P44    (info) nopref_Lazlo choice x2 residual                           +0.07 [-0.13,+0.26]            NA    
+wrote runs/postexit2_gemma_all/prereg7b_scores.csv

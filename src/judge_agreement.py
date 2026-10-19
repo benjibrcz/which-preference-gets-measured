@@ -34,10 +34,12 @@ def main(f1, f2):
         print(f"\n=== {ch}: n={len(g)}  agreement={po:.3f}  kappa={k:.3f}")
         print(pd.crosstab(g.label_1, g.label_2, rownames=["judge 1"], colnames=["judge 2"]).to_string())
         aff = {"identity": ("AFFIRMS",), "nonleading": ("ENACTMENT", "STYLE")}[ch]
-        g = g.assign(post=~g.checkpoint.isin(["t4", "t0"]))
+        POST = {"x2", "x8", "r_inst"} | {f"x2g{i}" for i in range(8)} | {f"x2gA{i}" for i in range(8)} | {f"rg{i}" for i in range(8)} | {"x2g0n1"}
+        pers = g[g.history.str.endswith(("_Vex", "_Lazlo"))]
         for who in ("label_1", "label_2"):
-            r = g.assign(aff=g[who].isin(aff)).groupby("post").aff.mean()
-            print(f"  affirming rate under {who}: during (t4) = {r.get(False, np.nan):.3f}   post-exit = {r.get(True, np.nan):.3f}")
+            dur = pers[pers.checkpoint == "t4"][who].isin(aff).mean(); post = pers[pers.checkpoint.isin(POST)][who].isin(aff).mean()
+            noex = pers[pers.checkpoint.str.startswith("noexit")][who].isin(aff).mean()
+            print(f"  affirming rate under {who} (persona histories): t4 = {dur:.3f}   exit checkpoints = {post:.3f}   no-exit = {noex:.3f}")
 
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[2])

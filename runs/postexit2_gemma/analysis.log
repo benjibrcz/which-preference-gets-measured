@@ -190,29 +190,55 @@
   pref_Vex    old stated_self   noexit2:+0.76|+0.52[+0.28,+0.95]  r_inst:+0.34|-0.02[-0.18,+0.28]  x2:+0.47|+0.15[+0.02,+0.40]  x8:+0.47|+0.32[+0.06,+0.74]
       x2_minus_noexit2     raw: -0.29 [-0.73,-0.02]   adj: -0.37 [-0.80,+0.01]
 
+=== adjusted-direction sensitivity: project (persona - control) onto (persona t4 - control t4)
+  auth_Lazlo  revealed      x2:+0.50[+0.30,+0.68]  noexit2:+0.56[+0.38,+0.77]  x8:+0.15[-0.04,+0.36]  r_inst:+0.21[+0.07,+0.38]  x2g_pooled:+0.13[+0.03,+0.24]
+  auth_Lazlo  stated_self   x2:+0.40[+0.19,+0.64]  noexit2:+0.70[+0.42,+0.98]  x8:+0.41[+0.21,+0.63]  r_inst:+0.15[-0.08,+0.39]  x2g_pooled:+0.37[+0.21,+0.54]
+  auth_Vex    revealed      x2:+0.35[+0.10,+0.62]  noexit2:+0.71[+0.54,+0.87]  x8:+0.34[+0.13,+0.54]  r_inst:+0.13[-0.11,+0.27]  x2g_pooled:+0.05[-0.06,+0.18]
+  auth_Vex    stated_self   x2:+0.63[+0.38,+0.85]  noexit2:+0.81[+0.58,+1.02]  x8:+0.59[+0.48,+0.73]  r_inst:+0.67[+0.42,+0.90]  x2g_pooled:+0.37[+0.26,+0.48]
+  genA_Lazlo  revealed      x2:+0.12[+0.02,+0.24]  noexit2:+0.30[+0.11,+0.48]  x2g_pooled:+0.10[+0.05,+0.17]
+  genA_Lazlo  stated_self   x2:+0.08[-0.10,+0.26]  noexit2:+0.55[+0.28,+0.80]  x2g_pooled:+0.13[+0.01,+0.26]
+  genA_Vex    revealed      x2:+0.15[-0.06,+0.34]  noexit2:+0.42[+0.12,+0.68]  x2g_pooled:+0.02[-0.07,+0.11]
+  genA_Vex    stated_self   x2:+0.29[+0.13,+0.48]  noexit2:+0.59[+0.36,+0.79]  x2g_pooled:+0.14[+0.05,+0.23]
+  genB_Lazlo  revealed      x2:+0.12[-0.08,+0.29]  noexit2:+0.08[-0.11,+0.33]  x2g_pooled:+0.13[+0.00,+0.24]
+  genB_Lazlo  stated_self   x2:+0.05[-0.11,+0.20]  noexit2:+0.13[-0.07,+0.35]  x2g_pooled:+0.20[+0.09,+0.32]
+  genB_Vex    revealed      x2:+0.11[-0.02,+0.27]  noexit2:+0.47[+0.26,+0.65]  x2g_pooled:+0.15[+0.07,+0.24]
+  genB_Vex    stated_self   x2:+0.39[+0.19,+0.58]  noexit2:+0.73[+0.49,+0.95]  x2g_pooled:+0.16[+0.04,+0.29]
+  genC_Lazlo  revealed      x2:-0.16[-0.33,-0.05]  noexit2:+0.33[+0.16,+0.57]  x2g_pooled:+0.11[+0.03,+0.21]
+  genC_Lazlo  stated_self   x2:+0.04[-0.08,+0.19]  noexit2:+0.31[+0.14,+0.50]  x2g_pooled:+0.12[-0.01,+0.24]
+  genC_Vex    revealed      x2:+0.10[-0.09,+0.30]  noexit2:+0.40[+0.23,+0.58]  x2g_pooled:+0.18[+0.08,+0.30]
+  genC_Vex    stated_self   x2:+0.28[+0.08,+0.48]  noexit2:+0.41[+0.16,+0.64]  x2g_pooled:+0.18[+0.09,+0.28]
+  inst_blunt  revealed    
+  inst_blunt  stated_self 
+  inst_short  revealed    
+  inst_short  stated_self 
+  pref_Lazlo  revealed      x2:-0.23[-0.71,+0.13]  noexit2:+0.20[-0.17,+0.54]  x8:-0.07[-0.52,+0.37]  r_inst:+0.20[-0.33,+0.77]  x2g_pooled:+0.07[-0.02,+0.21]
+  pref_Lazlo  stated_self   x2:+0.29[+0.01,+0.60]  noexit2:+0.11[-0.17,+0.43]  x8:+0.13[-0.09,+0.29]  r_inst:-0.05[-0.38,+0.18]  x2g_pooled:+0.06[-0.04,+0.16]
+  pref_Vex    revealed      x2:+0.24[-0.16,+0.49]  noexit2:+0.15[-0.04,+0.42]  x8:-0.08[-0.28,+0.14]  r_inst:+0.19[-0.27,+0.56]  x2g_pooled:+0.10[-0.03,+0.25]
+  pref_Vex    stated_self   x2:+0.19[-0.01,+0.50]  noexit2:+0.20[-0.32,+0.65]  x8:+0.02[-0.35,+0.33]  r_inst:+0.03[-0.30,+0.32]  x2g_pooled:-0.07[-0.28,+0.09]
+
 === E2 instruction controls: withdrawn2 vs active2 (units of own t4 direction, minus neutral_inst)
   inst_short revealed    active2     +0.86 [+0.73,+0.98]  mean|dp| t4=0.580
   inst_short revealed    withdrawn2  +0.62 [+0.47,+0.75]  mean|dp| t4=0.580
-      withdrawn2 - active2: raw -0.10 [-0.22,+0.00]   adj: -0.24 [-0.38,-0.10]
-  inst_short stated_self active2     +0.93 [+0.72,+1.13]  mean|dp| t4=0.336
-  inst_short stated_self withdrawn2  +0.24 [+0.08,+0.38]  mean|dp| t4=0.336
-      withdrawn2 - active2: raw -0.72 [-0.85,-0.58]   adj: -0.70 [-0.93,-0.47]
-  inst_blunt revealed    active2     +0.89 [+0.76,+1.04]  mean|dp| t4=0.461
-  inst_blunt revealed    withdrawn2  +0.79 [+0.65,+0.94]  mean|dp| t4=0.461
-      withdrawn2 - active2: raw -0.06 [-0.14,+0.02]   adj: -0.10 [-0.25,+0.04]
-  inst_blunt stated_self active2     +1.17 [+1.02,+1.34]  mean|dp| t4=0.434
+      withdrawn2 - active2: raw -0.10 [-0.22,+0.00]   adj: -0.24 [-0.39,-0.11]
+  inst_short stated_self active2     +0.93 [+0.72,+1.15]  mean|dp| t4=0.336
+  inst_short stated_self withdrawn2  +0.24 [+0.07,+0.39]  mean|dp| t4=0.336
+      withdrawn2 - active2: raw -0.72 [-0.85,-0.59]   adj: -0.70 [-0.92,-0.48]
+  inst_blunt revealed    active2     +0.89 [+0.77,+1.04]  mean|dp| t4=0.461
+  inst_blunt revealed    withdrawn2  +0.79 [+0.64,+0.94]  mean|dp| t4=0.461
+      withdrawn2 - active2: raw -0.06 [-0.15,+0.02]   adj: -0.10 [-0.26,+0.03]
+  inst_blunt stated_self active2     +1.17 [+1.03,+1.34]  mean|dp| t4=0.434
   inst_blunt stated_self withdrawn2  +0.91 [+0.77,+1.06]  mean|dp| t4=0.434
-      withdrawn2 - active2: raw +0.03 [-0.05,+0.13]   adj: -0.26 [-0.39,-0.11]
+      withdrawn2 - active2: raw +0.03 [-0.04,+0.13]   adj: -0.26 [-0.39,-0.11]
 
 === P32 cells: persona x2 residual - 2 x matched instruction withdrawn residual (joint pair bootstrap; < 0 = within the generic-persistence rule)
-  auth_Vex   revealed     vs inst_blunt: -1.16 [-1.61,-0.78]
-  auth_Vex   stated_self  vs inst_blunt: -1.11 [-1.57,-0.72]
-  pref_Vex   revealed     vs inst_blunt: -1.31 [-1.74,-0.92]
-  pref_Vex   stated_self  vs inst_blunt: -1.65 [-1.96,-1.34]
-  auth_Lazlo revealed     vs inst_short: -0.78 [-1.11,-0.47]
-  auth_Lazlo stated_self  vs inst_short: -0.21 [-0.65,+0.28]
-  pref_Lazlo revealed     vs inst_short: -1.16 [-1.48,-0.80]
-  pref_Lazlo stated_self  vs inst_short: -0.30 [-0.63,+0.03]
+  auth_Vex   revealed     vs inst_blunt: -1.16 [-1.62,-0.76]
+  auth_Vex   stated_self  vs inst_blunt: -1.11 [-1.55,-0.70]
+  pref_Vex   revealed     vs inst_blunt: -1.31 [-1.74,-0.93]
+  pref_Vex   stated_self  vs inst_blunt: -1.65 [-1.96,-1.33]
+  auth_Lazlo revealed     vs inst_short: -0.78 [-1.08,-0.47]
+  auth_Lazlo stated_self  vs inst_short: -0.21 [-0.66,+0.27]
+  pref_Lazlo revealed     vs inst_short: -1.16 [-1.49,-0.83]
+  pref_Lazlo stated_self  vs inst_short: -0.30 [-0.64,+0.02]
 
 === E2b: 'N' (no preference) rate under P3N, per history x checkpoint (new bank)
 history       checkpoint
@@ -248,4 +274,4 @@ neutral_inst active2           0.00      1.00  8     0.00
 none         t0                0.00      1.00  8     0.00
 (dropping 8 duplicate metric rows, keeping the first)
 
-wrote runs/postexit2_gemma/postexit2_results.csv (1025 rows)
+wrote runs/postexit2_gemma/postexit2_results.csv (1101 rows)

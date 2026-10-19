@@ -6,8 +6,8 @@ judge 1
 AFFIRMS      172       5        0
 DENIES        12    1833        0
 UNCLEAR        1       0        1
-  affirming rate under label_1: during (t4) = 0.432   post-exit = 0.055
-  affirming rate under label_2: during (t4) = 0.432   post-exit = 0.059
+  affirming rate under label_1 (persona histories): t4 = 0.760   exit checkpoints = 0.000   no-exit = 0.540
+  affirming rate under label_2 (persona histories): t4 = 0.760   exit checkpoints = 0.000   no-exit = 0.591
 
 === nonleading: n=2024  agreement=0.994  kappa=0.948
 judge 2    AMBIGUOUS  ENACTMENT  IDENTITY  STYLE
@@ -16,5 +16,5 @@ AMBIGUOUS          2          0         0      0
 ENACTMENT          0          1         0      4
 IDENTITY           0          0      1886      9
 STYLE              0          0         0    122
-  affirming rate under label_1: during (t4) = 0.420   post-exit = 0.029
-  affirming rate under label_2: during (t4) = 0.455   post-exit = 0.030
+  affirming rate under label_1 (persona histories): t4 = 0.708   exit checkpoints = 0.000   no-exit = 0.284
+  affirming rate under label_2 (persona histories): t4 = 0.750   exit checkpoints = 0.000   no-exit = 0.295

@@ -242,6 +242,83 @@ def main():
                     out.append(dict(history=hid, bank=bank, channel=ch, checkpoint="x2g_pooled", metric="beta_minus_control", point=pa, lo95=la, hi95=ha, n_pairs=int(m.sum())))
                     print(f"      x2g pooled (unconditional, minus pooled control): {pa:+.2f} [{la:+.2f},{ha:+.2f}]")
 
+    # ---- GPT round-2 #5: adjusted-DIRECTION sensitivity. Direction d* = d_h(t4) - d_n(t4); residual = projection of
+    #      (d_h(cp) - d_n(cp)) onto d*. Differs from beta_minus_control (which projects onto the unadjusted direction).
+    print("\n=== adjusted-direction sensitivity: project (persona - control) onto (persona t4 - control t4)")
+    for hid in hists:
+        if hid.startswith("neutral"): continue
+        c = ctrl(hid)
+        if not c: continue
+        for ch in ("revealed", "stated_self"):
+            idx, dv = dirn(hid, ch, "new")
+            if dv is None: continue
+            xn = vec(c, "t4", ch, "new", idx)
+            if xn is None: continue
+            dstar = dv - xn
+            line = f"  {hid:12}{ch:12}"
+            for cp in ("x2", "noexit2", "x8", "r_inst", "x2g_pooled"):
+                if cp == "x2g_pooled":
+                    hcps = sorted({q for (hh, q, cc, b, _) in p.index if hh == hid and cc == ch and b == "new"})
+                    ys = [vec(hid, q, ch, "new", idx) for q in hcps if re.fullmatch(r"x2g\d", q)]
+                    yns = [vec(c, q, ch, "new", idx) for q in hcps if re.fullmatch(r"x2g\d", q)]
+                    ys = [v for v in ys if v is not None]; yns = [v for v in yns if v is not None]
+                    if not ys or not yns: continue
+                    y = np.nanmean(np.vstack(ys), 0); yn = np.nanmean(np.vstack(yns), 0)
+                else:
+                    y = vec(hid, cp, ch, "new", idx); yn = vec(c, cp, ch, "new", idx)
+                    if y is None or yn is None: continue
+                m = ~(np.isnan(dstar) | np.isnan(y) | np.isnan(yn))
+                pt, lo, hi = boot(dstar[m], (y - yn)[m])
+                out.append(dict(history=hid, bank="new", channel=ch, checkpoint=cp, metric="beta_adjdir", point=pt, lo95=lo, hi95=hi, n_pairs=int(m.sum())))
+                line += f"  {cp}:{pt:+.2f}[{lo:+.2f},{hi:+.2f}]"
+            print(line)
+    # ---- GPT round-2 #4: fourth-exchange replacement (nopref) measured on the AUTHORED history's direction (common direction)
+    for persona in ("Vex", "Lazlo"):
+        nh, ah = f"nopref_{persona}", f"auth_{persona}"
+        if nh not in hists: continue
+        for ch in ("revealed", "stated_self"):
+            idx, dva = dirn(ah, ch, "new")
+            if dva is None: continue
+            y = vec(nh, "x2", ch, "new", idx); yn = vec("neutral_nopref", "x2", ch, "new", idx)
+            ya = vec(ah, "x2", ch, "new", idx); yan = vec("neutral_auth", "x2", ch, "new", idx)
+            if any(v is None for v in (y, yn, ya, yan)): continue
+            m = ~(np.isnan(dva) | np.isnan(y) | np.isnan(yn) | np.isnan(ya) | np.isnan(yan))
+            pt, lo, hi = boot(dva[m], y[m], yn[m])
+            out.append(dict(history=nh, bank="new", channel=ch, checkpoint="x2", metric="beta_minus_control_on_auth_direction", point=pt, lo95=lo, hi95=hi, n_pairs=int(m.sum())))
+            pr, lr, hr = boot_adj(dva[m], ya[m], yan[m], y[m], yn[m])
+            out.append(dict(history=nh, bank="new", channel=ch, checkpoint="auth_x2_minus_nopref_x2", metric="paired_contrast_adj", point=pr, lo95=lr, hi95=hr, n_pairs=int(m.sum())))
+            print(f"  {nh} {ch}: x2 residual on the authored direction {pt:+.2f} [{lo:+.2f},{hi:+.2f}]; authored - nopref (same direction, adj) {pr:+.2f} [{lr:+.2f},{hr:+.2f}]")
+    # ---- GPT round-2 #7: decomposition of the generated-package reduction into confirmation (x2 -> x2gA) and continuation (x2gA -> x2g), joint bootstrap
+    for hid in [h for h in hists if h.startswith(("auth_", "pref_"))]:
+        c = ctrl(hid)
+        for ch in ("revealed", "stated_self"):
+            idx, dv = dirn(hid, ch, "new")
+            if dv is None: continue
+            hcps = sorted({q for (hh, q, cc, b, _) in p.index if hh == hid and cc == ch and b == "new"})
+            def pooledv(prefix, h):
+                vs = [vec(h, q, ch, "new", idx) for q in hcps if re.fullmatch(prefix + r"\d", q)]
+                vs = [v for v in vs if v is not None]
+                return np.nanmean(np.vstack(vs), 0) if vs else None
+            x2, x2n = vec(hid, "x2", ch, "new", idx), vec(c, "x2", ch, "new", idx)
+            gA, gAn, g, gn = pooledv("x2gA", hid), pooledv("x2gA", c), pooledv("x2g", hid), pooledv("x2g", c)
+            if any(v is None for v in (x2, x2n, gA, gAn, g, gn)): continue
+            m = ~(np.isnan(dv) | np.isnan(x2) | np.isnan(x2n) | np.isnan(gA) | np.isnan(gAn) | np.isnan(g) | np.isnan(gn))
+            ii = np.where(m)[0]; n = len(ii)
+            def est(sel):
+                x = dv[sel]; d = x @ x
+                if d == 0: return None
+                r = lambda a, an: (x @ a[sel] - x @ an[sel]) / d
+                conf = r(x2, x2n) - r(gA, gAn); cont = r(gA, gAn) - r(g, gn)
+                return conf, cont
+            pt = est(ii)
+            bs = [v for v in (est(rng.choice(ii, n, replace=True)) for _ in range(2000)) if v is not None]
+            if pt is None or not bs: continue
+            conf_b = np.array([b[0] for b in bs]); cont_b = np.array([b[1] for b in bs]); diff_b = cont_b - conf_b
+            for name, val, arr in (("confirmation_reduction", pt[0], conf_b), ("continuation_reduction", pt[1], cont_b), ("continuation_minus_confirmation", pt[1] - pt[0], diff_b)):
+                lo, hi = np.percentile(arr, [2.5, 97.5])
+                out.append(dict(history=hid, bank="new", channel=ch, checkpoint=name, metric="package_decomposition", point=float(val), lo95=lo, hi95=hi, n_pairs=n))
+            print(f"  {hid} {ch}: package reduction = confirmation {pt[0]:+.2f} + continuation {pt[1]:+.2f}; continuation - confirmation {pt[1]-pt[0]:+.2f} [{np.percentile(diff_b,2.5):+.2f},{np.percentile(diff_b,97.5):+.2f}]")
+
     # ---- E2: instruction withdrawal residual as fraction of own active displacement
     print("\n=== E2 instruction controls: withdrawn2 vs active2 (units of own t4 direction, minus neutral_inst)")
     for hid in ("inst_short", "inst_blunt"):

@@ -26,10 +26,19 @@ P38,identity probe AFFIRMS at x8 (authored),0%,PASS,
 P38,identity probe AFFIRMS at t4 (info),100%,NA,
 P38,non-leading probe IDENTITY share post-exit,63%,PASS,
 P38,auth_Vex revealed x2 residual,"-0.04 [-0.22,+0.17]",NA,
+P38,auth_Vex revealed x8 residual,"-0.03 [-0.23,+0.17]",NA,
+P38,auth_Vex revealed x2g_pooled residual,"+0.09 [-0.08,+0.25]",NA,
 P38,auth_Vex stated_self x2 residual,"+0.05 [-0.10,+0.18]",NA,
+P38,auth_Vex stated_self x8 residual,"+0.35 [+0.23,+0.45]",NA,excludes 0
+P38,auth_Vex stated_self x2g_pooled residual,"+0.16 [+0.10,+0.23]",NA,excludes 0
 P38,auth_Lazlo revealed x2 residual,"+0.06 [-0.22,+0.41]",NA,
+P38,auth_Lazlo revealed x8 residual,"+0.01 [-0.17,+0.18]",NA,
+P38,auth_Lazlo revealed x2g_pooled residual,"+0.19 [+0.05,+0.35]",NA,excludes 0
 P38,auth_Lazlo stated_self x2 residual,"+0.04 [-0.15,+0.22]",NA,
-P38,at least one post-exit residual with interval excluding zero,False,FAIL,
+P38,auth_Lazlo stated_self x8 residual,"+0.28 [+0.01,+0.57]",NA,excludes 0
+P38,auth_Lazlo stated_self x2g_pooled residual,"+0.20 [+0.03,+0.35]",NA,excludes 0
+P38,"at least one post-exit residual (x2, x8 or pooled generated exits) with interval excluding zero (as registered)",True,PASS,
+P38,  narrower operationalisation: at least one x2 residual excluding zero,False,NA,(not the registered clause)
 P39,clean generated exits (info),40/60,NA,
 P39,"auth_Vex stated residual, generated exits pooled, > 0 (CI excludes 0)","+0.16 [+0.10,+0.23]",PASS,
 P39,auth_Vex choice residual: generated exits < scripted exit,+0.09 vs -0.04,FAIL,

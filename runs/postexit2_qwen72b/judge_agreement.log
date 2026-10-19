@@ -5,13 +5,13 @@ judge 2  AFFIRMS  DENIES
 judge 1                 
 AFFIRMS       35       5
 DENIES         0     472
-  affirming rate under label_1: during (t4) = 0.300   post-exit = 0.037
-  affirming rate under label_2: during (t4) = 0.300   post-exit = 0.025
+  affirming rate under label_1 (persona histories): t4 = 0.531   exit checkpoints = 0.000   no-exit = 0.156
+  affirming rate under label_2 (persona histories): t4 = 0.531   exit checkpoints = 0.000   no-exit = 0.109
 
 === nonleading: n=512  agreement=0.998  kappa=0.972
 judge 2   IDENTITY  STYLE
 judge 1                  
 IDENTITY       493      0
 STYLE            1     18
-  affirming rate under label_1: during (t4) = 0.200   post-exit = 0.007
-  affirming rate under label_2: during (t4) = 0.200   post-exit = 0.005
+  affirming rate under label_1 (persona histories): t4 = 0.312   exit checkpoints = 0.000   no-exit = 0.031
+  affirming rate under label_2 (persona histories): t4 = 0.312   exit checkpoints = 0.000   no-exit = 0.016

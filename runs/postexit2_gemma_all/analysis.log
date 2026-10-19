@@ -225,33 +225,75 @@
   pref_Vex    old stated_self   noexit2:+0.76|+0.52[+0.28,+0.93]  r_inst:+0.34|-0.02[-0.18,+0.26]  x2:+0.47|+0.15[+0.02,+0.38]  x8:+0.47|+0.32[+0.07,+0.76]
       x2_minus_noexit2     raw: -0.29 [-0.70,-0.02]   adj: -0.37 [-0.81,-0.00]
 
+=== adjusted-direction sensitivity: project (persona - control) onto (persona t4 - control t4)
+  auth_Lazlo  revealed      x2:+0.50[+0.30,+0.69]  noexit2:+0.56[+0.38,+0.78]  x8:+0.15[-0.03,+0.35]  r_inst:+0.21[+0.07,+0.38]  x2g_pooled:+0.13[+0.03,+0.24]
+  auth_Lazlo  stated_self   x2:+0.40[+0.19,+0.62]  noexit2:+0.70[+0.42,+0.97]  x8:+0.41[+0.19,+0.63]  r_inst:+0.15[-0.08,+0.37]  x2g_pooled:+0.37[+0.21,+0.53]
+  auth_Vex    revealed      x2:+0.35[+0.10,+0.62]  noexit2:+0.71[+0.54,+0.90]  x8:+0.34[+0.12,+0.53]  r_inst:+0.13[-0.10,+0.28]  x2g_pooled:+0.05[-0.07,+0.18]
+  auth_Vex    stated_self   x2:+0.63[+0.37,+0.85]  noexit2:+0.81[+0.58,+1.02]  x8:+0.59[+0.49,+0.73]  r_inst:+0.67[+0.42,+0.90]  x2g_pooled:+0.37[+0.27,+0.48]
+  genA_Lazlo  revealed      x2:+0.12[+0.02,+0.24]  noexit2:+0.30[+0.13,+0.47]  x2g_pooled:+0.10[+0.05,+0.16]
+  genA_Lazlo  stated_self   x2:+0.08[-0.10,+0.27]  noexit2:+0.55[+0.29,+0.80]  x2g_pooled:+0.13[+0.01,+0.26]
+  genA_Vex    revealed      x2:+0.15[-0.06,+0.34]  noexit2:+0.42[+0.13,+0.66]  x2g_pooled:+0.02[-0.06,+0.11]
+  genA_Vex    stated_self   x2:+0.29[+0.13,+0.47]  noexit2:+0.59[+0.37,+0.77]  x2g_pooled:+0.14[+0.06,+0.24]
+  genB_Lazlo  revealed      x2:+0.12[-0.08,+0.30]  noexit2:+0.08[-0.11,+0.33]  x2g_pooled:+0.13[+0.00,+0.24]
+  genB_Lazlo  stated_self   x2:+0.05[-0.10,+0.20]  noexit2:+0.13[-0.08,+0.33]  x2g_pooled:+0.20[+0.10,+0.31]
+  genB_Vex    revealed      x2:+0.11[-0.03,+0.27]  noexit2:+0.47[+0.27,+0.64]  x2g_pooled:+0.15[+0.07,+0.25]
+  genB_Vex    stated_self   x2:+0.39[+0.20,+0.58]  noexit2:+0.73[+0.50,+0.96]  x2g_pooled:+0.16[+0.05,+0.29]
+  genC_Lazlo  revealed      x2:-0.16[-0.33,-0.04]  noexit2:+0.33[+0.15,+0.56]  x2g_pooled:+0.11[+0.03,+0.22]
+  genC_Lazlo  stated_self   x2:+0.04[-0.08,+0.19]  noexit2:+0.31[+0.14,+0.48]  x2g_pooled:+0.12[-0.00,+0.24]
+  genC_Vex    revealed      x2:+0.10[-0.08,+0.31]  noexit2:+0.40[+0.24,+0.57]  x2g_pooled:+0.18[+0.08,+0.29]
+  genC_Vex    stated_self   x2:+0.28[+0.08,+0.48]  noexit2:+0.41[+0.18,+0.63]  x2g_pooled:+0.18[+0.09,+0.27]
+  inst_blunt  revealed    
+  inst_blunt  stated_self 
+  inst_short  revealed    
+  inst_short  stated_self 
+  nopref_Lazlorevealed      x2:+0.08[-0.13,+0.29]  noexit2:+0.51[+0.30,+0.69]
+  nopref_Lazlostated_self   x2:+0.41[+0.07,+0.79]  noexit2:+0.41[+0.13,+0.70]
+  nopref_Vex  revealed      x2:+0.24[-0.14,+0.56]  noexit2:+0.37[-0.03,+0.67]
+  nopref_Vex  stated_self   x2:+0.37[+0.08,+0.62]  noexit2:+0.66[+0.44,+0.82]
+  pref_Lazlo  revealed      x2:-0.23[-0.70,+0.12]  noexit2:+0.20[-0.18,+0.56]  x8:-0.07[-0.49,+0.35]  r_inst:+0.20[-0.38,+0.80]  x2g_pooled:+0.07[-0.02,+0.20]
+  pref_Lazlo  stated_self   x2:+0.29[+0.02,+0.60]  noexit2:+0.11[-0.18,+0.46]  x8:+0.13[-0.08,+0.29]  r_inst:-0.05[-0.37,+0.19]  x2g_pooled:+0.06[-0.03,+0.17]
+  pref_Vex    revealed      x2:+0.24[-0.17,+0.49]  noexit2:+0.15[-0.04,+0.41]  x8:-0.08[-0.27,+0.15]  r_inst:+0.19[-0.23,+0.54]  x2g_pooled:+0.10[-0.03,+0.24]
+  pref_Vex    stated_self   x2:+0.19[-0.02,+0.48]  noexit2:+0.20[-0.35,+0.68]  x8:+0.02[-0.36,+0.33]  r_inst:+0.03[-0.35,+0.31]  x2g_pooled:-0.07[-0.26,+0.09]
+  nopref_Vex revealed: x2 residual on the authored direction +0.20 [-0.05,+0.40]; authored - nopref (same direction, adj) +0.22 [+0.06,+0.40]
+  nopref_Vex stated_self: x2 residual on the authored direction +0.47 [+0.19,+0.79]; authored - nopref (same direction, adj) +0.24 [+0.00,+0.51]
+  nopref_Lazlo revealed: x2 residual on the authored direction +0.08 [-0.08,+0.24]; authored - nopref (same direction, adj) +0.39 [+0.18,+0.57]
+  nopref_Lazlo stated_self: x2 residual on the authored direction -0.08 [-0.36,+0.20]; authored - nopref (same direction, adj) +0.35 [-0.07,+0.82]
+  auth_Lazlo revealed: package reduction = confirmation +0.14 + continuation +0.20; continuation - confirmation +0.07 [-0.11,+0.24]
+  auth_Lazlo stated_self: package reduction = confirmation +0.03 + continuation +0.05; continuation - confirmation +0.02 [-0.17,+0.23]
+  auth_Vex revealed: package reduction = confirmation +0.17 + continuation +0.23; continuation - confirmation +0.07 [-0.21,+0.31]
+  auth_Vex stated_self: package reduction = confirmation +0.03 + continuation +0.30; continuation - confirmation +0.27 [+0.06,+0.49]
+  pref_Lazlo revealed: package reduction = confirmation -0.03 + continuation +0.08; continuation - confirmation +0.12 [-0.32,+0.63]
+  pref_Lazlo stated_self: package reduction = confirmation +0.14 + continuation +0.01; continuation - confirmation -0.13 [-0.36,+0.10]
+  pref_Vex revealed: package reduction = confirmation +0.13 + continuation +0.06; continuation - confirmation -0.07 [-0.48,+0.36]
+  pref_Vex stated_self: package reduction = confirmation +0.13 + continuation +0.01; continuation - confirmation -0.12 [-0.56,+0.32]
+
 === E2 instruction controls: withdrawn2 vs active2 (units of own t4 direction, minus neutral_inst)
-  inst_short revealed    active2     +0.86 [+0.72,+0.98]  mean|dp| t4=0.580
-  inst_short revealed    withdrawn2  +0.62 [+0.47,+0.76]  mean|dp| t4=0.580
-  inst_short revealed    withdrawn2g +0.51 [+0.38,+0.61]  (model's own confirmations, pooled over 4)
-      withdrawn2 - active2: raw -0.10 [-0.22,+0.01]   adj: -0.24 [-0.38,-0.11]
-  inst_short stated_self active2     +0.93 [+0.73,+1.15]  mean|dp| t4=0.336
+  inst_short revealed    active2     +0.86 [+0.73,+0.98]  mean|dp| t4=0.580
+  inst_short revealed    withdrawn2  +0.62 [+0.48,+0.76]  mean|dp| t4=0.580
+  inst_short revealed    withdrawn2g +0.51 [+0.39,+0.61]  (model's own confirmations, pooled over 4)
+      withdrawn2 - active2: raw -0.10 [-0.22,-0.00]   adj: -0.24 [-0.39,-0.10]
+  inst_short stated_self active2     +0.93 [+0.73,+1.14]  mean|dp| t4=0.336
   inst_short stated_self withdrawn2  +0.24 [+0.07,+0.40]  mean|dp| t4=0.336
-  inst_short stated_self withdrawn2g +0.29 [+0.12,+0.46]  (model's own confirmations, pooled over 4)
-      withdrawn2 - active2: raw -0.72 [-0.84,-0.59]   adj: -0.70 [-0.92,-0.47]
-  inst_blunt revealed    active2     +0.89 [+0.75,+1.05]  mean|dp| t4=0.461
+  inst_short stated_self withdrawn2g +0.29 [+0.13,+0.44]  (model's own confirmations, pooled over 4)
+      withdrawn2 - active2: raw -0.72 [-0.85,-0.59]   adj: -0.70 [-0.93,-0.48]
+  inst_blunt revealed    active2     +0.89 [+0.76,+1.05]  mean|dp| t4=0.461
   inst_blunt revealed    withdrawn2  +0.79 [+0.64,+0.94]  mean|dp| t4=0.461
   inst_blunt revealed    withdrawn2g +0.75 [+0.63,+0.89]  (model's own confirmations, pooled over 4)
-      withdrawn2 - active2: raw -0.06 [-0.15,+0.02]   adj: -0.10 [-0.25,+0.03]
-  inst_blunt stated_self active2     +1.17 [+1.01,+1.33]  mean|dp| t4=0.434
+      withdrawn2 - active2: raw -0.06 [-0.15,+0.02]   adj: -0.10 [-0.25,+0.04]
+  inst_blunt stated_self active2     +1.17 [+1.02,+1.33]  mean|dp| t4=0.434
   inst_blunt stated_self withdrawn2  +0.91 [+0.77,+1.06]  mean|dp| t4=0.434
-  inst_blunt stated_self withdrawn2g +0.96 [+0.82,+1.10]  (model's own confirmations, pooled over 4)
-      withdrawn2 - active2: raw +0.03 [-0.05,+0.13]   adj: -0.26 [-0.39,-0.11]
+  inst_blunt stated_self withdrawn2g +0.96 [+0.82,+1.11]  (model's own confirmations, pooled over 4)
+      withdrawn2 - active2: raw +0.03 [-0.05,+0.13]   adj: -0.26 [-0.38,-0.11]
 
 === P32 cells: persona x2 residual - 2 x matched instruction withdrawn residual (joint pair bootstrap; < 0 = within the generic-persistence rule)
-  auth_Vex   revealed     vs inst_blunt: -1.16 [-1.62,-0.76]
-  auth_Vex   stated_self  vs inst_blunt: -1.11 [-1.55,-0.71]
-  pref_Vex   revealed     vs inst_blunt: -1.31 [-1.72,-0.93]
-  pref_Vex   stated_self  vs inst_blunt: -1.65 [-1.95,-1.34]
-  auth_Lazlo revealed     vs inst_short: -0.78 [-1.09,-0.44]
-  auth_Lazlo stated_self  vs inst_short: -0.21 [-0.67,+0.27]
-  pref_Lazlo revealed     vs inst_short: -1.16 [-1.47,-0.81]
-  pref_Lazlo stated_self  vs inst_short: -0.30 [-0.60,+0.00]
+  auth_Vex   revealed     vs inst_blunt: -1.16 [-1.58,-0.77]
+  auth_Vex   stated_self  vs inst_blunt: -1.11 [-1.58,-0.71]
+  pref_Vex   revealed     vs inst_blunt: -1.31 [-1.73,-0.93]
+  pref_Vex   stated_self  vs inst_blunt: -1.65 [-1.97,-1.33]
+  auth_Lazlo revealed     vs inst_short: -0.78 [-1.09,-0.45]
+  auth_Lazlo stated_self  vs inst_short: -0.21 [-0.67,+0.26]
+  pref_Lazlo revealed     vs inst_short: -1.16 [-1.48,-0.81]
+  pref_Lazlo stated_self  vs inst_short: -0.30 [-0.62,+0.03]
 
 === E2b: 'N' (no preference) rate under P3N, per history x checkpoint (new bank)
 history       checkpoint
@@ -295,4 +337,4 @@ neutral_inst active2             0.00      1.00  8     0.00
 none         t0                  0.00      1.00  8     0.00
 (dropping 16 duplicate metric rows, keeping the first)
 
-wrote runs/postexit2_gemma_all/postexit2_results.csv (1220 rows)
+wrote runs/postexit2_gemma_all/postexit2_results.csv (1336 rows)
