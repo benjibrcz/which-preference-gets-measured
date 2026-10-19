@@ -95,7 +95,18 @@ def main():
             if dv is None: continue
             m = float(np.nanmean(np.abs(dv)))
             out.append(dict(history=hid, bank=bank, channel="revealed", checkpoint="t4", metric="mean_abs_dp", point=m))
-            print(f"  {hid:14} {bank:4} mean|dp|={m:.3f}  n={len(idx)}")
+            # how much of this history's t4 direction is generic drift: projection of the matched control's t4 shift onto it
+            c = ctrl(hid); extra = ""
+            if c and not hid.startswith("neutral"):
+                for ch in ("revealed", "stated_self"):
+                    idx2, dv2 = dirn(hid, ch, bank)
+                    yn = vec(c, "t4", ch, bank, idx2) if dv2 is not None else None
+                    if yn is not None:
+                        mm = ~np.isnan(dv2) & ~np.isnan(yn)
+                        pc, lc, hc = boot(dv2[mm], yn[mm])
+                        out.append(dict(history=hid, bank=bank, channel=ch, checkpoint="t4", metric="control_t4_projection", point=pc, lo95=lc, hi95=hc, n_pairs=int(mm.sum())))
+                        extra += f"  ctrl-t4-on-dir({ch[:3]})={pc:+.2f}[{lc:+.2f},{hc:+.2f}]"
+            print(f"  {hid:14} {bank:4} mean|dp|={m:.3f}  n={len(idx)}{extra}")
 
     # ---- residuals per history x checkpoint x channel: raw, adjusted, and exit-vs-noexit contrast
     print("\n=== residuals (units of own t4 direction): raw | minus matched control  [95% CI unclipped]")
@@ -103,7 +114,7 @@ def main():
         if hid.startswith("neutral"): continue
         c = ctrl(hid)
         for bank in ("new", "old"):
-            for ch in ("revealed", "stated_self"):
+            for ch in ("revealed", "stated_self", "P1", "P2", "P3N"):
                 idx, dv = dirn(hid, ch, bank)
                 if dv is None: continue
                 ok = ~np.isnan(dv)
