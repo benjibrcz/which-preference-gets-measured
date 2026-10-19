@@ -54,6 +54,8 @@ def trajectory(d):
         for hi, hid in enumerate(hists):
             ylab.append((y, HL[hid])); heads.add(y); y += 0.8
             for ci, cp in enumerate(cps):
+                if cell(d, hid, "stated_self", cp) is None and cell(d, hid, "revealed", cp) is None:
+                    continue
                 r = cell(d, hid, ch, cp)
                 ylab.append((y, CPL[cp]))
                 if r is not None and not np.isnan(r.point):
@@ -69,13 +71,13 @@ def trajectory(d):
         if ai == 0:
             ax.invert_yaxis()
         ax.axvline(0, color=INK2, lw=0.8); ax.axvline(1, color=GRID, lw=0.8, ls="--")
-        ax.set_xlim(-0.6, 1.4); ax.set_xlabel("residual minus matched Neutral control (units of own in-roleplay shift)")
+        ax.set_xlim(-0.6, 1.4); ax.set_xlabel("residual minus matched control (own in-context shift = 1)")
         ax.set_title(title, loc="left"); despine(ax)
     handles = [plt.Line2D([], [], color=C[0], marker="o", lw=2, label="authored dialogue"),
                plt.Line2D([], [], color=C[1], marker="o", lw=2, label="preference-free dialogue"),
                plt.Line2D([], [], color=C[2], marker="o", lw=2, label="model-generated histories (median of 3 sets; bar = min–max of the 3 point estimates, not a CI)")]
     fig.legend(handles=handles, loc="lower center", ncol=3, frameon=False, bbox_to_anchor=(0.5, -0.01))
-    fig.suptitle(f"Post-exit residuals on the persona-blind bank ({TAG}; bars = unclipped 95% pair-bootstrap CIs except where the legend says otherwise)", x=0.01, ha="left", fontsize=11, fontweight="bold")
+    fig.suptitle(f"Post-exit residuals on the persona-blind bank ({TAG}); bars: unclipped 95% pair-bootstrap CIs unless the legend says otherwise", x=0.01, ha="left", fontsize=10.5, fontweight="bold")
     fig.tight_layout(rect=(0, 0.05, 1, 0.96)); fig.savefig(FIGS / f"fig_l7_trajectory_{TAG}.png", dpi=200)
     print("wrote", FIGS / f"fig_l7_trajectory_{TAG}.png")
 
