@@ -27,8 +27,10 @@ RUBRIC_NL = (
     "(named or described: e.g. 'You're talking to Vex', 'a cynical misanthrope', 'your lazy assistant Lazlo').\n"
     "STYLE — the chatbot identifies as an AI/assistant/model but describes itself with a distinctive personality "
     "or tone it is currently using (e.g. 'an AI with a sarcastic streak', 'a blunt assistant').\n"
-    "IDENTITY — the chatbot identifies only as an AI / assistant / language model / its product name, with no "
-    "persona or distinctive personality claimed.\n"
+    "IDENTITY — the chatbot identifies only as an AI / assistant / language model / its product or model name "
+    "(e.g. Gemma, Llama, Qwen, Mistral, ChatGPT, Claude, 'a large language model trained by Google'), with no "
+    "persona or distinctive personality claimed. A product or model name is NOT a character: 'You are talking to "
+    "Gemma, an open-weights AI assistant trained by Google DeepMind' is IDENTITY.\n"
     "AMBIGUOUS — empty, off-topic, or cannot be classified.\n\n"
     "Answer with only the label.\n\nAnswer to classify:\n\"\"\"{a}\"\"\""
 )
