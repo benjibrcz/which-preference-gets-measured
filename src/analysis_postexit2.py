@@ -118,7 +118,7 @@ def main():
         return idx, (v - base.loc[(ch, bank)].reindex(idx)).values
 
     hists = sorted(set(d.history) - {"none"})
-    controls = {"auth": "neutral_auth", "pref": "neutral_pref", "genA": "neutral_genA", "genB": "neutral_genB",
+    controls = {"nopref": "neutral_nopref", "auth": "neutral_auth", "pref": "neutral_pref", "genA": "neutral_genA", "genB": "neutral_genB",
                 "genC": "neutral_genC", "inst": "neutral_inst"}
     def ctrl(hid):
         for k, v in controls.items():
@@ -199,6 +199,32 @@ def main():
                         out.append(dict(history=hid, bank=bank, channel=ch, checkpoint=name, metric="paired_contrast_adj", point=pt2, lo95=lo2, hi95=hi2, n_pairs=int(mm.sum())))
                         extra = f"   adj: {pt2:+.2f} [{lo2:+.2f},{hi2:+.2f}]"
                     print(f"      {name:20} raw: {pt:+.2f} [{lo:+.2f},{hi:+.2f}]{extra}")
+                # loop 7b: generated confirmation + authored suffix, pooled; contrast with the scripted exit (same suffix)
+                pgA = pooled("x2gA")
+                if pgA is not None:
+                    ynA = pooled("x2gA", c) if c else None
+                    m = ok & ~np.isnan(pgA) & (~np.isnan(ynA) if ynA is not None else True)
+                    pa, la, ha = boot(dv[m], pgA[m], ynA[m] if ynA is not None else None)
+                    out.append(dict(history=hid, bank=bank, channel=ch, checkpoint="x2gA_pooled", metric="beta_minus_control", point=pa, lo95=la, hi95=ha, n_pairs=int(m.sum())))
+                    print(f"      x2gA pooled (own confirmation + authored suffix, minus pooled control): {pa:+.2f} [{la:+.2f},{ha:+.2f}]")
+                    x2v = vec(hid, "x2", ch, bank, idx)
+                    if x2v is not None and ynA is not None and c:
+                        x2n = vec(c, "x2", ch, bank, idx)
+                        mm = m & ~np.isnan(x2v) & ~np.isnan(x2n)
+                        pt2, lo2, hi2 = boot_adj(dv[mm], pgA[mm], ynA[mm], x2v[mm], x2n[mm])
+                        out.append(dict(history=hid, bank=bank, channel=ch, checkpoint="x2gA_minus_x2", metric="paired_contrast_adj", point=pt2, lo95=lo2, hi95=hi2, n_pairs=int(mm.sum())))
+                        print(f"      x2gA_pooled - x2 (adj)  {pt2:+.2f} [{lo2:+.2f},{hi2:+.2f}]")
+                # loop 7b: matched reset contrast, exit 0 and one-exchange suffix held fixed
+                n1 = vec(hid, "x2g0n1", ch, bank, idx); prg0 = pooled("rg")
+                if n1 is not None and prg0 is not None and c:
+                    n1n = vec(c, "x2g0n1", ch, bank, idx); prgn = pooled("rg", c)
+                    if n1n is not None and prgn is not None:
+                        mm = ok & ~np.isnan(n1) & ~np.isnan(prg0) & ~np.isnan(n1n) & ~np.isnan(prgn)
+                        pt2, lo2, hi2 = boot_adj(dv[mm], prg0[mm], prgn[mm], n1[mm], n1n[mm])
+                        out.append(dict(history=hid, bank=bank, channel=ch, checkpoint="rg_pooled_minus_x2g0n1", metric="paired_contrast_adj", point=pt2, lo95=lo2, hi95=hi2, n_pairs=int(mm.sum())))
+                        pr0, lr0, hr0 = boot(dv[mm], n1[mm], n1n[mm])
+                        out.append(dict(history=hid, bank=bank, channel=ch, checkpoint="x2g0n1", metric="beta_minus_control", point=pr0, lo95=lr0, hi95=hr0, n_pairs=int(mm.sum())))
+                        print(f"      rg_pooled - x2g0n1 (adj; reset effect with exit 0 fixed)  {pt2:+.2f} [{lo2:+.2f},{hi2:+.2f}]   (x2g0n1 residual {pr0:+.2f})")
                 # pooled reset residual (over rg0..3, minus the control's pooled rg)
                 prg = pooled("rg")
                 if prg is not None:
@@ -231,6 +257,16 @@ def main():
                 pa, la, ha = boot(dv[m], y[m], yn[m])
                 out.append(dict(history=hid, bank="new", channel=ch, checkpoint=cp, metric="beta_minus_control", point=pa, lo95=la, hi95=ha, n_pairs=int(m.sum())))
                 print(f"  {hid:11}{ch:12}{cp:11} {pa:+.2f} [{la:+.2f},{ha:+.2f}]  mean|dp| t4={np.nanmean(np.abs(dv)):.3f}")
+            hcps = sorted({cp for (hh, cp, cc, b_, _) in p.index if hh == hid and cc == ch and b_ == "new"})
+            gw = [vec(hid, cp, ch, "new", idx) for cp in hcps if re.fullmatch(r"withdrawn2g\d", cp)]
+            gwn = [vec("neutral_inst", cp, ch, "new", idx) for cp in hcps if re.fullmatch(r"withdrawn2g\d", cp)]
+            gw = [v for v in gw if v is not None]; gwn = [v for v in gwn if v is not None]
+            if gw and gwn:
+                y = np.nanmean(np.vstack(gw), 0); yn = np.nanmean(np.vstack(gwn), 0)
+                m = ok & ~np.isnan(y) & ~np.isnan(yn)
+                pa, la, ha = boot(dv[m], y[m], yn[m])
+                out.append(dict(history=hid, bank="new", channel=ch, checkpoint="withdrawn2g_pooled", metric="beta_minus_control", point=pa, lo95=la, hi95=ha, n_pairs=int(m.sum())))
+                print(f"  {hid:11}{ch:12}{'withdrawn2g':11} {pa:+.2f} [{la:+.2f},{ha:+.2f}]  (model's own confirmations, pooled over {len(gw)})")
             a = vec(hid, "withdrawn2", ch, "new", idx); b = vec(hid, "active2", ch, "new", idx)
             if a is None or b is None:
                 continue
