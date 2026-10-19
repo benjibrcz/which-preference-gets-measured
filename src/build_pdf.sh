@@ -23,7 +23,7 @@ sed -e 's/→/\\ensuremath{\\rightarrow}/g'  -e 's/↔/\\ensuremath{\\leftrighta
     -e 's/˅/v/g'  -e 's/×/\\ensuremath{\\times}/g'  -e 's/β/\\ensuremath{\\beta}/g' \
     -e 's/ρ/\\ensuremath{\\rho}/g'  -e 's/Δ/\\ensuremath{\\Delta}/g'  -e 's/α/\\ensuremath{\\alpha}/g' \
     -e 's/σ/\\ensuremath{\\sigma}/g' -e 's/η/\\ensuremath{\\eta}/g' \
-    -e 's/∈/\\ensuremath{\\in}/g' \
+    -e 's/∈/\\ensuremath{\\in}/g' -e 's/κ/\\ensuremath{\\kappa}/g' -e 's/⟨/\\ensuremath{\\langle}/g' -e 's/⟩/\\ensuremath{\\rangle}/g' \
     "$(basename "$SRC_ABS")" > "$TMP"
 
 pandoc "$TMP" -o "$OUT_ABS" --pdf-engine=tectonic \
