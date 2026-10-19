@@ -2,7 +2,7 @@
 paired contrasts, model-generated exits (unconditional and conditional), instruction-withdrawal
 controls, paraphrase/indifference checks, spelling withdrawal. Unclipped 2,000-rep pair bootstrap.
 
-Reads runs/postexit2_gemma/results.jsonl; writes runs/postexit2_results.csv and prints tables.
+Reads <run>/results.jsonl; writes <run>/postexit2_results.csv and prints tables.
 Identity/non-leading probe coding is done separately by src/identity_judge2.py.
 Usage: python src/analysis_postexit2.py [runs/postexit2_gemma]
 """
@@ -155,11 +155,15 @@ def main():
             ok = ~np.isnan(dv)
             for cp in ("active2", "withdrawn2"):
                 y = vec(hid, cp, ch, "new", idx); yn = vec("neutral_inst", cp, ch, "new", idx)
+                if y is None or yn is None:
+                    continue
                 m = ok & ~np.isnan(y) & ~np.isnan(yn)
                 pa, la, ha = boot(dv[m], y[m], yn[m])
                 out.append(dict(history=hid, bank="new", channel=ch, checkpoint=cp, metric="beta_minus_control", point=pa, lo95=la, hi95=ha, n_pairs=int(m.sum())))
                 print(f"  {hid:11}{ch:12}{cp:11} {pa:+.2f} [{la:+.2f},{ha:+.2f}]  mean|dp| t4={np.nanmean(np.abs(dv)):.3f}")
             a = vec(hid, "withdrawn2", ch, "new", idx); b = vec(hid, "active2", ch, "new", idx)
+            if a is None or b is None:
+                continue
             m = ok & ~np.isnan(a) & ~np.isnan(b)
             pt, lo, hi = boot(dv[m], a[m], None, b[m])
             print(f"      withdrawn2 - active2: {pt:+.2f} [{lo:+.2f},{hi:+.2f}]")
@@ -168,8 +172,8 @@ def main():
     # ---- E2b: P3N indifference rates and paraphrase residuals
     print("\n=== E2b: 'N' (no preference) rate under P3N, per history x checkpoint (new bank)")
     n3 = df[df.channel == "P3N"]
-    rates = n3.assign(isN=(n3.value == "N")).groupby(["history", "checkpoint"]).isN.mean()
-    print(rates.round(3).to_string())
+    rates = n3.assign(isN=(n3.value == "N")).groupby(["history", "checkpoint"]).isN.mean() if len(n3) else pd.Series(dtype=float)
+    print(rates.round(3).to_string() if len(rates) else "  (no P3N cells in this run)")
     for h, cp in rates.index:
         out.append(dict(history=h, bank="new", channel="P3N", checkpoint=cp, metric="N_rate", point=float(rates.loc[(h, cp)])))
 
@@ -187,8 +191,8 @@ def main():
         for (h, cp), v in g.items():
             out.append(dict(history=h, bank=None, channel="spelling", checkpoint=cp, metric="british_share", point=float(v)))
 
-    pd.DataFrame(out).to_csv(RUN.parent / "postexit2_results.csv", index=False)
-    print(f"\nwrote {RUN.parent / 'postexit2_results.csv'} ({len(out)} rows)")
+    pd.DataFrame(out).to_csv(RUN / "postexit2_results.csv", index=False)
+    print(f"\nwrote {RUN / 'postexit2_results.csv'} ({len(out)} rows)")
 
 if __name__ == "__main__":
     main()

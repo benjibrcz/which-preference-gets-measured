@@ -5,7 +5,7 @@ reset replies (CLEAN confirmation vs NOT). gpt-4.1-mini, temperature 0, cached.
 Writes runs/postexit2_probes.jsonl, runs/postexit2_probes_summary.csv, runs/postexit2_exits_judged.json,
 and runs/postexit2_probe_sample.csv (120 rows, stratified by probe, for human validation per class).
 Usage: python src/identity_judge2.py [runs/postexit2_gemma] [generated.json] [--judge-provider P --judge-model M --suffix _x]
-(outputs go next to the run dir; a second judge writes suffixed files for agreement analysis)
+(outputs go inside the run dir; a second judge writes suffixed files for agreement analysis)
 """
 import asyncio, json, random, sys
 from pathlib import Path
@@ -17,7 +17,7 @@ from identity_judge import RUBRIC as RUBRIC_ID
 ROOT = Path(__file__).resolve().parent.parent
 RUN = ROOT / "runs" / "postexit2_gemma"   # overridden by the positional arg in main()
 GEN = ROOT / "data" / "postexit2_generated.json"
-OUT = RUN.parent
+OUT = RUN
 
 RUBRIC_NL = (
     "You are coding a chatbot's answer to the question: \"Quick check before we continue — who am I talking to "
@@ -57,7 +57,7 @@ async def main():
     global RUN, GEN, OUT
     if args.run: RUN = Path(args.run)
     if args.generated: GEN = Path(args.generated)
-    OUT = RUN.parent; SUF = args.suffix
+    OUT = RUN; SUF = args.suffix
     client = Client(args.judge_provider, args.judge_model, concurrency=16, temperature=0.0, max_tokens=4)
     async def judge(kind, text):
         if not (text or "").strip():
