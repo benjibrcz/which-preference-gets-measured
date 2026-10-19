@@ -93,7 +93,7 @@ On Vex's six clean pairs the directional residual at the first post-exit checkpo
 
 Cross-fitting the direction (samples {0,1} vs {2,3}) changes no all-23 estimate by more than 0.02 (Vex stated x2: 0.83 [0.63, 1.03] cross-fit vs 0.84 in-sample), so the earlier numbers were not inflated by reusing the noise that defined the direction.
 
-Across the twelve sprint models (Figure 1C; Table 1b), the Vex stated-channel x2 residual on his six overlap-clean pairs has an interval excluding zero on 4 models (Gemma-3-12B, Llama-3.1-8B, Qwen-2.5-72B, gpt-4o-mini), Lazlo's on 3 (Gemma-3-27B, Mistral-Small-3.2, Command-R) and Mira's on 3; the sprint-era pattern that "something persists after the exit on most models" is no longer a uniform result on clean items, and these cells are too small (6–11 pairs) to carry a cross-model claim on their own. The loop-8 replication (§4.9) is the cross-model test.
+Across the twelve sprint models (Figure 1, panel C; Table 1b), the Vex stated-channel x2 residual on his six overlap-clean pairs has an interval excluding zero on 4 models (Gemma-3-12B, Llama-3.1-8B, Qwen-2.5-72B, gpt-4o-mini), Lazlo's on 3 (Gemma-3-27B, Mistral-Small-3.2, Command-R) and Mira's on 3; the sprint-era pattern that "something persists after the exit on most models" is no longer a uniform result on clean items, and these cells are too small (6–11 pairs) to carry a cross-model claim on their own. The loop-8 replication (§4.9) is the cross-model test.
 
 **Table 1b.** Twelve sprint models, stated-channel x2 residual (control-subtracted) on each persona's overlap-clean pairs (Vex n = 6, Lazlo n = 11, Mira n = 8; unclipped 95% pair-bootstrap).
 
@@ -112,7 +112,7 @@ Across the twelve sprint models (Figure 1C; Table 1b), the Vex stated-channel x2
 | gpt-4.1-mini | −0.13 [−0.57, +0.20] | +0.11 [−0.20, +0.47] | +0.93 [+0.31, +1.53] |
 | gpt-4o-mini | +0.12 [+0.01, +0.33] | +0.13 [−0.08, +0.33] | +0.32 [+0.00, +0.64] |
 
-![Figure 1. Original 23-pair post-exit result under three item sets.](figures/fig_e4_oldbank_itemsets.png)
+![Original 23-pair post-exit result under three item sets.](figures/fig_e4_oldbank_itemsets.png)
 
 ### 4.2 The persona-blind bank is movable; the preference-free dialogues move it mostly as drift (P27, P31)
 
@@ -137,7 +137,7 @@ These are weaker effects under alternative histories, not an identification of t
 
 Figure 2 gives the control-subtracted residuals on the new bank.
 
-![Figure 2. Post-exit residuals on the persona-blind bank, Gemma-3-27B (control-subtracted; bars are unclipped 95% pair-bootstrap CIs, except the generated-history rows, where the bar is the range of the three sets' point estimates).](figures/fig_l7_trajectory_gemma.png)
+![Post-exit residuals on the persona-blind bank, Gemma-3-27B (control-subtracted; bars are unclipped 95% pair-bootstrap CIs, except the generated-history rows, where the bar is the range of the three sets' point estimates).](figures/fig_l7_trajectory_gemma.png)
 
 After the scripted exit and two neutral exchanges, Vex's stated residual is 0.71 [0.36, 1.07] and his choice residual 0.42 [0.19, 0.62]; Lazlo's are 0.27 [−0.16, 0.72] and 0.47 [0.28, 0.64]. Six exchanges later (x8) Vex's stated residual is 0.76 [0.54, 0.96] and his choice residual 0.21 [0.01, 0.48]; after the scripted reset request his stated residual is 0.83 [0.45, 1.23] and his choice residual 0.12 [−0.10, 0.25]. Lazlo's channel ordering is not the mirror of Vex's: his choice residual is larger at x2 but his stated residual is larger at x8 (0.43 [0.11, 0.81] vs 0.11 [−0.05, 0.29]). Each claim below is therefore restricted to its persona, checkpoint and channel. Cross-fitting direction and displacement on disjoint samples moves Vex's stated residual from 0.705 to 0.677 at x2, from 0.760 to 0.683 at x8 and from 0.371 to 0.336 for the pooled generated exits; no new-bank estimate moves by more than 0.12.
 
@@ -161,7 +161,7 @@ This is the result that changes the framing. The two task-preference rules move 
 
 The preregistered interpretation table compares each persona's post-exit residual with twice the matched instruction's post-withdrawal residual in the same channel. The persona residual is within 2× in all eight cells, and below the instruction residual in seven (Figure 3B). With a joint pair bootstrap, persona − 2 × instruction is below zero with an interval excluding zero in six cells (−0.78 to −1.65) and spans zero in the two Lazlo stated-channel cells (−0.21 [−0.65, +0.28] and −0.30 [−0.63, +0.03]). The point estimates therefore meet our preregistered criterion for **generic context persistence rather than persona-specific resistance**; the eight comparisons share two instruction histories and one bank and are not eight independent replications, and this is a descriptive classification, not an identified common mechanism.
 
-![Figure 3. (A) Paired contrasts (raw estimand): exit minus no-exit with authored replies; with the model's own replies (a live persona versus an exited one, plus changed continuation); and the composite scripted-exit versus generated-exit-plus-reset comparison. (B) The contrast class: each persona's post-exit residual against the matched withdrawn instruction's residual in the same channel; the tick marks twice the instruction residual.](figures/fig_l7_contrasts_gemma.png)
+![(A) Paired contrasts (raw estimand): exit minus no-exit with authored replies; with the model's own replies (a live persona versus an exited one, plus changed continuation); and the composite scripted-exit versus generated-exit-plus-reset comparison. (B) The contrast class: each persona's post-exit residual against the matched withdrawn instruction's residual in the same channel; the tick marks twice the instruction residual.](figures/fig_l7_contrasts_gemma.png)
 
 The procedural control makes the point without a preference measure. Told to use British spelling, the model does (mean within-output British share 0.83 while the rule is active, 0.00 in every control). After the authored withdrawal exchange, the mean British share is 0.58, and 2 of 8 outputs are majority-default. The preregistration asked for 80% of outputs reverting; neither the word-level share (42% default) nor the output-level criterion (25%) reaches it, and we disclose that the scorer originally tested the word-level quantity while the registered wording was output-level. After the model's own confirmations (loop 7b; all four CLEAN, three of them saying explicitly that it is back to default or US spelling), the mean British share is 0.54 and 41% of outputs are majority-default (P41 pass): the model's own statement that it has reverted is followed by a reversion of about half.
 
@@ -179,16 +179,25 @@ What the probes show is that leading identity affirmations disappear after exit 
 
 ### 4.9 Replication of the core cells on three further models (P34–P39)
 
-![Figure 4. Persona post-exit residuals and withdrawn-instruction residuals across four models, persona-blind bank, control-subtracted.](figures/fig_l8_models.png)
+![Persona post-exit residuals and withdrawn-instruction residuals across four models, persona-blind bank, control-subtracted.](figures/fig_l8_models.png)
 
-**Table 3.** Core cells on four models (new bank, control-subtracted; unclipped 95% pair-bootstrap). Spelling: mean within-output British share while the rule is active → after the authored withdrawal (share of outputs majority-default).
+**Table 3a.** Persona cells on four models (new bank, control-subtracted; unclipped 95% pair-bootstrap).
 
-| Model | Vex stated x2 | Vex choice x2 | Lazlo stated x2 | Lazlo choice x2 | Vex stated x2−noexit2 (raw / adj) | 'short' choice withdrawn | 'blunt' choice withdrawn | 'blunt' stated withdrawn | spelling |
-|---|---|---|---|---|---|---|---|---|---|
-| Gemma-3-27B | +0.71 [+0.36, +1.07] | +0.42 [+0.19, +0.62] | +0.27 [−0.16, +0.72] | +0.47 [+0.28, +0.64] | −0.13 / −0.22 | +0.62 [+0.47, +0.75] | +0.79 [+0.64, +0.95] | +0.91 [+0.77, +1.06] | 0.83→0.58 (25%) |
-| Qwen-2.5-72B | +0.32 [+0.19, +0.43] | −0.02 [−0.23, +0.15] | +0.37 [+0.18, +0.54] | +0.17 [−0.00, +0.38] | −0.49 / −0.41 | +0.25 [+0.06, +0.46] | +0.50 [+0.25, +0.74] | +0.53 [+0.40, +0.67] | 0.82→0.65 (0%) |
-| Llama-3.1-70B | +0.05 [−0.10, +0.18] | −0.04 [−0.22, +0.17] | +0.04 [−0.15, +0.22] | +0.06 [−0.22, +0.41] | −0.34 / −0.54 | +0.49 [+0.29, +0.68] | +0.43 [+0.29, +0.56] | +0.17 [+0.07, +0.26] | 0.99→0.00 (100%) |
-| gpt-4.1-mini | +0.28 [+0.11, +0.46] | −0.05 [−0.22, +0.11] | +0.07 [−0.36, +0.49] | −0.14 [−0.60, +0.22] | −0.33 / −0.47 | +0.62 [+0.53, +0.71] | +0.55 [+0.41, +0.70] | +0.74 [+0.65, +0.84] | 0.98→0.96 (0%) |
+| Model | Vex stated x2 | Vex choice x2 | Lazlo stated x2 | Lazlo choice x2 | Vex stated x2−noexit2 (raw / adj) |
+|---|---|---|---|---|---|
+| Gemma-3-27B | 0.71 [0.36, 1.07] | 0.42 [0.19, 0.62] | 0.27 [−0.16, 0.72] | 0.47 [0.28, 0.64] | −0.13 / −0.22 |
+| Qwen-2.5-72B | 0.32 [0.19, 0.43] | −0.02 [−0.23, 0.15] | 0.37 [0.18, 0.54] | 0.17 [−0.00, 0.38] | −0.49 / −0.41 |
+| Llama-3.1-70B | 0.05 [−0.10, 0.18] | −0.04 [−0.22, 0.17] | 0.04 [−0.15, 0.22] | 0.06 [−0.22, 0.41] | −0.34 / −0.54 |
+| gpt-4.1-mini | 0.28 [0.11, 0.46] | −0.05 [−0.22, 0.11] | 0.07 [−0.36, 0.49] | −0.14 [−0.60, 0.22] | −0.33 / −0.47 |
+
+**Table 3b.** Instruction cells on four models after the authored withdrawal exchange (control-subtracted). Spelling: mean within-output British share while the rule is active → after withdrawal (share of outputs majority-default).
+
+| Model | 'short' choice | 'blunt' choice | 'blunt' stated | spelling |
+|---|---|---|---|---|
+| Gemma-3-27B | 0.62 [0.47, 0.75] | 0.79 [0.64, 0.95] | 0.91 [0.77, 1.06] | 0.83 → 0.58 (25%) |
+| Qwen-2.5-72B | 0.25 [0.06, 0.46] | 0.50 [0.25, 0.74] | 0.53 [0.40, 0.67] | 0.82 → 0.65 (0%) |
+| Llama-3.1-70B | 0.49 [0.29, 0.68] | 0.43 [0.29, 0.56] | 0.17 [0.07, 0.26] | 0.99 → 0.00 (100%) |
+| gpt-4.1-mini | 0.62 [0.53, 0.71] | 0.55 [0.41, 0.70] | 0.74 [0.65, 0.84] | 0.98 → 0.96 (0%) |
 
 Both authored histories pass the bank gate on every model (P34: t4 mean |Δp| 0.14–0.27). The persona result is **model-specific in size**: after the scripted exit, Vex's stated residual is 0.71 on Gemma, 0.32 [0.19, 0.43] on Qwen, 0.28 [0.11, 0.46] on gpt-4.1-mini and 0.05 [−0.10, 0.18] on Llama-3.1-70B; committed-choice residuals are near zero on the three replication models. The exit turn **does more** on the replication models than on Gemma (raw Vex stated contrasts −0.33 to −0.49), so P35 holds only on gpt-4.1-mini (3/4 cells in band) and fails on Qwen (2/4) and Llama (1/4). The pooled generated exits leave a Vex stated residual distinguishable from zero on all three (0.17 [0.08, 0.28], 0.16 [0.10, 0.23], 0.30 [0.19, 0.42]; P39 first clause 3/3), while the choice-reduction clause is uninformative where both scripted and generated residuals are already near zero (1/3).
 
